@@ -1,0 +1,1 @@
+duckdb docs/data/oa_data.db -c "COPY author_tidy TO STDOUT WITH (FORMAT CSV);"
