@@ -10,20 +10,18 @@ Input OA api and a list of people as target, output 3 tables:
 Running this script for ego/target is somehow costly in terms of API calls, and constrained by OpenAlex data schema,
 so many decisions are made to account for both of these facts.
 """
-from pyalex import Works, Authors
-from itertools import chain
-from tqdm import tqdm
-from time import sleep
-import argparse
-from pathlib import Path
-import pandas as pd
-from datetime import datetime
 import calendar
-import random
 from collections import Counter
+from datetime import datetime
+from itertools import chain
+import json
+from tqdm import tqdm
+import random
+
+import pandas as pd
+from pyalex import Works, Authors
 import duckdb
 
-from helpers import get_all_work_time_t, find_all_colabs, write_jsonl
 
 def min_pub_year(target_aid):
     return Works().filter(authorships={"author": {"id": target_aid}})\
@@ -129,52 +127,42 @@ def get_pub_year_shuffled():
 
 def main():
 
-    target_aids=pd.read_csv("../researchers.tsv", delimiter="\t", usecols=['OpenAlex id (optional)']).dropna(subset=['OpenAlex id (optional)']).iloc[:,0].tolist()
+    target_aids = pd.read_csv("../researchers.tsv", delimiter="\t", usecols=['OpenAlex id (optional)']).dropna(subset=['OpenAlex id (optional)']).iloc[:,0].tolist()
 
-    auth_known_first_yr = {}
-    
-    # authors for which we verified manually their first year
-    auth_known_first_yr['A5037256938'] = 2004
-    auth_known_first_yr['A5088506012'] = 1988
-    auth_known_first_yr['A5017032627'] = 2000
-    auth_known_first_yr['A5037170969'] = 1950
-    auth_known_first_yr['A5027136376'] = 2005
-    auth_known_first_yr['A5009266404'] = 2005
-    auth_known_first_yr['A5046878011'] = 1987
-    auth_known_first_yr['A5017357771'] = 2007
-    auth_known_first_yr['A5040821463'] = 1999
+    # Authors for which we have manually verified their first year
+    # It is important to get this right, as it determines age of target.
+    with open("aid2firstyear.json") as f:
+        auth_known_first_yr = json.loads(f.read())
 
-    for target_aid in target_aids:
+    for target_aid in tqdm(target_aids[3:], total=len(target_aids)):
         # target_aid = 'a5040821463'
+        target_name = Authors()[target_aid]['display_name']
+        
+        # We use Authors() to get author information but it lacks earliest work year.
+        # We need to call Works() API to get the first and last work year.
+        min_yr = auth_known_first_yr[target_aid.upper()] if auth_known_first_yr.get(target_aid.upper()) else min_pub_year(target_aid)
+        max_yr = max_pub_year(target_aid)
+        
+        print(f"Doing {target_name}")
+
         papers = []
         coauthors = []
 
-        set_all_collabs = set()  # Track all collaborators across all years
-        set_collabs_of_collabs_never_worked_with = set()
-        all_time_collabo = {}  # Reset for each year
+        set_all_collabs = set()  # Track all collaborators across time
+        all_time_collabo = {}  # Track collaboration count across time
+        set_collabs_of_collabs_never_worked_with = set() # useful to know when two authors know each other
         
-        target_name = Authors()[target_aid]['display_name']
-        min_yr = auth_known_first_yr[target_aid.upper()] if auth_known_first_yr.get(target_aid.upper()) else min_pub_year(target_aid)
-        max_yr = max_pub_year(target_aid)
+        # Year -> target will be useful lookup later.
         yr2age = { yr:i for i,yr in enumerate(range(min_yr, max_yr+1)) }
-        
 
-        for yr in range(min_yr, max_yr+1):
-            # yr = min_yr
-            
-            time_collabo = {}  # Reset for each year
+        for yr in yr2age.keys():
+
             dates_in_year = []  # List to keep track of dates for papers in this year
-            new_collabs_this_year = set() 
             all_target_inst_this_year = []
+            new_collabs_this_year = set() 
+            collabs_of_collabs_time_t = set() # does nothing rn
             coauthName2aid = {}
-
-            collabs_of_collabs_time_t = set()
-
-            # Not doing the collab of collab stuff makes it much cheaper; we put it aside for now.
-            # But this means that the triadic closure thing is wrong rn.
-            # collab of collabs
-            # target_collaborators_time_t = find_all_colabs(target_aid, dat[yr])
-            # collabs_of_collabs_time_t = get_collabs_of_collabs_time_t(target_collaborators_time_t, yr, names=True)
+            time_collabo = {}  # Reset for each year
 
             q = get_work_object_query(target_aid, yr)
             
@@ -182,21 +170,22 @@ def main():
                 
                 if record['type'] != 'article' and record['language'] != 'en':
                     continue
-                        
+
+                # Add some noise within year for visualization purpose    
                 shuffled_date = shuffle_date_within_month(record['publication_date'])
+                # This is a hack to put different authors on the same yaxis.
                 shuffled_auth_age = "1"+shuffled_date.replace(shuffled_date.split("-")[0], str(yr2age[yr]).zfill(3))
+                # impossible leap year
                 shuffled_auth_age = shuffled_auth_age.replace("29", "28") if shuffled_auth_age.endswith("29") else shuffled_auth_age
                 dates_in_year.append(shuffled_date)
 
+                # Now for each collaborators, we will check their institutions and collaboration count.
                 for a in record['authorships']:
                     coauthor_name = a['author']['display_name']
                     
-                    if coauthor_name == target_name:
-                        all_target_inst_this_year += [i['display_name'] for i in a['institutions']]
-                        target_position = a['author_position']
-
-                    else:
+                    if coauthor_name != target_name:
                         
+
                         institutions = a['institutions'] if 'institutions' in a else []
                         
                         # Increment collaboration count for the current year
@@ -218,6 +207,12 @@ def main():
                         # Add new collaborators to the set for all years
                         if coauthor_name not in set_all_collabs:
                             new_collabs_this_year.add(coauthor_name)
+
+                    else: # if this is target, grab that information before moving on
+
+                        all_target_inst_this_year += [i['display_name'] for i in a['institutions']]
+                        target_position = a['author_position']
+                        
                             
                 # majority vote to determine target_institutio
                 target_institution = Counter(all_target_inst_this_year).most_common(1)[0][0] if len(all_target_inst_this_year) > 0 else None
@@ -245,7 +240,6 @@ def main():
                     )
             
             # At the end of each year, do yearly collaboration stats
-
             if len(time_collabo) > 0:            
 
                 for author_name, author_data in time_collabo.items():
@@ -262,13 +256,13 @@ def main():
                     # Assign a date from the papers they collaborated on (if available)
                     author_date = random.choice(dates_in_year) if dates_in_year else str(yr)
                     shuffled_auth_age = "1"+author_date.replace(author_date.split("-")[0], str(yr2age[yr]).zfill(3))
-                    # impossible leap year
+                    # Impossible leap year
                     shuffled_auth_age = shuffled_auth_age.replace("29", "28") if shuffled_auth_age.endswith("29") else shuffled_auth_age
 
-                    # find coauthor institution name
+                    # Find coauthor institution name
                     shared_inst = None
                     max_institution = None
-                    
+
                     if author_data['institutions'] and target_institution:
                         max_institution = max(author_data['institutions'], key=author_data['institutions'].get)
                         if max_institution == target_institution:
@@ -288,52 +282,14 @@ def main():
                         'shared_institutions': shared_inst,
                         'institution': max_institution,
                         'target_type': target_name+"-"+'coauthor'
-                        })                  
+                        })           
 
                 set_all_collabs.update(new_collabs_this_year)
 
 
-        # CREATE DATABASE
+        # WRITE TO DATABASE --------------------------------------------
         
-
-
-        con = duckdb.connect("../oa_data.db")
-
-
-        # TABLE 1
-
         
-        create_paper_db(con)
-        
-        con.executemany( """
-                INSERT INTO paper
-                (type, target, aid, wid, pub_date, pub_year, doi, title, author, author_age, author_age_i, institution, cited_by_count, target_type, target_position)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-        """, [list(_.values()) for _ in papers])
-
-
-        # TABLE 2
-
-        create_coauthor_db(con)
-        
-        con.executemany( """
-                INSERT INTO coauthor
-                (type, target, pub_date, pub_year, author_age, title, aid, acquaintance, yearly_collabo, all_times_collabo, shared_institutions, institution, target_type)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, )
-        """, [list(_.values()) for _ in coauthors])
-
-
-        # TABLE 3: (Update) AUTHOR INFO
-
-
-        create_author_info_db(con)
-        
-        dedup_author_df = pd.concat([
-            pd.DataFrame(papers)[['target', 'aid', 'pub_year', 'institution']], 
-            pd.DataFrame(coauthors)[['title', 'aid', 'pub_year', 'institution']].rename(columns={'title': 'target'})], 
-        axis=0).drop_duplicates()
-        
-
         # Function to preload publication year data from the database
         def preload_publication_years():
             query = "SELECT aid, first_pub_year, last_pub_year FROM author_tidy WHERE first_pub_year IS NOT NULL AND last_pub_year IS NOT NULL"
@@ -365,6 +321,41 @@ def main():
                 publication_year_cache[aid] = (min_year, max_year)
             return publication_year_cache[aid]
 
+        
+        con = duckdb.connect("../oa_data.db")
+
+
+        # TABLE 1: PAPER
+        
+        create_paper_db(con)
+        
+        con.executemany( """
+                INSERT INTO paper
+                (type, target, aid, wid, pub_date, pub_year, doi, title, author, author_age, author_age_i, institution, cited_by_count, target_type, target_position)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        """, [list(_.values()) for _ in papers])
+
+
+        # TABLE 2 COAUTHORS
+
+        create_coauthor_db(con)
+        
+        con.executemany( """
+                INSERT INTO coauthor
+                (type, target, pub_date, pub_year, author_age, title, aid, acquaintance, yearly_collabo, all_times_collabo, shared_institutions, institution, target_type)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, )
+        """, [list(_.values()) for _ in coauthors])
+
+
+        # TABLE 3:AUTHOR INFO
+
+        create_author_info_db(con)
+        
+        dedup_author_df = pd.concat([
+            pd.DataFrame(papers)[['target', 'aid', 'pub_year', 'institution']], 
+            pd.DataFrame(coauthors)[['title', 'aid', 'pub_year', 'institution']].rename(columns={'title': 'target'})], 
+        axis=0).drop_duplicates()
+        
         # Cache for storing publication years
         publication_year_cache = {}
         # Preload the cache
@@ -374,6 +365,8 @@ def main():
         for author, group in tqdm(dedup_author_df.groupby('aid')):
             for i, row in group.iterrows():
                 display_name, aid, pub_year, inst = row['target'], row['aid'], int(row['pub_year']), row['institution']
+                # costly bit right now; we need to call twice the API to get min, max for each target coauthors
+                # since we are caching the results, this will get faster overtime (if we stay around within collab neighborhood).
                 min_year, max_year = get_publication_years(aid)
                 author_age = pub_year - min_year
                 data_batch.append((display_name, aid, pub_year, inst, min_year, max_year, author_age))
@@ -381,8 +374,10 @@ def main():
 
         bulk_insert(data_batch)
         
-        con.commit()
 
+        # Commit and close DB connection
+
+        con.commit()
         con.close()
 
 
