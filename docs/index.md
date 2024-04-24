@@ -182,7 +182,7 @@ In this collection of notebooks, we examine interaction in patterns of collabora
 We are interested in finding how latent groups and collaboration in science are impacting the type of science we do.
 We will define what we means by collaboration and groups as we go along, but we can start with an example.
 
-#### Timeline: dual perspective of collaboration and producitivity
+#### 1. Timeline: dual perspective of collaboration and producitivity
 
 Here is an individual scientific trajectory contrasting number of publications and coauthors:
 
@@ -214,7 +214,7 @@ Eyeballing the plot, there are definitely some similarities and differences.
 One similarity is Jean-Gabriel Young (JGY), who share the same lab than LHD, and exhibit similar patterns in collaboration early on.
 
 
-#### Groups exploring new semantic space
+#### 2. Groups exploring new semantic space
 
 <img src="./figs/lhd_walk_phd.png" alt="" width="800" height="600"/>
 
