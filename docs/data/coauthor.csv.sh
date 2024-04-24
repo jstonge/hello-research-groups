@@ -1,1 +1,1 @@
-duckdb docs/data/oa_data.db -c "COPY coauthor TO STDOUT WITH (FORMAT CSV);"
+duckdb  data/clean/oa_data.db -c "COPY coauthor TO STDOUT WITH (FORMAT CSV);"

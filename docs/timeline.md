@@ -1,5 +1,5 @@
 ---
-theme: air
+theme: dashboard
 title: Scientific collab timeline
 toc: false
 sql:
@@ -23,20 +23,28 @@ sql:
   </div>
   <div class="card"">
     <h2>Choose parameters</h2>
-    <br>
+    <br>  
     ${formInput}
+  </div>
+</div>
+
+<div>
+  ${ plot_legend() }
+  <div class="grid grid-cols-2">
+    <div class="card">${resize((width) => plot_data(coauthor, { width }))}</div>
+    <div class="card">${resize((width) => plot_data(paper, { width }))}</div>
   </div>
 </div>
 
 ```js
 const formInput = Inputs.form({
-  targets: Inputs.select([...uniqAuthors].map(d => d.target), {label: "Author", value: "Laurent Hébert-Dufresne"}),
+  targets: Inputs.select([...uniqAuthors].map(d => d.target), { multiple: 5, label: "Author" }),
   a_nc: Inputs.select(
-    ["acquaintance", "shared_institutions", "institutions"], 
-    {label: "Select color", value: 'shared_institutions', disabled:true}
+    ["age_diff", "acquaintance", "shared_institutions", "institutions"], 
+    {label: "Select color", value: "age_diff"}
     ),
-  a_r: Inputs.select(["yearly_collabo", "all_times_collabo"], {label: "Author node size", value: 'all_times_collabo', disabled: true}),
-  p_r: Inputs.select(["", "cited_by_count", "nb_coauthor"], {label: "Paper node size", value: "tot_citation", disabled: true}),
+  a_r: Inputs.select(["yearly_collabo", "all_times_collabo"], {label: "Author node size", value: 'all_times_collabo'}),
+  p_r: Inputs.select(["", "cited_by_count"], {label: "Paper node size", value: "cited_by_count"}),
   yaxis: Inputs.select(["year", "author_age"], {label: "Y-axis", value: "year", disabled: true})
 });
 
@@ -44,102 +52,108 @@ const form = Generators.input(formInput);
 ```
 
 ```js
-Plot.legend({color: {
-  fillOpacity: 0.7,
-  range: ["orange", "lightblue", "darkred"], 
-  domain: ["younger (<-7)", "same_age (>=-7)","older (>7)",]}
+function plot_data(data, { width } = {}) {
+  return Plot.plot({
+    style: "overflow: visible;",
+    height: 800,
+    width,
+    marginLeft: 120,
+    y: { grid: true, reverse: true, inset: 50, label: null  },
+    fx: { label: null, padding: 0.03, axis: "top" },
+    r: { range: [1, 10] },
+    marks: [
+      Plot.dot(data, Plot.dodgeX("middle", {
+        y: "pub_date", 
+        fx: "target_type",
+        fill: d =>  d.type === 'paper' ?  "grey" : a_nc(d),
+        r: d => d.type === 'paper' ?  p_r(d) : d[form.a_r],
+        stroke: 'black', 
+        strokeWidth: 0.3, 
+        fillOpacity: 0.7, 
+        title: d => d.type === 'paper' ? `cited_count: ${d.cited_by_count}` : `name: ${d.coauthor_name}`,
+        tip: true
+      })),
+      Plot.text(
+          data, 
+            Plot.dodgeX("middle", {
+              fx: "target_type",
+              y: "pub_date", 
+              r: d => d.type === 'paper' ?  p_r(d) : null,
+              title: "coauthor_age",
+              text: "coauthor_age",
+          })),
+    ]
   })
+}
 ```
 
-```js
-Plot.plot({
-  style: "overflow: visible;",
-  height: 1000,
-  width: 1200,
-  marginLeft: 220,
-  color: { legend: true },
-  y: { grid: true, reverse: true, inset: 50, label: null  },
-  fx: { padding: 0.03, axis: "top" },
-  marks: [
-    Plot.dot(coauthor, Plot.dodgeX("middle", {
-      y: "pub_date", 
-      fill: d => d["age_diff"] > -7 ? 
-                    d["age_diff"] > 7 ? "darkred" : 
-                      "lightblue" :
-                        "orange", 
-      stroke: 'black', 
-      strokeWidth: 0.3, 
-      fillOpacity: 0.7, 
-      fx: "type", 
-      r:8,
-      title: d => `${d["coauthor_name"]}`,
-      tip: true
-    })),
-    Plot.text(
-        coauthor, 
-          Plot.dodgeX("middle", {
-            y: "pub_date", 
-            fx: "type",
-            title: "coauthor_age",
-            text: "coauthor_age",
-            r: 8
-        })),
-  ]
-})
-```
-
-## Raw table
-
-```js
-Inputs.table(coauthor)
-```
-
+## Coauthor table
 
 ```sql id=uniqAuthors
 SELECT DISTINCT(target) FROM coauthor
 ```
 
-```sql id=coauthor
-WITH Combined AS (
-    SELECT coauthor.type, coauthor.target, coauthor.aid, coauthor.pub_date, coauthor.pub_year, coauthor.title as coauthor_name, author.author_age as coauthor_age, 
-    FROM coauthor
-    LEFT JOIN author
-    ON coauthor.aid = author.aid AND coauthor.pub_year = author.pub_year
-    WHERE author.author_age < 25
-)
+```sql id=coauthor display
+SELECT c.type, c.pub_date, c.target, c.all_times_collabo, c.yearly_collabo, c.target_type,
+       c.title as coauthor_name, a.author_age as coauthor_age, a2.author_age,
+       (a2.author_age-a.author_age) AS age_diff
+FROM coauthor c
+LEFT JOIN author a
+ON c.aid = a.aid AND c.pub_year = a.pub_year
+LEFT JOIN author a2
+ON c.target = a2.display_name AND c.pub_year = a2.pub_year
+WHERE c.target = ${form.targets[0] === undefined ? 'Josh Bongard' : form.targets[0]} 
+```
 
-SELECT DISTINCT p.author_age_i as target_age, c.aid, c.type, c.target, c.pub_date, 
-                c.pub_year, c.coauthor_name, c.coauthor_age,
-                (c.coauthor_age - p.author_age_i) AS age_diff
+```sql id=paper
+SELECT p.type, p.target, p.aid, p.pub_date, p.pub_year, p.title, 
+       p.target_type, a.author_age, NULL AS age_diff, a.first_pub_year,
+       p.cited_by_count
 FROM paper p
-JOIN Combined c
-ON p.target = c.target AND p.pub_year = c.pub_year
-WHERE p.target = ${form.targets};
+LEFT JOIN author a
+ON p.aid = a.aid AND p.pub_year = a.pub_year
+WHERE target = ${form.targets[0] === undefined ? 'Josh Bongard' : form.targets[0]}
 ```
 
-<!-- ```js
-const selected_targets = form.targets.length > 0 ? form.targets : ['Laurent Hébert‐Dufresne'] 
-```
+<!-- HELPERS -->
 
 ```js
-trajectory([...paper_dat_multi], {form:form, width:form_hw.w, height:form_hw.h})
-```
+function plot_legend() {
+  return Plot.legend({color: {
+  fillOpacity: 0.7,
+  // range: ["orange", "lightblue", "darkred"], 
+  range: ["#FDE725FF", "#B8DE29FF", "#20A387FF", "#2D708EFF", "#404788FF"], 
+  domain: ["much younger (∞,-15)", "younger [-15, -7)", "same_age [-7, 7]", "older (7, 15]", "much older (15, ∞)"]
+  },
+  })
+}
 
-```js
-const form_hw = view(Inputs.form({
-  h: Inputs.range([800, 2000], {label: "Custom Height", step: 10, value: 1000}),
-  w: Inputs.range([800, 2500], {label: "Custom Width", step: 10, value: 1200})
-}))
-```
+function p_r(d) {
+        switch (form.p_r) {
+        case 'nb_coauthor':
+          return d.author === null ? 0 : d.author.split(", ").length;
+        case '':
+          return 0.1;
+        case 'cited_by_count':
+          return d['cited_by_count'];
+      }
+    }
 
-```sql id=paper_dat_multi
-SELECT * FROM timeline WHERE target = ${selected_targets[0]}
+function a_nc(d) {
+        switch (form.a_nc) {
+        case 'age_diff':
+          switch (true) {
+              case d.age_diff < -15 :
+                return "#404788FF"
+              case d.age_diff >= -15 && d.age_diff < -7:
+                return "#B8DE29FF"
+              case d.age_diff >= -7 && d.age_diff <= 7:
+                return "#20A387FF"
+              case d.age_diff > 7 && d.age_diff <= 15 :
+                  return "#2D708EFF" 
+              case d.age_diff > 15:
+                return "#FDE725FF"
+            };
+      }
+    }
 ```
-
-```sql id=uniqAuthors display
-SELECT DISTINCT(target) FROM timeline ORDER BY target
-```
-
-```js
-import {trajectory} from "./components/trajectory.js";
-``` -->
