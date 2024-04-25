@@ -7,7 +7,7 @@ DATA_DIR_OBS=$(FRAMEWORK_DIR)/data
 
 SCRIPT_DIR=./src
 
-TIMELINE_RESEARCHERS_PQT=$(DATA_DIR_RAW)/researchers.parquet
+TIMELINE_RESEARCHERS_TSV=$(DATA_DIR_RAW)/researchers.tsv
 
 #####################
 #                   #
@@ -30,5 +30,5 @@ data-dirs:
 	mkdir -p $(DATA_DIR_CLEAN)
 
 data: | data-dirs
-	python $(SCRIPT_DIR)/timeline_import.py -i $(TIMELINE_RESEARCHERS_PQT) \
+	python $(SCRIPT_DIR)/timeline_import.py -i $(TIMELINE_RESEARCHERS_TSV) \
 		-o $(DATA_DIR_CLEAN)

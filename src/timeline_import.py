@@ -211,14 +211,14 @@ def main():
 
     # load the input files
     assert args.input.exists(), "Input file does not exist"
-
-    target_aids = pd.read_parquet(args.input)['OpenAlex id'].dropna().tolist()
+    
+    target_aids = pd.read_csv(args.input, sep="\t")['OpenAlex id'].dropna().tolist()
 
     # load the DB
     con = duckdb.connect(str(args.output / "oa_data.db") )
 
     for target_aid in tqdm(target_aids, total=len(target_aids)):
-        # target_aid='A5012905268'
+        # target_aid=target_aids
         
         # Grab info about target author
         author_obj = Authors()[target_aid]
