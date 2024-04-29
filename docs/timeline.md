@@ -11,6 +11,21 @@ sql:
 # Scientific collab timeline dashboard
 ## How do collabs and individual productivity coevolve over time?
 
+<div class="grid grid-cols-4">
+  <div class="card">
+    <h2>Unique authors</h2>
+    <span class="big">${[...uniqAuthors].length}</span>
+  </div>
+  <div class="card">
+    <h2>Total #coauthors from ${selected_author}</h2>
+    <span class="big">${[...coauthor].length}</span>
+  </div>
+  <div class="card">
+    <h2>Total #papers from ${selected_author}</h2>
+    <span class="big">${[...paper].length}</span>
+  </div>
+</div>
+
 <div class="grid grid-cols-2">
   <div>
     <ul>
@@ -29,7 +44,6 @@ sql:
 </div>
 
 <div>
-  ${ plot_legend() }
   <div class="grid grid-cols-2">
     <div class="card">${resize((width) => plot_data(coauthor, { width }))}</div>
     <div class="card">${resize((width) => plot_data(paper, { width }))}</div>
@@ -40,7 +54,7 @@ sql:
 const formInput = Inputs.form({
   targets: Inputs.select([...uniqAuthors].map(d => d.target), { multiple: 5, label: "Author" }),
   a_nc: Inputs.select(
-    ["age_diff", "acquaintance", "shared_institutions", "institutions"], 
+    ["age_diff", "acquaintance", "shared_institutions"], 
     {label: "Select color", value: "age_diff"}
     ),
   a_r: Inputs.select(["yearly_collabo", "all_times_collabo"], {label: "Author node size", value: 'all_times_collabo'}),
@@ -52,6 +66,48 @@ const form = Generators.input(formInput);
 ```
 
 ```js
+const selected_author = form.targets[0] === undefined ? 'Laurent Hébert‐Dufresne' : form.targets[0]
+```
+
+```sql id=uniqAuthors
+SELECT DISTINCT(target) FROM coauthor ORDER BY target
+```
+
+## Coauthor table
+
+```sql id=coauthor display
+SELECT c.pub_date, c.target as ego, a2.aid, c.shared_institutions, a2.author_age as ego_age, a2.first_pub_year as ego_min_year, 
+       c.title as coauthor_name, 
+       a.pub_year,
+       a.first_pub_year as coauthor_min_year,
+       c.all_times_collabo, c.yearly_collabo, 
+       c.acquaintance,
+       a.author_age as coauthor_age,
+       (a2.author_age-a.author_age) AS age_diff,
+       c.type, c.target_type
+FROM coauthor c
+LEFT JOIN 
+  author a ON c.aid = a.aid AND c.pub_year = a.pub_year
+LEFT JOIN 
+  author a2 ON c.target = a2.display_name AND c.pub_year = a2.pub_year
+WHERE 
+  c.target = ${selected_author}  AND a.pub_year < 2024
+ORDER BY a.pub_year
+```
+## Paper table
+
+```sql id=paper display
+SELECT p.pub_date, p.pub_year, p.target, p.aid, p.title, 
+       p.cited_by_count, p.target_type, p.type
+FROM paper p
+LEFT JOIN author a
+ON p.aid = a.aid AND p.pub_year = a.pub_year
+WHERE target = ${selected_author} AND a.pub_year < 2024
+```
+
+<!-- HELPERS -->
+
+```js
 function plot_data(data, { width } = {}) {
   return Plot.plot({
     style: "overflow: visible;",
@@ -60,6 +116,7 @@ function plot_data(data, { width } = {}) {
     marginLeft: 120,
     y: { grid: true, reverse: true, inset: 50, label: null  },
     fx: { label: null, padding: 0.03, axis: "top" },
+    color: { legend: true }, 
     r: { range: [1, 10] },
     marks: [
       Plot.dot(data, Plot.dodgeX("middle", {
@@ -70,7 +127,7 @@ function plot_data(data, { width } = {}) {
         stroke: 'black', 
         strokeWidth: 0.3, 
         fillOpacity: 0.7, 
-        title: d => d.type === 'paper' ? `cited_count: ${d.cited_by_count}` : `name: ${d.coauthor_name}`,
+        title: d => d.type === 'paper' ? `title: ${d.title}\ncited_count: ${d.cited_by_count}` : `name: ${d.coauthor_name}`,
         tip: true
       })),
       Plot.text(
@@ -87,36 +144,6 @@ function plot_data(data, { width } = {}) {
 }
 ```
 
-## Coauthor table
-
-```sql id=uniqAuthors
-SELECT DISTINCT(target) FROM coauthor
-```
-
-```sql id=coauthor display
-SELECT c.type, c.pub_date, c.target, c.all_times_collabo, c.yearly_collabo, c.target_type,
-       c.title as coauthor_name, a.author_age as coauthor_age, a2.author_age,
-       (a2.author_age-a.author_age) AS age_diff
-FROM coauthor c
-LEFT JOIN author a
-ON c.aid = a.aid AND c.pub_year = a.pub_year
-LEFT JOIN author a2
-ON c.target = a2.display_name AND c.pub_year = a2.pub_year
-WHERE c.target = ${form.targets[0] === undefined ? 'Josh Bongard' : form.targets[0]} 
-```
-
-```sql id=paper
-SELECT p.type, p.target, p.aid, p.pub_date, p.pub_year, p.title, 
-       p.target_type, a.author_age, NULL AS age_diff, a.first_pub_year,
-       p.cited_by_count
-FROM paper p
-LEFT JOIN author a
-ON p.aid = a.aid AND p.pub_year = a.pub_year
-WHERE target = ${form.targets[0] === undefined ? 'Josh Bongard' : form.targets[0]}
-```
-
-<!-- HELPERS -->
-
 ```js
 function plot_legend() {
   return Plot.legend({color: {
@@ -127,7 +154,9 @@ function plot_legend() {
   },
   })
 }
+```
 
+```js
 function p_r(d) {
         switch (form.p_r) {
         case 'nb_coauthor':
@@ -138,22 +167,36 @@ function p_r(d) {
           return d['cited_by_count'];
       }
     }
+```
 
+```js
+function age_bucket(d) {
+          switch (true) {
+              case d.age_diff < -7 : 
+                return "much older (15, ∞)"
+              // case d.age_diff >= -15 && d.age_diff < -7:
+              //   return  "older (7, 15]"
+              case d.age_diff >= -7 && d.age_diff <= 7:
+                return "same_age [-7, 7]"
+              // case d.age_diff > 7 && d.age_diff <= 15 :
+              //     return "younger [-15, -7)" 
+              case d.age_diff > 7:
+                return "much younger (∞,-15)"
+            };
+  }
+```
+
+```js
 function a_nc(d) {
         switch (form.a_nc) {
         case 'age_diff':
-          switch (true) {
-              case d.age_diff < -15 :
-                return "#404788FF"
-              case d.age_diff >= -15 && d.age_diff < -7:
-                return "#B8DE29FF"
-              case d.age_diff >= -7 && d.age_diff <= 7:
-                return "#20A387FF"
-              case d.age_diff > 7 && d.age_diff <= 15 :
-                  return "#2D708EFF" 
-              case d.age_diff > 15:
-                return "#FDE725FF"
-            };
+          return age_bucket(d);
+        case 'shared_institutions': {
+          return d.shared_institutions
+        }
+        case 'acquaintance': {
+          return d.acquaintance
+        }
       }
-    }
+}
 ```
