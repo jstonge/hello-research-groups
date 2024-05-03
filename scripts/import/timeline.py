@@ -14,7 +14,6 @@ import calendar
 from collections import Counter
 from datetime import datetime
 from itertools import chain
-import json
 from pathlib import Path
 from tqdm import tqdm
 import random
@@ -22,54 +21,81 @@ import argparse
 import pandas as pd
 from pyalex import Works, Authors
 import duckdb
-import requests
 
 
-def min_pub_year(target_aid, s2orc_id=None):
+def guess_min_pub_year(target_aid):
     """
-    We find that OpenAlex often fails to get first author pub year right
+    A bit messy because we find that OpenAlex often fails to get first author pub year right.
     """
+    # target_aid, target_names = row
     # Authors for which we have manually verified their first year
     # It is important to get this right, as it determines age of target.
     # auth_known_first_yr = json.loads(open('./aid2firstyear.json', 'r').read())
     auth_known_first_yr = {
-        "A5021345205": 2007,
-        "A5037256938": 2004,
-        "A5088506012": 1988,
-        "A5017032627": 2000,
-        "A5037170969": 1950,
-        "A5027136376": 2005,
-        "A5009266404": 2005,
-        "A5046878011": 1987,
-        "A5017357771": 2007,
-        "A5040821463": 1999,
-        "A5067142016": 1995,
-        "A5012905268": 1997,
-        "A5072481660": 1993,
-        "A5085284243": 1989
+        "A5021345205": 2007,"A5037256938": 2004,"A5088506012": 1988,"A5017032627": 2000,"A5037170969": 1950,"A5027136376": 2005,"A5009266404": 2005,"A5046878011": 1987,"A5017357771": 2007,"A5040821463": 1999,"A5067142016": 1995,"A5012905268": 1997,"A5072481660": 1993,"A5085284243": 1989,"A5013608601":  2008, 'A5029940152': 2010,'A5007853190':  2006,'A5008985646':  2017,'A5005797884': 2010,
+        'A5022918698':  1997,'A5085284243': 1989,'A5034550396':  2012,'A5022747234':  2008,'A5085453531':  1984,
+        'A5028897058':  2012,'A5065860406':  1999,'A5009266404': 2006,'A5069300441': 2010,'A5016394435': 1994, 
+        'A5053585063': 1960,'A5008053111': 1998,'A5074398027':  2001,'A5025609514': 1997,'A5024921128':  2006,
+        'A5074881456':  1996,'A5051954808':  2007,'A5076633756': 1988,'A5078223816': 2002,'A5029410349':  1986,
+        'A5066274910':  2015, 'A5080623429':  2015,'A5036140974':  2006,'A5007710038': 2007, 'A5044664261': 2007, 
+        'A5014827802': 2015, 'A5072481660': 1985, 'A5055278920':  1973, 'A5069247395': 1991, 'A5027159554': 1997, "A5088141761": 1988,'A5063349034': 1999, 'A5021345205': 2007, 'A5002510411':  1984
     }
-    if auth_known_first_yr.get(target_aid.upper()):
-        return auth_known_first_yr[target_aid.upper()]
+
+    # if we knew the first year, return it
+    if auth_known_first_yr.get(target_aid):
+        return auth_known_first_yr[target_aid]
     else:
-        return Works().filter(authorships={"author": {"id": target_aid}})\
-                            .sort(publication_date="asc")\
-                            .get()[0]['publication_year']
+        # for i in range(3):
+            # max_pub_year = Works().filter(authorships={"author": {"id": target_aid}})\
+            #                         .sort(publication_date="asc")\
+            #                         .get()[0]['publication_year']
         
-    # else:
-        #!TODO: Find a way to have both oa and s2orc ID, without the ORCID. 
-        # Probably via paper, which we have DOI, then fuzzy matching on names.
-        # headers = {'x-api-key': '8mH99xWXoi60vMDfkSJtb6zVhSLiSgNP8ewg3nlZy'}
-        # s2orc_id = 46280510
-        # s2orc_url = f"https://api.semanticscholar.org/graph/v1/author/{s2orc_id}"
-        # query_params = {'fields': 'externalIds,name,papers.year'}
-        # response = requests.get(s2orc_url, params=query_params)
-        # if response.status_code == 200:
-        #     s2orc_papers = response.json()['papers']
-        #     s2orc_min_year = min([x['year'] for x in s2orc_papers if x['year'] is not None])
+        #     work_with_doi = Works().filter(authorships={"author": {"id": target_aid}}, has_doi=True)\
+        #                             .sort(publication_date="desc")\
+        #                             .get()[0]
+            
+        #     oa_max_year = work_with_doi['publication_year']
+        #     work_doi = work_with_doi['doi'].replace("https://doi.org/", "")
+        #     arxiv = work_doi.split("arxiv.")[-1]
+
+        #     # s2orc work
+        #     s2orc_url = f"https://api.semanticscholar.org/graph/v1/paper/DOI:{work_doi}"
+        #     s2orc_url = f"https://api.semanticscholar.org/graph/v1/paper/ARXIV:{arxiv}"
+        #     # headers = {'x-api-key': "8mH99xWXoi60vMDfkSJtb6zVhSLiSgNP8ewg3nlZy"}
+        #     query_params = {'fields': 'title,year,authors.name'}
+        #     response = requests.get(s2orc_url, params=query_params)
+            
+        #     if response.status_code == 200:
+        #         response.json()
+        #         break
         
-        # return max((s2orc_min_year, oa_min_year))
-        # pass
-    
+        # s2orc_paper = response.json()['authors']
+        # s2orc_id = None
+        
+        # target_names = [target_names, target_names.split(" ")[0][0]+" "+target_names.split(" ")[-1]] if isinstance(target_names, str) else target_names
+        # for a in s2orc_paper:
+        #     best_score = process.extractOne(a['name'], target_names)[1]
+        #     print(best_score, a)
+        #     if best_score > 90:
+        #         s2orc_id = a['authorId']
+        #         break
+            
+        # if s2orc_id is not None:
+        #     s2orc_url = f"https://api.semanticscholar.org/graph/v1/author/{s2orc_id}/papers?fields=year&limit=999"
+        #     query_params = {'fields': 'year'}
+        #     response = requests.get(s2orc_url)
+            
+        #     if response.status_code == 200:
+        #         s2orc_papers = response.json()['data']
+        #         s2orc_min_year = min([x['year'] for x in s2orc_papers if x['year'] is not None])
+        # else:
+        #     s2orc_min_year = math.inf
+
+    # return max(oa_min_year), oa_max_year
+        return  Works().filter(authorships={"author": {"id": target_aid}})\
+                                    .sort(publication_date="asc")\
+                                    .get()[0]['publication_year']
+       
 def most_recent_work(aid):
     return Works().filter(authorships={"author": {"id": aid}})\
                   .sort(publication_date="desc")\
@@ -79,60 +105,65 @@ def max_pub_year(aid):
         return Authors()[aid]['counts_by_year'][0]['year']
     
 def paper_db(con, aid=None):
+    # type VARCHAR,
+    # target VARCHAR,
+    # author_age DATE,
+    # author_age_i INT,
+    # institution VARCHAR,
+    # target_type VARCHAR,
     con.execute("""
         CREATE TABLE IF NOT EXISTS paper (
-            type VARCHAR,
-            target VARCHAR,
-            aid VARCHAR,
+            ego_aid VARCHAR,
+            ego_display_name VARCHAR,
             wid VARCHAR,
             pub_date DATE,
             pub_year INT,
             doi VARCHAR,
             title VARCHAR,
-            author VARCHAR,
-            author_age DATE,
-            author_age_i INT,
-            institution VARCHAR,
+            authors VARCHAR,
             cited_by_count INT,
-            target_type VARCHAR,
-            target_position VARCHAR,
-            PRIMARY KEY(aid, wid)
+            ego_position VARCHAR,
+            ego_institution VARCHAR,
+            PRIMARY KEY(ego_aid, wid)
         )
     """)
 
     if aid is not None:
-        return (con.execute("SELECT aid, wid FROM paper WHERE aid = ?", (aid,)).fetchall())
+        return (con.execute("SELECT ego_aid, wid FROM paper WHERE ego_aid = ?", (aid,)).fetchall())
 
-def coauthor_db(con, name=None):
+def coauthor_db(con, aid=None):
+    # type VARCHAR,
+    # target VARCHAR,
+    # author_age DATE,
+    # title VARCHAR,
+    # institution VARCHAR,
+    # target_type VARCHAR,
     con.execute("""
         CREATE TABLE IF NOT EXISTS coauthor (
-            type VARCHAR,
-            target VARCHAR,
+            ego_aid VARCHAR,
             pub_date DATE,
             pub_year INT,
-            author_age DATE,
-            title VARCHAR,
-            aid VARCHAR,
+            coauthor_aid VARCHAR,
+            coauthor_name VARCHAR,
             acquaintance VARCHAR,
             yearly_collabo INT,
             all_times_collabo INT,
             shared_institutions VARCHAR,
-            institution VARCHAR,
-            target_type VARCHAR,
-            PRIMARY KEY(target, title, pub_year)
+            coauthor_institution VARCHAR,
+            PRIMARY KEY(ego_aid, coauthor_aid, pub_year)
         )
     """)
     
-    if name is not None:
-        return (con.execute("SELECT target, title, pub_year FROM coauthor WHERE target = ?", (name,)).fetchall())
+    if aid is not None:
+        return (con.execute("SELECT ego_aid, coauthor_aid, pub_year FROM coauthor WHERE ego_aid = ?", (aid,)).fetchall())
 
 def author_info_db(con):
     con.execute("""
         CREATE TABLE IF NOT EXISTS author_tidy (
-            display_name VARCHAR,
             aid VARCHAR,
-            pub_year INT,
+            display_name VARCHAR,
             institution VARCHAR,
+            pub_year INT,
             first_pub_year INT,
             last_pub_year INT,
             author_age INT,
@@ -173,8 +204,8 @@ def get_pub_year_shuffled():
     pass
 
 def range_db(con, aid):
-    query_min = "SELECT pub_date FROM paper WHERE aid = ? ORDER BY pub_date DESC LIMIT 1"
-    query_max = "SELECT pub_date FROM paper WHERE aid = ? ORDER BY pub_date ASC LIMIT 1"
+    query_min = "SELECT pub_date FROM paper WHERE ego_aid = ? ORDER BY pub_date DESC LIMIT 1"
+    query_max = "SELECT pub_date FROM paper WHERE ego_aid = ? ORDER BY pub_date ASC LIMIT 1"
     min_db = con.execute(query_min, (aid,)).fetchall()
     max_db = con.execute(query_max, (aid,)).fetchall()
     if len(min_db) > 0 and len(max_db) > 0:
@@ -212,23 +243,28 @@ def main():
     # load the input files
     assert args.input.exists(), "Input file does not exist"
     
+    # target_aids = pd.read_csv("../../data/raw/researchers.tsv", sep="\t")['OpenAlex id'].dropna().str.upper().unique().tolist()
     target_aids = pd.read_csv(args.input, sep="\t")['OpenAlex id'].dropna().tolist()
 
+
     # load the DB
+    # con = duckdb.connect("../../data/raw/oa_data_raw.db")
     con = duckdb.connect(str(args.output / "oa_data.db") )
 
     for target_aid in tqdm(target_aids, total=len(target_aids)):
-        # target_aid=target_aids
+        # target_aid=target_aids[1]
         
         # Grab info about target author
         author_obj = Authors()[target_aid]
         target_name = author_obj['display_name']
-        min_yr = min_pub_year(target_aid)
-        max_yr = author_obj['counts_by_year'][0]['year']
-
+        # target_names = [author_obj['display_name']] + author_obj['display_name_alternatives']
+        min_yr = guess_min_pub_year(target_aid)
+        max_yr = max_pub_year(target_aid)
+        
         # Create cache DB if not exists, else return the cache
         cache_paper = paper_db(con, target_aid)
         cache_coauthor = coauthor_db(con, target_name)
+        author_info_db(con)
 
         if is_db_up_to_date(con, target_aid, min_yr):
             print(f"{target_name} is up to date")
@@ -310,21 +346,22 @@ def main():
                 
                 if (target_aid, wid) not in cache_paper:
                     papers.append({
-                        'type': 'paper',
-                        'target': target_name,
-                        'aid': target_aid,
+                        # 'type': 'paper',
+                        # 'target': target_name,
+                        'ego_aid': target_aid,
+                        'ego_display_name': target_name,
                         'wid': wid,
                         'pub_date': shuffled_date,
                         'pub_year': int(w['publication_year']),
                         'doi': w['ids']['doi'] if 'doi' in w['ids'] else None,
                         'title': w['title'],
-                        'author': ', '.join([_['author']['display_name'] for _ in w['authorships']]),
-                        'author_age': shuffled_auth_age,
-                        'author_age_i': yr2age[yr],
-                        'institution': target_institution,
+                        'authors': ', '.join([_['author']['display_name'] for _ in w['authorships']]),
+                        # 'author_age': shuffled_auth_age,
+                        # 'author_age_i': yr2age[yr],
                         'cited_by_count': w['cited_by_count'],
-                        'target_type': target_name + '-paper',
-                        'target_position': target_position
+                        # 'target_type': target_name + '-paper',
+                        'ego_position': target_position,
+                        'ego_institution': target_institution
                     })
 
             set_collabs_of_collabs_never_worked_with.update(
@@ -364,19 +401,19 @@ def main():
                             shared_inst = max_institution
 
                     coauthors.append({
-                        'type': 'coauthor',
-                        'target': target_name,
+                        # 'type': 'coauthor',
+                        'ego_aid': target_aid,
                         'pub_date': author_date,  
                         'pub_year': int(author_date[0:4]),  # Use one of the dates from this year's papers
-                        'author_age': shuffled_auth_age,
-                        'title': coauthor_name,
-                        'aid': coauthName2aid[coauthor_name],
+                        # 'author_age': shuffled_auth_age,
+                        'coauthor_aid': coauthName2aid[coauthor_name],
+                        'coauthor_name': coauthor_name,
                         'acquaintance': subtype,
                         'yearly_collabo': coauthor_data['count'],  
                         'all_times_collabo': all_time_collabo[coauthor_name],  
                         'shared_institutions': shared_inst,
-                        'institution': max_institution,
-                        'target_type': target_name+"-"+'coauthor'
+                        'coauthor_institution': max_institution
+                        # 'target_type': target_name+"-"+'coauthor'
                         })           
 
 
@@ -394,64 +431,66 @@ def main():
                 publication_year_cache[aid] = (min_year, max_year)
 
 
-        # Function to get min and max publication years, with caching and API fallback
-        def get_publication_years(aid):
-            if aid not in publication_year_cache:
-                min_year = min_pub_year(aid)  # API call assumed
-                max_year = max_pub_year(aid)  # API call assumed
-                publication_year_cache[aid] = (min_year, max_year)
-            return publication_year_cache[aid]
-
-
         # TABLE 1: PAPER
-        
         if len(papers) > 0:   
-            con.executemany( """
-                    INSERT INTO paper
-                    (type, target, aid, wid, pub_date, pub_year, doi, title, author, author_age, author_age_i, institution, cited_by_count, target_type, target_position)
-                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-            """, [list(_.values()) for _ in papers])
+                con.executemany( """
+                        INSERT INTO paper
+                        (ego_aid, ego_display_name, wid, pub_date, pub_year, doi, title, authors, cited_by_count, ego_position, ego_institution)
+                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                """, [list(_.values()) for _ in papers])
 
         # TABLE 2 COAUTHORS
-       
+        
         if len(coauthors) > 0:        
             con.executemany( """
                     INSERT INTO coauthor
-                    (type, target, pub_date, pub_year, author_age, title, aid, acquaintance, yearly_collabo, all_times_collabo, shared_institutions, institution, target_type)
-                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, )
+                    (ego_aid, pub_date, pub_year, coauthor_aid, coauthor_name, acquaintance, yearly_collabo, all_times_collabo, shared_institutions, coauthor_institution)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             """, [list(_.values()) for _ in coauthors])
 
         # TABLE 3:AUTHOR INFO
         
         if len(papers) > 0 and len(coauthors) > 0:
+            
             dedup_author_df = pd.concat([
-                pd.DataFrame(papers)[['target', 'aid', 'pub_year', 'institution']], 
-                pd.DataFrame(coauthors).loc[:,['title', 'aid', 'pub_year', 'institution']]\
-                                       .rename(columns={'title': 'target'})], 
-            axis=0).drop_duplicates()
+                pd.DataFrame(papers)[['ego_aid', 'ego_display_name', 'ego_institution', 'pub_year']], 
+                pd.DataFrame(coauthors).loc[:,['coauthor_aid', 'coauthor_name', 'coauthor_institution', 'pub_year']].rename(columns={'coauthor_aid': 'ego_aid', 'coauthor_name': 'ego_display_name', 'coauthor_institution': 'ego_institution'})
+                ], axis=0).drop_duplicates()
             
             # Cache for storing publication years
             publication_year_cache = {}
             preload_publication_years()
 
-            data_batch = []
-            for _, group in tqdm(dedup_author_df.groupby('aid')):
-                for _, row in group.iterrows():
-                    display_name, aid, pub_year, inst = row['target'], row['aid'], int(row['pub_year']), row['institution']
+            uniqAuthors = dedup_author_df[['ego_aid', 'ego_display_name']].drop_duplicates()
+            failedAuthors = []
+            for _, row in tqdm(uniqAuthors.iterrows(), total=uniqAuthors.shape[0]):
+                
+                try:       
+                    if row['ego_display_name'] == target_name:
+                        publication_year_cache[row['ego_aid']] = (min_yr, max_yr)
+                    
+                    elif row['ego_aid'] not in publication_year_cache:
+                        min_year = guess_min_pub_year(row['ego_aid']) 
+                        max_year = max_pub_year(row['ego_aid']) 
+                        publication_year_cache[row['ego_aid']] = (min_year, max_year)
+                    
+                
+                except: # we just ignore that for now
+                        print(f"{row['ego_aid']} failed to have range of year")
+                        failedAuthors.append(row['ego_aid'])
+                        pass    
+            
+            # for now we are getting rid of peolpe we can't get the first year. We might regret that
+            dedup_author_df = dedup_author_df[~dedup_author_df.ego_aid.isin(failedAuthors)]
 
-                    try:
-                        # costly bit right now; we need to call twice the API to get min, max for each target coauthors
-                        # since we are caching the results, this will get faster overtime.
-                        min_year, max_year = get_publication_years(aid)
-                        author_age = pub_year - min_year
-                        data_batch.append((display_name, aid, pub_year, inst, min_year, max_year, author_age))
-                    except: # very rarely it fails, just ignore it
-                        print(f"{display_name} failed to have range of year")
-                        pass
+            dedup_author_df[['first_pub_year', 'last_pub_year']] = dedup_author_df['ego_aid'].apply(
+                    lambda x: pd.Series(publication_year_cache.get(x, (None, None)))
+                )
+            dedup_author_df['author_age'] = dedup_author_df.pub_year - dedup_author_df.first_pub_year
 
             query = """
                 INSERT INTO author_tidy
-                (display_name, aid, pub_year, institution, first_pub_year, last_pub_year, author_age)
+                (aid, display_name, institution, pub_year, first_pub_year, last_pub_year, author_age)
                 VALUES (?, ?, ?, ?, ?, ?, ?)
                 ON CONFLICT (aid, pub_year) DO UPDATE SET
                 display_name = EXCLUDED.display_name,
@@ -460,7 +499,8 @@ def main():
                 last_pub_year = EXCLUDED.last_pub_year,
                 author_age = EXCLUDED.author_age
             """
-            con.executemany(query, data_batch)
+            
+            con.executemany(query, dedup_author_df.values.tolist())
         
 
     # Commit and close DB connection
@@ -468,61 +508,63 @@ def main():
     con.close()
 
 
-    # Manually fixing some first publication year values
-    # con = duckdb.connect("../docs/data/oa_data.db")
-
-    # def replace_new_min_year(con, aid, name, new_min_year):
-        
-    #     con.sql(f"UPDATE author_tidy SET first_pub_year={new_min_year} WHERE aid = '{aid}'")
-        
-    #     con.sql(f"DELETE FROM author_tidy WHERE aid = '{aid}' AND pub_year < {new_min_year}")
-    #     con.sql(f"DELETE FROM author_tidy WHERE display_name = '{name}' AND pub_year < {new_min_year}")
-        
-    #     con.sql(f"DELETE FROM paper WHERE aid = '{aid}' AND pub_year < {new_min_year}")
-    #     con.sql(f"DELETE FROM paper WHERE target = '{name}' AND pub_year < {new_min_year}")
-        
-    #     con.sql(f"DELETE FROM coauthor WHERE aid = '{aid}' AND pub_year < {new_min_year} ")
-    #     con.sql(f"DELETE FROM coauthor WHERE target = '{name}' AND pub_year < {new_min_year}")
-        
-    #     # update age
-    #     con.sql(f"UPDATE author_tidy SET author_age = pub_year-first_pub_year WHERE aid = '{aid}'")
-        
-    #     con.sql("")
-    #     # con.sql(f"UPDATE paper SET author_age = pub_year-first_pub_year WHERE display_name = '{name}'")
-        
-    #     con.commit()
-    
-    # replace_new_min_year(con, "A5021345205", "F. Guillaume Blanchet", 2007)
-    # replace_new_min_year(con, "a5021345205", "F. Guillaume Blanchet", 2007)
-    # replace_new_min_year(con, "A5067142016", "M. E. J. Newman", 1995)
-    # replace_new_min_year(con, "A5012905268", "Réka Albert", 1997)
-
-    # delete lwoer case
-    # con.sql("DELETE FROM author_tidy WHERE aid = 'a5012905268'")
-    # con.commit()
-
-    # def clean_db_from(con, aid, name):
-
-    #     con.execute("DELETE FROM paper WHERE aid = ?", (aid,))
-    #     con.execute("DELETE FROM paper WHERE target = ?", (name,))
-        
-    #     # In coauthor table it, we just get rid of the target rows
-    #     # We don't want to remove that persons from the coauthorship of others.
-    #     con.execute("DELETE FROM coauthor WHERE target = ?", (name,))
-        
-    #     # In author_tidy, we remove all all rows for that person
-    #     con.execute("DELETE FROM author_tidy WHERE aid = ?", (aid,))
-    #     con.execute("DELETE FROM author_tidy WHERE display_name = ?", (name,))
-        
-    #     con.commit()
-
-    # clean_db_from(con, 'A5000679279', 'Duncan J. Watts')
-    # clean_db_from(con, 'A5012905268', 'Réka Albert')
-            
-    # con.close()
-
 
 
 if __name__ == "__main__":
 
     main()
+
+
+
+
+# THRASH
+# def replace_new_min_year(con, aid, name, new_min_year):
+    
+#     con.sql(f"UPDATE author_tidy SET first_pub_year={new_min_year} WHERE aid = '{aid}'")
+    
+#     con.sql(f"DELETE FROM author_tidy WHERE aid = '{aid}' AND pub_year < {new_min_year}")
+#     con.sql(f"DELETE FROM author_tidy WHERE display_name = '{name}' AND pub_year < {new_min_year}")
+    
+#     con.sql(f"DELETE FROM paper WHERE aid = '{aid}' AND pub_year < {new_min_year}")
+#     con.sql(f"DELETE FROM paper WHERE target = '{name}' AND pub_year < {new_min_year}")
+    
+#     con.sql(f"DELETE FROM coauthor WHERE aid = '{aid}' AND pub_year < {new_min_year} ")
+#     con.sql(f"DELETE FROM coauthor WHERE target = '{name}' AND pub_year < {new_min_year}")
+    
+#     # update age
+#     con.sql(f"UPDATE author_tidy SET author_age = pub_year-first_pub_year WHERE aid = '{aid}'")
+    
+#     con.sql("")
+#     # con.sql(f"UPDATE paper SET author_age = pub_year-first_pub_year WHERE display_name = '{name}'")
+    
+#     con.commit()
+
+# replace_new_min_year(con, "A5021345205", "F. Guillaume Blanchet", 2007)
+# replace_new_min_year(con, "A5021345205", "F. Guillaume Blanchet", 2007)
+# replace_new_min_year(con, "a5021345205", "F. Guillaume Blanchet", 2007)
+# replace_new_min_year(con, "A5067142016", "M. E. J. Newman", 1995)
+# replace_new_min_year(con, "A5012905268", "Réka Albert", 1997)
+
+# delete lwoer case
+# con.sql("DELETE FROM author_tidy WHERE aid = 'a5012905268'")
+# con.commit()
+
+# def clean_db_from(con, aid, name):
+
+#     con.execute("DELETE FROM paper WHERE aid = ?", (aid,))
+#     con.execute("DELETE FROM paper WHERE target = ?", (name,))
+    
+#     # In coauthor table it, we just get rid of the target rows
+#     # We don't want to remove that persons from the coauthorship of others.
+#     con.execute("DELETE FROM coauthor WHERE target = ?", (name,))
+    
+#     # In author_tidy, we remove all all rows for that person
+#     con.execute("DELETE FROM author_tidy WHERE aid = ?", (aid,))
+#     con.execute("DELETE FROM author_tidy WHERE display_name = ?", (name,))
+    
+#     con.commit()
+
+# clean_db_from(con, 'A5000679279', 'Duncan J. Watts')
+# clean_db_from(con, 'A5012905268', 'Réka Albert')
+        
+# con.close()
