@@ -1,1 +1,1 @@
-duckdb data/clean/oa_data.db -c "COPY paper TO STDOUT WITH (FORMAT CSV);"
+duckdb data/clean/oa_data_raw.db -c "COPY paper TO STDOUT WITH (FORMAT CSV);"
