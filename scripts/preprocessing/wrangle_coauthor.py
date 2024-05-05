@@ -39,10 +39,12 @@ def shuffle_date_within_month(date_str):
 
 def main():
     
-    # args = parse_args()
+    args = parse_args()
     
-    con = duckdb.connect("../../data/raw/oa_data_raw.db")
-    # con = duckdb.connect(args.input / "oa_data.db")
+    # INPUT_DIR = Path("../../data/raw")
+    INPUT_DIR = args.input
+    
+    con = duckdb.connect(str(INPUT_DIR / "oa_data_raw.db"))
     
     # We want a table with ego (selected author under analysis), its coauthors, and 
     # metadata about their relationship (do they share institutions? How many times they
@@ -107,8 +109,8 @@ def main():
     df["age_std"] = "1"+df.author_age.astype(str).map(lambda x: x.zfill(3))+"-"+df.pub_date.map(lambda x: "-".join(x.split("-")[-2:]))
     df["age_std"] = df.age_std.map(lambda x: x.replace("29", "28") if x.endswith("29") else x)  
     
-    df.to_parquet("../../data/processed/coauthor_augmented.parquet")
-    df.to_parquet("../../docs/data/coauthor_augmented.parquet")
+    # df.to_parquet("../../data/processed/coauthor_augmented.parquet")
+    df.to_csv (args.output / "coauthor.csv", index=False)
     
     con.close()
 

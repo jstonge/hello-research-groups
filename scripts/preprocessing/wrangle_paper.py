@@ -22,12 +22,17 @@ def main():
     
     args = parse_args()
     
-    con = duckdb.connect("../../data/raw/oa_data_raw.db")
+    # INPUT_DIR = Path("../../data/raw")
+    INPUT_DIR = args.input
+    # OUTPUT_DIR = Path("../../data/processed")
+    OUTPUT_DIR = args.output
+    
+    con = duckdb.connect(str(INPUT_DIR / "oa_data_raw.db"))
 
     query = """
         SELECT p.ego_aid, a.display_name as name, p.pub_date, p.pub_year, p.title,
-               p.cited_by_count, p.doi, p.wid, 
-               a.author_age as ego_age, a.pub_year as pub_year2
+               p.cited_by_count, p.doi, p.wid, p.authors, p.work_type, 
+               a.author_age as ego_age
         FROM paper p
         LEFT JOIN author_tidy a ON p.ego_aid = a.aid AND p.pub_year = a.pub_year
     """
@@ -35,31 +40,33 @@ def main():
 
     df = con.sql(query).fetchdf()
 
-    # DROP PAPERS W/O TITLE
+    # Drop papers without title
     df = df[~df.title.isna()]
 
-    # deduplicate papers by title and aid.
+    # Deduplicate papers by title and aid.
     # We grab the most recent papers.
     df = df.sort_values("pub_date", ascending=False).reset_index(drop=True)
-    # df = df.query("ego_aid == 'A5065482485'")
     df['title'] = df.title.str.lower()
     df = df[~df[['ego_aid', 'title']].duplicated()]
 
-    # DROP PAPERS WITH "TABLE" IN TITLE
-    df = df[~df.title.str.contains("Table", case=False)]
+    # Filter based on work type
+    ACCEPTED_WORK_TYPES = ['article', 'preprint', 'book-chapter', 'book', 'report']
+    df = df[df.work_type.isin(ACCEPTED_WORK_TYPES)]
+
+    # Works mislabelled as article
+    df = df[~df.title.str.contains("^Table", case=False)]
     df = df[~df.title.str.contains("Appendix", case=False)]
-    df = df[~df.title.str.contains("Issue Information", case=False)]
     df = df[~df.title.str.contains("Issue Cover", case=False)]
-    df = df[~df.title.str.contains("Peer Review", case=False)]
     df = df[~df.title.str.contains("This Week in Science", case=False)]
     df = df[~df.title.str.contains("^Figure ", case=False)]
     df = df[~df.title.str.contains("^Data for ", case=False)]
     df = df[~df.title.str.contains("^Author Correction: ", case=False)]
     df = df[~df.title.str.contains("supporting information", case=False)]
 
-    df.to_parquet("../../data/processed/paper_tidy.parquet")
-    df.to_parquet("../../docs/data/paper_tidy.parquet")
-
+    df['nb_coauthors'] = df.authors.map(lambda x: len(x.split(", ")))
+    
+    df.to_csv(OUTPUT_DIR / "paper.csv", index=False)
+    
     con.close()
     
 if __name__ == "__main__":

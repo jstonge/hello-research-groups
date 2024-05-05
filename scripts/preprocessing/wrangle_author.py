@@ -23,7 +23,8 @@ def main():
     
     args = parse_args()
     
-    con = duckdb.connect("../../data/raw/oa_data_raw.db")
+    # con = duckdb.connect("../../data/raw/oa_data_raw.db")
+    con = duckdb.connect(str(args.input / "oa_data_raw.db"))
 
     query = """
         SELECT * FROM author_tidy
@@ -36,5 +37,9 @@ def main():
     
     df["age_std"] = "1"+df.author_age.astype(str).map(lambda x: x.zfill(3))+"-"+gen_fill_char(1, 12)+"-"+gen_fill_char(1, 28)
     
-    df.to_parquet("../../data/processed/author_tidy.parquet")
-    df.to_parquet("../../docs/data/author_tidy.parquet")
+    df.to_csv(args.output / "author.csv", index=False)
+    
+    con.close()
+
+if __name__ == "__main__":
+    main()
