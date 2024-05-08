@@ -109,8 +109,9 @@ def main():
     df["age_std"] = "1"+df.author_age.astype(str).map(lambda x: x.zfill(3))+"-"+df.pub_date.map(lambda x: "-".join(x.split("-")[-2:]))
     df["age_std"] = df.age_std.map(lambda x: x.replace("29", "28") if x.endswith("29") else x)  
     
-    # df.to_parquet("../../data/processed/coauthor_augmented.parquet")
-    df.to_csv (args.output / "coauthor.csv", index=False)
+    # df.to_parquet("../../data/processed/coauthor.parquet")
+    # df.to_csv (args.output / "coauthor.csv", index=False)
+    df.to_parquet (args.output / "coauthor.parquet")
     
     con.close()
 

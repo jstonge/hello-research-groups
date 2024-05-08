@@ -20,3 +20,5 @@ scripts/models/Week_9_Poisson_regression.ipynb
 
 scripts/models/stan/
 !scripts/models/stan/*.stan
+data/clean/
+data/oa_data_raw_copy.db

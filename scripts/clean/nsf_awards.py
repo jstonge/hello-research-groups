@@ -123,8 +123,8 @@ def get_award_df(fname):
     return df
 
 def main():
-    input_dir = Path("../../import/output")
-    output_dir = Path("../output")
+    input_dir = Path("../../data/raw/nsf_awards/")
+    output_dir = Path("../../docs/data/")
     fnames = list(input_dir.glob("*.zip"))
     dfs = []
     for fname in tqdm(fnames, total=len(fnames)):
@@ -133,7 +133,13 @@ def main():
     
     all_df = pd.concat(dfs, axis=0).reset_index(drop=True)
     all_df = all_df[all_df['EU_contribution'].astype(float) > 0]
+
+    cols2keep = ['Call_Year', 'Grant_Type', 'EU_contribution' , 'Institution_StateName', 'Project_Title', 'Researcher(s)', 'Domain', 'Host_Institution(s)', 'Institution_CityName']
     
+    all_df = all_df[cols2keep]
+
+    all_df = all_df[(all_df.Call_Year > 1960) & all_df.Call_Year < 2024]
+
     all_df.to_parquet(output_dir / "nsf_awards.parquet")
         
 

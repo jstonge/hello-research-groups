@@ -35,18 +35,18 @@ def main():
     OUTPUT_DIR = args.output
     ROOT_DIR = Path(__file__).resolve().parents[2]
     
-    dat = pd.read_csv(INPUT_DIR / 'training_data.csv')
+    dat = pd.read_parquet(INPUT_DIR / 'training_data.parquet')
 
-    
     stan_file = os.path.join(ROOT_DIR, 'scripts', 'models', 'stan', 'change_point02.stan')
     model = CmdStanModel(stan_file=stan_file)
 
     out={}
     for name in dat.name.unique():
-        # name=dat.name.unique()[45]
+        # name=dat.name.unique()[23]
         dat_author = dat[dat['name'] == name]
         
         # sns.scatterplot(x='pub_year', y='younger', data=dat_author)
+        # sns.lineplot(x='pub_year', y='younger', data=dat_author)
 
         nb_collabs = dat_author.younger.astype(int)
         years = dat_author.pub_year.tolist()
@@ -76,7 +76,7 @@ def main():
         
         dat['changing_rate'] = dat.apply(lambda row: out.get((row['name'], row['pub_year']), None), axis=1)
 
-    dat.to_csv(OUTPUT_DIR / 'training_data.csv', index=False)
+    dat.to_parquet(OUTPUT_DIR / 'training_data.parquet', index=False)
 
 if __name__ == "__main__":
     main()

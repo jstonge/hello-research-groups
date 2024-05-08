@@ -36,3 +36,25 @@ dag2 <- dagitty("dag {
 coordinates(dag2) <- list( x=c(CollabNorms=1,GroupSize=1,Gender=1,Dept=0,CompTheoryWork=2,CompDataWork=2) , y=c(CollabNorms=3,GroupSize=2,Gender=0,Dept=1,CompTheoryWork =1.5, CompDataWork=0.5) ) 
 drawdag( dag2)
 dev.off()
+
+
+pdf(file="etc/dag3.pdf", width=4, height=5)
+dag3 <- dagitty("dag { 
+    Gender -> CompTheoryWork  
+    Gender -> CompDataWork  
+    Gender -> Dept
+    Dept -> CompTheoryWork  
+    Dept -> CompDataWork  
+    Dept -> GroupSize
+    Dept -> CollabNorms
+    CompTheoryWork -> GroupSize
+    CompDataWork -> GroupSize
+    CompTheoryWork -> CollabNorms
+    CompDataWork -> CollabNorms
+    GroupSize -> CollabNorms
+    LaborAdv -> GroupSize
+    LaborAdv -> CollabNorms
+}")
+coordinates(dag3) <- list( x=c(LaborAdv=2, CollabNorms=1,GroupSize=1,Gender=1,Dept=0,CompTheoryWork=2,CompDataWork=2) , y=c(LaborAdv=2.5, CollabNorms=3,GroupSize=2,Gender=0,Dept=1,CompTheoryWork =1.5, CompDataWork=0.5) ) 
+drawdag( dag3)
+dev.off()

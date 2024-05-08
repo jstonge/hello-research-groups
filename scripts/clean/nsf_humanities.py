@@ -4,7 +4,7 @@ from pathlib import Path
 
 def main():
     input_dir = Path("../../data/raw/nsf_humanities")
-    output_dir = Path("../../data/clean/")
+    output_dir = Path("../../docs/data")
     fnames = list(input_dir.glob("*.parquet"))
     dfs = []
     for fname in fnames:
@@ -21,16 +21,17 @@ def main():
     all_df[['start_date', 'end_date']] = all_df.award_period.str.split("-", expand=True)
     all_df['start_date'] = pd.to_datetime(all_df['start_date'])
     
-    # useful columns
-    all_df['pub_year'] = all_df['start_date'].dt.year
 
     all_df['approved_award_total'] = all_df.approved_award_total.str.replace("(\$|,|\.)", "", regex=True).astype(int)
 
-    all_df.value_counts('pub_year', ascending=True).sort_index().plot()
+    all_df['year_awarded'] = all_df.year_awarded.astype(int)
+
+    # all_df.value_counts('pub_year', ascending=True).sort_index().plot()
     
-    all_df['nsf_name'] = all_df.project_director_first_name + " " + all_df.project_director_middle_name + " " + all_df.project_director_last_name 
+    cols2keep = ['grant_program_name', 'award_recipient', 'project_title', 'year_awarded', 'approved_award_total', 'division_or_office', 'primary_humanities_discipline']
 
-
+    all_df = all_df[cols2keep]
+    all_df = all_df[(all_df.year_awarded > 1960) & (all_df.year_awarded < 2024)]
     all_df.to_parquet(output_dir / "nsf_humanities.parquet")
         
 

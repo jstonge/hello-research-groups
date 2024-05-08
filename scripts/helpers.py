@@ -115,3 +115,13 @@ def clean_db_from(con, aid, name):
     con.execute("DELETE FROM author_tidy WHERE display_name = ?", (name,))
     
     con.commit()
+
+
+def generate_neh_query(
+    code="", 
+    yr=0, 
+    ob="Institution name", 
+    xor="ASC"
+    ):
+    query = f"https://apps.neh.gov/PublicQuery/Default.aspx?q=1&a=0&n=0&o=0&ot=0&k=0&f=0&s=1&sv={code}&cd=0&p=0&d=0&at=1&atv=2&y=1&yf={yr}&yt={yr+1}&prd=0&cov=0&prz=0&wp=0&sp=0&ca=0&arp=0&ob={ob}&or={xor}"
+    return query.strip()

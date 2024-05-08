@@ -65,7 +65,7 @@ def main():
 
     df['nb_coauthors'] = df.authors.map(lambda x: len(x.split(", ")))
     
-    df.to_csv(OUTPUT_DIR / "paper.csv", index=False)
+    df.to_parquet(OUTPUT_DIR / "paper.parquet")
     
     con.close()
     

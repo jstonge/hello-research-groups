@@ -1,291 +1,298 @@
-oa_display_name	is_prof	group_size	perceived_as_male	host_dept (; delimited if more than one)	has_research_group	OpenAlex id	group_url
-A. Ross Otto	1.0	17.0	1.0	Psychology	1.0	a5034124363	https://ottolab.persona.co/People
-Aaron Clauset	1.0		1.0	Computer Science	1.0	A5014647140	https://aaronclauset.github.io/labgroup.htm
-Abigail Crocker	1.0		0.0	Mathematics and Statistics	0.0	A5063968442	
-Adam K. Anderson	1.0		1.0	Human Development	1.0	A5018443530	http://aclab.human.cornell.edu/People.html
-Aditya Parameswaran	1.0		0.0	School of Information; Electrical Engineering and Computer Sciences	1.0	A5013608601	
-Alain Paquette	1.0		1.0	Biology	1.0	A5007853190	https://paqlab.uqam.ca/about-Members.php?lang=fr
-Albert László Barabási	1.0		1.0	Computer science; Information Science	1.0	A5025323154	https://www.barabasilab.com/science/about
-Àlex Arenas	1.0		1.0	Computer Engineering and Mathematics	1.0	A5027588100	
-Alicia Beckford Wassink	1.0	12.0	0.0	Linguistics	1.0	a5038253928	https://depts.washington.edu/sociolab/labmembers/currentmembers.php
-Alicia M. Ebert	1.0		0.0	Biology	1.0	a5070253378	https://blog.uvm.edu/amebert/people/
-Alison K. Brody	1.0		0.0	Biology	1.0	A5074708105	http://www.akbrody.com/lab%20members.html
-Allan H. Bell	1.0	2.0	1.0	anthropology	1.0	a5030960110	https://adrianbell.wordpress.com/students/
-Amber L. Doiron	1.0		0.0	Electrical and Biomedical Engineering	1.0	a5016061803	https://site.uvm.edu/bnb/
-Amos Maritan	1.0		1.0	Physics	1.0	A5076985100	https://www.liphlab.com/#people
-Anaka Aiyar	1.0		0.0	Community Development and Applied Economics	0.0	A5008985646	
-Anand A. Joshi	1.0	14.0	1.0	Electrical & Computer Engineering	1.0	a5048206294	https://neuroimage.usc.edu/neuro/Members
-Andrea J. Etter	1.0		0.0	Nutrition and Food Sciences	1.0	a5074355050	https://www.researchgate.net/lab/Andrea-J-Etter-Lab
-Andrew Barnaby	1.0		1.0	English	0.0	A5065482485	
-Antoine Allard	1.0		1.0	Physics	1.0	A5027136376	https://antoineallard.github.io/#team
-Appala Raju Badireddy	1.0		1.0	Civil and Environmental Engineering	1.0	A5037146310	https://arbadireddy.wixsite.com/uvmcee/members
-Arne Bomblies	1.0		1.0	Civil and Environmental Engineering	0.0	A5085014912	
-Ashton Anderson	1.0	13.0	1.0	Computer Science	1.0	a5048789742	http://csslab.cs.toronto.edu/people/
-Asim Zia	1.0		1.0	Community Development and Applied Economics	1.0	A5022918698	https://www.uvm.edu/segs/
-Avideh Zakhor	1.0		0.0	Electrical Engineering & Computer Sciences	1.0	A5008034417	http://www-video.eecs.berkeley.edu/people.shtml
-Barbara Arel	1.0		0.0	Grossman School of Business	0.0	A5014963201	
-Bernard F. Cole	1.0		1.0	College of Engineering and Mathematical Sciences	0.0	A5033544452	
-Bertram Gawronski	1.0		1.0	Psychology	1.0	A5069999624	https://www.bertramgawronski.com/people.htm
-Beth Kirkpatrick	1.0		0.0	Microbiology and Molecular Genetics	1.0	A5010472783	https://www.med.uvm.edu/tgircobre/home
-Brennan Klein	1.0		1.0	Network Science Institute	1.0	A5034550396	https://brennanklein.com/and-lab
-Brian A. Barsky	1.0		1.0	Electrical Engineering and Computer Sciences	1.0	A5046623635	https://barskygroup.wixsite.com/home
-Brian Beckage	1.0		1.0	Computer Science	1.0	A5064679606	https://brianbeckage.github.io/lab.html
-Brian Cunniff	1.0		1.0	Pathology and Laboratory Medicine	1.0	A5085980410	http://www.med.uvm.edu/cunnifflab/labmembers
-Brian Paciotti	1.0		1.0	Public health Sciences	0.0	a5057206436	
-Brian Tivnan	1.0		1.0	Mathematics & Statistics	1.0	A5050883332	https://www.compfi.org
-Brooke Foucault Welles	1.0		0.0	Communication Studies; Network Science Institute	1.0	A5047517174	https://www.networkscienceinstitute.org/commlab/team
-Bryce J. Dietrich	1.0	21.0	1.0	Political Science	1.0	a5035926041	https://www.cla.purdue.edu/academic/polsci/research/labs/computational-social-science-lab/people.html
-Caitlin J. Light	1.0		0.0	Cell and Molecular Biology	1.0	A5086092493	https://sites.google.com/binghamton.edu/lightlab/people?authuser=0
-Caroline Beer	1.0		0.0	Political Science	0.0	A5058128585	
-Carolyn M. Bonifield	1.0		0.0	Business	0.0	A5029861842	
-Cassidy R. Sugimoto	1.0		0.0	Public Policy	1.0	A5029483412	
-Catherine D’Ignazio	1.0	19.0	0.0	Urban Studies and Planning	1.0	a5050163961	https://dataplusfeminism.mit.edu/
-Catherine E. Clark	1.0		0.0	History and French Studies	0.0	a5089307248	
-Cathy J. Price	1.0		0.0	Cognitive Neuroscience	1.0	A5085284243	
-Cecilia Danks	1.0		0.0	Environment and Natural Resources	0.0	a5016511835	
-Chaoqun Ni	1.0		0.0	Information School	1.0	A5022747234	https://metasci.ischool.wisc.edu/members.html
-Charles Efferson	1.0	14.0	1.0	Business and Economics	1.0	a5076982741	http://pacelab.org/people/
-Christian Lambert	1.0		1.0	Neuroscience	1.0	A5028897058	
-Christophe Malaterre	1.0		1.0	Philosophy	1.0	A5077152506	
-Christopher Koliba	1.0		1.0	Community Development and Applied Economics	1.0	A5037614778	https://www.uvm.edu/segs/
-Christopher L. Berger	1.0		1.0	Molecular Physiology and Biophysics	0.0	A5075679004	
-Christopher M. Danforth	1.0		1.0	Mathematics & Statistics	1.0	A5002034958	https://compstorylab.org/about/
-Clapperton Chakanetsa Mavhunga	1.0		1.0	Science, Technology, and Society; history	0.0	a5027540762	
-Clare Cannon	1.0		-1.0	Human Ecology	0.0	a5028248738	
-Clare Press	1.0		0.0	Experimental Psychology	1.0	A5065860406	https://www.fil.ion.ucl.ac.uk/team/action-and-perception/
-Cody Buntain	1.0		1.0	Linguistics	0.0	a5027163845	
-Corey E. Baker	1.0	7.0	1.0	Computer Science	1.0	a5049845873	https://netrecon.usc.edu/baker/lab_members/
-Cosma Rohilla Shalizi	1.0		1.0	Statistics & Data Science	1.0	A5082953212	
-Craig H. Bassing	1.0		1.0	Pathology and Laboratory Medicine	1.0	A5054148814	https://pathology.med.upenn.edu/department/people/317/craig-h-bassing
-Cristopher Moore	1.0		1.0	Santa Fe Institute	0.0	a5008033989	
-Dan Edelstein	1.0		1.0	French; Political Science; History	1.0	a5091574623	http://hdlab.stanford.edu/people/
-Dan Jurafsky	1.0	18.0	1.0	Linguistics; Computer Science	1.0	a5087088138	http://web.stanford.edu/~jurafsky/people.html
-Dana Angluin	1.0	9.0	0.0	Linguistics	1.0	a5022630792	https://clay.yale.edu/members/
-Daniel Kneeshaw	1.0		1.0	Biology	1.0	A5064621501	
-Danielle S. Bassett	1.0		-1.0	Bioengineering, Electrical & Systems Engineering; Physics & Astronomy; Neurology; Psychiatry	1.0	A5009266404	https://complexsystemsupenn.com/
-David J. Barker	1.0		1.0	Psychology	1.0	A5053585063	https://www.thebarkerlab.com/people-1
-David Jangrow	1.0		1.0	Electrical and Biomedical Engineering	1.0	A5026763824	https://www.uvm.edu/~brainlab/index.html#team
-David S. Conner	1.0		1.0	Community Development and Applied Economics	0.0	A5019140171	
-Deborah E. Blom	1.0		0.0	Anthropology	0.0	A5010615491	
-Deborah Fitzgerald	1.0		0.0	Science, Technology, and Society; history	0.0	a5062540612	
-Denis Réale	1.0		1.0	Biology	1.0	A5029850402	
-Dennis P. Clougherty	1.0		1.0	Physics	0.0	A5026988863	
-Dmitriy Sheyn	1.0		1.0	Orthopaedics; Surgery	1.0	A5081116926	https://www.cedars-sinai.edu/research/labs/sheyn/members.html
-Dominique Gravel	1.0		1.0	Biology	1.0	A5037256938	https://ielab.recherche.usherbrooke.ca/
-Donna Toufexis	1.0		0.0	Psychological science	1.0	A5063974887	https://www.uvm.edu/cas/psychology/profiles/donna-toufexis-biobehavioral
-Duncan J. Watts	1.0		1.0	Communications; Sociology	1.0	A5000679279	https://css.seas.upenn.edu/people/
-E. Carol Adair	1.0		0.0	Rubenstein School of Environment and Natural Resources	0.0	A5034560073	https://adairlab.weebly.com/team.html
-Elena Sesma	1.0		0.0	Anthropology	0.0	a5053722641	
-Eliana Castro	1.0		0.0	College of Education and Social Services	0.0	A5008683066	
-Elizabeth A. Bonney	1.0		0.0	Obstetrics, Gynecology and Reproductive Sciences	1.0	A5023419188	https://www.med.uvm.edu/obgyn/research/lab_bonney
-Ellen Ann Andersen	1.0		0.0	Political Science	0.0	A5074398027	
-Emily Bernard	1.0		0.0	English	0.0	A5031469576	
-Emily H. Belarmino	1.0		0.0	Nutrition and Food Sciences; 	0.0	A5016548616	
-Emily L. Coderre	1.0		0.0	Communication Sciences and Disorders	0.0	A5066307333	
-Emma Spiro	1.0		0.0	Information School	1.0	A5053945884	https://datalab.ischool.uw.edu/people
-Eric J. B. von Wettberg	1.0		1.0	Plant and Soil Science	1.0	A5034453011	https://ebishopv.wixsite.com/cropdomesticationlab/people
-Erik Esselstrom	1.0		1.0	History	0.0	a5030562152	
-Étienne Laliberté	1.0		1.0	Biology	1.0	A5074298021	https://lefo.ca/
-Evan S. Lieberman	1.0	19.0	1.0	Political Science	1.0	a5033692189	https://globaldiversitylab.mit.edu/people/
-Eyal Amiel	1.0		1.0	Biomedical and Health Sciences	1.0	A5042866760	
-F. Guillaume Blanchet	1.0		1.0	Biology	1.0	A5021345205	
-Fabián Bustamante	1.0		1.0	Computer Science	1.0	A5025609514	https://aqualab.cs.northwestern.edu/lab-members/
-Frances E. Carr	1.0		0.0	Pharmacology	1.0	A5087721092	https://www.med.uvm.edu/pharmacology/carrlabpersonnel
-Gaby G. Dagher	1.0		1.0	Computer Science	1.0	A5073603332	http://cs.boisestate.edu/~gdagher/
-Georg Jander	1.0		1.0	Plant Biology	1.0	A5086006151	https://btiscience.org/georg-jander/
-George Crothers	1.0		1.0	Anthropology	0.0	a5084619432	
-Geraint Rees	1.0		1.0	Cognitive Neuroscience	1.0	A5074881456	
-Giovanna Ceserani	1.0		0.0	History	0.0	a5022682096	
-Giovanni Petri	1.0		1.0	Network Science Institute	1.0	A5063367289	https://lordgrilo.github.io/
-Hadi Hosseini	1.0		1.0	Information Sciences and Technology	1.0	A5086315841	https://sites.google.com/view/fairailab
-Hugh Garavan	1.0		1.0	Psychological science	1.0	A5001775538	https://nervelab.w3.uvm.edu
-Hugo Reyes-Centeno	1.0	14.0	1.0	Anthropology	1.0	a5089139349	https://heva.as.uky.edu/personnel
-Hung Do	1.0		1.0	Business	0.0	a5083219195	
-Ian Gold	1.0	9.0	1.0	Philosophy	1.0	a5067125984	https://www.neurophilosophylab.org/
-Isabella Peters	1.0		0.0	Computer Science	1.0	A5051954808	https://www.ws.informatik.uni-kiel.de/en/team
-Jacob Eisenstein	1.0		1.0	School of Interactive Computing	1.0	a5047699861	
-James A. Evans	1.0		1.0	Sociology	1.0	A5076633756	https://www.knowledgelab.org/knowledge-lab-team/
-James Demmel	1.0		1.0	Mathematics and Computer Science	1.0	A5076825233	http://bebop.cs.berkeley.edu/#peeps
-James F. English	1.0	22.0	1.0	English	1.0	a5023977884	https://pricelab.sas.upenn.edu/fellows
-James P. Bagrow	1.0		1.0	Mathematics & Statistics	1.0	A5062403203	https://bagrow.com/people/
-Jamie L. Abaied	1.0		0.0	Psychological Science	1.0	A5030384293	
-Jan Feldman	1.0		0.0	Political Science	0.0	a5030981885	
-Janis K. Burkhardt	1.0		0.0	Pathology and Laboratory Medicine	1.0	A5039653234	https://www.burkhardtlab.org/team
-Jason Jones	1.0		1.0	Sociology	1.0	a5080066602	https://jasonjones.ninja/csserg/
-Jason S. Bates	1.0		1.0	Chemical Engineering	1.0	A5014967076	https://sites.google.com/site/jasonsbates/members?authuser=0
-Jason Woodworth	1.0		1.0	Swine nutrition & management	1.0	A5066559586	https://www.asi.k-state.edu/extension/swine//
-Jay Foley	1.0		1.0	Chemistry	1.0	A5038397432	https://foleylab.github.io/
-Jean-Gabriel Young	1.0		1.0	Mathematics and Statistics	1.0	A5070850590	https://joint-lab.github.io/people
-Jeffrey Heinz	1.0	13.0	1.0	Linguistics	1.0	a5055065964	https://compling.stonybrook.edu/people.html
-Jeffrey M. Mativetsky	1.0		1.0	Physics; Materials Science and Engineering	1.0	A5046342589	https://www.mativetskylab.com/people/jeffrey-mativetsky
-Jeffrey S. Buzas	1.0		1.0	Mathematics & Statistics	0.0	A5060478670	
-Jessica DeMink-Carthew	1.0		0.0	Education and Social Services	0.0	A5010948910	
-Jevin West	1.0		1.0	Information School	1.0	A5046879461	https://datalab.ischool.uw.edu/people
-Joe Ament	1.0		1.0	Community Development and Applied Economics	0.0	A5002226064	
-John Ashburner	1.0		1.0	Neuroscience	1.0	A5029410349	https://www.fil.ion.ucl.ac.uk/team/computational-anatomy-team/
-John G. Crock	1.0		1.0	Anthropology	0.0	A5046250286	
-Jordan T Gebhardt	1.0		1.0	Diagnostic Medicine and pathobiology	1.0	A5066274910	https://www.asi.k-state.edu/extension/swine//
-Joseph Acquisto	1.0		1.0	French and Italian	0.0	A5049409973	
-Joseph Henrich	1.0	11.0	1.0	Human Evolutionary Biology	1.0	a5034266052	https://coevolution.fas.harvard.edu/current-lab-members
-Josh Bongard	1.0		1.0	Computer Science	1.0	A5066791342	https://www.meclab.org/people
-Joshua B. Tenenbaum	1.0		1.0	 Brain and Cognitive Sciences	1.0	A5071093940	https://cocosci.mit.edu/
-Joshua Farley	1.0		1.0	Community Development & Applied Economics	0.0	a5090686681	
-Juan Pablo Alperin	1.0		1.0	information science	1.0	A5085171399	https://www.scholcommlab.ca/people/
-Julie A. Dumas	1.0		0.0	Psychiatry	1.0	a5019605511	
-Katherine Ognyanova	1.0	10.0	0.0	Communication	1.0	a5084279765	https://csslab.rutgers.edu/people/
-Katherine Yelick	1.0		0.0	Electrical Engineering and Computer Sciences	1.0	A5091741596	
-Kathryn Demps	1.0		0.0	anthropology	0.0	a5084650556	
-Kelly Clark/Keefe	1.0		0.0	College of Education and Social Services	0.0	A5073802469	
-Ken Goldberg	1.0		1.0	Industrial Engineering and Operations Research	1.0	A5050342525	https://autolab.berkeley.edu/people
-Kim R. Bauerly	1.0		0.0	Communication sciences and disorders	1.0	A5086274493	https://www.uvm.edu/cnhs/csd/speech-fluency-lab
-Lauren F. Klein	1.0	8.0	0.0	English and Quantitative Theory and Methods	1.0		https://dhlab.lmc.gatech.edu/people/index.html
-Laurent Hébert‐Dufresne	1.0		1.0	Computer Science	1.0	A5035455593	https://joint-lab.github.io/people
-Lesley‐Ann Dupigny‐Giroux	1.0		9.0	Geography and Geosciences	0.0	a5012783921	
-Louis deRosset	1.0		1.0	Philosophy	0.0	a5046801350	
-Luc Faucher	1.0		1.0	Philosophy	0.0	a5070298387	
-Luis A. Duffaut Espinosa	1.0		1.0	Electrical and Biomedical Engineering	1.0	a5005494593	https://www.uvm.edu/cems/ebe/autonomous-and-intelligent-systems-research-air-lab
-M. E. J. Newman	1.0		1.0	Physics	1.0	A5067142016	https://public.websites.umich.edu/~mejn/
-Mads Almassalkhi	1.0		1.0	Electrical and Biomedical Engineering	1.0	A5053327116	https://madsalma.github.io/people.html
-Maeve Eberhardt	1.0		0.0	Linguistics	0.0	a5059719469	
-Mandar M. Dewoolkar	1.0		1.0	Civil and Environmental Engineering	1.0	a5008146559	https://site.uvm.edu/mdewoolk/
-Manlio De Domenico	1.0		1.0	Physics	1.0	A5019170728	https://manliodedomenico.com/people.php
-Marianne E. Krasny	1.0		0.0	Natural Resources and the Environment	1.0	A5068916099	https://www.civicecology.org/
-Mark Algee-Hewitt	1.0		1.0	English	1.0	a5074329461	https://litlab.stanford.edu/people/
-Mark Lubell	1.0	15.0	1.0	Environmental Science and Policy	1.0	a5081521085	https://environmentalpolicy.ucdavis.edu/
-Matthew Carlson	1.0		1.0	Political Science	0.0	A5074460980	
-Matthew J. Barker	1.0		1.0	Philosophy	0.0	A5053001049	
-Matthew K. Higgins	1.0		1.0	Biochemistry	1.0	A5035509700	https://higginslab.web.ox.ac.uk/who-we-are
-Matthew Price	1.0		1.0	Psychological science	1.0	A5036140974	https://www.crestresearch.org//
-Meaghan Emery	1.0		0.0	French and Italian	0.0	a5014136538	
-Meghan Cope	1.0		0.0	Geography and Geosciences	0.0	A5056414452	
-Meredith T. Niles	1.0		0.0	Nutrition and Food Sciences	1.0	A5080871120	https://www.meredithtniles.com/students
-Michael I. Jordan	1.0		1.0	Electrical Engineering and Computer Sciences; Statistics	1.0	A5049812527	
-Michael M. J. Fischer	1.0		1.0	Anthropology	0.0	a5066201883	
-Michael Muthukrishna	1.0	15.0	1.0	Psychological and Behavioural Science	1.0	a5056851399	https://www.michael.muthukrishna.com/muthukrishna-lab/
-Michael S. Cannizzaro	1.0		1.0	Communication Sciences and Disorders	0.0	A5002845482	
-Michele E. Commercio	1.0		0.0	Political Science	0.0	A5067076795	
-Michelle Girvan	1.0		0.0	Physics	1.0	A5017906200	https://sites.google.com/umd.edu/networks/home/group-members?authuser=0
-Mirta Galešić	1.0		0.0	Santa Fe Institute	1.0	A5071165387	
-Morgan Sonderegger	1.0	17.0	1.0	Linguistics; Computer Science	1.0	a5050873228	https://mcqll.org/people
-Muhammad Abdul-Mageed	1.0		1.0	School of Information; Linguistics; Computer Science	1.0	A5004629670	https://www.dlnlp.ai/#Team
-Muzhou Wang	1.0		1.0	Chemical and Biological Engineering.	1.0	A5027906115	https://www.wanglab.northwestern.edu/members/
-Naomi H. Feldman	1.0	7.0	0.0	Linguistics	1.0	a5016109670	http://users.umiacs.umd.edu/~nhf/students.html
-Nathalie Mathieu-Bolh	1.0		0.0	Economics	0.0	A5082336655	
-Niccolo M. Fiorentino	1.0	9.0	1.0	Mechanical Engineering	1.0	a5082463471	https://www.uvm.edu/~nfiorent/
-Nicholas A. Barber	1.0	9.0	1.0	Biology	1.0	a5002335402	https://barberna.wixsite.com/barberecology/people
-Nicholas Cheney	1.0		1.0	Computer Science	1.0	A5091485524	https://www.uvm.edu/neurobotics/people
-Nicholas J. Gotelli	1.0		1.0	Biology	1.0	A5085232359	https://www.uvm.edu/~ngotelli/homepage.html
-Nicole E. Conroy	1.0		0.0	Human Development and Family Science	0.0	A5017116907	
-Pablo S. Bose	1.0		1.0	Geography and Geosciences	0.0	A5086838547	
-Patrick J. Callery	1.0		1.0	Business	0.0	A5052810664	
-Paul Cisek	1.0		1.0	Neuroscience	1.0	A5089018845	https://cisek.org/pavel/
-Paul R. Bierman	1.0		1.0	Geology	1.0	A5065669012	https://www.uvm.edu/cosmolab/students.html
-Paula B. Deming	1.0		0.0	Biomedical and Health Science	1.0	a5030675455	
-Peter Sheridan Dodds	1.0		1.0	Mathematics & Statistics	1.0	A5040821463	https://compstorylab.org/about/
-Philip Barutha	1.0		1.0	English	0.0	A5015659727	
-Philippe Mongeon 	1.0	7.0	1.0	Information Science	1.0	A5081963935	https://www.qsslab.ca/people/
-Pierre Legendre	1.0		1.0	Biology	1.0	A5071178128	
-Pramit Chaudhuri	1.0	27.0	1.0	Classics	1.0	a5033946033	https://www.qcrit.org/people
-Quentin J. M. Huys	1.0		1.0	Computational Psychiatry	1.0	A5069346030	
-Rachael A. Bay	1.0	11.0	0.0	Evolution and Ecology	1.0	a5063361075	https://baylab.github.io/people/
-Rachel Rudinger	1.0		0.0	Computer Science; Linguistics	0.0	a5082447472	
-Ray Dolan	1.0		1.0	Cognitive Neuroscience	1.0	A5037175477	
-Rebecca Aslakson	1.0		0.0	Anesthesiology	0.0	A5090345791	
-Rebecca M. Callahan	1.0		0.0	Educational Leadership and Policy Studies	0.0	A5014853497	
-Réka Albert	1.0		0.0	Physics; Biology	1.0	A5012905268	https://www.ralbert.me/research.html
-Richard M. Single	1.0		1.0	Mathematics and Statistics	0.0	A5024849718	
-Richard Wright	1.0	19.0	1.0	Linguistics	1.0	a5006429520	http://depts.washington.edu/phonlab/currentmembers.php
-Robb B. Rutledge	1.0		1.0	Psychology	1.0	A5041209516	
-Robert Frank	1.0	9.0	1.0	Linguistics	1.0	a5071457812	https://clay.yale.edu/members/
-Robert Gramling	1.0		1.0	Family Medicine	1.0	A5005213390	https://vermontconversationlab.com/about/
-Robert R. McLeod	1.0		1.0	Electrical, Computer, and Energy Engineering	1.0	A5072481660	https://www.colorado.edu/faculty/mcleod/personnel
-Robin Wolfe Scheffler	1.0		1.0	Science, Technology, and Society; history	0.0	a5057132322	
-Roger Lévy	1.0	12.0	1.0	Brain and Cognitive Sciences	1.0	a5090215557	http://cpl.mit.edu/people.html
-Ronald S. Fearing	1.0		1.0	Electrical Engineering and Computer Sciences	1.0	A5073886799	https://people.eecs.berkeley.edu/~ronf/Biomimetics/people.html
-Růžena Bajcsy	1.0		0.0	Electrical Engineering and Computer Sciences	1.0	A5055278920	http://hart.berkeley.edu/people.html
-Ryan Trovitch	1.0		1.0	Molecular Sciences	1.0	A5081116926	https://trovitch.lab.asu.edu/
-Samuel Chevalier	1.0		1.0	Electrical and Biomedical Engineering	1.0	A5005388341	
-Sandro Azaele	1.0		1.0	Physics	1.0	A5062771810	
-Sara Helms Cahan	1.0		0.0	Biology	1.0	A5029896488	http://shelmscahan.github.io/Index2.html
-Sarah C. Alexander	1.0		0.0	English	0.0	A5032434213	
-Scott Merril	1.0		1.0	Plant and Soil Science	1.0	A5088766301	https://www.uvm.edu/segs/
-Sean A. Diehl	1.0		0.0	Microbiology and Molecular Genetics	1.0	a5090816940	https://www.med.uvm.edu/mmg/faculty/sean-diehl-phd
-Sibel Adalı	1.0		0.0	Computer Science	1.0	A5033986205	https://www.cs.rpi.edu/~sibel/www/research_blog.html
-Siva Reddy	1.0	17.0	1.0	Linguistics; Computer Science	1.0	a5028691398	https://mcqll.org/people
-Sonja Vogt	1.0	14.0	0.0	Business and Economics	1.0	a5067605351	http://pacelab.org/people/
-Spencer Backman	1.0		1.0	Mathematics & Statistics	0.0	A5066800852	
-Stefanie Haustein	1.0		0.0	information science	1.0	A5014077037	https://www.scholcommlab.ca/people/
-Stephen J. Dempsey	1.0		1.0	Business	0.0	a5040491225	
-Steven C. Soper	1.0		1.0	History	0.0	a5032873524	
-T.L. Bradshaw	1.0		1.0	Plant and Soil Science	0.0	A5063690586	
-Taylor Dupuy	1.0		1.0	Mathematics and Statistics	0.0	a5030917395	
-Terence Cuneo	1.0		1.0	Philosophy	0.0	A5005500349	
-Terrence P. Delaney	1.0		1.0	Plant Biology	1.0	a5081523526	https://www.uvm.edu/~tpdelane/lab/people.html
-Theodore J. Angelopoulos	1.0		1.0	Rehabilitation and Movement Science	0.0	A5033621367	
-Thomas P. Ahern	1.0		1.0	Surgery	0.0	A5079241058	
-Timothy D. Griffiths	1.0		1.0	Neurology	1.0	A5069247395	
-Timothy J. O’Donnell	1.0	17.0	1.0	Linguistics	1.0	a5089919672	https://mcqll.org/people
-Timothy M. Waring	1.0	3.0	1.0	School of Economics	1.0	a5019243359	https://timwaring.info/team-2/
-Tobias U. Hauser	1.0		1.0	Computational Psychiatry	1.0	A5042016465	
-Tracy Arámbula Ballysingh	1.0		0.0	Higher Education and Student Affairs Administration	0.0	A5052797184	
-Tyler Doggett	1.0		1.0	Philosophy	0.0	a5013796007	
-Vanessa Frías-Martínez	1.0	12.0	0.0	Information School; Computer Science	1.0	a5046562990	https://www.urbancomputinglab.org/people
-Vicki L. Brennan	1.0		0.0	African Studies Program	0.0	A5049222482	
-Vincent Larivière	1.0	10.0	1.0	information science; library science	1.0	A5068542997	https://www.researchgate.net/lab/Canada-Research-Chair-on-the-Transformations-of-Scholarly-Communication-Vincent-Lariviere
-W. Brent Seales	1.0	12.0	1.0	Computer Science	1.0	a5028529600	https://www2.cs.uky.edu/dri/our-team/
-William Deringer	1.0		1.0	Science, Technology, and Society; history	0.0	a5085421249	
-William L. Cats-Baril	1.0		1.0	Business	0.0	A5077022082	
-Wolfgang R. Dostmann	1.0		1.0	Pharmacology	-1.0	a5058542049	
-Yamir Moreno	1.0	14.0	1.0	Physics	1.0	A5084793824	https://cosnet.bifi.es/people/
-Yolanda H. Chen	1.0	9.0	0.0	Biology	1.0	a5029745678	https://blog.uvm.edu/yfanslow/people/
-Yong‐Yeol Ahn	1.0	22.0	1.0	Informatics and Computing		A5059236838	https://yongyeol.com/group/
-Zobayer Ahmmad	1.0		1.0	Sociology	0.0	A5077733558	
-Clayborne Carson	1.0		1.0	History	0.0	a5002141379	
-Nancy Lutkehaus	1.0		0.0	Anthropology; Political Science	0.0	a5027089210	
-Leo Braudy	1.0		1.0	History; Political Science; Spatial Sciences	0.0	a5018523649	
-Christopher M. Moreman	1.0		1.0	Philosophy & Religous Studies	0.0	a5089455892	
-Erin Graff Zivin	1.0		0.0	Spanish and Portuguese; Comparative Literature	0.0	a5072616403	
-Alan E. Wilson	1.0		1.0	School of Fisheries, Aquaculture & Aquatic Sciences	1.0	a5063349034	https://www.wilsonlab.com/
-A. J. Weinstein	1.0		1.0	Physics	1.0	a5014235664	https://labcit.ligo.caltech.edu/groups/astrophysics-group/people.shtml
-Paul Laris	1.0		1.0	Geography	1.0	a5034350333	https://www.researchgate.net/lab/Paul-Laris-Lab
-Corey G. Dunn	1.0		1.0	Applied Ecology	1.0	a5040153089	https://dunnfishresearch.weebly.com/people.html
-Rebecca S. Barak	1.0		0.0	Plant Science and Conservation	1.0	a5014827802	https://www.beckybarak.com/people
-Ana Carolina Carnaval	1.0		0.0	Biology	1.0	a5089366029	https://www.carnavallab.org/ana
-James R. Green	1.0		1.0	Systems and Computer Engineering	1.0	a5078223816	http://www.sce.carleton.ca/faculty/green/green.php?page=students
-Matthew P. Shores	1.0		1.0	Chemistry	1.0	a5087585600	https://shoreslab.colostate.edu/group.html
-Anthony B. Wilson	1.0		1.0	Biology	1.0	a5052545695	https://evolution.blog.brooklyn.edu/people/research-students/
-David A. Braun	1.0		1.0	Medicine	1.0	a5069300441	https://www.thebraunlab.org/people
-Michael P. Cummings	1.0		1.0	Biology	1.0	a5067884449	https://cummings-lab.org/
-Elena M. Kramer	1.0		0.0	Biology	1.0	a5008053111	https://kramerlab.oeb.harvard.edu/publications
-Ioan Raicu	1.0		1.0	Computer Science	1.0	a5030599558	http://datasys.cs.iit.edu/people/index.html
-Laura M. Hurley	1.0		0.0	Biology	1.0	a5077477494	https://hurley.lab.indiana.edu/publications.html
-Jeffrey J. Gray	1.0		1.0	Chemical and Biomolecular Engineering	1.0	a5009383312	https://graylab.jhu.edu/people.php
-Anthony I. Dell	1.0		1.0	Biology	1.0	a5005797884	http://dellecologylab.org/people
-David J. Van Den Berg	1.0		1.0	Biology	1.0	a5085453531	https://www.researchgate.net/lab/David-J-Berg-Lab
-Ashley N. Schulz	1.0		0.0	Forestry	1.0	a5038265616	https://www.schulzforestecolab.com/lab-team.html
-Rachel L. Severson	1.0		0.0	Biological Sciences	1.0	a5056602373	https://www.umt.edu/severson-lab/people/students.php
-Angela D. Luis	1.0		0.0	Biological Sciences	1.0	a5017367797	https://www.umt.edu/disease-ecology-lab/people/default.php
-L. Scott Mills	1.0		1.0	Wildlife Biology	1.0	a5041319633	https://www.umt.edu/mills-lab/people1.php
-Mark Hebblewhite	1.0		1.0	Wildlife Biology	1.0	a5037314876	https://www.umt.edu/ungulate-ecology-lab/default.php
-Monica A. Serban	1.0		0.0	Biochemistry	1.0	a5007710038	https://www.umt.edu/serban-lab/meet_the_team/default.php
-Philip E. Higuera	1.0		1.0	Ecosystem and Conservation Sciences	1.0	a5049717534	https://www.umt.edu/paleo-fire-ecology-lab/people/default.php
-Winsor H. Lowe	1.0		1.0	Biological Sciences	1.0	a5027159554	https://www.umt.edu/lowe-lab/people/default.php
-Akasha M. Faist	1.0		0.0	Rangeland and Restoration Ecology	1.0	a5029940152	https://www.umt.edu/faist-lab/people/default.php
-Daniel Z. Atwater	1.0		1.0	Biological Sciences	1.0	a5027906137	
-Michael Hargather	1.0		1.0	Mechanical Engineering	1.0	a5035269561	https://www.nmt.edu/academics/mecheng/faculty/mhargather/research.php
-Sevinç Ercan	1.0		1.0	Biology	1.0	a5044211202	https://sites.google.com/site/ercanlab/people?authuser=0
-Elon A. Ison	1.0		1.0	Chemistry	1.0	a5021325829	https://isonlab.wordpress.ncsu.edu/group/
-Christof Teuscher	1.0		1.0	Electrical and Computer Engineering	1.0	a5037611164	
-Bridgett M. vonHoldt	1.0		0.0	Biology	1.0	a5015824236	https://vonholdt.princeton.edu/people.html
-Jannette Carey	1.0		0.0	Molecular Biology	1.0	a5035598598	https://carey.princeton.edu/about/
-Jonathan D. Cohen	1.0		1.0	Neuroscience	1.0	a5088141761	https://sites.google.com/view/ncclab/people?authuser=0
-Greg Michalski	1.0		1.0	Chemistry	1.0	a5047079491	https://www.eaps.purdue.edu/michalski/people/index.html
-Felix Warneken	1.0		1.0	Psychology		a5024921128	https://sites.lsa.umich.edu/warneken/members/
-Peter D. Howe	1.0		1.0	Geography; Environment and Society		a5044664261	https://peterhowe.org/lab/lab-members/
-Natalia V. Kirienko			0.0	Biosciences		a5076196713	https://kirienkolab.rice.edu/people.html
-Nandakumar S. Narayanan	1.0		1.0	Neurology		a5082128655	https://narayanan.lab.uiowa.edu/people
-Meenakshi Dutt	1.0		0.0	Chemical and Biochemical Engineering	1.0	a5075457888	http://dutt-lab.rutgers.edu/People.html
-David I. Shreiber	1.0		1.0	Biomedical Engineering	1.0	a5016394435	https://sites.rutgers.edu/david-shreiber/current-lab-members/
-Sarah Cohen	1.0		0.0	Cell biology and Physiology	1.0	a5024471814	https://cohenlaboratory.web.unc.edu/people/
-Boyd M. Goodson	1.0		1.0	Chemistry	1.0	a5024471814	http://www.goodsonlab.org/GoodsonTeam.html
-Ruben Michael Ceballos	1.0		1.0	Biology	1.0	a5077954254	https://ceballoslab.uark.edu/personnel/
+oa_display_name	is_prof	group_size	perceived_as_male	host_dept (; delimited if more than one)	has_research_group	OpenAlex id	group_url	first_pub_year
+A. Ross Otto	1.0	17.0	1.0	Psychology	1.0	a5034124363	https://ottolab.persona.co/People	2008.0
+Aaron Clauset	1.0		1.0	Computer Science	1.0	A5014647140	https://aaronclauset.github.io/labgroup.htm	
+Abigail Crocker	1.0		0.0	Mathematics and Statistics	0.0	A5063968442		
+Adam K. Anderson	1.0		1.0	Human Development	1.0	A5018443530	http://aclab.human.cornell.edu/People.html	
+Aditya Parameswaran	1.0		0.0	School of Information; Electrical Engineering and Computer Sciences	1.0	A5013608601		2008.0
+Alain Paquette	1.0		1.0	Biology	1.0	A5007853190	https://paqlab.uqam.ca/about-Members.php?lang=fr	2006.0
+Albert László Barabási	1.0		1.0	Computer science; Information Science	1.0	A5025323154	https://www.barabasilab.com/science/about	
+Àlex Arenas	1.0		1.0	Computer Engineering and Mathematics	1.0	A5027588100		
+Alicia Beckford Wassink	1.0	12.0	0.0	Linguistics	1.0	a5038253928	https://depts.washington.edu/sociolab/labmembers/currentmembers.php	
+Alicia M. Ebert	1.0		0.0	Biology	1.0	a5070253378	https://blog.uvm.edu/amebert/people/	
+Alison K. Brody	1.0		0.0	Biology	1.0	A5074708105	http://www.akbrody.com/lab%20members.html	
+Allan H. Bell	1.0	2.0	1.0	anthropology	1.0	a5030960110	https://adrianbell.wordpress.com/students/	
+Amber L. Doiron	1.0		0.0	Electrical and Biomedical Engineering	1.0	a5016061803	https://site.uvm.edu/bnb/	
+Amos Maritan	1.0		1.0	Physics	1.0	A5076985100	https://www.liphlab.com/#people	
+Anaka Aiyar	1.0		0.0	Community Development and Applied Economics	0.0	A5008985646		2017.0
+Anand A. Joshi	1.0	14.0	1.0	Electrical & Computer Engineering	1.0	a5048206294	https://neuroimage.usc.edu/neuro/Members	
+Andrea J. Etter	1.0		0.0	Nutrition and Food Sciences	1.0	a5074355050	https://www.researchgate.net/lab/Andrea-J-Etter-Lab	
+Andrew Barnaby	1.0		1.0	English	0.0	A5065482485		
+Antoine Allard	1.0		1.0	Physics	1.0	A5027136376	https://antoineallard.github.io/#team	2005.0
+Appala Raju Badireddy	1.0		1.0	Civil and Environmental Engineering	1.0	A5037146310	https://arbadireddy.wixsite.com/uvmcee/members	
+Arne Bomblies	1.0		1.0	Civil and Environmental Engineering	0.0	A5085014912		
+Ashton Anderson	1.0	13.0	1.0	Computer Science	1.0	a5048789742	http://csslab.cs.toronto.edu/people/	2008.0
+Asim Zia	1.0		1.0	Community Development and Applied Economics	1.0	A5022918698	https://www.uvm.edu/segs/	1997.0
+Avideh Zakhor	1.0		0.0	Electrical Engineering & Computer Sciences	1.0	A5008034417	http://www-video.eecs.berkeley.edu/people.shtml	
+Barbara Arel	1.0		0.0	Grossman School of Business	0.0	A5014963201		
+Bernard F. Cole	1.0		1.0	College of Engineering and Mathematical Sciences	0.0	A5033544452		2000.0
+Bertram Gawronski	1.0		1.0	Psychology	1.0	A5069999624	https://www.bertramgawronski.com/people.htm	
+Beth Kirkpatrick	1.0		0.0	Microbiology and Molecular Genetics	1.0	A5010472783	https://www.med.uvm.edu/tgircobre/home	
+Brennan Klein	1.0		1.0	Network Science Institute	1.0	A5034550396	https://brennanklein.com/and-lab	2012.0
+Brian A. Barsky	1.0		1.0	Electrical Engineering and Computer Sciences	1.0	A5046623635	https://barskygroup.wixsite.com/home	
+Brian Beckage	1.0		1.0	Computer Science	1.0	A5064679606	https://brianbeckage.github.io/lab.html	
+Brian Cunniff	1.0		1.0	Pathology and Laboratory Medicine	1.0	A5085980410	http://www.med.uvm.edu/cunnifflab/labmembers	
+Brian Paciotti	1.0		1.0	Public health Sciences	0.0	a5057206436		
+Brian Tivnan	1.0		1.0	Mathematics & Statistics	1.0	A5050883332	https://www.compfi.org	
+Brooke Foucault Welles	1.0		0.0	Communication Studies; Network Science Institute	1.0	A5047517174	https://www.networkscienceinstitute.org/commlab/team	
+Bryce J. Dietrich	1.0	21.0	1.0	Political Science	1.0	a5035926041	https://www.cla.purdue.edu/academic/polsci/research/labs/computational-social-science-lab/people.html	
+Caitlin J. Light	1.0		0.0	Cell and Molecular Biology	1.0	A5086092493	https://sites.google.com/binghamton.edu/lightlab/people?authuser=0	
+Caroline Beer	1.0		0.0	Political Science	0.0	A5058128585		
+Carolyn M. Bonifield	1.0		0.0	Business	0.0	A5029861842		
+Cassidy R. Sugimoto	1.0		0.0	Public Policy	1.0	A5029483412		
+Catherine D’Ignazio	1.0	19.0	0.0	Urban Studies and Planning	1.0	a5050163961	https://dataplusfeminism.mit.edu/	2010.0
+Catherine E. Clark	1.0		0.0	History and French Studies	0.0	a5089307248		
+Cathy J. Price	1.0		0.0	Cognitive Neuroscience	1.0	A5085284243		1989.0
+Cecilia Danks	1.0		0.0	Environment and Natural Resources	0.0	a5016511835		
+Chaoqun Ni	1.0		0.0	Information School	1.0	A5022747234	https://metasci.ischool.wisc.edu/members.html	
+Charles Efferson	1.0	14.0	1.0	Business and Economics	1.0	a5076982741	http://pacelab.org/people/	
+Christian Lambert	1.0		1.0	Neuroscience	1.0	A5028897058		2012.0
+Christophe Malaterre	1.0		1.0	Philosophy	1.0	A5077152506		
+Christopher Koliba	1.0		1.0	Community Development and Applied Economics	1.0	A5037614778	https://www.uvm.edu/segs/	
+Christopher L. Berger	1.0		1.0	Molecular Physiology and Biophysics	0.0	A5075679004		
+Christopher M. Danforth	1.0		1.0	Mathematics & Statistics	1.0	A5002034958	https://compstorylab.org/about/	
+Clapperton Chakanetsa Mavhunga	1.0		1.0	Science, Technology, and Society; history	0.0	a5027540762		
+Clare Cannon	1.0		-1.0	Human Ecology	0.0	a5028248738		
+Clare Press	1.0		0.0	Experimental Psychology	1.0	A5065860406	https://www.fil.ion.ucl.ac.uk/team/action-and-perception/	1999.0
+Cody Buntain	1.0		1.0	Linguistics	0.0	a5027163845		
+Corey E. Baker	1.0	7.0	1.0	Computer Science	1.0	a5049845873	https://netrecon.usc.edu/baker/lab_members/	
+Cosma Rohilla Shalizi	1.0		1.0	Statistics & Data Science	1.0	A5082953212		
+Craig H. Bassing	1.0		1.0	Pathology and Laboratory Medicine	1.0	A5054148814	https://pathology.med.upenn.edu/department/people/317/craig-h-bassing	
+Cristopher Moore	1.0	1990.0	1.0	Santa Fe Institute	0.0	a5008033989		
+Dan Edelstein	1.0		1.0	French; Political Science; History	1.0	a5091574623	http://hdlab.stanford.edu/people/	2005.0
+Dan Jurafsky	1.0	18.0	1.0	Linguistics; Computer Science	1.0	a5087088138	http://web.stanford.edu/~jurafsky/people.html	
+Dana Angluin	1.0	9.0	0.0	Linguistics	1.0	a5022630792	https://clay.yale.edu/members/	1967.0
+Daniel Kneeshaw	1.0		1.0	Biology	1.0	A5064621501		
+Danielle S. Bassett	1.0		-1.0	Bioengineering, Electrical & Systems Engineering; Physics & Astronomy; Neurology; Psychiatry	1.0	A5009266404	https://complexsystemsupenn.com/	2006.0
+David J. Barker	1.0		1.0	Psychology	1.0	A5053585063	https://www.thebarkerlab.com/people-1	2008.0
+David Jangrow	1.0		1.0	Electrical and Biomedical Engineering	1.0	A5026763824	https://www.uvm.edu/~brainlab/index.html#team	1978.0
+David S. Conner	1.0		1.0	Community Development and Applied Economics	0.0	A5019140171		
+Deborah E. Blom	1.0		0.0	Anthropology	0.0	A5010615491		
+Deborah Fitzgerald	1.0		0.0	Science, Technology, and Society; history	0.0	a5062540612		
+Denis Réale	1.0		1.0	Biology	1.0	A5029850402		
+Dennis P. Clougherty	1.0		1.0	Physics	0.0	A5026988863		
+Dmitriy Sheyn	1.0		1.0	Orthopaedics; Surgery	1.0	A5081116926	https://www.cedars-sinai.edu/research/labs/sheyn/members.html	
+Dominique Gravel	1.0		1.0	Biology	1.0	A5037256938	https://ielab.recherche.usherbrooke.ca/	2004.0
+Donna Toufexis	1.0		0.0	Psychological science	1.0	A5063974887	https://www.uvm.edu/cas/psychology/profiles/donna-toufexis-biobehavioral	
+Duncan J. Watts	1.0		1.0	Communications; Sociology	1.0	A5000679279	https://css.seas.upenn.edu/people/	
+E. Carol Adair	1.0		0.0	Rubenstein School of Environment and Natural Resources	0.0	A5034560073	https://adairlab.weebly.com/team.html	
+Elena Sesma	1.0		0.0	Anthropology	0.0	a5053722641		
+Eliana Castro	1.0		0.0	College of Education and Social Services	0.0	A5008683066		
+Elizabeth A. Bonney	1.0		0.0	Obstetrics, Gynecology and Reproductive Sciences	1.0	A5023419188	https://www.med.uvm.edu/obgyn/research/lab_bonney	
+Ellen Ann Andersen	1.0		0.0	Political Science	0.0	A5074398027		2001.0
+Emily Bernard	1.0		0.0	English	0.0	A5031469576		
+Emily H. Belarmino	1.0		0.0	Nutrition and Food Sciences; 	0.0	A5016548616		
+Emily L. Coderre	1.0		0.0	Communication Sciences and Disorders	0.0	A5066307333		
+Emma Spiro	1.0		0.0	Information School	1.0	A5053945884	https://datalab.ischool.uw.edu/people	
+Eric J. B. von Wettberg	1.0		1.0	Plant and Soil Science	1.0	A5034453011	https://ebishopv.wixsite.com/cropdomesticationlab/people	
+Erik Esselstrom	1.0		1.0	History	0.0	a5030562152		
+Étienne Laliberté	1.0		1.0	Biology	1.0	A5074298021	https://lefo.ca/	
+Evan S. Lieberman	1.0	19.0	1.0	Political Science	1.0	a5033692189	https://globaldiversitylab.mit.edu/people/	
+Eyal Amiel	1.0		1.0	Biomedical and Health Sciences	1.0	A5042866760		
+F. Guillaume Blanchet	1.0		1.0	Biology	1.0	A5021345205		2007.0
+Fabián Bustamante	1.0		1.0	Computer Science	1.0	A5025609514	https://aqualab.cs.northwestern.edu/lab-members/	
+Frances E. Carr	1.0		0.0	Pharmacology	1.0	A5087721092	https://www.med.uvm.edu/pharmacology/carrlabpersonnel	
+Gaby G. Dagher	1.0		1.0	Computer Science	1.0	A5073603332	http://cs.boisestate.edu/~gdagher/	
+Georg Jander	1.0		1.0	Plant Biology	1.0	A5086006151	https://btiscience.org/georg-jander/	
+George Crothers	1.0		1.0	Anthropology	0.0	a5084619432		
+Geraint Rees	1.0		1.0	Cognitive Neuroscience	1.0	A5074881456		1996.0
+Giovanna Ceserani	1.0		0.0	History	0.0	a5022682096		
+Giovanni Petri	1.0		1.0	Network Science Institute	1.0	A5063367289	https://lordgrilo.github.io/	
+Hadi Hosseini	1.0		1.0	Information Sciences and Technology	1.0	A5086315841	https://sites.google.com/view/fairailab	
+Hugh Garavan	1.0		1.0	Psychological science	1.0	A5001775538	https://nervelab.w3.uvm.edu	
+Hugo Reyes-Centeno	1.0	14.0	1.0	Anthropology	1.0	a5089139349	https://heva.as.uky.edu/personnel	
+Hung Do	1.0		1.0	Business	0.0	a5083219195		
+Ian Gold	1.0	9.0	1.0	Philosophy	1.0	a5067125984	https://www.neurophilosophylab.org/	
+Isabella Peters	1.0		0.0	Computer Science	1.0	A5051954808	https://www.ws.informatik.uni-kiel.de/en/team	2007.0
+Jacob Eisenstein	1.0		1.0	School of Interactive Computing	1.0	a5047699861		
+James A. Evans	1.0		1.0	Sociology	1.0	A5076633756	https://www.knowledgelab.org/knowledge-lab-team/	1988.0
+James Demmel	1.0		1.0	Mathematics and Computer Science	1.0	A5076825233	http://bebop.cs.berkeley.edu/#peeps	
+James F. English	1.0	22.0	1.0	English	1.0	a5023977884	https://pricelab.sas.upenn.edu/fellows	1991.0
+James P. Bagrow	1.0		1.0	Mathematics & Statistics	1.0	A5062403203	https://bagrow.com/people/	
+Jamie L. Abaied	1.0		0.0	Psychological Science	1.0	A5030384293		
+Jan Feldman	1.0		0.0	Political Science	0.0	a5030981885		
+Janis K. Burkhardt	1.0		0.0	Pathology and Laboratory Medicine	1.0	A5039653234	https://www.burkhardtlab.org/team	
+Jason Jones	1.0		1.0	Sociology	1.0	a5080066602	https://jasonjones.ninja/csserg/	1998.0
+Jason S. Bates	1.0		1.0	Chemical Engineering	1.0	A5014967076	https://sites.google.com/site/jasonsbates/members?authuser=0	
+Jason Woodworth	1.0		1.0	Swine nutrition & management	1.0	A5066559586	https://www.asi.k-state.edu/extension/swine//	
+Jay Foley	1.0		1.0	Chemistry	1.0	A5038397432	https://foleylab.github.io/	
+Jean-Gabriel Young	1.0		1.0	Mathematics and Statistics	1.0	A5070850590	https://joint-lab.github.io/people	
+Jeffrey Heinz	1.0	13.0	1.0	Linguistics	1.0	a5055065964	https://compling.stonybrook.edu/people.html	
+Jeffrey M. Mativetsky	1.0		1.0	Physics; Materials Science and Engineering	1.0	A5046342589	https://www.mativetskylab.com/people/jeffrey-mativetsky	
+Jeffrey S. Buzas	1.0		1.0	Mathematics & Statistics	0.0	A5060478670		
+Jessica DeMink-Carthew	1.0		0.0	Education and Social Services	0.0	A5010948910		
+Jevin West	1.0		1.0	Information School	1.0	A5046879461	https://datalab.ischool.uw.edu/people	
+Joe Ament	1.0		1.0	Community Development and Applied Economics	0.0	A5002226064		
+John Ashburner	1.0		1.0	Neuroscience	1.0	A5029410349	https://www.fil.ion.ucl.ac.uk/team/computational-anatomy-team/	1986.0
+John G. Crock	1.0		1.0	Anthropology	0.0	A5046250286		
+Jordan T Gebhardt	1.0		1.0	Diagnostic Medicine and pathobiology	1.0	A5066274910	https://www.asi.k-state.edu/extension/swine//	2015.0
+Joseph Acquisto	1.0		1.0	French and Italian	0.0	A5049409973		
+Joseph Henrich	1.0	11.0	1.0	Human Evolutionary Biology	1.0	a5034266052	https://coevolution.fas.harvard.edu/current-lab-members	1997.0
+Josh Bongard	1.0		1.0	Computer Science	1.0	A5066791342	https://www.meclab.org/people	
+Joshua B. Tenenbaum	1.0		1.0	 Brain and Cognitive Sciences	1.0	A5071093940	https://cocosci.mit.edu/	
+Joshua Farley	1.0		1.0	Community Development & Applied Economics	0.0	a5090686681		
+Juan Pablo Alperin	1.0		1.0	information science	1.0	A5085171399	https://www.scholcommlab.ca/people/	
+Julie A. Dumas	1.0		0.0	Psychiatry	1.0	a5019605511		
+Katherine Ognyanova	1.0	10.0	0.0	Communication	1.0	a5084279765	https://csslab.rutgers.edu/people/	
+Katherine Yelick	1.0		0.0	Electrical Engineering and Computer Sciences	1.0	A5091741596		
+Kathryn Demps	1.0		0.0	anthropology	0.0	a5084650556		
+Kelly Clark/Keefe	1.0		0.0	College of Education and Social Services	0.0	A5073802469		
+Ken Goldberg	1.0		1.0	Industrial Engineering and Operations Research	1.0	A5050342525	https://autolab.berkeley.edu/people	1984.0
+Kim R. Bauerly	1.0		0.0	Communication sciences and disorders	1.0	A5086274493	https://www.uvm.edu/cnhs/csd/speech-fluency-lab	
+Lauren F. Klein	1.0	8.0	0.0	English and Quantitative Theory and Methods	1.0		https://dhlab.lmc.gatech.edu/people/index.html	
+Laurent Hébert‐Dufresne	1.0		1.0	Computer Science	1.0	A5035455593	https://joint-lab.github.io/people	
+Lesley‐Ann Dupigny‐Giroux	1.0		9.0	Geography and Geosciences	0.0	a5012783921		
+Louis deRosset	1.0		1.0	Philosophy	0.0	a5046801350		
+Luc Faucher	1.0		1.0	Philosophy	0.0	a5070298387		1997.0
+Luis A. Duffaut Espinosa	1.0		1.0	Electrical and Biomedical Engineering	1.0	a5005494593	https://www.uvm.edu/cems/ebe/autonomous-and-intelligent-systems-research-air-lab	
+M. E. J. Newman	1.0		1.0	Physics	1.0	A5067142016	https://public.websites.umich.edu/~mejn/	1995.0
+Mads Almassalkhi	1.0		1.0	Electrical and Biomedical Engineering	1.0	A5053327116	https://madsalma.github.io/people.html	
+Maeve Eberhardt	1.0		0.0	Linguistics	0.0	a5059719469		
+Mandar M. Dewoolkar	1.0		1.0	Civil and Environmental Engineering	1.0	a5008146559	https://site.uvm.edu/mdewoolk/	
+Manlio De Domenico	1.0		1.0	Physics	1.0	A5019170728	https://manliodedomenico.com/people.php	
+Marianne E. Krasny	1.0		0.0	Natural Resources and the Environment	1.0	A5068916099	https://www.civicecology.org/	
+Mark Algee-Hewitt	1.0		1.0	English	1.0	a5074329461	https://litlab.stanford.edu/people/	
+Mark Lubell	1.0	15.0	1.0	Environmental Science and Policy	1.0	a5081521085	https://environmentalpolicy.ucdavis.edu/	
+Matthew Carlson	1.0		1.0	Political Science	0.0	A5074460980		
+Matthew J. Barker	1.0		1.0	Philosophy	0.0	A5053001049		
+Matthew K. Higgins	1.0		1.0	Biochemistry	1.0	A5035509700	https://higginslab.web.ox.ac.uk/who-we-are	
+Matthew Price	1.0		1.0	Psychological science	1.0	A5036140974	https://www.crestresearch.org//	2006.0
+Meaghan Emery	1.0		0.0	French and Italian	0.0	a5014136538		
+Meghan Cope	1.0		0.0	Geography and Geosciences	0.0	A5056414452		
+Meredith T. Niles	1.0		0.0	Nutrition and Food Sciences	1.0	A5080871120	https://www.meredithtniles.com/students	
+Michael I. Jordan	1.0		1.0	Electrical Engineering and Computer Sciences; Statistics	1.0	A5049812527		
+Michael M. J. Fischer	1.0		1.0	Anthropology	0.0	a5066201883		1977.0
+Michael Muthukrishna	1.0	15.0	1.0	Psychological and Behavioural Science	1.0	a5056851399	https://www.michael.muthukrishna.com/muthukrishna-lab/	
+Michael S. Cannizzaro	1.0		1.0	Communication Sciences and Disorders	0.0	A5002845482		
+Michele E. Commercio	1.0		0.0	Political Science	0.0	A5067076795		
+Michelle Girvan	1.0		0.0	Physics	1.0	A5017906200	https://sites.google.com/umd.edu/networks/home/group-members?authuser=0	
+Mirta Galešić	1.0		0.0	Santa Fe Institute	1.0	A5071165387		
+Morgan Sonderegger	1.0	17.0	1.0	Linguistics; Computer Science	1.0	a5050873228	https://mcqll.org/people	
+Muhammad Abdul-Mageed	1.0		1.0	School of Information; Linguistics; Computer Science	1.0	A5004629670	https://www.dlnlp.ai/#Team	
+Muzhou Wang	1.0		1.0	Chemical and Biological Engineering.	1.0	A5027906115	https://www.wanglab.northwestern.edu/members/	
+Naomi H. Feldman	1.0	7.0	0.0	Linguistics	1.0	a5016109670	http://users.umiacs.umd.edu/~nhf/students.html	
+Nathalie Mathieu-Bolh	1.0		0.0	Economics	0.0	A5082336655		
+Niccolo M. Fiorentino	1.0	9.0	1.0	Mechanical Engineering	1.0	a5082463471	https://www.uvm.edu/~nfiorent/	
+Nicholas A. Barber	1.0	9.0	1.0	Biology	1.0	a5002335402	https://barberna.wixsite.com/barberecology/people	
+Nicholas Cheney	1.0		1.0	Computer Science	1.0	A5091485524	https://www.uvm.edu/neurobotics/people	
+Nicholas J. Gotelli	1.0		1.0	Biology	1.0	A5085232359	https://www.uvm.edu/~ngotelli/homepage.html	
+Nicole E. Conroy	1.0		0.0	Human Development and Family Science	0.0	A5017116907		
+Pablo S. Bose	1.0		1.0	Geography and Geosciences	0.0	A5086838547		
+Patrick J. Callery	1.0		1.0	Business	0.0	A5052810664		
+Paul Cisek	1.0		1.0	Neuroscience	1.0	A5089018845	https://cisek.org/pavel/	
+Paul R. Bierman	1.0		1.0	Geology	1.0	A5065669012	https://www.uvm.edu/cosmolab/students.html	
+Paula B. Deming	1.0		0.0	Biomedical and Health Science	1.0	a5030675455		
+Peter Sheridan Dodds	1.0		1.0	Mathematics & Statistics	1.0	A5040821463	https://compstorylab.org/about/	1999.0
+Philip Barutha	1.0		1.0	English	0.0	A5015659727		
+Philippe Mongeon 	1.0	7.0	1.0	Information Science	1.0	A5081963935	https://www.qsslab.ca/people/	
+Pierre Legendre	1.0		1.0	Biology	1.0	A5071178128		1967.0
+Pramit Chaudhuri	1.0	27.0	1.0	Classics	1.0	a5033946033	https://www.qcrit.org/people	2008.0
+Quentin J. M. Huys	1.0		1.0	Computational Psychiatry	1.0	A5069346030		
+Rachael A. Bay	1.0	11.0	0.0	Evolution and Ecology	1.0	a5063361075	https://baylab.github.io/people/	
+Rachel Rudinger	1.0		0.0	Computer Science; Linguistics	0.0	a5082447472		
+Ray Dolan	1.0		1.0	Cognitive Neuroscience	1.0	A5037175477		
+Rebecca Aslakson	1.0		0.0	Anesthesiology	0.0	A5090345791		
+Rebecca M. Callahan	1.0		0.0	Educational Leadership and Policy Studies	0.0	A5014853497		
+Réka Albert	1.0		0.0	Physics; Biology	1.0	A5012905268	https://www.ralbert.me/research.html	1997.0
+Richard M. Single	1.0		1.0	Mathematics and Statistics	0.0	A5024849718		
+Richard Wright	1.0	19.0	1.0	Linguistics	1.0	a5006429520	http://depts.washington.edu/phonlab/currentmembers.php	
+Robb B. Rutledge	1.0		1.0	Psychology	1.0	A5041209516		
+Robert Frank	1.0	9.0	1.0	Linguistics	1.0	a5071457812	https://clay.yale.edu/members/	
+Robert Gramling	1.0		1.0	Family Medicine	1.0	A5005213390	https://vermontconversationlab.com/about/	
+Robert R. McLeod	1.0		1.0	Electrical, Computer, and Energy Engineering	1.0	A5072481660	https://www.colorado.edu/faculty/mcleod/personnel	1985.0
+Robin Wolfe Scheffler	1.0		1.0	Science, Technology, and Society; history	0.0	a5057132322		
+Roger Lévy	1.0	12.0	1.0	Brain and Cognitive Sciences	1.0	a5090215557	http://cpl.mit.edu/people.html	2001.0
+Ronald S. Fearing	1.0		1.0	Electrical Engineering and Computer Sciences	1.0	A5073886799	https://people.eecs.berkeley.edu/~ronf/Biomimetics/people.html	
+Růžena Bajcsy	1.0		0.0	Electrical Engineering and Computer Sciences	1.0	A5055278920	http://hart.berkeley.edu/people.html	1973.0
+Ryan Trovitch	1.0		1.0	Molecular Sciences	1.0	A5081116926	https://trovitch.lab.asu.edu/	
+Samuel Chevalier	1.0		1.0	Electrical and Biomedical Engineering	1.0	A5005388341		
+Sandro Azaele	1.0		1.0	Physics	1.0	A5062771810		
+Sara Helms Cahan	1.0		0.0	Biology	1.0	A5029896488	http://shelmscahan.github.io/Index2.html	
+Sarah C. Alexander	1.0		0.0	English	0.0	A5032434213		
+Scott Merril	1.0		1.0	Plant and Soil Science	1.0	A5088766301	https://www.uvm.edu/segs/	
+Sean A. Diehl	1.0		0.0	Microbiology and Molecular Genetics	1.0	a5090816940	https://www.med.uvm.edu/mmg/faculty/sean-diehl-phd	
+Sibel Adalı	1.0		0.0	Computer Science	1.0	A5033986205	https://www.cs.rpi.edu/~sibel/www/research_blog.html	
+Siva Reddy	1.0	17.0	1.0	Linguistics; Computer Science	1.0	a5028691398	https://mcqll.org/people	
+Sonja Vogt	1.0	14.0	0.0	Business and Economics	1.0	a5067605351	http://pacelab.org/people/	
+Spencer Backman	1.0		1.0	Mathematics & Statistics	0.0	A5066800852		
+Stefanie Haustein	1.0		0.0	information science	1.0	A5014077037	https://www.scholcommlab.ca/people/	
+Stephen J. Dempsey	1.0		1.0	Business	0.0	a5040491225		
+Steven C. Soper	1.0		1.0	History	0.0	a5032873524		
+T.L. Bradshaw	1.0		1.0	Plant and Soil Science	0.0	A5063690586		
+Taylor Dupuy	1.0		1.0	Mathematics and Statistics	0.0	a5030917395		
+Terence Cuneo	1.0		1.0	Philosophy	0.0	A5005500349		
+Terrence P. Delaney	1.0		1.0	Plant Biology	1.0	a5081523526	https://www.uvm.edu/~tpdelane/lab/people.html	
+Theodore J. Angelopoulos	1.0		1.0	Rehabilitation and Movement Science	0.0	A5033621367		
+Thomas P. Ahern	1.0		1.0	Surgery	0.0	A5079241058		
+Timothy D. Griffiths	1.0		1.0	Neurology	1.0	A5069247395		1991.0
+Timothy J. O’Donnell	1.0	17.0	1.0	Linguistics	1.0	a5089919672	https://mcqll.org/people	2002.0
+Timothy M. Waring	1.0	3.0	1.0	School of Economics	1.0	a5019243359	https://timwaring.info/team-2/	2004.0
+Tobias U. Hauser	1.0		1.0	Computational Psychiatry	1.0	A5042016465		
+Tracy Arámbula Ballysingh	1.0		0.0	Higher Education and Student Affairs Administration	0.0	A5052797184		
+Tyler Doggett	1.0		1.0	Philosophy	0.0	a5013796007		
+Vanessa Frías-Martínez	1.0	12.0	0.0	Information School; Computer Science	1.0	a5046562990	https://www.urbancomputinglab.org/people	
+Vicki L. Brennan	1.0		0.0	African Studies Program	0.0	A5049222482		
+Vincent Larivière	1.0	10.0	1.0	information science; library science	1.0	A5068542997	https://www.researchgate.net/lab/Canada-Research-Chair-on-the-Transformations-of-Scholarly-Communication-Vincent-Lariviere	
+W. Brent Seales	1.0	12.0	1.0	Computer Science	1.0	a5028529600	https://www2.cs.uky.edu/dri/our-team/	
+William Deringer	1.0		1.0	Science, Technology, and Society; history	0.0	a5085421249		
+William L. Cats-Baril	1.0		1.0	Business	0.0	A5077022082		
+Wolfgang R. Dostmann	1.0		1.0	Pharmacology	-1.0	a5058542049		
+Yamir Moreno	1.0	14.0	1.0	Physics	1.0	A5084793824	https://cosnet.bifi.es/people/	
+Yolanda H. Chen	1.0	9.0	0.0	Biology	1.0	a5029745678	https://blog.uvm.edu/yfanslow/people/	
+Yong‐Yeol Ahn	1.0	22.0	1.0	Informatics and Computing		A5059236838	https://yongyeol.com/group/	
+Zobayer Ahmmad	1.0		1.0	Sociology	0.0	A5077733558		
+Luis A. García	1.0		1.0	Civil and Environment Engineering	0.0	a5084851307		
+Ruth Mostern	1.0		0.0	History	0.0	a5066196518		
+Kelly Schrum	1.0		0.0	History and Art history	0.0	a5073559582		
+Taylor Berg-Kirkpatrick	1.0	11.0	1.0	Computer Science	1.0	a5017455302	https://icebergnlp.github.io/people	
+Andrea D. Sims	1.0	8.0	0.0	Linguistics	1.0	a5001850880	https://u.osu.edu/morphology/who-we-are/	
+Roopika Risam	1.0		0.0	Film and Media Studies; Comparative Literature	0.0	a5004179234		
+Edward E. Baptist	1.0		1.0	History	0.0	a5018372342		
+Clayborne Carson	1.0		1.0	History	0.0	a5002141379		
+Nancy Lutkehaus	1.0		0.0	Anthropology; Political Science	0.0	a5027089210		
+Leo Braudy	1.0		1.0	History; Political Science; Spatial Sciences	0.0	a5018523649		
+Christopher M. Moreman	1.0		1.0	Philosophy & Religous Studies	0.0	a5089455892		
+Erin Graff Zivin	1.0		0.0	Spanish and Portuguese; Comparative Literature	0.0	a5072616403		
+Alan E. Wilson	1.0		1.0	School of Fisheries, Aquaculture & Aquatic Sciences	1.0	a5063349034	https://www.wilsonlab.com/	1999.0
+A. J. Weinstein	1.0		1.0	Physics	1.0	a5014235664	https://labcit.ligo.caltech.edu/groups/astrophysics-group/people.shtml	
+Paul Laris	1.0		1.0	Geography	1.0	a5034350333	https://www.researchgate.net/lab/Paul-Laris-Lab	
+Corey G. Dunn	1.0		1.0	Applied Ecology	1.0	a5040153089	https://dunnfishresearch.weebly.com/people.html	
+Rebecca S. Barak	1.0		0.0	Plant Science and Conservation	1.0	a5014827802	https://www.beckybarak.com/people	2015.0
+Ana Carolina Carnaval	1.0		0.0	Biology	1.0	a5089366029	https://www.carnavallab.org/ana	
+James R. Green	1.0		1.0	Systems and Computer Engineering	1.0	a5078223816	http://www.sce.carleton.ca/faculty/green/green.php?page=students	2002.0
+Matthew P. Shores	1.0		1.0	Chemistry	1.0	a5087585600	https://shoreslab.colostate.edu/group.html	
+Anthony B. Wilson	1.0		1.0	Biology	1.0	a5052545695	https://evolution.blog.brooklyn.edu/people/research-students/	
+David A. Braun	1.0		1.0	Medicine	1.0	a5069300441	https://www.thebraunlab.org/people	2010.0
+Michael P. Cummings	1.0		1.0	Biology	1.0	a5067884449	https://cummings-lab.org/	
+Elena M. Kramer	1.0		0.0	Biology	1.0	a5008053111	https://kramerlab.oeb.harvard.edu/publications	1998.0
+Ioan Raicu	1.0		1.0	Computer Science	1.0	a5030599558	http://datasys.cs.iit.edu/people/index.html	
+Laura M. Hurley	1.0		0.0	Biology	1.0	a5077477494	https://hurley.lab.indiana.edu/publications.html	
+Jeffrey J. Gray	1.0		1.0	Chemical and Biomolecular Engineering	1.0	a5009383312	https://graylab.jhu.edu/people.php	
+Anthony I. Dell	1.0		1.0	Biology	1.0	a5005797884	http://dellecologylab.org/people	2010.0
+David J. Van Den Berg	1.0		1.0	Biology	1.0	a5085453531	https://www.researchgate.net/lab/David-J-Berg-Lab	1984.0
+Ashley N. Schulz	1.0		0.0	Forestry	1.0	a5038265616	https://www.schulzforestecolab.com/lab-team.html	
+Rachel L. Severson	1.0		0.0	Biological Sciences	1.0	a5056602373	https://www.umt.edu/severson-lab/people/students.php	
+Angela D. Luis	1.0		0.0	Biological Sciences	1.0	a5017367797	https://www.umt.edu/disease-ecology-lab/people/default.php	
+L. Scott Mills	1.0		1.0	Wildlife Biology	1.0	a5041319633	https://www.umt.edu/mills-lab/people1.php	
+Mark Hebblewhite	1.0		1.0	Wildlife Biology	1.0	a5037314876	https://www.umt.edu/ungulate-ecology-lab/default.php	
+Monica A. Serban	1.0		0.0	Biochemistry	1.0	a5007710038	https://www.umt.edu/serban-lab/meet_the_team/default.php	2007.0
+Philip E. Higuera	1.0		1.0	Ecosystem and Conservation Sciences	1.0	a5049717534	https://www.umt.edu/paleo-fire-ecology-lab/people/default.php	
+Winsor H. Lowe	1.0		1.0	Biological Sciences	1.0	a5027159554	https://www.umt.edu/lowe-lab/people/default.php	1997.0
+Akasha M. Faist	1.0		0.0	Rangeland and Restoration Ecology	1.0	a5029940152	https://www.umt.edu/faist-lab/people/default.php	2010.0
+Daniel Z. Atwater	1.0		1.0	Biological Sciences	1.0	a5027906137		
+Michael Hargather	1.0		1.0	Mechanical Engineering	1.0	a5035269561	https://www.nmt.edu/academics/mecheng/faculty/mhargather/research.php	
+Sevinç Ercan	1.0		1.0	Biology	1.0	a5044211202	https://sites.google.com/site/ercanlab/people?authuser=0	
+Elon A. Ison	1.0		1.0	Chemistry	1.0	a5021325829	https://isonlab.wordpress.ncsu.edu/group/	
+Christof Teuscher	1.0		1.0	Electrical and Computer Engineering	1.0	a5037611164		
+Bridgett M. vonHoldt	1.0		0.0	Biology	1.0	a5015824236	https://vonholdt.princeton.edu/people.html	
+Jannette Carey	1.0		0.0	Molecular Biology	1.0	a5035598598	https://carey.princeton.edu/about/	
+Jonathan D. Cohen	1.0		1.0	Neuroscience	1.0	a5088141761	https://sites.google.com/view/ncclab/people?authuser=0	1988.0
+Greg Michalski	1.0		1.0	Chemistry	1.0	a5047079491	https://www.eaps.purdue.edu/michalski/people/index.html	
+Felix Warneken	1.0		1.0	Psychology		a5024921128	https://sites.lsa.umich.edu/warneken/members/	2006.0
+Peter D. Howe	1.0		1.0	Geography; Environment and Society		a5044664261	https://peterhowe.org/lab/lab-members/	2007.0
+Natalia V. Kirienko			0.0	Biosciences		a5076196713	https://kirienkolab.rice.edu/people.html	
+Nandakumar S. Narayanan	1.0		1.0	Neurology		a5082128655	https://narayanan.lab.uiowa.edu/people	
+Meenakshi Dutt	1.0		0.0	Chemical and Biochemical Engineering	1.0	a5075457888	http://dutt-lab.rutgers.edu/People.html	
+David I. Shreiber	1.0		1.0	Biomedical Engineering	1.0	a5016394435	https://sites.rutgers.edu/david-shreiber/current-lab-members/	1994.0
+Sarah Cohen	1.0		0.0	Cell biology and Physiology	1.0	a5024471814	https://cohenlaboratory.web.unc.edu/people/	2015.0
+Boyd M. Goodson	1.0		1.0	Chemistry	1.0	a5024471814	http://www.goodsonlab.org/GoodsonTeam.html	
+Ruben Michael Ceballos	1.0		1.0	Biology	1.0	a5077954254	https://ceballoslab.uark.edu/personnel/	

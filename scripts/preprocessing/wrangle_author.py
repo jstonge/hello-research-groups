@@ -37,7 +37,7 @@ def main():
     
     df["age_std"] = "1"+df.author_age.astype(str).map(lambda x: x.zfill(3))+"-"+gen_fill_char(1, 12)+"-"+gen_fill_char(1, 28)
     
-    df.to_csv(args.output / "author.csv", index=False)
+    df.to_parquet(args.output / "author.parquet")
     
     con.close()
 
