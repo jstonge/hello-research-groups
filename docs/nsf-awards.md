@@ -1,6 +1,4 @@
 ---
-toc: false
-title: Visualize nsf awards
 sql:
   data: ./data/nsf_awards.parquet
 ---

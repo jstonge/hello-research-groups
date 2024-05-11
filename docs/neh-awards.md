@@ -3,7 +3,7 @@ theme: dashboard
 toc: false
 title: Visualize nsf humanities
 sql:
-  data: ./data/nsf_humanities.parquet
+  data: ./data/neh_awards.parquet
 ---
 
 <div class="hero">
@@ -25,11 +25,46 @@ HAVING COUNT(grant_program_name) > 5
 ORDER BY grant_program_name
 ```
 
-
 ```js
-const select_grant = view(Inputs.table(uniqGrants))
+const search_grants = view(Inputs.search(uniqGrants))
 ```
 
+```js
+const select_grant = view(Inputs.table(search_grants))
+```
+
+```js
+const select_grants_safe = select_grant.length === 236 ? // eyeballed
+  ['State Humanities Councils General Operating Support Grants', 'Summer Stipends', 'Basic Research', 
+   'Humanities Projects in Media', 'Humanities Projects in Libraries and Archives', 
+   'Digital Humanities Start-Up Grants'] : 
+  select_grant.map(d=>d.grant_program_name)
+```
+
+<div>${resize((width) => 
+Plot.plot({
+      width,
+      marginLeft: 100,
+      y: { grid: true, type: "log" },
+      color: { legend: true },
+      marks: [
+        Plot.ruleY([0]),
+        Plot.lineY(
+          money_overtime2.filter(d => select_grants_safe.includes(d["grant_program_name"])), 
+          Plot.windowY(
+          { k:5 },
+          { x: "year_awarded", y: "tot", stroke: "grant_program_name" }
+        )),
+        Plot.dotY(
+          money_overtime2.filter(d => select_grants_safe.includes(d["grant_program_name"])), 
+          Plot.windowY(
+            { k:1 },
+            { x: "year_awarded", y: "tot", stroke: "grant_program_name", tip: true }
+          ))
+      ]
+    })
+)}
+</div>
 
 ```sql id=[...money_overtime2]
 SELECT 
@@ -40,26 +75,6 @@ WHERE
 GROUP BY year_awarded, grant_program_name 
 ORDER BY year_awarded
 ```
-
-<div>${resize((width) => 
-Plot.plot({
-      width,
-      marginLeft: 100,
-      y: {grid: true, type: "log"},
-      color: {legend: true},
-      marks: [
-        Plot.ruleY([0]),
-        Plot.lineY(money_overtime2.filter(d => select_grant.map(d=>d.grant_program_name).includes(d["grant_program_name"])), Plot.windowY(
-          {k:5},
-          {x: "year_awarded", y: "tot", stroke: "grant_program_name"})),
-        Plot.dotY(money_overtime2.filter(d => select_grant.map(d=>d.grant_program_name).includes(d["grant_program_name"])), Plot.windowY(
-          {k:1},
-          {x: "year_awarded", y: "tot", stroke: "grant_program_name", tip: true}))
-      ]
-    })
-)}
-</div>
-
 
 ## By division
 
@@ -106,26 +121,55 @@ Plot.plot({
 
 ## By field of science
 
-
-```sql id=[...uniqFOS] 
-SELECT primary_humanities_discipline as FoS, COUNT(year_awarded) as awarded_count
-FROM data
-GROUP BY primary_humanities_discipline
-HAVING COUNT(primary_humanities_discipline) > 5
-ORDER BY primary_humanities_discipline
+```js
+const search_fos = view(Inputs.search(uniqFOS))
 ```
-<!-- 
-```sql id=uniqFOS
-SELECT DISTINCT primary_humanities_discipline as FoS
-FROM data
-GROUP BY year_awarded, primary_humanities_discipline 
-HAVING COUNT(approved_award_total > 5)
-ORDER BY primary_humanities_discipline
-``` -->
 
 ```js
-const select = view(Inputs.table(uniqFOS))
+const sel_fos = view(Inputs.table(search_fos))
 ```
+
+```js
+const select_fos_safe = sel_fos.length === 156 ? 
+  ['Archaeology', 'U.S. History', 'Art History and Criticism', 'American Studies',  'Anthropology', 
+    'History of Religion', 'Gender Studies', 'Russian History'
+  ] : 
+  sel_fos.map(d=>d.FoS)
+```
+
+<div>${resize((width) => 
+Plot.plot({
+      width,
+      marginLeft: 100,
+      marginRight: 140,
+      y: {grid: true, type: "log"},
+      color: {legend: true},
+      marks: [
+        Plot.ruleY([0]),
+        Plot.lineY(
+          [...money_overtime_fos].filter(d => select_fos_safe.includes(d["FoS"])), 
+          Plot.windowY(
+            {k: 5},
+            {x: "year_awarded", y: "tot", stroke: "FoS"}
+          )),
+        Plot.text(
+          [...money_overtime_fos].filter(d => select_fos_safe.includes(d["FoS"])), 
+          Plot.selectLast(
+            Plot.windowY(
+              { k: 5 },
+              { x: "year_awarded", y: "tot", text: "FoS", z: "FoS", frameAnchor: "left", dx: 15 })
+            )
+        ),
+        Plot.dotY(
+          [...money_overtime_fos].filter(d => select_fos_safe.includes(d["FoS"])), 
+          Plot.windowY(
+            {k: 1},
+            {x: "year_awarded", y: "tot", stroke: "FoS", tip: true}
+          ))
+      ]
+    })
+)}
+</div>
 
 ```sql id=money_overtime_fos
 SELECT 
@@ -137,45 +181,13 @@ GROUP BY year_awarded, primary_humanities_discipline
 ORDER BY year_awarded
 ```
 
-```js
-const data_f = [...money_overtime_fos].filter(d => sel_fos.includes(d["FoS"]))
+```sql id=[...uniqFOS] 
+SELECT primary_humanities_discipline as FoS, COUNT(year_awarded) as awarded_count
+FROM data
+GROUP BY primary_humanities_discipline
+HAVING COUNT(primary_humanities_discipline) > 5
+ORDER BY primary_humanities_discipline
 ```
-
-```js
-const sel_fos = select.length == 143 ? ['American Literature'] : select.map(d=>d["FoS"])
-```
-
-
-<div>${resize((width) => 
-Plot.plot({
-      width,
-      marginLeft: 100,
-      y: {grid: true, type: "log"},
-      color: {legend: true},
-      marks: [
-        Plot.ruleY([0]),
-        Plot.lineY(data_f, Plot.windowY(
-          {k: 5},
-          {x: "year_awarded", y: "tot", stroke: "FoS", tip: true}
-          )),
-        Plot.dotY(data_f, Plot.windowY(
-          {k: 1},
-          {x: "year_awarded", y: "tot", stroke: "FoS"}
-          ))
-      ]
-    })
-)}
-</div>
-
-
-
-
-
-```js
-Inputs.table(data_f)
-```
-
-
 
 
 ## raw data

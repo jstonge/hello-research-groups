@@ -1,11 +1,31 @@
 import pandas as pd
 from pathlib import Path
+import argparse
 
+def parse_args():
+    parser = argparse.ArgumentParser("Data Downloader")
+    parser.add_argument(
+        "-i",
+        "--input",
+        type= Path,
+        help="JSONlines file with urls and hashes",
+        required=True,
+    )
+    parser.add_argument(
+        "-o", "--output", type=Path, help="output directory", required=True
+    )
+    return parser.parse_args()
 
 def main():
-    input_dir = Path("../../data/raw/nsf_humanities")
-    output_dir = Path("../../docs/data")
+    # input_dir = Path("../../data/raw/neh_awards")
+    # output_dir = Path("../../docs/data")
+    
+    args = parse_args()
+    input_dir = args.input
+    output_dir = args.output
+
     fnames = list(input_dir.glob("*.parquet"))
+
     dfs = []
     for fname in fnames:
         # thissss is sloow but whatev forn now
@@ -32,7 +52,7 @@ def main():
 
     all_df = all_df[cols2keep]
     all_df = all_df[(all_df.year_awarded > 1960) & (all_df.year_awarded < 2024)]
-    all_df.to_parquet(output_dir / "nsf_humanities.parquet")
+    all_df.to_parquet(output_dir / "neh_awards.parquet")
         
 
 if __name__ == "__main__":

@@ -7,6 +7,7 @@ yarn-error.log
 .vscode/
 .venv/
 
+tmp/
 docs/data/.cache_author/
 docs/data/embedding-walk/
 docs/data/oa_data*
@@ -22,3 +23,8 @@ scripts/models/stan/
 !scripts/models/stan/*.stan
 data/clean/
 data/oa_data_raw_copy.db
+__pycache__/
+data/oa_data_raw.db
+docs/data/*.parquet
+etc/*.pdf
+scripts/import/geckodriver

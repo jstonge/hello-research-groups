@@ -229,7 +229,7 @@ def main():
 
     failed_range = []
 
-    for i, row in tqdm(target_aids.iloc[159:,:].iterrows(), total=len(target_aids.iloc[159:,:])):
+    for i, row in tqdm(target_aids.iterrows(), total=len(target_aids)):
         # target_aid, target_name = 'A5018443530', 'Adam K. Anderson'
         target_aid = row['OpenAlex id']
         target_name = row['oa_display_name']

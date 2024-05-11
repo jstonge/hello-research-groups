@@ -11,7 +11,8 @@ from time import sleep
 from numpy.random import uniform
 from selenium.webdriver.common.by import By
 from selenium import webdriver
-
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 
 import sys
@@ -31,8 +32,9 @@ def main():
     """https://apps.neh.gov/publicquery/default.aspx"""
     
     driver = webdriver.Firefox()
-    
-    for yr in range(1978, 1981):
+    wait = WebDriverWait(driver, 20) 
+
+    for yr in range(1980, 1981):
         dfs = []
         base_url = 'https://apps.neh.gov/PublicQuery/Default.aspx?'
         all_rows = []
@@ -71,7 +73,8 @@ def main():
                 df = pd.DataFrame(table_dat, columns=colnames)
                 df['Recipient Type'] = 'institutions' if atv == 1 else 'individuals'
                 dfs.append(df)
-                driver.find_element(By.CSS_SELECTOR, "button.t-button.rgActionButton.rgPageNext").click()
+                next_button = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, "button.t-button.rgActionButton.rgPageNext")))
+                next_button.click()
                 sleep(uniform(6,7))
 
             all_rows.append(tot_rows)

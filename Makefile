@@ -1,6 +1,7 @@
 DATA_DIR=./data
 DATA_DIR_RAW=$(DATA_DIR)/raw
-DATA_DIR_PROCESSED=$(DATA_DIR)/clean
+DATA_DIR_PROCESSED=$(DATA_DIR)/preprocessed
+DATA_DIR_CLEAN=$(DATA_DIR)/clean
 DATA_DIR_TRAINING=$(DATA_DIR)/training
 
 
@@ -22,11 +23,26 @@ TIMELINE_RESEARCHERS_TSV=$(DATA_DIR_RAW)/researchers.tsv
 clean:
 	rm -rf docs/.observablehq/cache
 
-#####################
-#                   #
-#        DATA       #
-#                   #
-#####################
+########################
+#                      #
+#        NSF DATA      #
+#                      #
+########################
+
+nsf-awards-update:
+	python $(SCRIPT_DIR)/clean/nsf_awards.py -i $(DATA_DIR_CLEAN)/nsf_awards -o $(DATA_DIR_OBS)
+
+neh-awards:
+	python $(SCRIPT_DIR)/import/neh_awards.py -o $(DATA_DIR_CLEAN)/neh_awards
+
+neh-awards-update:
+	python $(SCRIPT_DIR)/clean/neh_awards.py -i $(DATA_DIR_CLEAN)/neh_awards -o $(DATA_DIR_OBS)
+
+##############################
+#                            #
+#        TIMELINE DATA       #
+#                            #
+##############################
 
 .PHONY: update-timeline
 

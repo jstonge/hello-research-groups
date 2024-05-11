@@ -1,62 +1,113 @@
 ---
-toc: false
-theme: "air"
+index: false
 ---
 
 <style>
 
 .hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   font-family: var(--sans-serif);
-  margin: 4rem 0 8rem;
+  margin: 4rem 0;
   text-wrap: balance;
-  text-align: center;
 }
 
 .hero h1 {
-  margin: 2rem 0;
-  max-width: none;
-  font-size: 14vw;
-  font-weight: 900;
+  font-size: 64px;
+  font-family: var(--serif);
   line-height: 1;
-  background: linear-gradient(30deg, var(--theme-foreground-focus), currentColor);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  margin: 2rem 0;
 }
 
 .hero h2 {
-  margin: 0;
-  max-width: 34em;
-  font-size: 20px;
-  font-style: initial;
-  font-weight: 500;
-  line-height: 1.5;
+  font-style: normal;
+  font-size: 18px;
+  line-height: normal;
   color: var(--theme-foreground-muted);
 }
 
-@media (min-width: 640px) {
-  .hero h1 {
-    font-size: 90px;
+.hero .observablehq-pre-container,
+.hero pre:not(.observablehq-pre-container pre) {
+  margin: 1rem 0;
+}
+
+.cta {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+@container not (min-width: 400px) {
+  .cta {
+    flex-direction: column;
+    align-items: start;
+    gap: 0;
+  }
+  .cta .observablehq-pre-container,
+  .cta pre:not(.observablehq-pre-container pre) {
+    width: 100%;
   }
 }
 
-.text-align-center {
-  text-align: center;
+.gallery {
+  margin: 4rem -1rem;
+  gap: 2rem;
+  max-width: calc(640px + 2rem);
 }
 
-img.centered {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.gallery a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.gallery img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 0 0.75px rgba(128, 128, 128, 0.2), 0 6px 12px 0 rgba(0, 0, 0, 0.2);
+  aspect-ratio: 2500 / 1900;
+}
+
+@media (prefers-color-scheme: dark) {
+  .gallery img {
+    box-shadow: 0 0 0 0.75px rgba(128, 128, 128, 0.2), 0 6px 12px 0 rgba(0, 0, 0, 0.4);
+  }
+}
+
+.gallery a:not(:hover, :focus) {
+  color: var(--theme-foreground-muted);
+}
+
+.gallery a:hover img,
+.gallery a:focus img {
+  box-shadow: 0 0 0 0.75px var(--theme-foreground-focus), 0 6px 12px 0 rgba(0, 0, 0, 0.2);
+}
+
+.gallery figcaption {
+  font-size: 12px;
+  color: inherit;
+}
+
+.arrow {
+  font-weight: 500;
+}
+
+.arrow::after {
+  content: "→";
+  display: inline-block;
+  margin-left: 0.25rem;
+}
+
+@media (prefers-color-scheme: light) {
+  h1 {
+    --theme-red: #d75c48;
+  }
 }
 
 </style>
 
+
 # Welcome
-_"But what are reseach groups". This is our big question. We seek to define and characterize research groups in a practical ways while engaging with philosophical perambulation._
+_But what are reseach groups? How do they impact our scientific works? These are our big questions. We seek to define and characterize research groups in a practical ways while engaging with philosophical pedantries._
 
 This is an experimental project that combine data collection, data analysis, model building, and model visualization within the same project. We believe in the philosophy of principled data processing (see [the-turing-way](https://book.the-turing-way.org/),and [Patrick Ball: Principled Data Processing](https://www.youtube.com/watch?v=ZSunU9GQdcI&t=2923s&pp=ygURcGF0cmljayBiYWxsIGRhdGE%3D) for the details), but that is augmented with a modern data visualization framework (aka [Observable Framework](https://observablehq.com/framework/)).
 
@@ -75,6 +126,17 @@ In the project, we will include and exclude people from groups. Sometime this wi
 
 When we are lucky, there is a public facing webpage hosted by the group/PI that says, "look, here is my lab". This will be the people we define as part of the group, even thoug some loose collaborators might be missing from that page. We assume that this approach is a good proxy to get who is on the payroll of the lab, or at least who benefit from being exhibited on the main page of the lab.
 
+#### The challenges
+
+ - _Measuring research groups_; their emergence/birth, deaths, composition (role specialization?), and size.
+ - _Measuring the emergence of computational works_
+    - As part of the rise of computational works, _measuring the emergence of F/OSS-driven works_ (aka caring about the intersection of good software-engineering practices and scientific ideals of reproducibility and transparency)
+ - _Putting the two together_: measuring how  computational works impact the 'culture' of research groups. By culture, we mean collaboration norms at the moment, but really we would like to know how the rise of of computational works might endanger within- and inter-group diversity. That is, does the rise of computational works cause BIPOC researchers to leave academia at a faster rate at various career stage than not? 
+    - Why would it be the case? 
+      - Social identities involving computers are overly tied to (white) males, which mean that males are most likely (i) to have prior experience with computing and (ii) the intrinsic motivation to dive into the rabbit hole that is to learn computational thinking.
+    - Different ways the replacement of non-computational to computational researchers can happen:
+      1. `Non-computational groups trying to become computational`: in doing so, the composition within the group is changing (aka people in the groups willing to bite the bullett and learn to code are, on average, men).
+      1. `Group selection`: non-computational/qualitative/traditional researchers are being replaced by computational groups via (non-violent) intergroup competition (aka prestige-biased, differential group survival without conflict, differential reproduction, differential migration). Group selection dynamics, it might be that non-comp researchers willing to have groups need more resources, and they will offspring more new researchers as output. If funding agencies/industry favor quantative science over more qualitative science, it might be good enough to see _computational hysterisis_. 
 
 ## Project philosophy
 
@@ -246,7 +308,7 @@ Part of it is due to ego's new PhD students that are more into computer science 
 The funding stream might be also a driver of that attraction towards that space.
 There has been also foray into the intersection of climate change and public health.
 
-Yet another way to look at the change in collaboration patterns is to visualize collaborations as hyperedges:
+<!-- Yet another way to look at the change in collaboration patterns is to visualize collaborations as hyperedges:
 
 <img src="./figs/lhd_hyperedges.png" alt="" width="1000" height="600"/>
 
@@ -258,8 +320,5 @@ As we know, 2019-2020 COVID-19 was in full swing.
 
 We can also see the degree to which ego's PhD was collaborative, with darker hyperedges indicating multiple collaboration with the same subset of coauthors.
 
-
-
----
 
 

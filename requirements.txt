@@ -1,5 +1,0 @@
-pandas==2.2.0
-pyalex
-tqdm
-fastparquet
-duckdb
