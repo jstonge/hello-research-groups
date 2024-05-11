@@ -156,13 +156,13 @@ Features to examines:
 <div class="grid grid-cols-4">
   <div class="card"><br><br><br><br><br><br>
     <figure>
-      <img src="https://raw.githubusercontent.com/jstonge/hello-research-groups/main/docs/figs/friendship.svg" alt="growth" style="width:100%">
+      <img src="https://raw.githubusercontent.com/jstonge/hello-research-groups/main/static/friendship.svg" alt="growth" style="width:100%">
     </figure> 
     <br><br><br><br><br><br><br>The power of Two
   </div>
   <div>
     <figure>
-      <img src="https://raw.githubusercontent.com/jstonge/hello-research-groups/main/docs/figs/width.svg" 
+      <img src="https://raw.githubusercontent.com/jstonge/hello-research-groups/main/static/width.svg" 
       alt="width" style="width:100%">
     </figure> 
     Average width + Max width
