@@ -58,11 +58,11 @@ def main():
             (coauth.author_age-ego_a.author_age) AS age_diff,
 
         FROM 
-            coauthor c
+            coauthor2 c
         LEFT JOIN 
-            author_tidy coauth ON c.coauthor_aid = coauth.aid AND c.pub_year = coauth.pub_year
+            author coauth ON c.coauthor_aid = coauth.aid AND c.pub_year = coauth.pub_year
         LEFT JOIN 
-            author_tidy ego_a ON c.ego_aid = ego_a.aid AND c.pub_year = ego_a.pub_year
+            author ego_a ON c.ego_aid = ego_a.aid AND c.pub_year = ego_a.pub_year
         WHERE 
             c.pub_year < 2024
         ORDER BY c.pub_year
@@ -70,21 +70,17 @@ def main():
 
     df = con.sql(query).fetchdf()
 
-    # We calculate age difference between coauthors and ego such that
-    # positive numbers indicate that the coauthor is older than the ego.
-    # df[df.name == 'Aaron Clauset'].head()
-
     # making sure
     df = df[~df.author_age.isna()]
     df['author_age'] = df.author_age.astype(int)
     
-    # BIG MOVE. After inspection, many coauthor min years are most likely wrong.
+    # BIG MOVE. 
+    # After inspection, many coauthor min years are most likely wrong.
     # OpenAlex very often think that first works of a given author is much earlier than it really is.
     # For now, we simply say that all coauthors before 1950 are wrong. We will try to fix that later.
     df['coauth_min_year'] = np.where(df.coauth_min_year < 1950, None, df.coauth_min_year)
     df['coauth_age'] = df.pub_year - df.coauth_min_year
     df['age_diff'] = df.coauth_age - df.author_age
-
 
     # df[df['coauthor_age'].isna()] # 6K rows we need to fix
     
@@ -102,15 +98,9 @@ def main():
 
     assert len(df[df['age_bucket'].isna()]) == len(df[df['coauth_age'].isna()])
 
-    # df[df['ego'] == 'Aaron Clauset'].value_counts(['pub_year', 'age_bucket']).sort_index().reset_index(name='n')
-    # df[df['ego'] == 'Aaron Clauset'].sort_values('pub_year')
-
-    # df["age_std"] = "1"+df.author_age.astype(str).map(lambda x: x.zfill(3))+"-01-01"
     df["age_std"] = "1"+df.author_age.astype(str).map(lambda x: x.zfill(3))+"-"+df.pub_date.map(lambda x: "-".join(x.split("-")[-2:]))
     df["age_std"] = df.age_std.map(lambda x: x.replace("29", "28") if x.endswith("29") else x)  
     
-    # df.to_parquet("../../data/processed/coauthor.parquet")
-    # df.to_csv (args.output / "coauthor.csv", index=False)
     df.to_parquet (args.output / "coauthor.parquet")
     
     con.close()

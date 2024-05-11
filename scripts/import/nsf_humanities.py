@@ -6,11 +6,18 @@ import pandas as pd
 from tqdm import tqdm
 from pathlib import Path
 import argparse
+from time import sleep
+
+from numpy.random import uniform
+from selenium.webdriver.common.by import By
+from selenium import webdriver
+
+
 
 import sys
 sys.path.append("..")
 
-from helpers import generate_query
+# from ..helpers import generate_query
 
 def parse_args():
     parser = argparse.ArgumentParser("Data Downloader")
@@ -22,67 +29,65 @@ def parse_args():
 
 def main():
     """https://apps.neh.gov/publicquery/default.aspx"""
-
-    # r = requests.get("https://apps.neh.gov/PublicQuery/Default.aspx?q=1&a=0&n=0&o=0&ot=0&k=0&f=0&s=0&cd=0&p=0&d=1&dv=2&at=0&y=0&prd=0&cov=0&prz=0&wp=0&sp=0&ca=0&arp=0&ob=Institution%20name&or=ASC")
-    # soup = BeautifulSoup(r.content, "html.parser")
-    # table = soup.find("table", class_="rgMasterTable")
-    # colnames = table.find_all("th", class_="rgHeader") if table else []
-    # colnames = [_.get_text() for _ in colnames]
-    # rows = table.find_all("tr", class_="rgRow") if table else []
-    # table_dat=[]
-    # for row in rows:
-    #     cells = row.find_all("td")
-    #     cell_data = [cell.get_text(strip=True) for cell in cells]
-    #     table_dat.append(cell_data)
-    # pd.DataFrame(table_dat, columns=colnames)
-
-    args = parse_args()
-
-    # OUTPUT_DIR = Path("../../data/raw/nsf_humanities")
-    OUTPUT_DIR = Path(args.output)
-
-    state_code = ["AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL",
-                "IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO",
-                "MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA",
-                "RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"]
-
-    for code in tqdm(state_code[1:], total=len(state_code[1:])):
-        
-        # We do not want to assume columns are the same over the years
-        # we create a dataframe by year, then we will concat them
-        # If columns change, pd.concat will do the right thing.
+    
+    driver = webdriver.Firefox()
+    
+    for yr in range(1978, 1981):
         dfs = []
-        for yr in range(1960, 2023):
+        base_url = 'https://apps.neh.gov/PublicQuery/Default.aspx?'
+        all_rows = []
+        for atv in [1,2]: # orgs, people
             
-            table_dat = []
-            print(yr)
-            url=generate_query(code=code, yr=yr)
-            url=f"https://apps.neh.gov/PublicQuery/Default.aspx?q=1&a=0&n=0&o=0&ot=0&k=0&f=0&s=1&sv={code}&cd=0&p=0&d=0&at=1&atv=2&y=1&yf={yr}&yt={yr+1}&prd=0&cov=0&prz=0&wp=0&sp=0&ca=0&arp=0&ob={ob}&or={xor}"
-            
-            response = requests.get(url)
-            soup = BeautifulSoup(response.content, "html.parser")
-            
-            # find table Master table
+            query = f"q=1&a=0&n=0&o=0&ot=0&k=0&f=0&s=0&cd=0&p=0&d=0&at=1&atv={atv}&y=1&yf={yr}&yt={yr+1}&prd=0&cov=0&prz=0&wp=0&sp=0&ca=0&arp=0&ob=Institution%20name&or=ASC"
+                        
+            url = base_url + query
+            driver.get(url)
+            sleep(uniform(4))
+
+            soup = BeautifulSoup(driver.page_source, "html.parser")
             table = soup.find("table", class_="rgMasterTable")
-
-            # grqab columns names
-            colnames = table.find_all("th", class_="rgHeader") if table else []
-            colnames = [_.get_text() for _ in colnames]
-
-            # Extract data
-            rows = table.find_all("tr", class_="rgRow") if table else []
-            for row in rows:
-                cells = row.find_all("td")
-                cell_data = [cell.get_text(strip=True) for cell in cells]
-                table_dat.append(cell_data)
-
-            dfs.append(pd.DataFrame(table_dat, columns=colnames))
             
+            try:
+                tot_rows, tot_pages = [int(_.get_text()) for _ in table.find("div", class_="rgWrap rgInfoPart") if _.get_text().isnumeric()]
+            except:
+                continue
+            
+            
+            for i in tqdm(range(tot_pages), total=tot_pages):
+            # for i in tqdm(range(5, tot_pages)):
+                soup = BeautifulSoup(driver.page_source, "html.parser")
+                table = soup.find("table", class_="rgMasterTable")
+                
+                colnames = table.find_all("th", class_="rgHeader") if table else []
+                colnames = [_.get_text() for _ in colnames]
+                rows = table.find_all("tr", class_=["rgRow", "rgAltRow"]) if table else []
+                table_dat=[]
+                for row in rows:
+                    cells = row.find_all("td")
+                    cell_data = [cell.get_text(strip=True) for cell in cells]
+                    table_dat.append(cell_data)
+                
+                
+                df = pd.DataFrame(table_dat, columns=colnames)
+                df['Recipient Type'] = 'institutions' if atv == 1 else 'individuals'
+                dfs.append(df)
+                driver.find_element(By.CSS_SELECTOR, "button.t-button.rgActionButton.rgPageNext").click()
+                sleep(uniform(6,7))
 
-        if len(dfs) > 0:
+            all_rows.append(tot_rows)
 
-            # Slow but at least we know concat would do right thing
-            df = pd.concat(dfs, axis=0).reset_index(drop=True)
+        all_dfs = pd.concat(dfs)
 
-            df.to_parquet(OUTPUT_DIR / f"{code}.parquet")
+        all_dfs = all_dfs[~all_dfs['Award Number\xa0'].duplicated()]
+        
+        current_an_inst = all_dfs[all_dfs['Recipient Type'] == 'institutions']['Award Number\xa0'].unique()
+        assert len(current_an_inst) == all_rows[0]
+        
+        current_an_inds = all_dfs[all_dfs['Recipient Type'] == 'individuals']['Award Number\xa0'].unique()
+        assert len(current_an_inds) == all_rows[1]
 
+        # all_dfs[all_dfs['Award Number\xa0'] == 'FT-23244-83']
+
+        all_dfs.to_parquet(f"../../data/raw/nsf_humanities/{yr}.parquet")
+
+    driver.quit()

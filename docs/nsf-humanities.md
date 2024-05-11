@@ -171,8 +171,6 @@ Plot.plot({
 
 
 
-
-
 ```js
 Inputs.table(data_f)
 ```
@@ -181,8 +179,17 @@ Inputs.table(data_f)
 
 
 ## raw data
-```sql
-DESCRIBE data
+
+```sql id=raw_Dat
+SELECT * FROM data
+```
+
+```js
+const found = view(Inputs.search(raw_Dat))
+```
+
+```js
+Inputs.table(found)
 ```
 
 <style>

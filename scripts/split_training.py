@@ -79,36 +79,11 @@ def calc_density(df, df_pap, df_wide):
     return df_wide.apply(lambda row: out.get((row['name'], row['pub_year']), None), axis=1)
 
 
-# for yr in [[2017,2018,2019], [2020,2021,2022]]:
-#     # yr=[2017,2018,2019]
-#     df_lhd = df_pap[(df_pap.name == 'Laurent Hébert‐Dufresne') & (df_pap.pub_year.isin(yr))]
-#     df_lhd['authors'] = df_lhd.authors.str.split(", ")
-#     df_lhd = df_lhd.explode('authors')
-#     df_lhd.rename(columns={'authors': 'coauth_name'}, inplace=True)
-#     df_lhd = df_lhd.merge(df[['name', 'pub_year', 'coauth_name', 'age_bucket']], on=['name', 'pub_year', 'coauth_name'])
-#     df_lhd = df_lhd[df_lhd.age_bucket == 'younger']
-
-#     def extract_comb_coauths(x):
-#         return list(combinations(df_lhd.loc[df_lhd.wid == x, ['wid', 'pub_year', 'coauth_name']].coauth_name, 2))
-
-#     comb_auths = [extract_comb_coauths(wid) for wid in df_lhd.wid.unique()]
-#     count_auths = Counter(flatten(comb_auths))
-#     df_long = pd.DataFrame(count_auths.keys(), columns=['source', 'target']).assign(nb_collab = count_auths.values())
-#     df_long[['source', 'target']] = pd.DataFrame(np.sort(df_long[['source', 'target']], axis=1))    
-#     aggregated_df = df_long.groupby(['source', 'target'], as_index=False)['nb_collab'].sum()
-#     matrix = aggregated_df.pivot_table(index='source', columns='target', values='nb_collab', fill_value=0)
-#     non_zero_edges = np.count_nonzero(np.triu(matrix, k=1))
-#     num_nodes = matrix.shape[0]
-#     total_possible_edges = (num_nodes * (num_nodes - 1)) / 2
-#     density = np.round((non_zero_edges / total_possible_edges), 3) if total_possible_edges > 0 else 0
-#     print((yr,density))
-
-
 def main():
     args = parse_args()
     
     # INPUT_DIR = Path("../docs/data/")
-    # ANNOT_DIR = Path("../docs/data/raw/")
+    # ANNOT_DIR = Path("../data/raw/")
     # OUTPUT_DIR = Path("../docs/data/")
     INPUT_DIR = args.input 
     ANNOT_DIR = args.annots
@@ -137,10 +112,10 @@ def main():
     df_wide_new_acq = counts_new_acq.pivot(index=['name', 'pub_year'], columns='acquaintance', values='counts').fillna(0).reset_index().sort_values(['name', 'pub_year'])
     df_wide = df_wide.merge(df_wide_new_acq, on=['name', 'pub_year'], how='left')
 
+    # add author-coauthor shared institutions
     df_shared_inst = df[~df.shared_institutions.isna()]
     counts_shared_inst = df_shared_inst.groupby(['name', 'age_bucket', 'pub_year', 'shared_institutions']).size().reset_index(name='counts')
-    df_wide_shared_inst = counts_shared_inst.pivot(index=['name', 'pub_year'], columns='age_bucket', values='counts').fillna(0).reset_index().sort_values(['name', 'pub_year'])
-    df_wide = df_wide.merge(df_wide_shared_inst, on=['name', 'pub_year'], how='left', suffixes=('', '_shared_inst'))
+    df_wide = df_wide.merge(counts_shared_inst, on=['name', 'pub_year'], how='left', suffixes=('', '_shared_inst'))
 
     
     df_wide['prop_younger'] = df_wide.younger / (df_wide.older+df_wide.younger+df_wide.same_age)
@@ -162,7 +137,7 @@ def main():
 
     # ADD ANNOTATION DATA ABOUT HAVING RESEARCH GROUP
 
-
+    # if authors not in this table, they ar egone
     df_annots = pd.read_csv(ANNOT_DIR / "researchers.tsv", sep="\t")
 
     df_annots.rename(columns={'host_dept (; delimited if more than one)': 'department'}, inplace=True)
@@ -174,6 +149,7 @@ def main():
     # see McGill faculties https://www.mcgill.ca/faculties/ (agricultural & environmental, arts, dental, education, engineering, law, management, medicine+health sciences, music, science)
     # see harvard https://www.harvard.edu/academics/schools/ (education, design, dental+medicine, business, FAS, engineering and applied sciences, law, public health)
     # see stanford https://www.stanford.edu/list/academic/ (business, education, engineering, humanities & sciences, law, medicine, sustainability)
+    # see Duke: https://scholars.duke.edu/organizations
     dept2fos = json.loads(open(ANNOT_DIR / "dept2fos.json").read() )
     dept2fos = {v['department']:v['category'] for v in dept2fos}
  
@@ -185,6 +161,7 @@ def main():
 
     # Output data
     df_wide.drop(['oa_display_name'], axis=1, inplace=True)
+
     df_wide.to_parquet(OUTPUT_DIR / "training_data.parquet", index=False)
     
     
@@ -198,20 +175,6 @@ if __name__ == "__main__":
 # d = d.merge(df.loc[df.pub_year == 2023, ['display_name', 'institution']].drop_duplicates(), left_on='oa_display_name', right_on='display_name', how='left')
 # d.to_csv("~/test.csv", index=False)
 
-# we add first pub year to sheet
-# df = pd.read_csv(INPUT_DIR / "author.csv")
-# aid2firstyear={"A5021345205": 2007,"A5037256938": 2004,"A5088506012": 1988,"A5017032627": 2000,"A5037170969": 1950,
-#         "A5027136376": 2005,"A5009266404": 2005,"A5046878011": 1987,"A5017357771": 2007,"A5040821463": 1999,
-#         "A5067142016": 1995,"A5012905268": 1997,"A5072481660": 1993,"A5085284243": 1989,"A5013608601":  2008, 
-#         'A5029940152': 2010,'A5007853190':  2006,'A5008985646':  2017,'A5005797884': 2010,
-#         'A5022918698':  1997,'A5085284243': 1989,'A5034550396':  2012,'A5022747234':  2008,'A5085453531':  1984,
-#         'A5028897058':  2012,'A5065860406':  1999,'A5009266404': 2006,'A5069300441': 2010,'A5016394435': 1994, 
-#         'A5053585063': 1960,'A5008053111': 1998,'A5074398027':  2001,'A5025609514': 1997,'A5024921128':  2006,
-#         'A5074881456':  1996,'A5051954808':  2007,'A5076633756': 1988,'A5078223816': 2002,'A5029410349':  1986,
-#         'A5066274910':  2015, 'A5080623429':  2015,'A5036140974':  2006,'A5007710038': 2007, 'A5044664261': 2007, 
-#         'A5014827802': 2015, 'A5072481660': 1985, 'A5055278920':  1973, 'A5069247395': 1991, 'A5027159554': 1997, 
-#         "A5088141761": 1988,'A5063349034': 1999, 'A5021345205': 2007, 'A5002510411':  1984}
-
 # name2first_year= df[['aid','display_name']].assign(first_year= lambda x: x.aid.map(lambda x: aid2firstyear.get(x))).dropna().drop_duplicates().drop('aid', axis=1).reset_index(drop=True).set_index('display_name').to_dict(orient='index')
 # name2first_year = {k:v['first_year'] for k,v in name2first_year.items()}
 # d=pd.read_csv("/Users/jstonge1/Downloads/Finding Principal Investigators (PIs) - PIs with a research group(8).tsv", sep="\t") 
@@ -222,17 +185,3 @@ if __name__ == "__main__":
 
 # d2.first_pub_year_new.tolist()
 
-# Concat sheets
-# d=pd.read_csv("/Users/jstonge1/Downloads/Finding Principal Investigators (PIs) - PIs with a research group(9).tsv", sep="\t") 
-# d2=pd.read_csv("/Users/jstonge1/Downloads/Finding Principal Investigators (PIs) - nsf-gov_researchExperienceSites(7).tsv", sep="\t")
-# d2=d2[~d2.oa_display_name.isna()]  
-
-# cols = ['oa_display_name', 'is_prof', 'group_size', 'perceived_as_male', 
-#         'host_dept (; delimited if more than one)',   'has_research_group', 
-#         'OpenAlex id', 'group_url', 'first_pub_year'] 
-
-# d = d[cols]
-# d2 = d2[cols]
-
-# d = pd.concat([d,d2], axis=0) 
-# d.to_csv(ANNOT_DIR / "researchers.tsv", sep="\t", index=False)

@@ -10,57 +10,186 @@ sql:
 
 <div class="grid grid-cols-4">
   <div class="card">
-    <h2>Unique authors</h2>                                                                         
+    <h2>Unique authors</h2>
     <span class="big">${[...uniq_name].length}</span>
   </div>
 </div>
 
+---
 
-## Collaboration patterns
 
+## Balancing annotations
+
+To study group size across field of sciences, we would as many faculties with and without resarch groups in each domain. At the moment, we oversampled faculties with research groups because we were interested in characterizing group size.
+
+
+<div>${resize((width) => balancing_annots(uniq_name, { width, title: "by research group by field", facet_var: "college"}) )}
+</div>
+
+<div>${resize((width) => balancing_annots(uniq_dept_hum, { width, title: "The humanities, by department", facet_var: "department"}) )}
+</div>
+
+<div>${resize((width) => balancing_annots(uniq_dept_soc, { width, title: "The social sciences, by department", facet_var: "department"}) )}
+</div>
+
+```js
+function balancing_annots(data, {width, facet_var, title} = {}) {
+    return Plot.plot({
+        title,
+        width,
+        fx: {ticksRotation: 90},
+        color: {legend: true, type: "ordinal", range: ["lightblue", "orange"]},
+        marks: [
+            Plot.barY(data, Plot.groupX({ y: "count" }, {
+            x: "has_research_group", fill: "has_research_group", fx: facet_var, sort: {x: "-y"}
+            })),
+            Plot.gridY(),
+            Plot.ruleY([0])
+        ]
+        })
+} 
+```
+
+and here's the proportion of each field by author age... 
+
+```js
+const tog_age = view(Inputs.toggle({label: "normalize"}))
+```
 
 <div>${resize((width) => 
 Plot.plot({
+  title: "by author age by field",
   width,
-  marginBottom: 100,
-  color: {scheme: "spectral", legend: true},
-  y: {grid: true},
-  x: {tickRotate: 45},
-  fx: {
-    label: "career stage (numbers represent cutpoints, e.g. <4, <7, <12, <17, and <30 years since first publication)",
-    },
+  color: {legend:true},
+  y: {percent:tog_age?true:false},
+  fx: {ticksRotation: 90},
   marks: [
-    Plot.barY(training1, {
-      x: "college", y: "mean_collab", 
-      fill: "age_bucket", fx: "career_stage", 
-      }),
+    Plot.barY(training_all, Plot.groupX({ y: tog_age ? "proportion-facet" : "count" }, {
+      x: "author_age", fill: "college", 
+      sort: {x: "x"}, 
+      offset: tog_age ? "normalize" : null,
+      tip:true,
+      })),
+    Plot.gridY(),
     Plot.ruleY([0])
   ]
 })
 )}
 </div>
 
+---
+
+## Collaboration patterns across domains/career stage
+
+<div class="grid grid-cols-2">
+    <div><br>
+    For each college/career stage, what is the proportion/count of collaborations with researchers who are either younger, same age, or older. With the default choice, we can see for example that people from the physical sciences collaborate more early on (during Phd; see last table for department to 'college' mapping), but engineering people catch up during their postDoc years. Humanists work more by themselves.
+    </div>
+    <div class="warning">The data is unbalanced. Some college/career stage values might be still slightly misleading as there are only few individuals within each. This is the cost to pay to show proportion that are easy to compare. 
+    </div>
+</div>
+
+```js
+const f = view(Inputs.form({
+    tog: Inputs.toggle({
+        label: "normalize (by the sum proportional to the facet total)"
+        }),
+    facet: Inputs.select(['career_stage', 'college'], {
+        label: "facet variable"
+        }
+    )
+}))
+```
+
+<div>${resize((width) => 
+Plot.plot({
+    width,
+    height: 400,
+    marginBottom: f.facet === "college" ? 40 : 100,
+    marginTop: 35,
+    color: {
+        legend: true,
+        range: ["#FDE725FF", "#20A387FF", "#404788FF"], 
+        domain: ["younger", "same_age", "older"]
+    },
+    y: {
+        grid: true,
+        percent: f.tog ? true : false,
+        label: f.tog ? "Younger collab %" : "# Younger collabs"
+        },
+    x: { tickRotate: 45 },
+    fx: {
+        label: "Career stage (numbers represent cutpoints, e.g. <4, <7, <12, <17, and <30 years since first publication)",
+        },
+    marks: [
+        Plot.barY(training1, Plot.groupX(
+            { y: f.tog ? "proportion-facet" : "mean" }, 
+            { x: f.facet === "college" ? "career_stage" : 'college',
+              y: "val", fill: "age_bucket",  fx: f.facet,
+              offset: f.tog ? "normalize" : null })),
+        Plot.ruleY([0])
+    ]
+})
+)}
+</div>
+
+
+<div class="grid grid-cols-2">
+    <div class="card">
+        <h3>Normalized: Comparing relative proportion of collaboration for two different facets showing different aspect of the data:</h3>
+        <li>
+        <em>college facet</em>: within college, how do collaboration with people of different author age strata changes over time? This facet focuses on comparing colleges for a given career stage. For instance, `computer scientists` collaborating extensively with younger folks. 
+        </li>
+        <li>
+        <em>career stage facet</em>: within career stage, how do collaboration with people of different author age strata changes across colleges? This facet focuses on comparing career stage across colleges. For instance, `engineering` people seems to be collaborating with more senior researchers than other colleges.
+        </li>
+    </div>
+    <div class="card">
+        <h3>Raw count: Comparing how many total collaborators with bar heights.</h3> The meaning for facets is the same than when y-axis is normalized.
+    </div>
+</div>
+
+---
+
 ## Professors' collaboration rate with younger academics (>7 years younger)
+
+Each tick is a faculty's rate of collaboration with collaborators seven years younger than them (cut point is the average time in our data to get from first publication to tenure-track position). 
+
+```js
+const sel_fos = view(Inputs.select(
+    Array.from(new Set([...uniq_name].map(d=>d.college))
+    ), { multiple: 4 }))
+```
+```js
+const sel_fos_safe = sel_fos.length === 0 ? ['Physical Science', 'Social Sciences', 'Computer Science', 'Humanities'
+] : sel_fos
+```
 
 <div>${resize((width) => 
 Plot.plot({
   width,
   height: 400,
-  y: {grid: true}, 
+  marginBottom: 50,
+  marginTop: 30,
+  y: { grid: true }, 
+  x: {label: "Time Since First Pub (author age)"},
   color: {legend: true},
   marks: [
     Plot.frame(),
     Plot.ruleX([8], { dx: -18,  strokeDasharray: 3 }),
-    Plot.tickY(training_all, {
-      x: "author_age", y: "changing_rate", z: "name", stroke: "college", strokeOpacity: 0.5, fx: "has_research_group",
-      sort: {x: "x"}
-    }),
+    Plot.tickY(
+        training_all.filter(d=>sel_fos_safe.includes(d['college'])),
+        { x: "author_age", y: "changing_rate", z: "name", 
+          stroke: "college", strokeOpacity: 0.5, tip: true, 
+          title: d => `${d.name}\nrate collab: ${d.changing_rate.toFixed(2)}`,
+          fx: "has_research_group", sort: {x: "x"} }
+    ),
     Plot.lineY(
-      training_all,
-          Plot.groupX(
+      training_all.filter(d=>sel_fos_safe.includes(d['college'])),
+        Plot.groupX(
             { y: "median" },
             { x: "author_age", y: "changing_rate", stroke: "college", fx: "has_research_group", 
-              strokeWidth: 4, tip: true, sort: {x: "-y"} },
+            strokeWidth: 4, sort: {x: "-y"} },
           )
     ),
     Plot.axisY({anchor: "left"})
@@ -69,11 +198,13 @@ Plot.plot({
 )}
 </div>
 
-## Collaboration patterns
+---
 
-We are intersted in the relationship between group size, collaboration norms, and the emergence of computational works. More precisely, we want to know whether strong collaboration patterns could help humanities transitioning into the computational realm. 
+## Collaboration ''norms''
 
-At the moment, we simply calculate `density` of interactions among faculties' younger collaboraters. The idea is that a group with strong collaboration norms is characterized by early career researchers working togeher early on.
+We are interested in the relationship between group size, collaboration norms, and the emergence of computational works. More precisely, we want to know whether strong collaboration patterns could help humanities transitioning into the computational realm. 
+
+At the moment, we simply calculate `density` of interactions among faculties' younger collaboraters as proxy for collaboration norms. The idea is that a group with strong collaboration norms is characterized by early career researchers working togeher early on.
 
 One issue with density is that it doesn't take into account the recurrent relationships, aka whether younger folks keep collaborating on each others' papers.
 
@@ -83,37 +214,26 @@ Plot.plot({
   height: 500,
   marginLeft: 35,
   marginBottom: 50,
-  color: {legend: true, scheme: "viridis"},
+  color: { legend: true, scheme: "viridis" },
   x: { label: "changing rate" },
   y: { label: "density" },
   marks: [
-    Plot.cell(training_all_agg.filter(d => d.density < 1.00 & d.density > 0.), Plot.bin({ fill: "proportion" }, {
-      x: d => parseInt(d["changing_rate"].toFixed(1)), y: d => parseFloat(d["density"].toFixed(1)), fx: "has_research_group"
-    })),
+    Plot.cell(
+        training_all_agg.filter(
+            d => d.density < 1.00 & d.density > 0.
+        ), 
+    Plot.bin(
+        { fill: "proportion" }, 
+        { x: d => parseInt(d["changing_rate"].toFixed(1)), 
+          y: d => parseFloat(d["density"].toFixed(1)), 
+          fx: "has_research_group" }
+    )),
     Plot.frame()
   ]
 })
 ```
 
-## Balancing annotations
 
-To study group size across field of sciences, we would as many faculties with and without resarch groups in each domain. At the moment, we oversampled faculties with research groups because we were interested in characterizing group size.
-
-<div>${resize((width) => 
-Plot.plot({
-  width,
-  fx: {ticksRotation: 90},
-  color: {legend: true, type: "ordinal", range: ["lightblue", "orange"]},
-  marks: [
-    Plot.barY(uniq_name, Plot.groupX({ y: "count" }, {
-      x: "has_research_group", fill: "has_research_group", fx: "college", sort: {x: "-y"}
-      })),
-    Plot.gridY(),
-    Plot.ruleY([0])
-  ]
-})
-)}
-</div>
 
 ## Training data
 
@@ -132,7 +252,7 @@ WITH long_table AS (
         VALUE val
 )
 SELECT 
-  age_bucket, MEAN(val) as mean_collab, college,
+  age_bucket, val, college,
   CASE 
     WHEN author_age <= 4 THEN 4 
     WHEN author_age <= 7 THEN 7 
@@ -142,8 +262,7 @@ SELECT
     ELSE 999
     END AS career_stage
   FROM long_table
-  WHERE college in ('Humanities', 'Social Sciences', 'Physical Sciences', 'Engineering', 'Computer Science') AND career_stage != 999
-  GROUP BY college, career_stage, age_bucket
+  WHERE college in ('Humanities', 'Social Sciences', 'Physical Science', 'Computer Science') AND career_stage != 999
 ```
 
 ```sql id=uniq_name 
@@ -154,6 +273,23 @@ GROUP BY name, has_research_group, college
 ORDER BY name
 ```
 
+```sql id=uniq_dept_hum
+SELECT name, has_research_group, department
+FROM training 
+WHERE has_research_group is not NULL and college in ('Humanities')  AND has_research_group != -1
+GROUP BY name, has_research_group, department
+ORDER BY name
+```
+
+```sql id=uniq_dept_soc
+SELECT name, has_research_group, department
+FROM training 
+WHERE has_research_group is not NULL and college in ('Social Sciences')  AND has_research_group != -1
+GROUP BY name, has_research_group, department
+ORDER BY name
+```
+
+
 ```sql id=[...training_all_agg] 
 SELECT name, changing_rate, MEAN(density) as density, has_research_group
 FROM training 
@@ -161,13 +297,15 @@ WHERE changing_rate < 40 AND author_age < 30 AND has_research_group is not NULL 
 GROUP BY name, changing_rate, has_research_group
 ```
 
-```sql id=training_all 
+
+
+```sql id=[...training_all] 
   SELECT DISTINCT name, changing_rate, college, author_age, has_research_group::CHAR as has_research_group
   FROM training 
   WHERE 
     changing_rate < 40 AND 
-    author_age < 30 AND 
-    College not in ('Agriculture', 'Health', 'Medical Sciences', 'Education', 'Language') AND
+    author_age < 29 AND 
+    college in ('Humanities', 'Social Sciences', 'Physical Science', 'Computer Science', 'Biological Sciences', 'Mathematical Sciences', 'Psychological Science') AND
     has_research_group is not NULL AND has_research_group != -1.0
   ORDER BY author_age
 ```

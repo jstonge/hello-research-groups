@@ -24,7 +24,7 @@ def main():
     
     # INPUT_DIR = Path("../../data/raw")
     INPUT_DIR = args.input
-    # OUTPUT_DIR = Path("../../data/processed")
+    # OUTPUT_DIR = Path("../../docs/data")
     OUTPUT_DIR = args.output
     
     con = duckdb.connect(str(INPUT_DIR / "oa_data_raw.db"))
@@ -34,9 +34,8 @@ def main():
                p.cited_by_count, p.doi, p.wid, p.authors, p.work_type, 
                a.author_age as ego_age
         FROM paper p
-        LEFT JOIN author_tidy a ON p.ego_aid = a.aid AND p.pub_year = a.pub_year
+        LEFT JOIN author a ON p.ego_aid = a.aid AND p.pub_year = a.pub_year
     """
-
 
     df = con.sql(query).fetchdf()
 
@@ -48,6 +47,8 @@ def main():
     df = df.sort_values("pub_date", ascending=False).reset_index(drop=True)
     df['title'] = df.title.str.lower()
     df = df[~df[['ego_aid', 'title']].duplicated()]
+
+    # df[(df.ego_aid.isna()) | (df.name.isna())]
 
     # Filter based on work type
     ACCEPTED_WORK_TYPES = ['article', 'preprint', 'book-chapter', 'book', 'report']
@@ -62,6 +63,10 @@ def main():
     df = df[~df.title.str.contains("^Data for ", case=False)]
     df = df[~df.title.str.contains("^Author Correction: ", case=False)]
     df = df[~df.title.str.contains("supporting information", case=False)]
+    df = df[~df.title.str.contains("^supplementary material", case=False)]
+    df = df[~df.title.str.contains("^list of contributors", case=False)]
+    df = df[~df.doi.str.contains("supplement", case=False, na=False)]
+    df = df[~df.doi.str.contains("zenodo", case=False, na=False)]
 
     df['nb_coauthors'] = df.authors.map(lambda x: len(x.split(", ")))
     

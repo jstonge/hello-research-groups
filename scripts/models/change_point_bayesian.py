@@ -21,6 +21,13 @@ def parse_args():
         required=True,
     )
     parser.add_argument(
+        "-m",
+        "--model",
+        type= Path,
+        help="JSONlines file with urls and hashes",
+        required=True,
+    )
+    parser.add_argument(
         "-o", "--output", type=Path, help="output directory", required=True
     )
     return parser.parse_args()
@@ -28,17 +35,17 @@ def parse_args():
 
 
 def main():
-    # INPUT_DIR = Path("../../data/training")
-    # OUTPUT_DIR = Path("../../data/training")
+    # INPUT_DIR = Path("../../docs/data")
+    # OUTPUT_DIR = Path("../../docs/data")
+    # MDOEL_DIR = Path("../../docs/data")
     args = parse_args()
     INPUT_DIR = args.input
     OUTPUT_DIR = args.output
-    ROOT_DIR = Path(__file__).resolve().parents[2]
+    MODEL_DIR = args.model
     
     dat = pd.read_parquet(INPUT_DIR / 'training_data.parquet')
 
-    stan_file = os.path.join(ROOT_DIR, 'scripts', 'models', 'stan', 'change_point02.stan')
-    model = CmdStanModel(stan_file=stan_file)
+    model = CmdStanModel(stan_file= MODEL_DIR / "change_point02.stan")
 
     out={}
     for name in dat.name.unique():

@@ -56,9 +56,9 @@ img.centered {
 </style>
 
 # Welcome
-_"But what are reseach groups". This is our big question. We seek to define and characterize research groups in a practical way while staying open to philosophical pendantry._
+_"But what are reseach groups". This is our big question. We seek to define and characterize research groups in a practical ways while engaging with philosophical perambulation._
 
-This is an experimental project that seek to combine (some) data collection, data analysis, model building, and model visualization under the same roof. We believe in the philosophy of principled data processing (see [the-turing-way](https://book.the-turing-way.org/),and [Patrick Ball: Principled Data Processing](https://www.youtube.com/watch?v=ZSunU9GQdcI&t=2923s&pp=ygURcGF0cmljayBiYWxsIGRhdGE%3D) for the details), but that is augmented with a modern data visualization framework (aka [Observable Framework](https://observablehq.com/framework/)).
+This is an experimental project that combine data collection, data analysis, model building, and model visualization within the same project. We believe in the philosophy of principled data processing (see [the-turing-way](https://book.the-turing-way.org/),and [Patrick Ball: Principled Data Processing](https://www.youtube.com/watch?v=ZSunU9GQdcI&t=2923s&pp=ygURcGF0cmljayBiYWxsIGRhdGE%3D) for the details), but that is augmented with a modern data visualization framework (aka [Observable Framework](https://observablehq.com/framework/)).
 
 This project is for (i) anybody sharing the same goals of reproducible science or (ii) people interested in the science of science of groups. 
 
@@ -71,14 +71,14 @@ This project is for (i) anybody sharing the same goals of reproducible science o
 
 Free and open-source software (F/OSS) is changing how researchers collaborate on projects. As individuals increasingly rely on F/OSS, they are confronted on learning different tools and skills such as version control, interacting with API, or building principled data pipelines that are robust yet extensible. Learning about all of this can be scary. A solution to survive the process, once again, are communities.
 
-In the project, we will include and exclude people from groups. Sometime this will feel unfair, as people will get excluded for seemingly arbitrary reasons. Truth be told, as research groups emerge and thrive, I think they become like the figure above; a loose network of people that can have a more or less central cores. That being said, in current academia, many research groups are characterized by one or few principal investigators (PIs) that tied together a bunch of students under the same roof. 
+In the project, we will include and exclude people from groups. Sometime this will feel unfair, as people will get excluded for seemingly arbitrary reasons. Truth be told, as research groups emerge and thrive, I think they become like the figure above; a loose network of people that can have more or less central cores. That being said, in current academia, many research groups are characterized by one or few principal investigators (PIs) who tie together a bunch of students under the same roof. 
 
 When we are lucky, there is a public facing webpage hosted by the group/PI that says, "look, here is my lab". This will be the people we define as part of the group, even thoug some loose collaborators might be missing from that page. We assume that this approach is a good proxy to get who is on the payroll of the lab, or at least who benefit from being exhibited on the main page of the lab.
 
 
 ## Project philosophy
 
-We are gonna build a collection of dashboards tied together by a common theme, that is, _characterizing research groups in science_. Similar to [Andy Matuschak's Evergreen Notes](https://notes.andymatuschak.org/Evergreen_notes), the central idea is to keep together a family of dashboards that will accumulate over time and across projects. By analogy with Evergreen notes, each dashboard ought to be atomic, and 'concept-oriented' (answering a single question).
+We are gonna build a collection of dashboards tied together by a common theme, that is, _characterizing research groups in science_. Similar to [Andy Matuschak's Evergreen Notes](https://notes.andymatuschak.org/Evergreen_notes), the central idea is to keep together a family of dashboards that will accrete over time. By analogy with Evergreen notes, each dashboard ought to be atomic, and 'concept-oriented' (answering a single question).
 
 Note that it is easier to have many apps representing the data in different ways these days, thanks the [observable framework](https://observablehq.com/framework/what-is-framework) code design. Any observable project is basically a static site, for data apps. So one of the goals is to see if it works to create a new tab for each new way one could visualize the entire project. There is a chance it might gets out of hand, but I think if the data pipeline is well designed and it has the potential to scale up.
 
@@ -89,7 +89,7 @@ One reason not to do what we are about to do is _modularity_. Wouldn't be better
 
 ## Project structure
 
-We take as starting point the observable framework structure, but modify it a little to accomodate our data processing pipeline. That is, on top of the Framework project that mostly lives in `docs/` (see hidden summary below for authors' description), we have a project structure heavily inspired from the [Turing Way's repository structure](https://book.the-turing-way.org/project-design/project-repo/project-repo-advanced#example-with-every-possible-folder):
+On top of the Observable Framework project that lives in `docs/` (see hidden summary below for authors' description), we have a project structure borrowed  from the [Turing Way's repository structure](https://book.the-turing-way.org/project-design/project-repo/project-repo-advanced#example-with-every-possible-folder):
 
 ```ini
 .
@@ -182,7 +182,19 @@ In this collection of notebooks, we examine interaction in patterns of collabora
 We are interested in finding how latent groups and collaboration in science are impacting the type of science we do.
 We will define what we means by collaboration and groups as we go along, but we can start with an example.
 
-#### 1. Timeline: dual perspective of collaboration and producitivity
+#### 1. NSF Money
+
+To fund groups, one needs money. One place researchers get money from is the NSF. 
+
+#### 2. NEH Money
+
+To fund projects, one needs money. One place researchers get money from is the National Endowment of the Humanities. 
+
+#### 3. Summary data
+
+This dashboard contains summary of the current data; it checks whether the annotated data is balanced, what are our different categories, and so on..
+
+#### 4. Timeline: dual perspective of collaboration and productivity
 
 Here is an individual scientific trajectory contrasting number of publications and coauthors:
 
@@ -197,13 +209,7 @@ We use a simple heuristics to determine affiliation;
 Sometimes, we can have a good idea of ego's career trajectory by just looking at that information.
 Here ego started at <span style="color:Salmon">Université Laval</span>, did a PostDoc at the <span style="color:CornflowerBlue">Santa Fe Institute</span>, then got a position at <span style="color:DarkGoldenRod">University of Vermont</span> where we started his research lab.
 
-We can also look at how the social and producitivity trajectory correlate with topical exploration by ego. 
-Here we use SPECTER2's <ins>scientific document embedding</ins> to look at how career trajectory maps onto topic exploration.
-We can look at, for example, where did ego started by looking at his student's years:
 
-Do the patterns observed in the previous section are typical? 
-We can put side by side researchers, and start investigating the question. 
-Here are 4 researchers in complex systems who are all under 11 years of academic age. 
 
 <figure>
   <img src="https://raw.githubusercontent.com/jstonge/hello-research-groups/main/docs/figs/plot1.svg" alt="Trulli" style="width:100%">
@@ -214,11 +220,22 @@ Eyeballing the plot, there are definitely some similarities and differences.
 One similarity is Jean-Gabriel Young (JGY), who share the same lab than LHD, and exhibit similar patterns in collaboration early on.
 
 
-#### 2. Groups exploring new semantic space
+
+#### 5. Groups exploring new semantic space (TBD)
+
+<div class="warning">This has been removed for now. It will come back at some point.</div>
+
+We can also look at how the social and productivity trajectory correlate with topical exploration by ego. 
+Here we use SPECTER2's <ins>scientific document embedding</ins> to look at how career trajectory maps onto topic exploration.
+We can look at, for example, where did ego started by looking at his student's years:
+
+Do the patterns observed in the previous section are typical? 
+We can put side by side researchers, and start investigating the question. 
+Here are 4 researchers in complex systems who are all under 11 years of academic age. 
 
 <img src="./figs/lhd_walk_phd.png" alt="" width="800" height="600"/>
 
-We see that the early year was concentrated on the physics of network and some early epidimiology. 
+We see that the early year was concentrated on the physics of network and some early epidemiology. 
 We can compare early years with later years, where we already know he has new collaborations:
 
 <img src="./figs/lhd_walk_prof.png" alt="" width="800" height="600"/>

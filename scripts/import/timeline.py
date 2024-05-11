@@ -135,7 +135,7 @@ def coauthor_db(con, aid=None):
 
 def author_info_db(con):
     con.execute("""
-        CREATE TABLE IF NOT EXISTS author_tidy (
+        CREATE TABLE IF NOT EXISTS author (
             aid VARCHAR,
             display_name VARCHAR,
             institution VARCHAR,
@@ -210,23 +210,26 @@ def parse_args():
     parser.add_argument(
         "-o", "--output", type=Path, help="output directory", required=True
     )
+    parser.add_argument(
+        "-U", "--update", action="store_true", help="update author age"
+    )
     return parser.parse_args()
 
 def main():
-    # target_aids = pd.read_csv("../../data/raw/researchers.tsv", sep="\t")
-    # con = duckdb.connect("../../data/raw/oa_data_raw.db")
-    
     args = parse_args()
-    update_author_age = True
-    # load the input files
-    assert args.input.exists(), "Input file does not exist"
+    # update_author_age = True
+    update_author_age = args.update
     
+    assert args.input.exists(), "Input file does not exist"
+
+    # target_aids = pd.read_csv("../../data/raw/researchers.tsv", sep="\t")
     target_aids = pd.read_csv(args.input, sep="\t")
     known_first_pub_years = target_aids[['oa_display_name', 'first_pub_year']].dropna()
     known_first_pub_years = {k: int(v) for k, v in known_first_pub_years.values}
     target_aids = target_aids['OpenAlex id'].dropna().str.upper().unique().tolist()
 
     # load the DB
+    # con = duckdb.connect("../../data/raw/oa_data_raw.db")
     con = duckdb.connect(str(args.output / "oa_data_raw.db") )
 
     # initialize db
@@ -235,7 +238,39 @@ def main():
     for target_aid in tqdm(target_aids, total=len(target_aids)):
         # Grab info about target author
         # target_aid = target_aids[0]
-        # target_aid = "A5019243359"
+        
+        if update_author_age:
+            dedup_author_df = con.execute("SELECT * FROM author WHERE aid = ?", (target_aid,)).fetch_df()
+            
+            # If author hasn't been done, we just skip it.
+            if len(dedup_author_df) > 0:
+                target_name = dedup_author_df.display_name.iloc[0]
+                current_min_yr = dedup_author_df.first_pub_year.min()
+                
+                if (known_first_pub_years.get(target_name) is None) or (known_first_pub_years[target_name] == current_min_yr):
+                    continue
+                
+                min_yr = known_first_pub_years[target_name] if known_first_pub_years.get(target_name) else dedup_author_df.pub_year.min()
+                dedup_author_df['first_pub_year'] = min_yr
+                dedup_author_df['author_age'] = dedup_author_df.pub_year - dedup_author_df.first_pub_year
+                
+                query = """
+                    INSERT INTO author
+                    (aid, display_name, institution, pub_year, first_pub_year, last_pub_year, author_age)
+                    VALUES (?, ?, ?, ?, ?, ?, ?)
+                    ON CONFLICT (aid, pub_year) 
+                    DO UPDATE SET 
+                        author_age = EXCLUDED.author_age,
+                        first_pub_year = EXCLUDED.first_pub_year,
+
+                """
+                
+                con.executemany(query, dedup_author_df.values.tolist()).commit()
+                con.execute("DELETE FROM author WHERE aid = ? AND author_age < 0", (target_aid,))
+                
+                
+            continue
+        
         author_obj = Authors()[target_aid]
         target_name = author_obj['display_name']
         min_yr = known_first_pub_years[target_name] if known_first_pub_years.get(target_name) else guess_min_pub_year(target_aid) 
@@ -245,7 +280,7 @@ def main():
         cache_paper = paper_db(con, target_aid)
         cache_coauthor = coauthor_db(con, target_aid)
 
-        if is_db_up_to_date(con, target_aid, min_yr) and update_author_age == False:
+        if is_db_up_to_date(con, target_aid, min_yr):
             print(f"{target_name} is up to date")
             continue
         
@@ -276,7 +311,6 @@ def main():
             
             for w in chain(*q.paginate(per_page=200)):
                 wid = w['id'].split("/")[-1]
-                # break
                 
                 if w['language'] != 'en' or update_author_age:
                     continue
@@ -397,14 +431,14 @@ def main():
         
         # Function to preload publication year data from the database
         def preload_publication_years():
-            query = "SELECT aid, first_pub_year, last_pub_year FROM author_tidy WHERE first_pub_year IS NOT NULL AND last_pub_year IS NOT NULL"
+            query = "SELECT aid, first_pub_year, last_pub_year FROM author WHERE first_pub_year IS NOT NULL AND last_pub_year IS NOT NULL"
             results = con.execute(query).fetchall()
             for result in results:
                 aid, min_year, max_year = result
                 publication_year_cache[aid] = (min_year, max_year)
 
-
         # TABLE 1: PAPER
+
         if len(papers) > 0:   
                 con.executemany( """
                         INSERT INTO paper
@@ -429,66 +463,55 @@ def main():
             """, [list(_.values()) for _ in coauthors])
 
         # TABLE 3:AUTHOR INFO
-        if (len(papers) > 0 and len(coauthors) > 0) or update_author_age:
-            if update_author_age:
-                
 
-                dedup_author_df = con.execute("SELECT * FROM author_tidy WHERE aid = ?", (target_aid,)).fetch_df()
-                
-                if dedup_author_df.first_pub_year.min() == min_yr:
-                    continue
+        if len(papers) > 0 and len(coauthors) > 0:
 
-                dedup_author_df['first_pub_year'] = min_yr
-                dedup_author_df['author_age'] = dedup_author_df.pub_year - dedup_author_df.first_pub_year
-                dedup_author_df = dedup_author_df[dedup_author_df.author_age > 0].reset_index(drop=True)
-
-            elif len(papers) > 0 and len(coauthors) > 0:
             
-                dedup_author_df = pd.concat([
-                    pd.DataFrame(papers)[['ego_aid', 'ego_display_name', 'ego_institution', 'pub_year']], 
-                    pd.DataFrame(coauthors).loc[:,['coauthor_aid', 'coauthor_name', 'coauthor_institution', 'pub_year']].rename(columns={'coauthor_aid': 'ego_aid', 'coauthor_name': 'ego_display_name', 'coauthor_institution': 'ego_institution'})
-                    ], axis=0).drop_duplicates()
-                
-                # Cache for storing publication years
-                publication_year_cache = {}
-                preload_publication_years()
+            dedup_author_df = pd.concat([
+                pd.DataFrame(papers)[['ego_aid', 'ego_display_name', 'ego_institution', 'pub_year']], 
+                pd.DataFrame(coauthors).loc[:,['coauthor_aid', 'coauthor_name', 'coauthor_institution', 'pub_year']].rename(columns={'coauthor_aid': 'ego_aid', 'coauthor_name': 'ego_display_name', 'coauthor_institution': 'ego_institution'})
+                ], axis=0).drop_duplicates()
+            
+            # Cache for storing publication years
+            publication_year_cache = {}
+            preload_publication_years()
 
-                uniqAuthors = dedup_author_df[['ego_aid', 'ego_display_name']].drop_duplicates()
-                failedAuthors = []
-                for _, row in tqdm(uniqAuthors.iterrows(), total=uniqAuthors.shape[0]):
-                    
-                    try:       
-                        if row['ego_display_name'] == target_name:
-                            publication_year_cache[row['ego_aid']] = (min_yr, max_yr)
-                        
-                        elif row['ego_aid'] not in publication_year_cache:
-                            min_year = guess_min_pub_year(row['ego_aid']) 
-                            max_year = max_pub_year(row['ego_aid']) 
-                            publication_year_cache[row['ego_aid']] = (min_year, max_year)
-                        
-                    
-                    except: # we just ignore that for now
-                            print(f"{row['ego_aid']} failed to have range of year")
-                            failedAuthors.append(row['ego_aid'])
-                            pass    
+            uniqAuthors = dedup_author_df[['ego_aid', 'ego_display_name']].drop_duplicates()
+            failedAuthors = []
+            for _, row in tqdm(uniqAuthors.iterrows(), total=uniqAuthors.shape[0]):
                 
-                # for now we are getting rid of peolpe we can't get the first year. We might regret that
-                dedup_author_df = dedup_author_df[~dedup_author_df.ego_aid.isin(failedAuthors)]
+                try:       
+                    if row['ego_display_name'] == target_name:
+                        publication_year_cache[row['ego_aid']] = (min_yr, max_yr)
+                    
+                    elif row['ego_aid'] not in publication_year_cache:
+                        min_year = guess_min_pub_year(row['ego_aid']) 
+                        max_year = max_pub_year(row['ego_aid']) 
+                        publication_year_cache[row['ego_aid']] = (min_year, max_year)
+                    
+                
+                except: # we just ignore that for now
+                        print(f"{row['ego_aid']} failed to have range of year")
+                        failedAuthors.append(row['ego_aid'])
+                        pass    
+            
+            # for now we are getting rid of peolpe we can't get the first year. We might regret that
+            dedup_author_df = dedup_author_df[~dedup_author_df.ego_aid.isin(failedAuthors)]
 
-                dedup_author_df[['first_pub_year', 'last_pub_year']] = dedup_author_df['ego_aid'].apply(
-                        lambda x: pd.Series(publication_year_cache.get(x, (None, None)))
-                    )
-                dedup_author_df['author_age'] = dedup_author_df.pub_year - dedup_author_df.first_pub_year
+            dedup_author_df[['first_pub_year', 'last_pub_year']] = dedup_author_df['ego_aid'].apply(
+                    lambda x: pd.Series(publication_year_cache.get(x, (None, None)))
+                )
+            dedup_author_df['author_age'] = dedup_author_df.pub_year - dedup_author_df.first_pub_year
 
             # here on conlflict we simply update the institution, only if institution was NULL (for that year).
             query = """
-                INSERT INTO author_tidy
+                INSERT INTO author
                 (aid, display_name, institution, pub_year, first_pub_year, last_pub_year, author_age)
                 VALUES (?, ?, ?, ?, ?, ?, ?)
                 ON CONFLICT (aid, pub_year) 
                 DO UPDATE SET
-                    institution = COALESCE(EXCLUDED.institution, author_tidy.institution),
-                    first_pub_year = COALESCE(EXCLUDED.first_pub_year, author_tidy.first_pub_year)
+                    institution = COALESCE(EXCLUDED.institution, author.institution),
+                    first_pub_year = COALESCE(EXCLUDED.first_pub_year, author.first_pub_year)
             """
             
             con.executemany(query, dedup_author_df.values.tolist())

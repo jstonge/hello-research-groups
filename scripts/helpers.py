@@ -82,10 +82,10 @@ def write_jsonl(fname, out):
 
 def replace_new_min_year(con, aid, name, new_min_year):
     """CLEANING oa_data_raw.db. (OLD)"""
-    con.sql(f"UPDATE author_tidy SET first_pub_year={new_min_year} WHERE aid = '{aid}'")
+    con.sql(f"UPDATE author SET first_pub_year={new_min_year} WHERE aid = '{aid}'")
     
-    con.sql(f"DELETE FROM author_tidy WHERE aid = '{aid}' AND pub_year < {new_min_year}")
-    con.sql(f"DELETE FROM author_tidy WHERE display_name = '{name}' AND pub_year < {new_min_year}")
+    con.sql(f"DELETE FROM author WHERE aid = '{aid}' AND pub_year < {new_min_year}")
+    con.sql(f"DELETE FROM author WHERE display_name = '{name}' AND pub_year < {new_min_year}")
     
     con.sql(f"DELETE FROM paper WHERE aid = '{aid}' AND pub_year < {new_min_year}")
     con.sql(f"DELETE FROM paper WHERE target = '{name}' AND pub_year < {new_min_year}")
@@ -94,7 +94,7 @@ def replace_new_min_year(con, aid, name, new_min_year):
     con.sql(f"DELETE FROM coauthor WHERE target = '{name}' AND pub_year < {new_min_year}")
     
     # update age
-    con.sql(f"UPDATE author_tidy SET author_age = pub_year-first_pub_year WHERE aid = '{aid}'")
+    con.sql(f"UPDATE author SET author_age = pub_year-first_pub_year WHERE aid = '{aid}'")
     
     con.sql("")
     # con.sql(f"UPDATE paper SET author_age = pub_year-first_pub_year WHERE display_name = '{name}'")
@@ -110,9 +110,9 @@ def clean_db_from(con, aid, name):
     # We don't want to remove that persons from the coauthorship of others.
     con.execute("DELETE FROM coauthor WHERE target = ?", (name,))
     
-    # In author_tidy, we remove all all rows for that person
-    con.execute("DELETE FROM author_tidy WHERE aid = ?", (aid,))
-    con.execute("DELETE FROM author_tidy WHERE display_name = ?", (name,))
+    # In author, we remove all all rows for that person
+    con.execute("DELETE FROM author WHERE aid = ?", (aid,))
+    con.execute("DELETE FROM author WHERE display_name = ?", (name,))
     
     con.commit()
 

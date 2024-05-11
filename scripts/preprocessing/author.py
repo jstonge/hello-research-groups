@@ -25,17 +25,12 @@ def main():
     
     # con = duckdb.connect("../../data/raw/oa_data_raw.db")
     con = duckdb.connect(str(args.input / "oa_data_raw.db"))
-
-    query = """
-        SELECT * FROM author_tidy
-    """
-
-    df = con.sql(query).fetchdf()
+    df = con.sql("SELECT * FROM author").fetchdf()
 
     def gen_fill_char(lower, upper):
         return np.char.zfill(np.random.randint(lower,upper,len(df)).astype(str),2)
     
-    df["age_std"] = "1"+df.author_age.astype(str).map(lambda x: x.zfill(3))+"-"+gen_fill_char(1, 12)+"-"+gen_fill_char(1, 28)
+    df["age_std"] = "1"+df.author_age.astype(str).str.replace(".0", "").map(lambda x: x.zfill(3))+"-"+gen_fill_char(1, 12)+"-"+gen_fill_char(1, 28)
     
     df.to_parquet(args.output / "author.parquet")
     
