@@ -5,8 +5,8 @@ export default {
   title: "Hello Research Groups",
   pages: [
     { name: "Researcher timeline", path: "/timeline" },
-    { name: "Summary DB", path: "/summary-db" },
     { name: "Summary Research Groups", path: "/summary-groups" },
+    { name: "Summary DB", path: "/summary-db" },
     { name: "NSF awards", path: "/nsf-awards" },
     { name: "NEH awards", path: "/neh-awards" }
   ],

@@ -1,7 +1,4 @@
 ---
-theme: dashboard
-toc: false
-title: Visualize nsf humanities
 sql:
   data: ./data/neh_awards.parquet
 ---
@@ -9,9 +6,31 @@ sql:
 <div class="hero">
   <h1>Exploring National Endowment of humanities</h1>
   <h2>A small exploration of the data available from <a href="https://www.neh.gov/grants/listing">https://www.neh.gov/grants/listing</a>.</h2>
+  <div class="grid grid-cols-4">
+      <div class="card">
+      <h2>Min awarded/year</h2>
+          <span class="big">${minAward['totAwarded'].toFixed()}M</span> (${minAward['year_awarded']})
+      </div>
+      <div class="card">
+      <h2>Max awarded/year</h2>
+      <span class="big">${maxAward['totAwarded'].toFixed()}M</span> (${maxAward['year_awarded']})
+      </div>
+  </div>
 </div>
 
-<div class="warning">At the moment, the following are grants awared is just for individual recipients. I still need to add organizational recipients.</div>
+```sql id=[...totalAwarded]
+SELECT SUM(approved_award_total)/1000000 as totAwarded, year_awarded
+FROM data 
+GROUP BY year_awarded 
+```
+```js
+const [minA, maxA] = d3.extent(totalAwarded, d=>d.totAwarded)
+```
+```js
+const maxAward = totalAwarded.filter(d => d.totAwarded === maxA)[0]
+const minAward = totalAwarded.filter(d => d.totAwarded === minA)[0]
+```
+
 
 ## Grant program name
 
@@ -77,8 +96,6 @@ ORDER BY year_awarded
 ```
 
 ## By division
-
-See [here](https://www.neh.gov/divisions-offices) for a description of the division. I still need to write some tests to make sure the data is all here. I find suspicious that the division of "Public Programs" has so many missing years:
 
 ```sql id=money_overtime
 SELECT 

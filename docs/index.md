@@ -126,7 +126,7 @@ In the project, we will include and exclude people from groups. Sometime this wi
 
 When we are lucky, there is a public facing webpage hosted by the group/PI that says, "look, here is my lab". This will be the people we define as part of the group, even thoug some loose collaborators might be missing from that page. We assume that this approach is a good proxy to get who is on the payroll of the lab, or at least who benefit from being exhibited on the main page of the lab.
 
-#### The challenges
+## The challenges
 
  - _Measuring research groups_; their emergence/birth, deaths, composition (role specialization?), and size.
  - _Measuring the emergence of computational works_

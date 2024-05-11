@@ -3,11 +3,34 @@ sql:
   data: ./data/nsf_awards.parquet
 ---
 
-
 <div class="hero">
   <h1>Exploring NSF grants</h1>
   <h2>A small exploration of the data available from <a href="https://www.nsf.gov/awardsearch/">https://www.nsf.gov/awardsearch/</a>.</h2>
+  <div class="grid grid-cols-4">
+      <div class="card">
+      <h2>Min awarded/year</h2>
+          <span class="big">${minAward['totAwarded'].toFixed(2)}M</span> (${minAward['Call_Year']})
+      </div>
+      <div class="card">
+      <h2>Max awarded/year</h2>
+      <span class="big">${maxAward['Call_Year'].toFixed()}M</span> (${maxAward['Call_Year']})
+      </div>
+  </div>
 </div>
+
+```sql id=[...totalAwarded]
+SELECT SUM(EU_contribution::INT)/1000000 as totAwarded, Call_Year
+FROM data 
+WHERE Call_Year is not NULL and EU_contribution is not NULL AND Call_year > 1960 AND Call_year < 2024
+GROUP BY Call_Year 
+```
+```js
+const [minA, maxA] = d3.extent(totalAwarded, d=>d.totAwarded)
+```
+```js
+const maxAward = totalAwarded.filter(d => d.totAwarded === maxA)[0]
+const minAward = totalAwarded.filter(d => d.totAwarded === minA)[0]
+```
 
 ## Timeseries
 

@@ -150,6 +150,26 @@ ${form.a_nc === 'age_diff' ?
 </div>
 </div>
 
+---
+
+Features to examines:
+<div class="grid grid-cols-4">
+  <div class="card"><br><br><br><br><br><br>
+    <figure>
+      <img src="https://raw.githubusercontent.com/jstonge/hello-research-groups/main/docs/figs/friendship.svg" alt="growth" style="width:100%">
+    </figure> 
+    <br><br><br><br><br><br><br>The power of Two
+  </div>
+  <div>
+    <figure>
+      <img src="https://raw.githubusercontent.com/jstonge/hello-research-groups/main/docs/figs/width.svg" 
+      alt="width" style="width:100%">
+    </figure> 
+    Average width + Max width
+  </div>
+</div>
+
+---
 
 ```js
 const selected_authors = form.targets.length > 0 ? form.targets[0] : 'Aaron Clauset'
