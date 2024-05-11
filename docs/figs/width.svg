@@ -1,0 +1,1294 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   class="plot-d6a7b5"
+   fill="currentColor"
+   font-family="system-ui, sans-serif"
+   font-size="10px"
+   text-anchor="middle"
+   width="170.89462"
+   height="186.15192"
+   viewBox="0 0 170.89462 186.15192"
+   style="overflow:visible"
+   version="1.1"
+   id="svg467"
+   sodipodi:docname="width.svg"
+   inkscape:version="1.3 (0e150ed, 2023-07-21)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs467">
+    <marker
+       style="overflow:visible"
+       id="ArrowTriangleStylized"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Stylized triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="m 6,0 c -3,1 -7,3 -9,5 0,0 0,-4 2,-5 -2,-1 -2,-5 -2,-5 2,2 6,4 9,5 z"
+         id="path4" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="namedview467"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="2.7894713"
+     inkscape:cx="86.396299"
+     inkscape:cy="95.896307"
+     inkscape:window-width="1512"
+     inkscape:window-height="916"
+     inkscape:window-x="0"
+     inkscape:window-y="38"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg467" />
+  <style
+     id="style1">:where(.plot-d6a7b5) {&#10;  --plot-background: white;&#10;  display: block;&#10;  height: auto;&#10;  height: intrinsic;&#10;  max-width: 100%;&#10;}&#10;:where(.plot-d6a7b5 text),&#10;:where(.plot-d6a7b5 tspan) {&#10;  white-space: pre;&#10;}</style>
+  <circle
+     cx="-95.865051"
+     cy="139.8638"
+     r="5.47931"
+     fill="#20A387FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle88"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-95.865051"
+     cy="115.03394"
+     r="4.3386807"
+     fill="#20A387FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle104"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-95.865051"
+     cy="125.02299"
+     r="4.1081424"
+     fill="#FDE725FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle112"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-106.99981"
+     cy="151.85069"
+     r="3.9862068"
+     fill="#20A387FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle115"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-84.56485"
+     cy="153.77715"
+     r="3.9862068"
+     fill="#20A387FF"
+     fill-opacity="0.1"
+     stroke-width="0.1"
+     id="circle116"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-95.865051"
+     cy="96.12616"
+     r="3.8590753"
+     fill="#FDE725FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle120"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-95.865051"
+     cy="71.724396"
+     r="3.5861309"
+     fill="#20A387FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle125"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-105.82882"
+     cy="141.2908"
+     r="3.5861309"
+     fill="#20A387FF"
+     fill-opacity="0.1"
+     stroke-width="0.1"
+     id="circle126"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-98.103516"
+     cy="64.018585"
+     r="3.4382277"
+     fill="#FDE725FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle132"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-87.338928"
+     cy="144.92966"
+     r="3.4382277"
+     fill="#20A387FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle133"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-79.462494"
+     cy="144.92966"
+     r="3.4382277"
+     fill="#404788FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle134"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-88.073669"
+     cy="133.72766"
+     r="3.4382277"
+     fill="#FDE725FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle135"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-95.865051"
+     cy="32.838566"
+     r="3.2807531"
+     fill="#20A387FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle140"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-104.25122"
+     cy="125.23704"
+     r="3.2807531"
+     fill="#FDE725FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle141"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-95.865051"
+     cy="20.352266"
+     r="3.111567"
+     fill="#FDE725FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle142"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-93.898102"
+     cy="8.8451405"
+     r="3.111567"
+     fill="#FDE725FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle142-3"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-103.93787"
+     cy="117.53118"
+     r="3.111567"
+     fill="#FDE725FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle143"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-87.735321"
+     cy="123.81002"
+     r="3.111567"
+     fill="#20A387FF"
+     fill-opacity="0.1"
+     stroke-width="0.1"
+     id="circle144"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-90.737701"
+     cy="64.018585"
+     r="2.9275882"
+     fill="#404788FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle146"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-102.10416"
+     cy="109.61132"
+     r="2.9275882"
+     fill="#FDE725FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle147"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-81.667175"
+     cy="120.24249"
+     r="2.9275882"
+     fill="#20A387FF"
+     fill-opacity="0.1"
+     stroke-width="0.1"
+     id="circle148"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-81.546295"
+     cy="127.16348"
+     r="2.9275882"
+     fill="#FDE725FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle149"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-102.99512"
+     cy="133.72766"
+     r="2.9275882"
+     fill="#FDE725FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle150"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-105.14975"
+     cy="62.73428"
+     r="2.7240872"
+     fill="#20A387FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle164"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-111.25277"
+     cy="125.02299"
+     r="2.7240872"
+     fill="#20A387FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle165"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-84.317017"
+     cy="64.018585"
+     r="2.4931035"
+     fill="#FDE725FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle184"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-111.23283"
+     cy="64.018585"
+     r="2.4931035"
+     fill="#FDE725FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle185"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-95.865051"
+     cy="80.999908"
+     r="2.4931035"
+     fill="#20A387FF"
+     fill-opacity="0.1"
+     stroke-width="0.1"
+     id="circle186"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-102.76807"
+     cy="73.294098"
+     r="2.4931035"
+     fill="#FDE725FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle187"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-110.51782"
+     cy="118.102"
+     r="2.4931035"
+     fill="#20A387FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle188"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-75.49292"
+     cy="125.02299"
+     r="2.4931035"
+     fill="#20A387FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle189"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-95.865051"
+     cy="44.325932"
+     r="2.2191138"
+     fill="#20A387FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle221"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-75.905212"
+     cy="118.102"
+     r="2.2191138"
+     fill="#20A387FF"
+     fill-opacity="0.1"
+     stroke-width="0.1"
+     id="circle222"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-116.23004"
+     cy="118.102"
+     r="2.2191138"
+     fill="#FDE725FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle223"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-70.905945"
+     cy="120.24249"
+     r="2.2191138"
+     fill="#FDE725FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle224"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-88.73175"
+     cy="117.53118"
+     r="2.2191138"
+     fill="#404788FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle225"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-112.48277"
+     cy="139.8638"
+     r="2.2191138"
+     fill="#FDE725FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle226"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-115.07536"
+     cy="144.64426"
+     r="2.2191138"
+     fill="#FDE725FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle227"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-116.79715"
+     cy="127.16348"
+     r="2.2191138"
+     fill="#404788FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle228"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-70.196899"
+     cy="127.16348"
+     r="2.2191138"
+     fill="#FDE725FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle229"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-73.887634"
+     cy="141.2908"
+     r="2.2191138"
+     fill="#20A387FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle230"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-121.88272"
+     cy="125.23704"
+     r="2.2191138"
+     fill="#20A387FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle231"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-126.96829"
+     cy="127.16348"
+     r="2.2191138"
+     fill="#20A387FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle232"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-65.197662"
+     cy="125.02299"
+     r="2.2191138"
+     fill="#20A387FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle233"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-117.91914"
+     cy="140.0065"
+     r="2.2191138"
+     fill="#20A387FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle234"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-120.5061"
+     cy="144.92966"
+     r="2.2191138"
+     fill="#404788FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle235"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-131.96756"
+     cy="125.02299"
+     r="2.2191138"
+     fill="#20A387FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle236"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-69.846222"
+     cy="144.92966"
+     r="2.2191138"
+     fill="#20A387FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle237"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-59.75943"
+     cy="125.02299"
+     r="2.2191138"
+     fill="#20A387FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle238"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-137.40579"
+     cy="125.02299"
+     r="2.2191138"
+     fill="#20A387FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle239"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-123.35736"
+     cy="140.0065"
+     r="2.2191138"
+     fill="#404788FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle240"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-54.321198"
+     cy="125.02299"
+     r="2.2191138"
+     fill="#20A387FF"
+     fill-opacity="0.1"
+     stroke-width="0.1"
+     id="circle241"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-67.536072"
+     cy="140.0065"
+     r="2.2191138"
+     fill="#20A387FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle242"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-128.7881"
+     cy="140.2919"
+     r="2.2191138"
+     fill="#20A387FF"
+     fill-opacity="0.1"
+     stroke-width="0.1"
+     id="circle243"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-125.94434"
+     cy="144.92966"
+     r="2.2191138"
+     fill="#FDE725FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle244"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-62.097839"
+     cy="140.0065"
+     r="2.2191138"
+     fill="#FDE725FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle245"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-132.04863"
+     cy="144.64426"
+     r="2.2191138"
+     fill="#20A387FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle246"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-134.64125"
+     cy="139.8638"
+     r="2.2191138"
+     fill="#404788FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle247"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-109.14182"
+     cy="133.72766"
+     r="2.2191138"
+     fill="#20A387FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle248"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-64.40799"
+     cy="144.92966"
+     r="2.2191138"
+     fill="#404788FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle249"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-142.84401"
+     cy="125.02299"
+     r="2.2191138"
+     fill="#20A387FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle250"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-48.882961"
+     cy="125.02299"
+     r="2.2191138"
+     fill="#404788FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle251"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-56.661499"
+     cy="139.8638"
+     r="2.2191138"
+     fill="#FDE725FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle252"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-114.1452"
+     cy="150.92314"
+     r="2.2191138"
+     fill="#FDE725FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle253"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-100.53079"
+     cy="28.842958"
+     r="1.8620436"
+     fill="#FDE725FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle306"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-96.658852"
+     cy="-1.0100231"
+     r="1.8620436"
+     fill="#FDE725FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle306-2"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-91.19931"
+     cy="28.842958"
+     r="1.8620436"
+     fill="#FDE725FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle307"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-79.118134"
+     cy="62.73428"
+     r="1.8620436"
+     fill="#404788FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle308"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-100.32971"
+     cy="46.751835"
+     r="1.8620436"
+     fill="#20A387FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle309"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-116.4317"
+     cy="62.73428"
+     r="1.8620436"
+     fill="#20A387FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle310"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-74.571991"
+     cy="64.018585"
+     r="1.8620436"
+     fill="#20A387FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle311"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-120.97783"
+     cy="64.018585"
+     r="1.8620436"
+     fill="#404788FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle312"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-69.8479"
+     cy="64.018585"
+     r="1.8620436"
+     fill="#20A387FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle313"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-125.70192"
+     cy="64.018585"
+     r="1.8620436"
+     fill="#20A387FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle314"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-65.301727"
+     cy="62.73428"
+     r="1.8620436"
+     fill="#20A387FF"
+     fill-opacity="0.1"
+     stroke-width="0.1"
+     id="circle315"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-130.42603"
+     cy="64.018585"
+     r="1.8620436"
+     fill="#404788FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle316"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-60.755585"
+     cy="64.018585"
+     r="1.8620436"
+     fill="#20A387FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle317"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-135.15013"
+     cy="64.018585"
+     r="1.8620436"
+     fill="#20A387FF"
+     fill-opacity="0.1"
+     stroke-width="0.1"
+     id="circle318"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-101.22018"
+     cy="80.999908"
+     r="1.8620436"
+     fill="#20A387FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle319"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-89.420441"
+     cy="71.938446"
+     r="1.8620436"
+     fill="#FDE725FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle320"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-84.701202"
+     cy="71.724396"
+     r="1.8620436"
+     fill="#FDE725FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle321"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-95.865051"
+     cy="88.919769"
+     r="1.8620436"
+     fill="#FDE725FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle322"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-107.888"
+     cy="71.724396"
+     r="1.8620436"
+     fill="#404788FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle323"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-80.245514"
+     cy="73.294098"
+     r="1.8620436"
+     fill="#404788FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle324"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-112.34367"
+     cy="73.294098"
+     r="1.8620436"
+     fill="#404788FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle325"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-75.720123"
+     cy="71.938446"
+     r="1.8620436"
+     fill="#20A387FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle326"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-116.86905"
+     cy="71.938446"
+     r="1.8620436"
+     fill="#20A387FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle327"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-100.58914"
+     cy="88.919769"
+     r="1.8620436"
+     fill="#404788FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle328"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-121.27905"
+     cy="117.53118"
+     r="1.8620436"
+     fill="#404788FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle329"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-125.14761"
+     cy="120.24249"
+     r="1.8620436"
+     fill="#FDE725FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle330"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-101.5159"
+     cy="99.765015"
+     r="1.8620436"
+     fill="#20A387FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle331"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-84.30661"
+     cy="115.03394"
+     r="1.8620436"
+     fill="#20A387FF"
+     fill-opacity="0.1"
+     stroke-width="0.1"
+     id="circle332"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-63.475647"
+     cy="120.24249"
+     r="1.8620436"
+     fill="#FDE725FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle333"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-90.214203"
+     cy="99.765015"
+     r="1.8620436"
+     fill="#404788FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle334"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-129.87169"
+     cy="120.24249"
+     r="1.8620436"
+     fill="#404788FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle335"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-85.490105"
+     cy="99.765015"
+     r="1.8620436"
+     fill="#FDE725FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle336"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-83.593201"
+     cy="139.8638"
+     r="1.8620436"
+     fill="#404788FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle337"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-147.45232"
+     cy="127.16348"
+     r="1.8620436"
+     fill="#20A387FF"
+     fill-opacity="0.1"
+     stroke-width="0.1"
+     id="circle338"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-139.70435"
+     cy="140.2919"
+     r="1.8620436"
+     fill="#FDE725FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle339"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-43.801815"
+     cy="125.02299"
+     r="1.8620436"
+     fill="#404788FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle340"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-51.582333"
+     cy="140.0065"
+     r="1.8620436"
+     fill="#20A387FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle341"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-144.4198"
+     cy="140.0065"
+     r="1.8620436"
+     fill="#FDE725FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle342"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-150.77966"
+     cy="123.81002"
+     r="1.8620436"
+     fill="#20A387FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle343"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-39.077724"
+     cy="125.02299"
+     r="1.8620436"
+     fill="#FDE725FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle344"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-155.34538"
+     cy="125.02299"
+     r="1.8620436"
+     fill="#20A387FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle345"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-62.697876"
+     cy="129.4467"
+     r="1.8620436"
+     fill="#FDE725FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle346"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-46.858242"
+     cy="140.0065"
+     r="1.8620436"
+     fill="#FDE725FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle347"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-59.326843"
+     cy="144.92966"
+     r="1.8620436"
+     fill="#20A387FF"
+     fill-opacity="0.1"
+     stroke-width="0.1"
+     id="circle348"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-81.773407"
+     cy="133.72766"
+     r="1.8620436"
+     fill="#20A387FF"
+     fill-opacity="0.1"
+     stroke-width="0.1"
+     id="circle349"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-148.96596"
+     cy="141.2908"
+     r="1.8620436"
+     fill="#404788FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle350"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-34.866394"
+     cy="127.16348"
+     r="1.8620436"
+     fill="#20A387FF"
+     fill-opacity="0.1"
+     stroke-width="0.1"
+     id="circle351"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-160.06946"
+     cy="125.02299"
+     r="1.8620436"
+     fill="#404788FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle352"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-30.142302"
+     cy="127.16348"
+     r="1.8620436"
+     fill="#404788FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle353"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-42.142788"
+     cy="140.2919"
+     r="1.8620436"
+     fill="#FDE725FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle354"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-153.58322"
+     cy="140.2919"
+     r="1.8620436"
+     fill="#FDE725FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle356"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-37.418701"
+     cy="140.2919"
+     r="1.8620436"
+     fill="#404788FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle357"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-158.30731"
+     cy="140.2919"
+     r="1.8620436"
+     fill="#404788FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle358"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-25.930998"
+     cy="125.02299"
+     r="1.8620436"
+     fill="#20A387FF"
+     fill-opacity="0.1"
+     stroke-width="0.1"
+     id="circle359"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-77.520203"
+     cy="150.92314"
+     r="1.8620436"
+     fill="#404788FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle360"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-72.798279"
+     cy="151.06584"
+     r="1.8620436"
+     fill="#FDE725FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle361"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-119.14099"
+     cy="151.85069"
+     r="1.8620436"
+     fill="#20A387FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle363"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <circle
+     cx="-68.076355"
+     cy="150.92314"
+     r="1.8620436"
+     fill="#20A387FF"
+     fill-opacity="0.9"
+     stroke-width="0.3"
+     id="circle366"
+     style="overflow:visible;stroke:#000000"
+     transform="rotate(-91.86441)" />
+  <path
+     style="fill:#4f8ec2;stroke:#0b0000;stroke-width:0.782362;stroke-linejoin:round;stroke-dasharray:4.69417, 0.782362"
+     d="M 0.18704476,87.933647 156.04703,3.0798222"
+     id="path467" />
+  <path
+     style="overflow:visible;fill:#4f8ec2;stroke:#0b0000;stroke-width:0.782362;stroke-linejoin:round;stroke-dasharray:4.69417, 0.782362"
+     d="M 0.63906476,103.46336 159.50535,182.54567"
+     id="path467-4" />
+  <path
+     style="fill:#4f8ec2;stroke:#0b0000;stroke-width:0.938652;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;marker-start:url(#ArrowTriangleStylized);marker-end:url(#ArrowTriangleStylized)"
+     d="M 167.79299,3.8053819 167.75445,182.34654"
+     id="path468" />
+</svg>
