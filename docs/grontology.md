@@ -56,7 +56,7 @@ figcaption code {
         x: "year", y: (d, i) => (i % 2 === 0 ? -4 : 4 ), text: (d) => d.year.toString()
       }),
       Plot.image(data, {
-        x: "year",
+        x: d => d.year === 2006 ? 1998 : d.year,
         y: (d, i) =>
           i % 2 === 0
             ? 30 + d.numberOfLines * 16 * 0.5
@@ -65,7 +65,8 @@ figcaption code {
         width: 270,
         title: "text"
       })
-    ]
+    ],
+    caption: "Most articles come from different communities with distinct interests and groups. Cambell was a sociologist, psychologists, and organizational scientists who argued that groups should have some ontological status as being real. Echoing this sentiment, Amie Thomasson begins her recent paper on the ontology of social groups in a similar fashion, asking why is it such a big deal to make the claim that groups exist. "
   })
 )}
 </div>
@@ -75,26 +76,37 @@ const data = [
   {
     year: 1956,
     numberOfLines: 3,
+    type: "sociology",
+    link: "https://raw.githubusercontent.com/jstonge/hello-research-groups/main/docs/assets/campbell.webp"
+  },
+  {
+    year: 1975,
+    numberOfLines: 3,
+    type: "sociology",
     link: "https://raw.githubusercontent.com/jstonge/hello-research-groups/main/docs/assets/campbell.webp"
   },
   {
     year: 1990,
     numberOfLines: 3,
+    type: "cultural evolution",
     link: "https://raw.githubusercontent.com/jstonge/hello-research-groups/main/docs/assets/boyd_richerson_1989.webp"
   },
   {
     year: 2006,
     numberOfLines: 3,
+    type: "philosophy",
     link: "https://raw.githubusercontent.com/jstonge/hello-research-groups/main/docs/assets/gilbert.webp"
   },
   {
     year: 2016,
     numberOfLines: 3,
+    type: "philosophy",
     link: "https://raw.githubusercontent.com/jstonge/hello-research-groups/main/docs/assets/tomlinson.webp"
   },
   {
-    year: 2022,
+    year: 2021,
     numberOfLines: 3,
+    type: "Policy Studies",
     link: "https://raw.githubusercontent.com/jstonge/hello-research-groups/main/docs/assets/digital_commons.webp"
   }
 ]
