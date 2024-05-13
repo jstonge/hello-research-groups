@@ -38,6 +38,12 @@ figcaption code {
 
 </style>
 
+```js
+const selectInput = Inputs.radio(["all", "evolutionary biology", "cultural evolution", "philosophy", "policy studies"], {value: "all"})
+const select = Generators.input(selectInput)
+```
+
+<div>${selectInput}</div>
 <div>${resize((width) => 
   Plot.plot({
     width,
@@ -47,23 +53,23 @@ figcaption code {
     y: { axis: null, domain: [-200 / 2, 200 / 2] },
     marks: [
       Plot.ruleY([0]),
-      Plot.ruleX(data, {
-        x: "year",
-        y: (d, i) => (i % 2 === 0 ? 25 : -25)
-      }),
-      Plot.dot(data, { x: "year", fill: "#fff", stroke: "#000" }),
-      Plot.text(data, {
+      Plot.ruleX(
+        data.filter(d => select === "all" ? d : d.type == select), 
+        { x: "year", y: (d, i) => (i % 2 === 0 ? 25 : -25)  }),
+      Plot.dot(data.filter(d => select === "all" ? d : d.type == select), { x: "year", fill: "#fff", stroke: "type" }),
+      Plot.text(data.filter(d => select === "all" ? d : d.type == select), {
         x: "year", y: (d, i) => (i % 2 === 0 ? -4 : 4 ), text: (d) => d.year.toString()
       }),
-      Plot.image(data, {
-        x: d => d.year === 2006 ? 1998 : d.year,
-        y: (d, i) =>
+      Plot.image(
+        data.filter(d => select === "all" ? d : d.type == select), 
+        { x: d => select === "philosophy" ? d.year : d.year === 2006 ? 1998 : d.year, 
+          y: (d, i) =>
           i % 2 === 0
             ? 30 + d.numberOfLines * 16 * 0.5
             : -30 - d.numberOfLines * 16 * 0.5,
         src: "link",
         width: 270,
-        title: "text"
+        title: "text", tip: true, title: "type"
       })
     ],
     caption: "Most articles come from different communities with distinct interests and groups. Cambell was a sociologist, psychologists, and organizational scientists who argued that groups should have some ontological status as being real. Echoing this sentiment, Amie Thomasson begins her recent paper on the ontology of social groups in a similar fashion, asking why is it such a big deal to make the claim that groups exist. "
@@ -82,8 +88,8 @@ const data = [
   {
     year: 1975,
     numberOfLines: 3,
-    type: "sociology",
-    link: "https://raw.githubusercontent.com/jstonge/hello-research-groups/main/docs/assets/campbell.webp"
+    type: "evolutionary biology",
+    link: "https://raw.githubusercontent.com/jstonge/hello-research-groups/main/docs/assets/sloan_wilson.webp"
   },
   {
     year: 1990,
@@ -106,7 +112,7 @@ const data = [
   {
     year: 2021,
     numberOfLines: 3,
-    type: "Policy Studies",
+    type: "policy studies",
     link: "https://raw.githubusercontent.com/jstonge/hello-research-groups/main/docs/assets/digital_commons.webp"
   }
 ]

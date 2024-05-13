@@ -113,6 +113,26 @@ This is an experimental project that combine data collection, data analysis, mod
 
 This project is for (i) anybody sharing the same goals of reproducible science or (ii) people interested in the science of science of groups. 
 
+<div class="gallery grid grid-cols-3">
+    <picture>
+      <source srcset="./assets/defining.webp" media="(prefers-color-scheme: dark)">
+      <img src="./assets/defining.webp">
+    </picture>
+    <div class="small arrow">Defining</div>
+    <picture>
+      <source srcset="./assets/measuring.webp" media="(prefers-color-scheme: dark)">
+      <img src="./assets/measuring.webp">
+    </picture>
+    <div class="small arrow">Measuring</div>
+      <a href="https://joint-lab.observablehq.cloud/hello-gmes/" target="_blank">
+      <picture>
+      <source srcset="./assets/modeling.webp" media="(prefers-color-scheme: dark)">
+        <img src="./assets/modeling.webp">
+      </picture>
+      <div class="small arrow">Modeling</div>
+    </a>
+</div>
+
 ## The philosophy of research groups
 
 <figure>

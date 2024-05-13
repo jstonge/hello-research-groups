@@ -39,7 +39,7 @@ To say whether a field is becoming computational, we need to classify papers wit
 
 ### Top-down approaches
 
-Top-down approaches are 99
+Top-down approaches are ...
 
 Databases like web of science uses venues as marker. If you publish your papers in a venue the 'American Journal of Sociology', then it is sociology. This is not a bad start. Oftentimes, this approach will even get you emerging field such as computational linguistics, as they become mature they will start their own venue. 
 
