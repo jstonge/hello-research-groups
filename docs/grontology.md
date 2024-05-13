@@ -91,6 +91,11 @@ const data = [
     year: 2016,
     numberOfLines: 3,
     link: "https://raw.githubusercontent.com/jstonge/hello-research-groups/main/docs/assets/tomlinson.webp"
+  },
+  {
+    year: 2022,
+    numberOfLines: 3,
+    link: "https://raw.githubusercontent.com/jstonge/hello-research-groups/main/docs/assets/digital_commons.webp"
   }
 ]
 ```
