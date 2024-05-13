@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="82.944374mm"
+   height="87.553108mm"
+   viewBox="0 0 82.944373 87.553108"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="maslow.svg"
+   inkscape:version="1.3 (0e150ed, 2023-07-21)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="1.8881575"
+     inkscape:cx="69.909421"
+     inkscape:cy="137.17076"
+     inkscape:window-width="1920"
+     inkscape:window-height="1027"
+     inkscape:window-x="1512"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-19.023674,-27.122696)">
+    <path
+       id="path7"
+       style="fill:#caffbf;fill-opacity:1;stroke:#0b0000;stroke-width:0.180446;stroke-linejoin:round"
+       inkscape:transform-center-x="0.010684623"
+       inkscape:transform-center-y="-11.93671"
+       d="m 82.586998,79.481673 -44.32413,0.419907 -4.002409,7.122023 52.492588,-0.514858 z"
+       transform="rotate(0.68772753,60.506684,89.087723)" />
+    <path
+       id="path1"
+       style="fill:#ffadad;fill-opacity:1;stroke:#0b0000;stroke-width:0.180446;stroke-linejoin:round"
+       inkscape:transform-center-x="0.010684623"
+       inkscape:transform-center-y="-11.93671"
+       d="m 96.913793,105.97886 -72.774886,-0.12402 -5.025017,8.69404 41.381971,0.0181 41.381969,0.0186 z" />
+    <text
+       xml:space="preserve"
+       style="font-size:6.59893px;line-height:1.3;font-family:'CMU Sans Serif';-inkscape-font-specification:'CMU Sans Serif';text-align:center;text-anchor:middle;fill:#ffadad;fill-opacity:1;stroke:#0b0000;stroke-width:0.153426;stroke-linejoin:round"
+       x="60.08532"
+       y="112.27318"
+       id="text2"><tspan
+         sodipodi:role="line"
+         id="tspan2"
+         style="fill:#ffadad;fill-opacity:1;stroke-width:0.153426"
+         x="60.08532"
+         y="112.27318">UNIX+Git</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:5.60062px;line-height:1.3;font-family:'CMU Sans Serif';-inkscape-font-specification:'CMU Sans Serif';text-align:center;text-anchor:middle;fill:#020406;fill-opacity:1;stroke:#0b0000;stroke-width:0.130215;stroke-linejoin:round"
+       x="62.590729"
+       y="31.232391"
+       id="text2-9"><tspan
+         sodipodi:role="line"
+         id="tspan2-7"
+         style="fill:#020406;fill-opacity:1;stroke-width:0.130215"
+         x="62.590729"
+         y="31.232391">Computational Social Science's </tspan><tspan
+         sodipodi:role="line"
+         style="fill:#020406;fill-opacity:1;stroke-width:0.130215"
+         x="62.590729"
+         y="38.513195"
+         id="tspan1"
+         dx="0 0.16901873">Hierarchy of Needs</tspan></text>
+    <path
+       id="path6"
+       style="fill:#fdffb6;fill-opacity:1;stroke:#0b0000;stroke-width:0.180446;stroke-linejoin:round"
+       inkscape:transform-center-x="0.010684623"
+       inkscape:transform-center-y="-11.93671"
+       d="M 86.782111,87.353128 34.287125,87.23789 29.738564,95.107694 91.320336,95.221898 Z" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.38224px;line-height:1.3;font-family:'CMU Sans Serif';-inkscape-font-specification:'CMU Sans Serif';text-align:center;text-anchor:middle;fill:#fdffb6;fill-opacity:1;stroke:#0b0000;stroke-width:0.101887;stroke-linejoin:round"
+       x="60.125744"
+       y="92.647774"
+       id="text3"><tspan
+         sodipodi:role="line"
+         id="tspan3"
+         style="fill:#fdffb6;fill-opacity:1;stroke-width:0.101887"
+         x="60.125744"
+         y="92.647774">DBs + API + Web Scraping</tspan></text>
+    <path
+       id="path8"
+       style="fill:#9bf6ff;fill-opacity:1;stroke:#0b0000;stroke-width:0.180446;stroke-linejoin:round"
+       inkscape:transform-center-x="0.010684623"
+       inkscape:transform-center-y="-11.93671"
+       d="M 78.529385,71.986108 42.55432,71.873969 39.821154,76.603396 38.37473,79.106087 82.700707,79.218224 81.203124,76.622 Z" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.38224px;line-height:1.3;font-family:'CMU Sans Serif';-inkscape-font-specification:'CMU Sans Serif';text-align:center;text-anchor:middle;fill:#9bf6ff;fill-opacity:1;stroke:#0b0000;stroke-width:0.101887;stroke-linejoin:round"
+       x="60.269104"
+       y="76.867157"
+       id="text3-9"><tspan
+         sodipodi:role="line"
+         id="tspan3-5"
+         style="fill:#9bf6ff;fill-opacity:1;stroke-width:0.101887"
+         x="60.269104"
+         y="76.867157">Data visualization</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.38224px;line-height:1.3;font-family:'CMU Sans Serif';-inkscape-font-specification:'CMU Sans Serif';text-align:center;text-anchor:middle;fill:#caffbf;fill-opacity:1;stroke:#0b0000;stroke-width:0.101887;stroke-linejoin:round"
+       x="60.12574"
+       y="84.702744"
+       id="text3-9-5"><tspan
+         sodipodi:role="line"
+         id="tspan3-5-4"
+         style="fill:#caffbf;fill-opacity:1;stroke-width:0.101887"
+         x="60.12574"
+         y="84.702744">Principled data cleaning</tspan></text>
+    <path
+       id="path10"
+       style="fill:#bdb2ff;fill-opacity:1;stroke:#0b0000;stroke-width:0.180446;stroke-linejoin:round"
+       inkscape:transform-center-x="0.010684623"
+       inkscape:transform-center-y="-11.93671"
+       d="m 71.97733,59.567227 -22.938134,0.02739 -2.900599,5.018815 28.76827,0.03359 z" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.33489px;line-height:1.3;font-family:'CMU Sans Serif';-inkscape-font-specification:'CMU Sans Serif';text-align:center;text-anchor:middle;fill:#bdb2ff;fill-opacity:1;stroke:#0b0000;stroke-width:0.0775362;stroke-linejoin:round"
+       x="60.227924"
+       y="63.364456"
+       id="text3-9-3"><tspan
+         sodipodi:role="line"
+         id="tspan3-5-2"
+         style="fill:#bdb2ff;fill-opacity:1;stroke-width:0.0775362"
+         x="60.782383"
+         y="63.364456">Simulation </tspan></text>
+    <path
+       id="path9"
+       style="fill:#a0c4ff;fill-opacity:1;stroke:#0b0000;stroke-width:0.180446;stroke-linejoin:round"
+       inkscape:transform-center-x="0.010684623"
+       inkscape:transform-center-y="-11.93671"
+       d="m 74.906867,65.176187 -28.76827,-0.03359 -3.584277,6.202206 35.975065,0.112138 z" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.33489px;line-height:1.3;font-family:'CMU Sans Serif';-inkscape-font-specification:'CMU Sans Serif';text-align:center;text-anchor:middle;fill:#a0c4ff;fill-opacity:1;stroke:#0b0000;stroke-width:0.0775362;stroke-linejoin:round"
+       x="60.159534"
+       y="69.554825"
+       id="text3-9-3-9"><tspan
+         sodipodi:role="line"
+         id="tspan3-5-2-9"
+         style="fill:#a0c4ff;fill-opacity:1;stroke-width:0.0775362"
+         x="60.159534"
+         y="69.554825">Modeling</tspan></text>
+    <path
+       id="path11"
+       style="fill:#ffc6ff;fill-opacity:1;stroke:#0b0000;stroke-width:0.180446;stroke-linejoin:round"
+       inkscape:transform-center-x="0.010684623"
+       inkscape:transform-center-y="-11.93671"
+       d="M 68.60751,53.195006 52.523738,53.036874 49.039196,59.065446 71.97733,59.038057 Z" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.66955px;line-height:1.3;font-family:'CMU Sans Serif';-inkscape-font-specification:'CMU Sans Serif';text-align:center;text-anchor:middle;fill:#ffc6ff;fill-opacity:1;stroke:#0b0000;stroke-width:0.0620672;stroke-linejoin:round"
+       x="60.206047"
+       y="56.888481"
+       id="text3-9-3-7"><tspan
+         sodipodi:role="line"
+         id="tspan3-5-2-3"
+         style="fill:#ffc6ff;fill-opacity:1;stroke-width:0.0620672"
+         x="60.206047"
+         y="56.888481">Fitting models</tspan></text>
+    <path
+       id="path12"
+       style="fill:#fffffc;fill-opacity:1;stroke:#0b0000;stroke-width:0.172031;stroke-linejoin:round"
+       inkscape:transform-center-x="0.010688711"
+       inkscape:transform-center-y="-11.142669"
+       d="m 60.62174,41.413334 c -1.969372,-0.14123 -3.847366,3.686998 -5.373145,6.149255 -1.52578,2.462258 -2.559216,4.959822 -2.559216,4.959822 l 15.657916,0.147635 c 0,0 -0.911671,-2.393244 -2.315685,-4.821795 -1.404014,-2.428551 -3.440498,-6.293688 -5.40987,-6.434917 z"
+       sodipodi:nodetypes="ssccss" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.41571px;line-height:1;font-family:'CMU Sans Serif';-inkscape-font-specification:'CMU Sans Serif';text-align:center;text-anchor:middle;fill:#fffffc;fill-opacity:1;stroke:#0b0000;stroke-width:0.0561655;stroke-linejoin:round"
+       x="61.40448"
+       y="47.727119"
+       id="text3-9-3-7-4"
+       transform="scale(0.98639845,1.0137891)"><tspan
+         sodipodi:role="line"
+         style="line-height:1;fill:#fffffc;fill-opacity:1;stroke-width:0.0561655"
+         x="61.40448"
+         y="47.727119"
+         id="tspan4">Scientific</tspan><tspan
+         sodipodi:role="line"
+         style="line-height:1;fill:#fffffc;fill-opacity:1;stroke-width:0.0561655"
+         x="61.40448"
+         y="50.14283"
+         dx="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.065264396 0.065264396 0 -0.13052879"
+         id="tspan7">work</tspan></text>
+    <path
+       id="path5"
+       style="fill:#ffd6a5;fill-opacity:1;stroke:#0b0000;stroke-width:0.180446;stroke-linejoin:round"
+       inkscape:transform-center-x="0.010684623"
+       inkscape:transform-center-y="-11.93671"
+       d="m 91.320336,95.751065 -61.581772,-0.114204 -5.599657,9.688809 72.774886,0.12402 z" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.59341px;line-height:1.3;font-family:'CMU Sans Serif';-inkscape-font-specification:'CMU Sans Serif';text-align:center;text-anchor:middle;fill:#ffd6a5;fill-opacity:1;stroke:#0b0000;stroke-width:0.106797;stroke-linejoin:round"
+       x="60.274288"
+       y="101.46281"
+       id="text3-3"><tspan
+         sodipodi:role="line"
+         id="tspan3-7"
+         style="fill:#ffd6a5;fill-opacity:1;stroke-width:0.106797"
+         x="60.274288"
+         y="101.46281">Amateur software engineering</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:7.7611px;line-height:1.3;font-family:'CMU Sans Serif';-inkscape-font-specification:'CMU Sans Serif';text-align:center;text-anchor:middle;fill:#ffbb00;stroke:#0b0000;stroke-width:0.00661458;stroke-linejoin:round"
+       x="127.06042"
+       y="48.612606"
+       id="text5"><tspan
+         sodipodi:role="line"
+         id="tspan5"
+         style="stroke-width:0.00661458"
+         x="127.06042"
+         y="48.612606"></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:7.7611px;line-height:1;font-family:'CMU Sans Serif';-inkscape-font-specification:'CMU Sans Serif';text-align:center;text-anchor:middle;fill:#ffbb00;stroke:#0b0000;stroke-width:0.00661458;stroke-linejoin:round"
+       x="42.573277"
+       y="109.80764"
+       id="text12"><tspan
+         sodipodi:role="line"
+         id="tspan12"
+         style="stroke-width:0.00661458"
+         x="42.573277"
+         y="109.80764"></tspan></text>
+  </g>
+</svg>
