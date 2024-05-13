@@ -4,6 +4,8 @@ export default {
   output: "dist", // path to the output root for build
   title: "Hello Research Groups",
   pages: [
+    { name: "The rise of computational works", path: "/comp-works" },
+    { name: "Grontology", path: "/grontology" },
     { name: "Researcher timeline", path: "/timeline" },
     { name: "Summary Research Groups", path: "/summary-groups" },
     { name: "Summary DB", path: "/summary-db" },

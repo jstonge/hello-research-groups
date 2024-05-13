@@ -1,7 +1,4 @@
 ---
-theme: air
-title: Scientific collab timeline
-toc: false
 sql:
   coauthor: ./data/coauthor.parquet
   paper: ./data/paper.parquet

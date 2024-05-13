@@ -1,14 +1,10 @@
 ---
-theme: dashboard
-title: Summary Data
-toc: false
 sql:
   coauthor: ./data/coauthor.parquet
   paper: ./data/paper.parquet
   author: ./data/author.parquet
   training: ./data/training_data.parquet
 ---
-
 
 # Summary database
 

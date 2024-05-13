@@ -1,7 +1,4 @@
 ---
-theme: dashboard
-title: Summary Groups
-toc: false
 sql:
     training: ./data/training_data.parquet
 ---
