@@ -38,16 +38,11 @@ figcaption code {
 
 </style>
 
-
-# Grontology
-
 <div>${resize((width) => 
   Plot.plot({
     width,
-    height: 500,
-    marginBottom: 100,
-    marginLeft: 150,
-    marginRight: 200,
+    height: 600,
+    marginLeft: 150, marginBottom: 50, marginRight: 180,
     x: { axis: null },
     y: { axis: null, domain: [-200 / 2, 200 / 2] },
     marks: [
@@ -58,16 +53,14 @@ figcaption code {
       }),
       Plot.dot(data, { x: "year", fill: "#fff", stroke: "#000" }),
       Plot.text(data, {
-        x: "year",
-        y: (d, i) => (i % 2 === 0 ? -16 / 2 - 4 : 16 / 2 + 4),
-        text: (d) => d.year.toString()
+        x: "year", y: (d, i) => (i % 2 === 0 ? -4 : 4 ), text: (d) => d.year.toString()
       }),
       Plot.image(data, {
         x: "year",
         y: (d, i) =>
           i % 2 === 0
-            ? 25 + d.numberOfLines * 16 * 0.5
-            : -55 - d.numberOfLines * 16 * 0.5,
+            ? 30 + d.numberOfLines * 16 * 0.5
+            : -30 - d.numberOfLines * 16 * 0.5,
         src: "link",
         width: 270,
         title: "text"
@@ -85,12 +78,24 @@ const data = [
     link: "https://raw.githubusercontent.com/jstonge/hello-research-groups/main/docs/assets/campbell.webp"
   },
   {
+    year: 1990,
+    numberOfLines: 3,
+    link: "https://raw.githubusercontent.com/jstonge/hello-research-groups/main/docs/assets/boyd_richerson_1989.webp"
+  },
+  {
+    year: 2006,
+    numberOfLines: 3,
+    link: "https://raw.githubusercontent.com/jstonge/hello-research-groups/main/docs/assets/gilbert.webp"
+  },
+  {
     year: 2016,
     numberOfLines: 3,
     link: "https://raw.githubusercontent.com/jstonge/hello-research-groups/main/docs/assets/tomlinson.webp"
   }
 ]
 ```
+
+# Grontology
 
 In the previous section, we defined the rise of computational works as a shifting ground that might benefit particular research groups. To show that, we need to define what are groups and why they matter.
 
