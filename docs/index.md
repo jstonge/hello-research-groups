@@ -50,7 +50,7 @@ index: false
 .gallery {
   margin: 4rem -1rem;
   gap: 2rem;
-  max-width: calc(640px + 2rem);
+  max-width: calc(840px + 2rem);
 }
 
 .gallery a {
@@ -105,7 +105,6 @@ index: false
 
 </style>
 
-
 # Welcome
 _But what are reseach groups? How do they impact our scientific works? These are our big questions. We seek to define and characterize research groups in a practical ways while engaging with philosophical pedantries._
 
@@ -114,22 +113,26 @@ This is an experimental project that combine data collection, data analysis, mod
 This project is for (i) anybody sharing the same goals of reproducible science or (ii) people interested in the science of science of groups. 
 
 <div class="gallery grid grid-cols-3">
-    <picture>
-      <source srcset="./assets/defining.webp" media="(prefers-color-scheme: dark)">
-      <img src="./assets/defining.webp">
-    </picture>
-    <div class="small arrow">Defining</div>
-    <picture>
-      <source srcset="./assets/measuring.webp" media="(prefers-color-scheme: dark)">
-      <img src="./assets/measuring.webp">
-    </picture>
-    <div class="small arrow">Measuring</div>
-      <a href="https://joint-lab.observablehq.cloud/hello-gmes/" target="_blank">
+    <a href="https://jstonge.observablehq.cloud/hello-research-groups/grontology" target="_blank">
+      <picture>
+        <source srcset="./assets/defining.webp" media="(prefers-color-scheme: dark)">
+        <img src="./assets/defining.webp">
+      </picture>
+      <div class="small arrow">Defining</div>
+    </a>
+    <a href="https://joint-lab.observablehq.cloud/hello-gmes/" target="_blank">
       <picture>
       <source srcset="./assets/modeling.webp" media="(prefers-color-scheme: dark)">
         <img src="./assets/modeling.webp">
       </picture>
       <div class="small arrow">Modeling</div>
+    </a>
+    <a href="https://jstonge.observablehq.cloud/hello-research-groups/timeline" target="_blank">
+      <picture>
+      <source srcset="./assets/measuring.webp" media="(prefers-color-scheme: dark)">
+      <img src="./assets/measuring.webp">
+      </picture>
+    <div class="small arrow">Measuring</div>
     </a>
 </div>
 
@@ -146,7 +149,7 @@ In the project, we will include and exclude people from groups. Sometime this wi
 
 When we are lucky, there is a public facing webpage hosted by the group/PI that says, "look, here is my lab". This will be the people we define as part of the group, even thoug some loose collaborators might be missing from that page. We assume that this approach is a good proxy to get who is on the payroll of the lab, or at least who benefit from being exhibited on the main page of the lab.
 
-## The challenges
+## Empirical challenges
 
  - _Measuring research groups_; their emergence/birth, deaths, composition (role specialization?), and size.
  - _Measuring the emergence of computational works_
@@ -291,17 +294,8 @@ We use a simple heuristics to determine affiliation;
 Sometimes, we can have a good idea of ego's career trajectory by just looking at that information.
 Here ego started at <span style="color:Salmon">Université Laval</span>, did a PostDoc at the <span style="color:CornflowerBlue">Santa Fe Institute</span>, then got a position at <span style="color:DarkGoldenRod">University of Vermont</span> where we started his research lab.
 
-
-
-<figure>
-  <img src="https://raw.githubusercontent.com/jstonge/hello-research-groups/main/docs/figs/plot1.svg" alt="Trulli" style="width:100%">
-  <figcaption>Fig. 142 The Turing Way community illustrated as a garden. The Turing Way project illustration by Scriberia. Used under a CC-BY 4.0 licence. DOI: 10.5281/zenodo.3332807.</figcaption>
-</figure> 
-
 Eyeballing the plot, there are definitely some similarities and differences. 
 One similarity is Jean-Gabriel Young (JGY), who share the same lab than LHD, and exhibit similar patterns in collaboration early on.
-
-
 
 #### 5. Groups exploring new semantic space (TBD)
 
@@ -339,6 +333,3 @@ We know ego became a professors at University of Vermont, but he is also involve
 As we know, 2019-2020 COVID-19 was in full swing. 
 
 We can also see the degree to which ego's PhD was collaborative, with darker hyperedges indicating multiple collaboration with the same subset of coauthors.
-
-
-

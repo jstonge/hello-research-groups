@@ -58,3 +58,6 @@ Try both, and see how the findings are aligned.
 ## Timely issues
 
 The tricky bit is how to  handle time. Any label is subject to the _Theseus's paradox_. That is, if you change all the parts that is the the ship of Theseus, but that those original parts are somehow reused somewhere else to build a new ship, which one Theseus ship. The one that stayed afloat, that maybe Theseus is still on it, or the new on that is built from the original part of Theseus' ship. 
+
+## OA taxonomy
+

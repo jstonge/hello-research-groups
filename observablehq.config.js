@@ -5,6 +5,7 @@ export default {
   title: "Hello Research Groups",
   pages: [
     { name: "The rise of computational works", path: "/comp-works" },
+    { name: "Classify computational works", path: "/classify-comp-works" },
     { name: "Grontology", path: "/grontology" },
     { name: "Researcher timeline", path: "/timeline" },
     { name: "Summary Research Groups", path: "/summary-groups" },

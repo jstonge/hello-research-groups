@@ -1,0 +1,758 @@
+[
+    {
+        "name": "Health Sciences.Dentistry.General Dentistry"
+    },
+    {
+        "name": "Health Sciences.Dentistry.Oral Surgery"
+    },
+    {
+        "name": "Health Sciences.Dentistry.Orthodontics"
+    },
+    {
+        "name": "Health Sciences.Dentistry.Periodontics"
+    },
+    {
+        "name": "Health Sciences.Health Professions.Complementary and Manual Therapy"
+    },
+    {
+        "name": "Health Sciences.Health Professions.Emergency Medical Services"
+    },
+    {
+        "name": "Health Sciences.Health Professions.General Health Professions"
+    },
+    {
+        "name": "Health Sciences.Health Professions.Health Information Management"
+    },
+    {
+        "name": "Health Sciences.Health Professions.Medical Laboratory Technology"
+    },
+    {
+        "name": "Health Sciences.Health Professions.Medical Terminology"
+    },
+    {
+        "name": "Health Sciences.Health Professions.Occupational Therapy"
+    },
+    {
+        "name": "Health Sciences.Health Professions.Pharmacy"
+    },
+    {
+        "name": "Health Sciences.Health Professions.Physical Therapy, Sports Therapy and Rehabilitation"
+    },
+    {
+        "name": "Health Sciences.Health Professions.Radiological and Ultrasound Technology"
+    },
+    {
+        "name": "Health Sciences.Health Professions.Speech and Hearing"
+    },
+    {
+        "name": "Health Sciences.Medicine.Anatomy"
+    },
+    {
+        "name": "Health Sciences.Medicine.Anesthesiology and Pain Medicine"
+    },
+    {
+        "name": "Health Sciences.Medicine.Biochemistry"
+    },
+    {
+        "name": "Health Sciences.Medicine.Cardiology and Cardiovascular Medicine"
+    },
+    {
+        "name": "Health Sciences.Medicine.Complementary and alternative medicine"
+    },
+    {
+        "name": "Health Sciences.Medicine.Critical Care and Intensive Care Medicine"
+    },
+    {
+        "name": "Health Sciences.Medicine.Dermatology"
+    },
+    {
+        "name": "Health Sciences.Medicine.Emergency Medicine"
+    },
+    {
+        "name": "Health Sciences.Medicine.Endocrinology, Diabetes and Metabolism"
+    },
+    {
+        "name": "Health Sciences.Medicine.Epidemiology"
+    },
+    {
+        "name": "Health Sciences.Medicine.Family Practice"
+    },
+    {
+        "name": "Health Sciences.Medicine.Gastroenterology"
+    },
+    {
+        "name": "Health Sciences.Medicine.Genetics"
+    },
+    {
+        "name": "Health Sciences.Medicine.Geriatrics and Gerontology"
+    },
+    {
+        "name": "Health Sciences.Medicine.Health Informatics"
+    },
+    {
+        "name": "Health Sciences.Medicine.Hematology"
+    },
+    {
+        "name": "Health Sciences.Medicine.Hepatology"
+    },
+    {
+        "name": "Health Sciences.Medicine.Immunology and Allergy"
+    },
+    {
+        "name": "Health Sciences.Medicine.Infectious Diseases"
+    },
+    {
+        "name": "Health Sciences.Medicine.Internal Medicine"
+    },
+    {
+        "name": "Health Sciences.Medicine.Microbiology"
+    },
+    {
+        "name": "Health Sciences.Medicine.Nephrology"
+    },
+    {
+        "name": "Health Sciences.Medicine.Neurology"
+    },
+    {
+        "name": "Health Sciences.Medicine.Obstetrics and Gynecology"
+    },
+    {
+        "name": "Health Sciences.Medicine.Oncology"
+    },
+    {
+        "name": "Health Sciences.Medicine.Ophthalmology"
+    },
+    {
+        "name": "Health Sciences.Medicine.Orthopedics and Sports Medicine"
+    },
+    {
+        "name": "Health Sciences.Medicine.Otorhinolaryngology"
+    },
+    {
+        "name": "Health Sciences.Medicine.Pathology and Forensic Medicine"
+    },
+    {
+        "name": "Health Sciences.Medicine.Pediatrics, Perinatology and Child Health"
+    },
+    {
+        "name": "Health Sciences.Medicine.Pharmacology"
+    },
+    {
+        "name": "Health Sciences.Medicine.Physiology"
+    },
+    {
+        "name": "Health Sciences.Medicine.Psychiatry and Mental health"
+    },
+    {
+        "name": "Health Sciences.Medicine.Public Health, Environmental and Occupational Health"
+    },
+    {
+        "name": "Health Sciences.Medicine.Pulmonary and Respiratory Medicine"
+    },
+    {
+        "name": "Health Sciences.Medicine.Radiology, Nuclear Medicine and Imaging"
+    },
+    {
+        "name": "Health Sciences.Medicine.Rehabilitation"
+    },
+    {
+        "name": "Health Sciences.Medicine.Reproductive Medicine"
+    },
+    {
+        "name": "Health Sciences.Medicine.Rheumatology"
+    },
+    {
+        "name": "Health Sciences.Medicine.Surgery"
+    },
+    {
+        "name": "Health Sciences.Medicine.Transplantation"
+    },
+    {
+        "name": "Health Sciences.Medicine.Urology"
+    },
+    {
+        "name": "Health Sciences.Nursing.Issues, ethics and legal aspects"
+    },
+    {
+        "name": "Health Sciences.Nursing.Leadership and Management"
+    },
+    {
+        "name": "Health Sciences.Nursing.Nutrition and Dietetics"
+    },
+    {
+        "name": "Health Sciences.Nursing.Research and Theory"
+    },
+    {
+        "name": "Health Sciences.Veterinary.Equine"
+    },
+    {
+        "name": "Health Sciences.Veterinary.Small Animals"
+    },
+    {
+        "name": "Life Sciences.Agricultural and Biological Sciences.Agronomy and Crop Science"
+    },
+    {
+        "name": "Life Sciences.Agricultural and Biological Sciences.Animal Science and Zoology"
+    },
+    {
+        "name": "Life Sciences.Agricultural and Biological Sciences.Aquatic Science"
+    },
+    {
+        "name": "Life Sciences.Agricultural and Biological Sciences.Ecology, Evolution, Behavior and Systematics"
+    },
+    {
+        "name": "Life Sciences.Agricultural and Biological Sciences.Food Science"
+    },
+    {
+        "name": "Life Sciences.Agricultural and Biological Sciences.Forestry"
+    },
+    {
+        "name": "Life Sciences.Agricultural and Biological Sciences.General Agricultural and Biological Sciences"
+    },
+    {
+        "name": "Life Sciences.Agricultural and Biological Sciences.Horticulture"
+    },
+    {
+        "name": "Life Sciences.Agricultural and Biological Sciences.Insect Science"
+    },
+    {
+        "name": "Life Sciences.Agricultural and Biological Sciences.Plant Science"
+    },
+    {
+        "name": "Life Sciences.Agricultural and Biological Sciences.Soil Science"
+    },
+    {
+        "name": "Life Sciences.Biochemistry, Genetics and Molecular Biology.Aging"
+    },
+    {
+        "name": "Life Sciences.Biochemistry, Genetics and Molecular Biology.Biochemistry"
+    },
+    {
+        "name": "Life Sciences.Biochemistry, Genetics and Molecular Biology.Biophysics"
+    },
+    {
+        "name": "Life Sciences.Biochemistry, Genetics and Molecular Biology.Biotechnology"
+    },
+    {
+        "name": "Life Sciences.Biochemistry, Genetics and Molecular Biology.Cancer Research"
+    },
+    {
+        "name": "Life Sciences.Biochemistry, Genetics and Molecular Biology.Cell Biology"
+    },
+    {
+        "name": "Life Sciences.Biochemistry, Genetics and Molecular Biology.Clinical Biochemistry"
+    },
+    {
+        "name": "Life Sciences.Biochemistry, Genetics and Molecular Biology.Developmental Biology"
+    },
+    {
+        "name": "Life Sciences.Biochemistry, Genetics and Molecular Biology.Endocrinology"
+    },
+    {
+        "name": "Life Sciences.Biochemistry, Genetics and Molecular Biology.Genetics"
+    },
+    {
+        "name": "Life Sciences.Biochemistry, Genetics and Molecular Biology.Molecular Biology"
+    },
+    {
+        "name": "Life Sciences.Biochemistry, Genetics and Molecular Biology.Molecular Medicine"
+    },
+    {
+        "name": "Life Sciences.Biochemistry, Genetics and Molecular Biology.Physiology"
+    },
+    {
+        "name": "Life Sciences.Biochemistry, Genetics and Molecular Biology.Structural Biology"
+    },
+    {
+        "name": "Life Sciences.Immunology and Microbiology.Applied Microbiology and Biotechnology"
+    },
+    {
+        "name": "Life Sciences.Immunology and Microbiology.Immunology"
+    },
+    {
+        "name": "Life Sciences.Immunology and Microbiology.Microbiology"
+    },
+    {
+        "name": "Life Sciences.Immunology and Microbiology.Parasitology"
+    },
+    {
+        "name": "Life Sciences.Immunology and Microbiology.Virology"
+    },
+    {
+        "name": "Life Sciences.Neuroscience.Behavioral Neuroscience"
+    },
+    {
+        "name": "Life Sciences.Neuroscience.Biological Psychiatry"
+    },
+    {
+        "name": "Life Sciences.Neuroscience.Cellular and Molecular Neuroscience"
+    },
+    {
+        "name": "Life Sciences.Neuroscience.Cognitive Neuroscience"
+    },
+    {
+        "name": "Life Sciences.Neuroscience.Developmental Neuroscience"
+    },
+    {
+        "name": "Life Sciences.Neuroscience.Endocrine and Autonomic Systems"
+    },
+    {
+        "name": "Life Sciences.Neuroscience.Neurology"
+    },
+    {
+        "name": "Life Sciences.Neuroscience.Sensory Systems"
+    },
+    {
+        "name": "Life Sciences.Pharmacology, Toxicology and Pharmaceutics.Drug Discovery"
+    },
+    {
+        "name": "Life Sciences.Pharmacology, Toxicology and Pharmaceutics.Pharmaceutical Science"
+    },
+    {
+        "name": "Life Sciences.Pharmacology, Toxicology and Pharmaceutics.Pharmacology"
+    },
+    {
+        "name": "Life Sciences.Pharmacology, Toxicology and Pharmaceutics.Toxicology"
+    },
+    {
+        "name": "Physical Sciences.Chemical Engineering.Bioengineering"
+    },
+    {
+        "name": "Physical Sciences.Chemical Engineering.Catalysis"
+    },
+    {
+        "name": "Physical Sciences.Chemical Engineering.Chemical Health and Safety"
+    },
+    {
+        "name": "Physical Sciences.Chemical Engineering.Filtration and Separation"
+    },
+    {
+        "name": "Physical Sciences.Chemical Engineering.Fluid Flow and Transfer Processes"
+    },
+    {
+        "name": "Physical Sciences.Chemical Engineering.Process Chemistry and Technology"
+    },
+    {
+        "name": "Physical Sciences.Chemistry.Analytical Chemistry"
+    },
+    {
+        "name": "Physical Sciences.Chemistry.Electrochemistry"
+    },
+    {
+        "name": "Physical Sciences.Chemistry.Inorganic Chemistry"
+    },
+    {
+        "name": "Physical Sciences.Chemistry.Organic Chemistry"
+    },
+    {
+        "name": "Physical Sciences.Chemistry.Physical and Theoretical Chemistry"
+    },
+    {
+        "name": "Physical Sciences.Chemistry.Spectroscopy"
+    },
+    {
+        "name": "Physical Sciences.Computer Science.Artificial Intelligence"
+    },
+    {
+        "name": "Physical Sciences.Computer Science.Computational Theory and Mathematics"
+    },
+    {
+        "name": "Physical Sciences.Computer Science.Computer Graphics and Computer-Aided Design"
+    },
+    {
+        "name": "Physical Sciences.Computer Science.Computer Networks and Communications"
+    },
+    {
+        "name": "Physical Sciences.Computer Science.Computer Science Applications"
+    },
+    {
+        "name": "Physical Sciences.Computer Science.Computer Vision and Pattern Recognition"
+    },
+    {
+        "name": "Physical Sciences.Computer Science.Hardware and Architecture"
+    },
+    {
+        "name": "Physical Sciences.Computer Science.Human-Computer Interaction"
+    },
+    {
+        "name": "Physical Sciences.Computer Science.Information Systems"
+    },
+    {
+        "name": "Physical Sciences.Computer Science.Signal Processing"
+    },
+    {
+        "name": "Physical Sciences.Computer Science.Software"
+    },
+    {
+        "name": "Physical Sciences.Earth and Planetary Sciences.Atmospheric Science"
+    },
+    {
+        "name": "Physical Sciences.Earth and Planetary Sciences.Earth-Surface Processes"
+    },
+    {
+        "name": "Physical Sciences.Earth and Planetary Sciences.Geochemistry and Petrology"
+    },
+    {
+        "name": "Physical Sciences.Earth and Planetary Sciences.Geology"
+    },
+    {
+        "name": "Physical Sciences.Earth and Planetary Sciences.Geophysics"
+    },
+    {
+        "name": "Physical Sciences.Earth and Planetary Sciences.Oceanography"
+    },
+    {
+        "name": "Physical Sciences.Earth and Planetary Sciences.Paleontology"
+    },
+    {
+        "name": "Physical Sciences.Earth and Planetary Sciences.Space and Planetary Science"
+    },
+    {
+        "name": "Physical Sciences.Energy.Energy Engineering and Power Technology"
+    },
+    {
+        "name": "Physical Sciences.Energy.Fuel Technology"
+    },
+    {
+        "name": "Physical Sciences.Energy.General Energy"
+    },
+    {
+        "name": "Physical Sciences.Energy.Nuclear Energy and Engineering"
+    },
+    {
+        "name": "Physical Sciences.Energy.Renewable Energy, Sustainability and the Environment"
+    },
+    {
+        "name": "Physical Sciences.Engineering.Aerospace Engineering"
+    },
+    {
+        "name": "Physical Sciences.Engineering.Architecture"
+    },
+    {
+        "name": "Physical Sciences.Engineering.Automotive Engineering"
+    },
+    {
+        "name": "Physical Sciences.Engineering.Biomedical Engineering"
+    },
+    {
+        "name": "Physical Sciences.Engineering.Building and Construction"
+    },
+    {
+        "name": "Physical Sciences.Engineering.Civil and Structural Engineering"
+    },
+    {
+        "name": "Physical Sciences.Engineering.Computational Mechanics"
+    },
+    {
+        "name": "Physical Sciences.Engineering.Control and Systems Engineering"
+    },
+    {
+        "name": "Physical Sciences.Engineering.Electrical and Electronic Engineering"
+    },
+    {
+        "name": "Physical Sciences.Engineering.General Engineering"
+    },
+    {
+        "name": "Physical Sciences.Engineering.Industrial and Manufacturing Engineering"
+    },
+    {
+        "name": "Physical Sciences.Engineering.Mechanical Engineering"
+    },
+    {
+        "name": "Physical Sciences.Engineering.Mechanics of Materials"
+    },
+    {
+        "name": "Physical Sciences.Engineering.Media Technology"
+    },
+    {
+        "name": "Physical Sciences.Engineering.Ocean Engineering"
+    },
+    {
+        "name": "Physical Sciences.Engineering.Safety, Risk, Reliability and Quality"
+    },
+    {
+        "name": "Physical Sciences.Environmental Science.Ecological Modeling"
+    },
+    {
+        "name": "Physical Sciences.Environmental Science.Ecology"
+    },
+    {
+        "name": "Physical Sciences.Environmental Science.Environmental Chemistry"
+    },
+    {
+        "name": "Physical Sciences.Environmental Science.Environmental Engineering"
+    },
+    {
+        "name": "Physical Sciences.Environmental Science.Global and Planetary Change"
+    },
+    {
+        "name": "Physical Sciences.Environmental Science.Health, Toxicology and Mutagenesis"
+    },
+    {
+        "name": "Physical Sciences.Environmental Science.Management, Monitoring, Policy and Law"
+    },
+    {
+        "name": "Physical Sciences.Environmental Science.Nature and Landscape Conservation"
+    },
+    {
+        "name": "Physical Sciences.Environmental Science.Pollution"
+    },
+    {
+        "name": "Physical Sciences.Environmental Science.Waste Management and Disposal"
+    },
+    {
+        "name": "Physical Sciences.Environmental Science.Water Science and Technology"
+    },
+    {
+        "name": "Physical Sciences.Materials Science.Biomaterials"
+    },
+    {
+        "name": "Physical Sciences.Materials Science.Ceramics and Composites"
+    },
+    {
+        "name": "Physical Sciences.Materials Science.Electronic, Optical and Magnetic Materials"
+    },
+    {
+        "name": "Physical Sciences.Materials Science.General Materials Science"
+    },
+    {
+        "name": "Physical Sciences.Materials Science.Materials Chemistry"
+    },
+    {
+        "name": "Physical Sciences.Materials Science.Metals and Alloys"
+    },
+    {
+        "name": "Physical Sciences.Materials Science.Polymers and Plastics"
+    },
+    {
+        "name": "Physical Sciences.Materials Science.Surfaces, Coatings and Films"
+    },
+    {
+        "name": "Physical Sciences.Mathematics.Algebra and Number Theory"
+    },
+    {
+        "name": "Physical Sciences.Mathematics.Applied Mathematics"
+    },
+    {
+        "name": "Physical Sciences.Mathematics.Computational Mathematics"
+    },
+    {
+        "name": "Physical Sciences.Mathematics.Discrete Mathematics and Combinatorics"
+    },
+    {
+        "name": "Physical Sciences.Mathematics.Geometry and Topology"
+    },
+    {
+        "name": "Physical Sciences.Mathematics.Mathematical Physics"
+    },
+    {
+        "name": "Physical Sciences.Mathematics.Modeling and Simulation"
+    },
+    {
+        "name": "Physical Sciences.Mathematics.Numerical Analysis"
+    },
+    {
+        "name": "Physical Sciences.Mathematics.Statistics and Probability"
+    },
+    {
+        "name": "Physical Sciences.Mathematics.Theoretical Computer Science"
+    },
+    {
+        "name": "Physical Sciences.Physics and Astronomy.Acoustics and Ultrasonics"
+    },
+    {
+        "name": "Physical Sciences.Physics and Astronomy.Astronomy and Astrophysics"
+    },
+    {
+        "name": "Physical Sciences.Physics and Astronomy.Atomic and Molecular Physics, and Optics"
+    },
+    {
+        "name": "Physical Sciences.Physics and Astronomy.Condensed Matter Physics"
+    },
+    {
+        "name": "Physical Sciences.Physics and Astronomy.Instrumentation"
+    },
+    {
+        "name": "Physical Sciences.Physics and Astronomy.Nuclear and High Energy Physics"
+    },
+    {
+        "name": "Physical Sciences.Physics and Astronomy.Radiation"
+    },
+    {
+        "name": "Physical Sciences.Physics and Astronomy.Statistical and Nonlinear Physics"
+    },
+    {
+        "name": "Social Sciences.Arts and Humanities.Archeology"
+    },
+    {
+        "name": "Social Sciences.Arts and Humanities.Classics"
+    },
+    {
+        "name": "Social Sciences.Arts and Humanities.Conservation"
+    },
+    {
+        "name": "Social Sciences.Arts and Humanities.General Arts and Humanities"
+    },
+    {
+        "name": "Social Sciences.Arts and Humanities.History"
+    },
+    {
+        "name": "Social Sciences.Arts and Humanities.History and Philosophy of Science"
+    },
+    {
+        "name": "Social Sciences.Arts and Humanities.Language and Linguistics"
+    },
+    {
+        "name": "Social Sciences.Arts and Humanities.Literature and Literary Theory"
+    },
+    {
+        "name": "Social Sciences.Arts and Humanities.Museology"
+    },
+    {
+        "name": "Social Sciences.Arts and Humanities.Music"
+    },
+    {
+        "name": "Social Sciences.Arts and Humanities.Philosophy"
+    },
+    {
+        "name": "Social Sciences.Arts and Humanities.Religious studies"
+    },
+    {
+        "name": "Social Sciences.Arts and Humanities.Visual Arts and Performing Arts"
+    },
+    {
+        "name": "Social Sciences.Business, Management and Accounting.Accounting"
+    },
+    {
+        "name": "Social Sciences.Business, Management and Accounting.Business and International Management"
+    },
+    {
+        "name": "Social Sciences.Business, Management and Accounting.Industrial relations"
+    },
+    {
+        "name": "Social Sciences.Business, Management and Accounting.Management Information Systems"
+    },
+    {
+        "name": "Social Sciences.Business, Management and Accounting.Management of Technology and Innovation"
+    },
+    {
+        "name": "Social Sciences.Business, Management and Accounting.Marketing"
+    },
+    {
+        "name": "Social Sciences.Business, Management and Accounting.Organizational Behavior and Human Resource Management"
+    },
+    {
+        "name": "Social Sciences.Business, Management and Accounting.Strategy and Management"
+    },
+    {
+        "name": "Social Sciences.Business, Management and Accounting.Tourism, Leisure and Hospitality Management"
+    },
+    {
+        "name": "Social Sciences.Decision Sciences.General Decision Sciences"
+    },
+    {
+        "name": "Social Sciences.Decision Sciences.Information Systems and Management"
+    },
+    {
+        "name": "Social Sciences.Decision Sciences.Management Science and Operations Research"
+    },
+    {
+        "name": "Social Sciences.Decision Sciences.Statistics, Probability and Uncertainty"
+    },
+    {
+        "name": "Social Sciences.Economics, Econometrics and Finance.Economics and Econometrics"
+    },
+    {
+        "name": "Social Sciences.Economics, Econometrics and Finance.Finance"
+    },
+    {
+        "name": "Social Sciences.Economics, Econometrics and Finance.General Economics, Econometrics and Finance"
+    },
+    {
+        "name": "Social Sciences.Psychology.Applied Psychology"
+    },
+    {
+        "name": "Social Sciences.Psychology.Clinical Psychology"
+    },
+    {
+        "name": "Social Sciences.Psychology.Developmental and Educational Psychology"
+    },
+    {
+        "name": "Social Sciences.Psychology.Experimental and Cognitive Psychology"
+    },
+    {
+        "name": "Social Sciences.Psychology.General Psychology"
+    },
+    {
+        "name": "Social Sciences.Psychology.Neuropsychology and Physiological Psychology"
+    },
+    {
+        "name": "Social Sciences.Psychology.Social Psychology"
+    },
+    {
+        "name": "Social Sciences.Social Sciences.Anthropology"
+    },
+    {
+        "name": "Social Sciences.Social Sciences.Archeology"
+    },
+    {
+        "name": "Social Sciences.Social Sciences.Communication"
+    },
+    {
+        "name": "Social Sciences.Social Sciences.Cultural Studies"
+    },
+    {
+        "name": "Social Sciences.Social Sciences.Demography"
+    },
+    {
+        "name": "Social Sciences.Social Sciences.Development"
+    },
+    {
+        "name": "Social Sciences.Social Sciences.Education"
+    },
+    {
+        "name": "Social Sciences.Social Sciences.Gender Studies"
+    },
+    {
+        "name": "Social Sciences.Social Sciences.General Social Sciences"
+    },
+    {
+        "name": "Social Sciences.Social Sciences.Geography, Planning and Development"
+    },
+    {
+        "name": "Social Sciences.Social Sciences.Health"
+    },
+    {
+        "name": "Social Sciences.Social Sciences.Human Factors and Ergonomics"
+    },
+    {
+        "name": "Social Sciences.Social Sciences.Law"
+    },
+    {
+        "name": "Social Sciences.Social Sciences.Library and Information Sciences"
+    },
+    {
+        "name": "Social Sciences.Social Sciences.Life-span and Life-course Studies"
+    },
+    {
+        "name": "Social Sciences.Social Sciences.Linguistics and Language"
+    },
+    {
+        "name": "Social Sciences.Social Sciences.Political Science and International Relations"
+    },
+    {
+        "name": "Social Sciences.Social Sciences.Public Administration"
+    },
+    {
+        "name": "Social Sciences.Social Sciences.Safety Research"
+    },
+    {
+        "name": "Social Sciences.Social Sciences.Sociology and Political Science"
+    },
+    {
+        "name": "Social Sciences.Social Sciences.Transportation"
+    },
+    {
+        "name": "Social Sciences.Social Sciences.Urban Studies"
+    }
+]
