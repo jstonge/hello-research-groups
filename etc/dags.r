@@ -132,7 +132,7 @@ drawdag( dag3)
 dev.off()
 
 
-svg(file="etc/dag_samZ.svg", width=4, height=5)
+svg(file="etc/dag_samZ.svg", width=4, height=4)
 dag4 <- dagitty("dag { 
     prestige -> fundedLabor
     fundedLabor -> groupSize
@@ -143,5 +143,22 @@ dag4 <- dagitty("dag {
 }")
 coordinates(dag4) <- list( x=c(prestige=1.5, fundedLabor=1.5, groupSize=0, groupProd=1.5, productivity=2.5), y=c(prestige=0, fundedLabor=1, groupSize=2,groupProd=2, productivity=3) ) 
 drawdag( dag4)
+dev.off()
+
+svg(file="etc/dag_laberge.svg", width=4, height=4)
+dag5 <- dagitty("dag { 
+    gender -> compSubfield
+    firstGen -> compSubfield
+    gender -> prestige
+    firstGen -> prestige
+    prestige -> compSubfield
+    prestige -> academicSurvival
+    compSubfield -> academicSurvival
+}")
+coordinates(dag5) <- list( 
+    x=c(gender=1, firstGen=2, prestige=1, compSubfield=2, academicSurvival=1.5), 
+    y=c(gender=0, firstGen=0, prestige=1, compSubfield=1, academicSurvival=2) 
+) 
+drawdag( dag5)
 dev.off()
 
