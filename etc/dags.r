@@ -162,3 +162,33 @@ coordinates(dag5) <- list(
 drawdag( dag5)
 dev.off()
 
+svg(file="etc/dag_wapman.svg", width=4, height=4)
+dag6 <- dagitty("dag { 
+    prestige -> deptSize
+    gender -> domains
+    domains -> deptSize
+    prestige -> academicSurvival
+    deptSize -> academicSurvival
+    domains -> academicSurvival
+}")
+coordinates(dag6) <- list( 
+    x=c(prestige=0.5, gender=1, deptSize=0, domains=1, academicSurvival=0.5), 
+    y=c(prestige=0, gender=0, deptSize=1, domains=1, academicSurvival=2) 
+) 
+drawdag( dag6)
+dev.off()
+
+svg(file="etc/dag_morgan.svg", width=4, height=4)
+dag7 <- dagitty("dag { 
+    gender -> parenthood
+    gender -> discipline
+    discipline -> productivity
+    parenthood -> productivity
+}")
+coordinates(dag7) <- list( 
+    x=c(gender=0.5, parenthood=0, productivity=0.5, discipline=1), 
+    y=c(gender=0, parenthood=1, productivity=2, discipline=1) 
+) 
+drawdag( dag7)
+dev.off()
+
