@@ -4,14 +4,17 @@ export default {
   output: "dist", // path to the output root for build
   title: "Hello Research Groups",
   pages: [
-    { name: "The rise of computational works", path: "/comp-works" },
-    { name: "Classify computational works", path: "/classify-comp-works" },
-    { name: "Grontology", path: "/grontology" },
-    { name: "Researcher timeline", path: "/timeline" },
-    { name: "Summary Research Groups", path: "/summary-groups" },
-    { name: "Summary DB", path: "/summary-db" },
-    { name: "NSF awards", path: "/nsf-awards" },
-    { name: "NEH awards", path: "/neh-awards" }
+    { name: "💡 The rise of computational works", path: "/comp-works" },
+    { name: "📊 Classify computational works", path: "/classify-comp-works" },
+    { name: "💡 Overthinking FoS", path: "/overthinking-fos" },
+    { name: "💡 Grontology", path: "/grontology" },
+    { name: "🗺️ Computational hysteresis", path: "/hysteresis" },
+    { name: "📊 Researchers timeline", path: "/timeline" },
+    { name: "📊 Patterns of collaboration", path: "/summary-groups" },
+    { name: "📊 Summarize DB", path: "/summary-db" },
+    { name: "📊 Explore NSF awards", path: "/nsf-awards" },
+    { name: "📊 Explore NEH awards", path: "/neh-awards" },
+    { name: "📊 Embeddings Playground", path: "/embeddings-playground" },
   ],
 
   // Content to add to the head of the page, e.g. for a favicon:

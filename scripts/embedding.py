@@ -1,23 +1,23 @@
 import umap
 import numpy as np
 from pathlib import Path
-from pyalex import Authors
+# from pyalex import Authors
 from helpers import read_jsonl
 import pandas as pd
 
 def main():
     # target_aid = 'A5035455593'
-    reducer = umap.UMAP()
+    # reducer = umap.UMAP()
     
-    pap_dir = Path(".cache_paper")
-    bg_pap_dir = Path(".cache_bg_paper")
-    bg_papa_dir = Path(".cache_bg_author_paper")
+    # pap_dir = Path(".cache_paper")
+    # bg_pap_dir = Path(".cache_bg_paper")
+    # bg_papa_dir = Path(".cache_bg_author_paper")
     
-    target_aid = 'A5040821463'
-    target_name = Authors()[target_aid]['display_name']
-    # fnames=[_ for _ in bg_pap_dir.glob("*jsonl")]
-    fnames=[_ for _ in bg_papa_dir.glob("*jsonl")]
-    fnames_authors=[_ for _ in pap_dir.glob("*jsonl") if _.stem.split("_")[0] == target_aid]
+    # target_aid = 'A5040821463'
+    # target_name = Authors()[target_aid]['display_name']
+    # # fnames=[_ for _ in bg_pap_dir.glob("*jsonl")]
+    # fnames=[_ for _ in bg_papa_dir.glob("*jsonl")]
+    # fnames_authors=[_ for _ in pap_dir.glob("*jsonl") if _.stem.split("_")[0] == target_aid]
     
     # background = []
     # for fname in fnames:

@@ -19,6 +19,7 @@
     {"name": "computational.empirical.methods.topic modeling", "description": ""},
     {"name": "computational.empirical.methods.topic modeling.BERT", "description": ""},
     {"name": "computational.empirical.methods.topic modeling.LDA", "description": ""},
+    {"name": "computational.empirical.science of science", "description": "A bit weird, empirical work about science of science. We keep this field to make sure to balance annotations."},
     {"name": "computational.empirical.social media", "description": "A bit weird, empirical work about social media. We keep this field to make sure to balance annotations."},
     {"name": "computational.empirical.social media.facebook", "description": ""},
     {"name": "computational.empirical.social media.reddit", "description": ""},

@@ -95,12 +95,6 @@ The computational turn in linguistics was perhaps one of the most acrimonious di
 the Case of Computer Assisted-Language Learning](https://aclanthology.org/C96-2171.pdf)
  - [LINGUISTICS IN A COMPUTATIONAL WORLD](https://www.ideals.illinois.edu/items/11601/bitstreams/42397/data.pdf)
 
-### Computational Thinking
-
- - [Computational Thinking (2006)](https://www.cs.cmu.edu/~15110-s13/Wing06-ct.pdf)
-
-Surprisingly, this idea of computational thinking at the intersection of computer science and education. It was further realization that computational X is more than computers; it is a way of being. Nothing less. Computers, and communities around them, are cognitive gadgets. Instead of thinking with maths, most people can have an easier time to work with programs. 
-
 ### Computational Journalism
 
  - [11.3: Computational Journalism](https://socialsci.libretexts.org/Bookshelves/Communication/Journalism_and_Mass_Communication/The_American_Journalism_Handbook_-_Concepts_Issues_and_Skills_(Zamith)/11%3A_Future_of_Journalism/11.03%3A_Computational_Journalism)
@@ -147,6 +141,16 @@ Manifestos
  - [Computational Analysis of Political Texts: Bridging Research Efforts Across Communities](https://www.semanticscholar.org/paper/Computational-Analysis-of-Political-Texts%3A-Bridging-Glavas-Nanni/4dea8e7bbc8f59b0307879121f5f8eab0848dd06)
  - [For a heterodox computational social science](https://www.semanticscholar.org/paper/For-a-heterodox-computational-social-science-T%C3%B6rnberg-Uitermark/3a45303cf6fb902bbff653e2e1dbb1dcb4ca531c)
 
+## Computational Theories
+
+ - [Computational Thinking (2006)](https://www.cs.cmu.edu/~15110-s13/Wing06-ct.pdf)
+
+Sometimes, what we mean by computational is not that we use computers. It is that a process is computational. For instance, the 'computational theory of the mind' (CCTM) says that the mind is something akin to a computer. It is tied to the computational turn in science, but you do not need a computer to do research on CCTM. If anything, it a topic of predilections for armchair philosophers.
+
+Another edge case for our purpose is the philosophy of computational thinking. With the rise of computational works, researchers started to realize that using computers as cognitive aids can benefit more than computer scientists. Computational thinking is learning known mathematical skills---sequences, differential calculus, all kinds of mathematical abstractions---but with computer programs. The original proponents, people like Seymour Papers, Alan Kay, and Jeannette Wing, sit at the intersection of computer science and education. They use programming language, such as the LOGO programming language, or SCRATCH, as medium to teach people of all age a compuatational way of thinking about problems.
+
+Some works on computational thinking definitely are definitely computational works, some others are conceptual. This is a hard one to disambiguate.
+
 ## Groups and the computational turn
 
 In the free and open source world, it is understood that many software projects are really about the community. The community is what make a project great or burn it to the ground. F/OSS is in large part responsible for the development of new collaborative tools that sustain the digital economy. It is about project management and having people working together on shared projects. F/OSS requires a whole new understanding of being a good citizen of the free and open source world. For example, by understanding the faux-pas of confusing open-source with free software. It more than just learning about the skills. 
@@ -158,12 +162,3 @@ All of this rise the following question; do the computational turn could signifi
 The same argument can be made at institutional level. Do institutions who are able to adapt to this new reality will be favored, thereby spreading their practices to other, more conservative institutions. This strand of research is about the organizational contexts in which researchers and their groups evolve, either by providing labor advantage or having early start by having stronger digital instructure. 
 
 All of that depend on how we define groups, collaboration, and institutions, which we do next.
-
-
-
-
-
-
-
-
-

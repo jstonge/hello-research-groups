@@ -4,31 +4,6 @@ index: false
 
 <style>
 
-.hero {
-  font-family: var(--sans-serif);
-  margin: 4rem 0;
-  text-wrap: balance;
-}
-
-.hero h1 {
-  font-size: 64px;
-  font-family: var(--serif);
-  line-height: 1;
-  margin: 2rem 0;
-}
-
-.hero h2 {
-  font-style: normal;
-  font-size: 18px;
-  line-height: normal;
-  color: var(--theme-foreground-muted);
-}
-
-.hero .observablehq-pre-container,
-.hero pre:not(.observablehq-pre-container pre) {
-  margin: 1rem 0;
-}
-
 .cta {
   display: flex;
   align-items: center;
@@ -46,6 +21,8 @@ index: false
     width: 100%;
   }
 }
+
+/* Gallery */
 
 .gallery {
   margin: 4rem -1rem;
@@ -97,6 +74,71 @@ index: false
   margin-left: 0.25rem;
 }
 
+/* 
+Tabset  for alternative intro
+ */
+
+.tabset > input[type="radio"] {
+  position: absolute;
+  left: -200vw;
+}
+
+.tabset .tab-panel {
+  display: none;
+}
+
+.tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
+.tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
+.tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
+.tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
+.tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
+.tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
+  display: block;
+}
+
+/*
+ Tabset Styling
+*/
+
+.tabset > label {
+  position: relative;
+  display: inline-block;
+  padding: 15px 15px 5px;
+  border: 1px solid transparent;
+  border-bottom: 0;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+input:focus-visible + label {
+  outline: 2px solid rgba(0,102,204,1);
+  border-radius: 3px;
+}
+
+.tabset > label:hover,
+.tabset > input:focus + label,
+.tabset > input:checked + label {
+  color: #06c;
+}
+
+.tabset > label:hover::after,
+.tabset > input:focus + label::after,
+.tabset > input:checked + label::after {
+  background: #06c;
+}
+
+.tabset > input:checked + label {
+  border-color: #ccc;
+  border-bottom: 1px solid #fff;
+  margin-bottom: -1px;
+}
+
+.tab-panel {
+  padding: 20px 0;
+  border-top: 1px solid #ccc;
+}
+
+
 @media (prefers-color-scheme: light) {
   h1 {
     --theme-red: #d75c48;
@@ -105,12 +147,28 @@ index: false
 
 </style>
 
+
 # Welcome
-_But what are reseach groups? How do they impact our scientific works? These are our big questions. We seek to define and characterize research groups in a practical ways while engaging with philosophical pedantries._
+_This is an experimental project combining data collection, analysis, model building, narrative, and visualizations under the same roof._
 
-This is an experimental project that combine data collection, data analysis, model building, and model visualization within the same project. We believe in the philosophy of principled data processing (see [the-turing-way](https://book.the-turing-way.org/),and [Patrick Ball: Principled Data Processing](https://www.youtube.com/watch?v=ZSunU9GQdcI&t=2923s&pp=ygURcGF0cmljayBiYWxsIGRhdGE%3D) for the details), but that is augmented with a modern data visualization framework (aka [Observable Framework](https://observablehq.com/framework/)).
 
-This project is for (i) anybody sharing the same goals of reproducible science or (ii) people interested in the science of science of groups. 
+<div class="tabset">
+  <!-- Tab 1 -->
+  <input type="radio" name="tabset" id="tab1" aria-controls="introA" checked>
+  <label for="tab1">Group-first intro</label>
+  <!-- Tab 2 -->
+  <input type="radio" name="tabset" id="tab2" aria-controls="introB">
+  <label for="tab2">F/OSS intro</label>
+  <div class="tab-panels">
+    <section id="introA" class="tab-panel">
+      But what are reseach groups? How do they impact our scientific works? Can groups  These are our big questions. We seek to define and characterize research groups in a practical ways while engaging with philosophical pedantries.
+  </section>
+    <section id="introB" class="tab-panel">
+      Free and open-source software (F/OSS) is changing how researchers collaborate on projects. As individuals increasingly rely on F/OSS, they are confronted with learning different tools and skills such as version control, interacting with API, or building principled data pipelines that are robust yet extensible. Learning about all of that can be scary. A solution to survive the process, once again, are communities.
+    </section>
+  </div>
+</div>
+
 
 <div class="gallery grid grid-cols-3">
     <a href="https://jstonge.observablehq.cloud/hello-research-groups/grontology" target="_blank">
@@ -118,21 +176,21 @@ This project is for (i) anybody sharing the same goals of reproducible science o
         <source srcset="./assets/defining.webp" media="(prefers-color-scheme: dark)">
         <img src="./assets/defining.webp">
       </picture>
-      <div class="small arrow">Defining</div>
+      <div class="small arrow">💡 Defining</div>
     </a>
     <a href="https://joint-lab.observablehq.cloud/hello-gmes/" target="_blank">
       <picture>
       <source srcset="./assets/modeling.webp" media="(prefers-color-scheme: dark)">
         <img src="./assets/modeling.webp">
       </picture>
-      <div class="small arrow">Modeling</div>
+      <div class="small arrow">🗺️ Modeling</div>
     </a>
     <a href="https://jstonge.observablehq.cloud/hello-research-groups/timeline" target="_blank">
       <picture>
       <source srcset="./assets/measuring.webp" media="(prefers-color-scheme: dark)">
       <img src="./assets/measuring.webp">
       </picture>
-    <div class="small arrow">Measuring</div>
+    <div class="small arrow">📊 Measuring</div>
     </a>
 </div>
 
@@ -143,7 +201,6 @@ This project is for (i) anybody sharing the same goals of reproducible science o
   <figcaption>Fig. 142 The Turing Way community illustrated as a garden. The Turing Way project illustration by Scriberia. Used under a CC-BY 4.0 licence. DOI: 10.5281/zenodo.3332807.</figcaption>
 </figure> 
 
-Free and open-source software (F/OSS) is changing how researchers collaborate on projects. As individuals increasingly rely on F/OSS, they are confronted on learning different tools and skills such as version control, interacting with API, or building principled data pipelines that are robust yet extensible. Learning about all of this can be scary. A solution to survive the process, once again, are communities.
 
 In the project, we will include and exclude people from groups. Sometime this will feel unfair, as people will get excluded for seemingly arbitrary reasons. Truth be told, as research groups emerge and thrive, I think they become like the figure above; a loose network of people that can have more or less central cores. That being said, in current academia, many research groups are characterized by one or few principal investigators (PIs) who tie together a bunch of students under the same roof. 
 
