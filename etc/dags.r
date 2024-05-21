@@ -1,7 +1,7 @@
 library(dagitty)
 library(rethinking)
 
-pdf(file="etc/dagA.pdf", width=4, height=4)
+svg(file="etc/dagA.svg", width=4, height=4)
 dagA <- dagitty("dag { 
     Gender -> CompWork  
     Gender -> Dept
@@ -13,7 +13,7 @@ coordinates(dagA) <- list( x=c(Gender=1,Dept=0,CompWork=2, AcademicSurvival=1) ,
 drawdag( dagA)
 dev.off()
 
-pdf(file="etc/dagB.pdf", width=4, height=4)
+svg(file="etc/dagB.svg", width=4, height=4)
 dagB <- dagitty("dag { 
     Gender -> CompWork  
     Gender -> Dept
@@ -31,7 +31,7 @@ coordinates(dagB) <- list(
 drawdag( dagB)
 dev.off()
 
-pdf(file="etc/dagC.pdf", width=4, height=4)
+svg(file="etc/dagC.svg", width=4, height=4)
 dagC <- dagitty("dag { 
     Gender -> CompWork  
     Gender -> Dept
@@ -53,7 +53,7 @@ coordinates(dagC) <- list(
 drawdag( dagC)
 dev.off()
 
-pdf(file="etc/dagC1.pdf", width=6, height=3)
+svg(file="etc/dagC1.svg", width=6, height=3)
 dagC1 <- dagitty("dag { 
     u [unobserved]
     Dept -> GroupSize
@@ -73,7 +73,7 @@ coordinates(dagC1) <- list(
 drawdag( dagC1 )
 dev.off()
 
-pdf(file="etc/dag1.pdf", width=4, height=5)
+svg(file="etc/dag1.svg", width=4, height=5)
 dag1 <- dagitty("dag { 
     Gender -> CompWork  
     Gender -> Dept
@@ -90,7 +90,7 @@ dev.off()
 
 
 
-pdf(file="etc/dag2.pdf", width=4, height=5)
+svg(file="etc/dag2.svg", width=4, height=5)
 dag2 <- dagitty("dag { 
     Gender -> CompTheoryWork  
     Gender -> CompDataWork  
@@ -110,7 +110,7 @@ drawdag( dag2)
 dev.off()
 
 
-pdf(file="etc/dag3.pdf", width=4, height=5)
+svg(file="etc/dag3.svg", width=4, height=5)
 dag3 <- dagitty("dag { 
     Gender -> CompTheoryWork  
     Gender -> CompDataWork  
@@ -129,5 +129,19 @@ dag3 <- dagitty("dag {
 }")
 coordinates(dag3) <- list( x=c(LaborAdv=2, CollabNorms=1,GroupSize=1,Gender=1,Dept=0,CompTheoryWork=2,CompDataWork=2) , y=c(LaborAdv=2.5, CollabNorms=3,GroupSize=2,Gender=0,Dept=1,CompTheoryWork =1.5, CompDataWork=0.5) ) 
 drawdag( dag3)
+dev.off()
+
+
+svg(file="etc/dag_samZ.svg", width=4, height=5)
+dag4 <- dagitty("dag { 
+    prestige -> fundedLabor
+    fundedLabor -> groupSize
+    fundedLabor -> groupProd
+    fundedLabor -> productivity
+    groupSize -> groupProd
+    groupProd -> productivity
+}")
+coordinates(dag4) <- list( x=c(prestige=1.5, fundedLabor=1.5, groupSize=0, groupProd=1.5, productivity=2.5), y=c(prestige=0, fundedLabor=1, groupSize=2,groupProd=2, productivity=3) ) 
+drawdag( dag4)
 dev.off()
 
