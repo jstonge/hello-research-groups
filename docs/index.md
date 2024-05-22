@@ -153,22 +153,34 @@ _This is an experimental project combining data collection, analysis, model buil
 
 
 <div class="tabset">
-  <!-- Tab 1 -->
-  <input type="radio" name="tabset" id="tab1" aria-controls="introA" checked>
-  <label for="tab1">Group-first intro</label>
+  <!-- Generic intro -->
+  <input type="radio" name="tabset" id="GenericIntro" aria-controls="GenericIntro" checked>
+  <label for="GenericIntro">Short intro</label>
+  <!-- GroupFirst intro -->
+  <input type="radio" name="tabset" id="GroupFirst" aria-controls="GroupFirst" checked>
+  <label for="GroupFirst">Group-first intro</label>
   <!-- Tab 2 -->
   <input type="radio" name="tabset" id="tab2" aria-controls="introB">
   <label for="tab2">F/OSS intro</label>
+  <!-- Tab 3 -->
+  <input type="radio" name="tabset" id="tab3" aria-controls="introC">
+  <label for="tab3">Non-meritocratic intro</label>
+  <!-- pannels -->
   <div class="tab-panels">
-    <section id="introA" class="tab-panel">
+    <section id="GenericIntro" class="tab-panel">
       But what are reseach groups? How do they impact our scientific works? Can groups  These are our big questions. We seek to define and characterize research groups in a practical ways while engaging with philosophical pedantries.
-  </section>
+    </section>
+    <section id="GroupFirst" class="tab-panel">
+      Complex scientists are interested in how components of complex systems interact in non-trivial ways, giving rise to tipping points, emergence, and more generally collective phenomena. By using all sorts of models, it is possible to study a variety of systems under the same umbrella. Yet, in the face of complexity, we observe a common trend. At first, we take averages of systems, studying how systems behave at, or nearby, equilibrum states. In this regime, we add complexity by adding more features to individuals. 
+    </section>
     <section id="introB" class="tab-panel">
-      Free and open-source software (F/OSS) is changing how researchers collaborate on projects. As individuals increasingly rely on F/OSS, they are confronted with learning different tools and skills such as version control, interacting with API, or building principled data pipelines that are robust yet extensible. Learning about all of that can be scary. A solution to survive the process, once again, are communities.
+        Free and open-source software (F/OSS) is changing how researchers collaborate on projects. As individuals increasingly rely on F/OSS, they are confronted with learning different tools and skills such as version control, interacting with API, or building principled data pipelines that are robust yet extensible. Learning about all of that can be scary. A solution to survive the process, once again, are communities.
+    </section>
+    <section id="introC" class="tab-panel">
+        Non-meritocratic factors--institutional prestige, parenthood, subfields hype--is influencing academia in many ways. Evidence shows how institutional prestige is driving faculty hiring in computer science, business, and history, or how much of the scientific culture remains hostile to parenthood. Given data provenance and, as we will show, our WEIRD view of science (Western Educated Industrialized Rich and Democratic), most of this line of research has focused on individual researchers working in Phd granting institutions in STEM. Here we take a step forth in providing a view that is (i) group-based and (ii) more specific to the impact of computing on traditionally non-computational fields.
     </section>
   </div>
 </div>
-
 
 <div class="gallery grid grid-cols-3">
     <a href="https://jstonge.observablehq.cloud/hello-research-groups/grontology" target="_blank">
@@ -206,7 +218,13 @@ In the project, we will include and exclude people from groups. Sometime this wi
 
 When we are lucky, there is a public facing webpage hosted by the group/PI that says, "look, here is my lab". This will be the people we define as part of the group, even thoug some loose collaborators might be missing from that page. We assume that this approach is a good proxy to get who is on the payroll of the lab, or at least who benefit from being exhibited on the main page of the lab.
 
+
 ## Empirical challenges
+
+<figure>
+  <img src="https://raw.githubusercontent.com/jstonge/hello-research-groups/main/etc/dagC.svg" alt="Trulli" style="width:50%">
+  <figcaption>Our estimand.</figcaption>
+</figure>
 
  - _Measuring research groups_; their emergence/birth, deaths, composition (role specialization?), and size.
  - _Measuring the emergence of computational works_
@@ -324,21 +342,25 @@ In this collection of notebooks, we examine interaction in patterns of collabora
 We are interested in finding how latent groups and collaboration in science are impacting the type of science we do.
 We will define what we means by collaboration and groups as we go along, but we can start with an example.
 
-#### 1. NSF Money
+#### The rise of computational works
 
-To fund groups, one needs money. One place researchers get money from is the NSF. 
+Defining the rise of computational works in science. How science is becoming more computational everywhere, but not definitely not at the same rate. As such, this lay the groundwork for our empirical and modeling work.
 
-#### 2. NEH Money
+#### Group ontology, or Grontology
 
-To fund projects, one needs money. One place researchers get money from is the National Endowment of the Humanities. 
+More and more people are claiming that science is now all about team. But really, how do most people operationalize teams? As set of coauthors. We think we can do better by integrating a bit of philosophy with modeling and data.
 
-#### 3. Summary data
+#### Epistemic inequality
 
-This dashboard contains summary of the current data; it checks whether the annotated data is balanced, what are our different categories, and so on..
+A small literature review of how non-meritocratic factors are influencing the scientific enterprise.
 
-#### 4. Timeline: dual perspective of collaboration and productivity
+#### Computational hysteresis in the social sciences
 
-Here is an individual scientific trajectory contrasting number of publications and coauthors:
+A group-based model of how the computational turn showing how an increase in the group benefits of having programmers in your team might have important consequences for fields where the individual cost of learning to code is high.
+
+#### Researchers timeline: dual perspective of collaboration and productivity
+
+Individual scientific trajectory showing patterns of of publications and coauthorships:
 
 <img src="./figs/lhd_trajectory.png" alt="" width="1000" height="800"/>
 
@@ -354,7 +376,19 @@ Here ego started at <span style="color:Salmon">Université Laval</span>, did a P
 Eyeballing the plot, there are definitely some similarities and differences. 
 One similarity is Jean-Gabriel Young (JGY), who share the same lab than LHD, and exhibit similar patterns in collaboration early on.
 
-#### 5. Groups exploring new semantic space (TBD)
+#### Classifying computational works
+
+How can we quantify 'computational works'. This is harder than it seems.
+
+#### Overthinking field of study
+
+To claim that such or such a field is becoming computational, we need to define field of studies. This choice is not inconsequential.
+
+#### Patterns of collaboration
+
+Dashboard exploring what is it like to be a group
+
+#### Groups exploring new semantic space (TBD)
 
 <div class="warning">This has been removed for now. It will come back at some point.</div>
 
@@ -378,6 +412,21 @@ There are many reasons this might be the case.
 Part of it is due to ego's new PhD students that are more into computer science than physics or epidemiology.
 The funding stream might be also a driver of that attraction towards that space.
 There has been also foray into the intersection of climate change and public health.
+
+#### Summarize database
+
+This dashboard contains summary of the current data; it checks whether the annotated data is balanced, what are our different categories, and so on..
+
+#### NSF Money
+
+To fund groups, one needs money. One place researchers get money from is the NSF. 
+
+#### NEH Money
+
+To fund projects, one needs money. One place researchers get money from is the National Endowment of the Humanities. 
+
+
+
 
 <!-- Yet another way to look at the change in collaboration patterns is to visualize collaborations as hyperedges:
 

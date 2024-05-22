@@ -35,7 +35,7 @@ figcaption code {
 
 # Hysteresis in the social sciences
 
-
+In the previous section, we show that computati
 
 ## A group-based master equations model of hysteresis
 
