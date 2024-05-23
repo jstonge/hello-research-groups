@@ -1,7 +1,7 @@
 ---
 sql:
-  embeddings: ./data/embeddings.csv
-  emb_lookup: ./data/emb_lookup.csv
+  embeddings: ../data/embeddings.csv
+  emb_lookup: ../data/emb_lookup.csv
 ---
 <style type="text/css">
 

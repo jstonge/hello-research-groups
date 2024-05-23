@@ -1,6 +1,6 @@
 ---
 sql:
-    training: ./data/training_data.parquet
+    training: ../data/training_data.parquet
 ---
 
 # Summary database

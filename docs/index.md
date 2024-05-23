@@ -149,7 +149,7 @@ input:focus-visible + label {
 
 
 # Welcome
-_This is an experimental project combining data collection, analysis, model building, narrative, and visualizations under the same roof._
+_This is an experimental project combining data collection, analysis, model building, narrative, and visualizations under the same roof, with a pinch of 'choose your own adventure' for people who get bored._
 
 
 <div class="tabset">
@@ -247,118 +247,42 @@ One reason not to do what we are about to do is _modularity_. Wouldn't be better
 - `Linking the data and the app:` One reason my dashboards end up dead is by forgetting where the data comes from. Then the app become frozen for eternity, as I simply move on to other projects. Wouldn't be better to have the app and the data pipeline coexisting under the same repo? 
 - ...
 
-## Project structure
 
-On top of the Observable Framework project that lives in `docs/` (see hidden summary below for authors' description), we have a project structure borrowed  from the [Turing Way's repository structure](https://book.the-turing-way.org/project-design/project-repo/project-repo-advanced#example-with-every-possible-folder):
 
-```ini
-.
-├─ data # Observable framework app
-│  ├─ clean       # processed file
-│  │  └─ oa_data.db           # database used by data loader
-│  └─ raw       # import/raw data
-│     ├── input_file_1.parquet
-│     └─ input_file_2.parquet # file that is coming from excel sheet
-├─ docs # Observable framework app
-├─ src
-│  ├─ timeline_import.py # script processing data for the timeline dashboard
-│  └─ helpers.py  # helpers shared across scripts
-├─ .gitignore
-├─ static # static resources (images and audio files)
-├─ Makefile # A makefile to run the pipelind
-├─ observablehq.config.js  # Observable Framework project config file
-├─ package.json
-├── report/   # static analysis
-│   └── report.tex
-├─ README.md
-└─ reqirements.txt
-```
+---
 
-<details><summary>How to get started with Observable Framework</summary>
-
-## 
-
-This is (also) an [Observable Framework](https://observablehq.com/framework) project. To start the local preview server, run:
-
-```
-npm run dev
-```
-
-Then visit <http://localhost:3000> to preview your project.
-
-For more, see <https://observablehq.com/framework/getting-started>.
-
-#### Project structure
-
-A typical Framework project looks like this:
-
-```ini
-.
-├─ docs
-│  ├─ components
-│  │  └─ timeline.js           # an importable module
-│  ├─ data
-│  │  ├─ launches.csv.js       # a data loader
-│  │  └─ events.json           # a static data file
-│  ├─ example-dashboard.md     # a page
-│  ├─ example-report.md        # another page
-│  └─ index.md                 # the home page
-├─ .gitignore
-├─ observablehq.config.js      # the project config file
-├─ package.json
-└─ README.md
-```
-
-**`docs`** - This is the “source root” — where your source files live. Pages go here. Each page is a Markdown file. Observable Framework uses [file-based routing](https://observablehq.com/framework/routing), which means that the name of the file controls where the page is served. You can create as many pages as you like. Use folders to organize your pages.
-
-**`docs/index.md`** - This is the home page for your site. You can have as many additional pages as you’d like, but you should always have a home page, too.
-
-**`docs/data`** - You can put [data loaders](https://observablehq.com/framework/loaders) or static data files anywhere in your source root, but we recommend putting them here.
-
-**`docs/components`** - You can put shared [JavaScript modules](https://observablehq.com/framework/javascript/imports) anywhere in your source root, but we recommend putting them here. This helps you pull code out of Markdown files and into JavaScript modules, making it easier to reuse code across pages, write tests and run linters, and even share code with vanilla web applications.
-
-**`observablehq.config.js`** - This is the [project configuration](https://observablehq.com/framework/config) file, such as the pages and sections in the sidebar navigation, and the project’s title.
-
-#### Command reference
-
-| Command           | Description                                              |
-| ----------------- | -------------------------------------------------------- |
-| `npm install`            | Install or reinstall dependencies                        |
-| `npm run dev`        | Start local preview server                               |
-| `npm run build`      | Build your static site, generating `./dist`              |
-| `npm run deploy`     | Deploy your project to Observable                        |
-| `npm run clean`      | Clear the local data loader cache                        |
-| `npm run observable` | Run commands like `observable help`                      |
-
-##
-
-</details>
-
-<br>
-
-## The science of science of groups
+## Roadmap
 
 In this collection of notebooks, we examine interaction in patterns of collaboration and scientific paper publication. 
 We are interested in finding how latent groups and collaboration in science are impacting the type of science we do.
-We will define what we means by collaboration and groups as we go along, but we can start with an example.
+We will define what we means by collaboration and computational and groups as we go along, but here is the roadmap.
 
-#### The rise of computational works
+_The rise of computational works_
 
-Defining the rise of computational works in science. How science is becoming more computational everywhere, but not definitely not at the same rate. As such, this lay the groundwork for our empirical and modeling work.
+We start by defining the rise of computational works in science. How science is becoming more computational everywhere, but not definitely not at the same rate. As such, this lay the groundwork for our empirical and modeling work.
 
-#### Group ontology, or Grontology
+_Epistemic inequality_
+
+A small literature review on how non-meritocratic factors are influencing the scientific enterprise. The section lead to the central idea that the computational turn might significantly fuelled those non-meritocratic factors.
+
+
+_Group ontology, or Grontology_
 
 More and more people are claiming that science is now all about team. But really, how do most people operationalize teams? As set of coauthors. We think we can do better by integrating a bit of philosophy with modeling and data.
 
-#### Epistemic inequality
-
-A small literature review of how non-meritocratic factors are influencing the scientific enterprise.
-
-#### Computational hysteresis in the social sciences
+_Computational hysteresis in the social sciences_
 
 A group-based model of how the computational turn showing how an increase in the group benefits of having programmers in your team might have important consequences for fields where the individual cost of learning to code is high.
 
-#### Researchers timeline: dual perspective of collaboration and productivity
+### Methods
+
+_Classifying computational works_
+
+How can we quantify 'computational works'. This is harder than it seems.
+
+### Results
+
+_Researchers timeline: dual perspective of collaboration and productivity_
 
 Individual scientific trajectory showing patterns of of publications and coauthorships:
 
@@ -376,19 +300,19 @@ Here ego started at <span style="color:Salmon">Université Laval</span>, did a P
 Eyeballing the plot, there are definitely some similarities and differences. 
 One similarity is Jean-Gabriel Young (JGY), who share the same lab than LHD, and exhibit similar patterns in collaboration early on.
 
-#### Classifying computational works
+_Patterns of collaboration_
 
-How can we quantify 'computational works'. This is harder than it seems.
+What is it like to be a group.
 
-#### Overthinking field of study
+### Appendix
+
+_Overthinking field of study_
 
 To claim that such or such a field is becoming computational, we need to define field of studies. This choice is not inconsequential.
 
-#### Patterns of collaboration
+### Extra works
 
-Dashboard exploring what is it like to be a group
-
-#### Groups exploring new semantic space (TBD)
+_How proups fuelled creativity: exploring new semantic space (WIP)_
 
 <div class="warning">This has been removed for now. It will come back at some point.</div>
 

@@ -33,9 +33,11 @@ figcaption code {
 
 </style>
 
-# Hysteresis in the social sciences
+# Computational hysteresis in the social sciences
 
-In the previous section, we show that computati
+In the previous sections, we defined the computational turn and reviewed literature on various non-meritocratic factors that shape academia, e.g. institutional prestige and labor advantage, the unequal impact of parenthood, and gendered attrition in faculty careers. Here, we begin to put everything together to show how the computational turn, via _computational hysteresis_, ought to exacerbate some of the observed gendered bias observed in academia, if nothing is done. 
+
+Hysteresis is a well-known idea from physics applied to a plethora of domains. In ecology, this is tied to alternative stable states and critical transition. Empirically, ecologists are interested in how perturbation to an ecosystem force communities  out of their original stable state.
 
 ## A group-based master equations model of hysteresis
 

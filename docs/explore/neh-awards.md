@@ -1,6 +1,6 @@
 ---
 sql:
-  data: ./data/neh_awards.parquet
+  data: ../data/neh_awards.parquet
 ---
 
 <div class="hero">

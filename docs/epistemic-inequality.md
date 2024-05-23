@@ -33,7 +33,9 @@ figcaption code {
 
 </style>
 
-# The science of science of scientific inequalities
+# Gendered Academia and labor advantage
+
+In the previous section, we saw that with the computational turn we are experience a deep change in many parts of scientific culture.
 
 <div class="grid grid-cols-3">
   <div>

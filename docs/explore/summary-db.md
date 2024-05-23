@@ -1,9 +1,9 @@
 ---
 sql:
-  coauthor: ./data/coauthor.parquet
-  paper: ./data/paper.parquet
-  author: ./data/author.parquet
-  training: ./data/training_data.parquet
+  coauthor: ../data/coauthor.parquet
+  paper: ../data/paper.parquet
+  author: ../data/author.parquet
+  training: ../data/training_data.parquet
 ---
 
 # Summary database

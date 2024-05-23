@@ -1,6 +1,6 @@
 ---
 sql:
-  embeddings: ./data/embeddings.csv
+  embeddings: ../data/embeddings.csv
 ---
 <style type="text/css">
 
@@ -38,7 +38,7 @@ figcaption code {
 </style>
 
 
-# Overthinking fields of study
+# Overthinking fields of studies
 
 <div class="grid grid-cols-2">
 <div>
@@ -88,7 +88,7 @@ figcaption code {
 
 
 ```js
-const s2orc_taxonomy = FileAttachment("./data/taxonomy/s2orc-fos.json").json();
+const s2orc_taxonomy = FileAttachment("../data/taxonomy/s2orc-fos.json").json();
 ```
 
 <div class="grid grid-cols-2">
@@ -159,7 +159,7 @@ One nice feature with embedding space is that when we use density-based methods 
 
 
 ```js
-const wos_taxonomy = FileAttachment("./data/taxonomy/WOS-fields2domain.json").json();
+const wos_taxonomy = FileAttachment("../data/taxonomy/WOS-fields2domain.json").json();
 ```
 
 <div class="grid grid-cols-2">
@@ -174,7 +174,7 @@ const wos_taxonomy = FileAttachment("./data/taxonomy/WOS-fields2domain.json").js
 ## [Google scholar (FoS → Venues)](https://scholar.google.ca/citations?view_op=top_venues&hl=en)
 
 ```js
-const gscholar_taxonomy = FileAttachment("./data/taxonomy/gscholar-taxonomy.json").json();
+const gscholar_taxonomy = FileAttachment("../data/taxonomy/gscholar-taxonomy.json").json();
 ```
 
 <div class="grid grid-cols-2">
@@ -190,7 +190,7 @@ const gscholar_taxonomy = FileAttachment("./data/taxonomy/gscholar-taxonomy.json
 ## [Google scholar Full Blown (FoS → Venues)](https://scholar.google.ca/citations?view_op=top_venues&hl=en)
 
 ```js
-const gscholar_taxonomy2 = FileAttachment("./data/taxonomy/gscholar_full_taxonomy.json").json();
+const gscholar_taxonomy2 = FileAttachment("../data/taxonomy/gscholar_full_taxonomy.json").json();
 
 const abbrev2full = {
   "soc": "Social Sciences", 
@@ -325,7 +325,7 @@ Best seen if the collapsible table of content closed and wide enough screen.
 </div>
 
 ```js
-const oa_taxonomy = FileAttachment("./data/taxonomy/oa-fields2domain.json").json();
+const oa_taxonomy = FileAttachment("../data/taxonomy/oa-fields2domain.json").json();
 ```
 
 ```js

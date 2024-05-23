@@ -1,6 +1,6 @@
 ---
 sql:
-  data: ./data/nsf_awards.parquet
+  data: ../data/nsf_awards.parquet
 ---
 
 <div class="hero">

@@ -35,7 +35,7 @@ figcaption code {
 
 
 ```js
-const taxonomy = FileAttachment("./data/taxonomy/comp-taxonomy.json").json();
+const taxonomy = FileAttachment("../data/taxonomy/comp-taxonomy.json").json();
 ```
 
 <div class="grid grid-cols-2">
