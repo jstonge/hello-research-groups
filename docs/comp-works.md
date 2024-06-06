@@ -52,6 +52,77 @@
 figcaption code {
   font-size: 90%; /* TODO move to global.css */
 }
+/* 
+Tabset  for alternative intro
+ */
+
+.tabset > input[type="radio"] {
+  position: absolute;
+  left: -200vw;
+}
+
+.tabset .tab-panel {
+  display: none;
+}
+
+.tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
+.tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
+.tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
+.tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
+.tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
+.tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
+  display: block;
+}
+
+/*
+ Tabset Styling
+*/
+
+.tabset > label {
+  position: relative;
+  display: inline-block;
+  padding: 15px 15px 5px;
+  border: 1px solid transparent;
+  border-bottom: 0;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+input:focus-visible + label {
+  outline: 2px solid rgba(0,102,204,1);
+  border-radius: 3px;
+}
+
+.tabset > label:hover,
+.tabset > input:focus + label,
+.tabset > input:checked + label {
+  color: #06c;
+}
+
+.tabset > label:hover::after,
+.tabset > input:focus + label::after,
+.tabset > input:checked + label::after {
+  background: #06c;
+}
+
+.tabset > input:checked + label {
+  border-color: #ccc;
+  border-bottom: 1px solid #fff;
+  margin-bottom: -1px;
+}
+
+.tab-panel {
+  padding: 20px 0;
+  border-top: 1px solid #ccc;
+}
+
+
+@media (prefers-color-scheme: light) {
+  h1 {
+    --theme-red: #d75c48;
+  }
+}
+
 
 </style>
 
@@ -75,60 +146,65 @@ figcaption code {
 </div>
 
 Why make a big deal of scientists using computers? 
-We will see that there are many reasons. 
-But first, as both of the authors above know, this is not really about computers. 
-This is about what computers and computer programming mean for different communities. 
 
-## [The Norvig-Chomsky debate](https://news.ycombinator.com/item?id=34857287)
+<div class="tabset">
+  <!-- Generic intro -->
+  <input type="radio" name="tabset" id="LostExplorers" aria-controls="LostExplorers" checked>
+  <label for="LostExplorers">Lost explorers</label>
+  <!-- GroupFirst intro -->
+  <input type="radio" name="tabset" id="meaning" aria-controls="meaning" checked>
+  <label for="meaning">Computer meaning</label>
+  <!-- pannels -->
+  <div class="tab-panels">
+    <section id="LostExplorers" class="tab-panel">
+      Consider the following analogy. In his 'lost European explorers' chapter, Joseph Henrich recounts the stories of technologically-advanced European explorers who spectacularly fail to survive in the Artic or the Australian outback because they lacked the local know-hows. As anthropologist, Henrich makes the point that huamns can thrive in harsh environments not because of our big brains having some innate modules, but by accessing a large bodies of culturally acquired knowledge. Our big brains are useful for learning from each others; leading to a ratchet effect where local populations can iterate cultural adaptations over many generations. This culturally acquired knowledge is complex, well-designed, adapted to local challenges, and often invisible to the unprepared eyes. <br><br> 
+      As both of the authors above well know, the computational turn is not really about scientists using computers. The computational turn is about new tribes of scientists venturing into a new kind of cultural niche; one that is computational and that has been shaped by the local culture of hackers and other kinds of computer-savvy researchers. Doing computational works is multifacetted; ranging resource managements on high-performant clusters via  the command line, to write reproducible and transparent computer code.   <br><br> 
+      In most cases, the new tribes of scientists are really like lost explorers. They lack local know-hows and cultural adaptations that make possible to thrive in this new environments. By failling to notice those local adaptations, and seeings computers as a simple tool, we make the computational much harder for some people than it could be. <br><br>
+      Does it matter? Although scientists might not die of hunger as a results, we will show it can (i) increase unnecessary suffering in the academia, especially to early-career researchers, and explore how it might (ii) exacerbate gender biases in academia, what we will refer as the hidden costs of the computational turn. 
+    </section>
+    <section id="meaning" class="tab-panel">
+      As both of the authors above well know, we will see that there are many reasons. 
+      First, this is not really about computers, but what computers and computer programming mean for different communities. <br><br>
+      In linguistics, computational methods are tied to a worldview about the study of languages.
+      Say that you want to become a professor of linguistics in the 1990s. 
+      As with other fields in the humanities, you learn to speak the native language.
+      For instance, you might need to speak fluently in Chomsky's transformational-generative grammar, which states that grammar is a system of 'transformations', or processes, that specify the possible combinations of words in a sentence.
+      By having a good grasp of these transformations, you can demonstrate to your peers that you are part of the tribe, potentially leading to a position in a linguistic department. <br><br>
+      In his paper, Jurafsky mentions that the use of computers as tools does not really change the above. Using computer softwares to do phonetics or transcribe conversation doesn not change the worldview of linguistics. <br><br>
+      Computers first pose problem when they introduce competing statistical methods to established linguistic theories that are successful due to their usefulness in industry. <br><br>
+      The debate is epitomized by the dispute between Peter Norvig, now director of research at Google, and Chomsky, on whether statistical theory are providing any _theoretical_ insight into language. 
+      Chomsky (in)famously stated that statistical theories are pointless to understand language because they fail to be mechanistics, unlike his theories (see [this transcript](http://languagelog.ldc.upenn.edu/myl/PinkerChomskyMIT.html)). 
+      In many sciences, computational methods (often) do not reflect established theories thought to explain the phenomena by the natives but are still deemed successful, partly because success is defined by stakeholders outside the field.
+      This idea is at the heart of why the computational turn is more than just about computers; it is cultural, epistemic and value-driven. <br><br>
+      By changing what is deemed successful, the rise of computational works produce an [alternative stable state](https://esajournals.onlinelibrary.wiley.com/doi/10.1890/1540-9295%282003%29001%5B0376%3AASSIE%5D2.0.CO%3B2), as we will describe in the chapter on [computational hysteresis](./hysteresis.md). Key questions with stable states in conservation is about stability; how does one ecosystem, say forest, transitionned into another, savanah, given a shift in environmental drivers (Beisner et al. 2003). <br><br>
+      Going back to our linguistic example, doing a PhD in linguistics in the Chomskian world involved developing a thesis about the fundamental properties of language, formulated with the vocabulary established in linguistics. Doing a PhD in linguistics in Norvig's world would involve splitting your time between learning enough linguistics to get you started, but also enough programming skills to wield larger corpora and do large scale analysis, typically useful to the tech industry that emerged with the informational era. One of our first questions is similar to that of conservationists; <br><br>
+      > how does a shift in enviromental drivers, say academia being pressured to output quantifiable deliverable (CITE report), is impacting the coexistence of the Chomskian and Norvig's world. <br><br>
+      Linguistics is not alone in that situation, albeit they might have been amongst the first in the humanities to undertake this transition. Digital humanities, computational social science, and cultural analytics are all meta-fields in search of their own identity, as they are expats from their own tribe. It is 'sus' that anthropologists are called something else when they start using computers. But if ever anthropology ends up becoming computationalized, what is the final outcome of this transition is still very much up in the air. This bring up the following question <br><br>
+      > How can we, as communities, best reconcile the more traditional, qualitative works with hyped, and money-making computational works? How can science maintains methodological diversity with increasing pressure within, and outside, scientific communities to embrace computational works. <br>
+      We note that the same phenomenon is happening in more experimental sciences, such as psychology, ecology, or biomedical engineering, where we observe a shift in which domain-specialists are somehow pressured to learn computer programming for various reasons. <mark class="red">I need to say more on this idea</mark> <br><br>
+      We saw that the computational turn is more about the the meaning of the methods than with computers _per se_. A second reason to study the computational turn is that computational methods involve a skillset that is more or less easily attainable for researchers with different backgrounds, which has serious impact on the collective suffering and group dynamics of communities undertaking the computational turn.
+    </section>
+  </div>
+</div>
 
-In linguistics, computational methods are tied to a worldview about the study of languages.
-Say that you want to become a professor of linguistics in the 1990s. 
-As with other fields in the humanities, you learn to speak the native language.
-For instance, you might need to speak fluently in Chomsky's transformational-generative grammar, which states that grammar is a system of 'transformations', or processes, that specify the possible combinations of words in a sentence.
-By having a good grasp of these transformations, you can demonstrate to your peers that you are part of the tribe, potentially leading to a position in a linguistic department.
 
-In his paper, Jurafsky mentions that the use of computers as tools does not really change the above. Using computer softwares to do phonetics or transcribe conversation doesn not change the worldview of linguistics. 
-
-Computers pose problem when they introduce competing statistical methods to established linguistic theories that are successful due to their usefulness in industry.
-The debate is epitomized by the dispute between Peter Norvig, now director of research at Google, and Chomsky, on whether statistical theory are providing any _theoretical_ insight into language. 
-Chomsky (in)famously stated that statistical theories were kind of pointless to understand language because they fail to be mechanistic, unlike his theories (see [this transcript](http://languagelog.ldc.upenn.edu/myl/PinkerChomskyMIT.html)). 
-This idea is at the heart of why the computational turn is more than just about computers. 
-In many sciences, computational methods (often) do not reflect established theories thought to explain the phenomena by the natives but are still deemed successful, partly because success is defined by stakeholders outside the field.
-
-By changing what is deemed successful, the rise of computational works produce an [alternative stable state](https://esajournals.onlinelibrary.wiley.com/doi/10.1890/1540-9295%282003%29001%5B0376%3AASSIE%5D2.0.CO%3B2), as we will describe in the chapter on [computational hysteresis](./hysteresis.md). Key questions with stable states in conservation is about stability; how does one ecosystem, say forest, transitionned into another, savanah, given a shift in environmental drivers (Beisner et al. 2003). 
-
-Going back to our linguistic example, doing a PhD in linguistics in the Chomskian world involved developing a thesis about the fundamental properties of language, formulated with the vocabulary established in linguistics. Doing a PhD in linguistics in Norvig's world would involve splitting your time between learning enough linguistics to get you started, but also enough programming skills to wield larger corpora and do large scale analysis, typically useful to the tech industry that emerged with the informational era. One of our first questions is similar to that of conservationists; 
-
-> how does a shift in enviromental drivers, say academia being pressured to output quantifiable deliverable (CITE report), is impacting the coexistence of the Chomskian and Norvig's world.
-
-Linguistics is not alone in that situation, albeit they might have been amongst the first in the humanities to undertake this transition. Digital humanities, computational social science, and cultural analytics are all meta-fields in search of their own identity, as they are expats from their own tribe. It is 'sus' that anthropologists are called something else when they start using computers. But if ever anthropology ends up becoming computationalized, what is the final outcome of this transition is still very much up in the air. How to best reconcile the more traditional, qualitative works with hyped, and money-making computational works, is at key to our enterprise, as we believe we should find ways to maintain methodological diversity in science. 
-
-We note that the same phenomenon is happening in more experimental sciences, such as psychology, ecology, or biomedical engineering, where we observe a shift in which domain-specialists are somehow pressured to learn computer programming for various reasons. <mark class="red">I need to say more on this idea</mark>
-
-We saw that the computational turn is more about the the meaning of the methods than with computers _per se_. A second reason to study the computational turn is that computational methods involve a skillset that is more or less easily attainable for researchers with different backgrounds, which has serious impact on the collective suffering and group dynamics of communities undertaking the computational turn.
 
 ## What makes the computational turn 'computational'
 
 <div class="grid grid-cols-3">
   <div class="grid-colspan-2">
-    We will delve in more depth in operationalize computational works in a <a href=./classify-comp-works.md>later section</a>, but for now we build a (heuristic) taxonomy of computational skills, what we call the Computational Works's Hierarchy of Needs (CWHN). We identify nine layers of skillsets to conduct a full-blown reproducible and transparent computational social science project (CITE).  Not all of layers might be required in a single project, but arguably most researchers stumble on a subset of those when dabbling with computational works. <br><br> Ask any computer-savvy researchers, they will tell you about how important it is to have good grasp of UNIX and Git to do computational works. On the one hand, all computing servers, most free and open-source programming libraries, and many computing routines are native to UNIX-based systems. On the other hand, any collaborative project requires version control history—as embodied by Git—to prevent collaborators stepping on each others' toes. <br><br> In the next three layers, we define software engineering skills that are emerging as key to conduct data-driven projects that are scalable, reproducible and transparent. We borrow the idea of amateur software engineering engineering from a <a href="https://www.youtube.com/watch?v=zwRdO9_GGhY&pp=ygURbWNlbHJlYXRoIGFtYXRldXI%3D">talk by Richard McElreath</a>, wher he argues for the importance of science doing more testing to ensure we limit the number of computer bugs in our works. Then, working with databases, Application Programming Interface (API), and extracting data from the web are all part of the skillset that are not that hard on their own, but can be time consuming for newcomers to do well. Finally, the idea of principled data processing originates from <a href="https://www.youtube.com/watch?v=ZSunU9GQdcI&t=1103s&pp=ygUacHJpbmNpcGxlZCBkYXRhIHByb2Nlc3Npbmc%3D">Patrick Ball</a>, who teach how to use project management skills and tools like Makefile to make a data-driven project reproducible on the long run. <br><br> At the top of the pyramid, we are getting closer to actual scientific works that are expected by most scientific domains today. Doing simulation, fitting models, as well as reading literature review to inform our modeling work with established theories.
+    We will delve in more depth in operationalize computational works in a <a href=./classify-comp-works.md>later section</a>, but for now we build a (heuristic) taxonomy of computational skills. We help visualizing all the bits of knowledge with the table of content of <a href="https://book.the-turing-way.org/">the-turing-way</a>, a online bNot all of layers might be required in a single project, but arguably most researchers stumble on a subset of those when dabbling with computational works. <br><br> Ask any computer-savvy researchers, they will tell you about how important it is to have good grasp of UNIX and Git to do computational works. On the one hand, all computing servers, most free and open-source programming libraries, and many computing routines are native to UNIX-based systems. On the other hand, any collaborative project requires version control history—as embodied by Git—to prevent collaborators stepping on each others' toes. <br><br> In the next three layers, we define software engineering skills that are emerging as key to conduct data-driven projects that are scalable, reproducible and transparent. We borrow the idea of amateur software engineering engineering from a <a href="https://www.youtube.com/watch?v=zwRdO9_GGhY&pp=ygURbWNlbHJlYXRoIGFtYXRldXI%3D">talk by Richard McElreath</a>, wher he argues for the importance of science doing more testing to ensure we limit the number of computer bugs in our works. Then, working with databases, Application Programming Interface (API), and extracting data from the web are all part of the skillset that are not that hard on their own, but can be time consuming for newcomers to do well. Finally, the idea of principled data processing originates from <a href="https://www.youtube.com/watch?v=ZSunU9GQdcI&t=1103s&pp=ygUacHJpbmNpcGxlZCBkYXRhIHByb2Nlc3Npbmc%3D">Patrick Ball</a>, who teach how to use project management skills and tools like Makefile to make a data-driven project reproducible on the long run. <br><br> At the top of the pyramid, we are getting closer to actual scientific works that are expected by most scientific domains today. Doing simulation, fitting models, as well as reading literature review to inform our modeling work with established theories.
   </div>
-  <div>
-    <br><br><br><br><br><br>
-    <figure class="wide">
-      <picture>
-        <source srcset="./assets/maslow.svg" media="(prefers-color-scheme: dark)">
-        <img loading="lazy" src="./assets/maslow.svg" class="wide">
-      </picture>
-      <!-- <figcaption>One potential hierarchy of needs for computational social scientists. By amateur software engineering, we mean testing code, making it shareable and readble, or make it performant. By principled data cleaning, we mean how to clean code in such a way you actually introduce bugs in your cleaning process, and your cleaning process will be reproducible on the long run. To be fair, this is the hierarchy of needs to computational social scientists who work with observational data. The hierarchy ought to differ for experimentalists or theoreticians, but there will be overlap.</figcaption> -->
-    </figure>
+  <div> ${resize((width) => 
+        plot_tree(turing_taxonomy, {width, height: 1500}))
+    }
   </div>
 </div>
-
 
 ## Hidden costs of the computational turn
 
 <em class="red">TODO: Discuss diversity in science and tech + reproducibility and transparenty in science. Underlying the diversity in computational social science, discuss the fact of reducing overall suffering when dabbling with code. Maybe it is a good place to motivate that with the little prehistory of computer science.</em>
+
 
 ### Learning to code
 
@@ -174,3 +250,40 @@ The same argument can be made at institutional level. Do institutions who are ab
 
 All of that depend on how we define groups, collaboration, and institutions, which we do next.
 
+
+
+```js
+const turing_taxonomy = FileAttachment("./data/taxonomy/turing-way.json").json();
+```
+
+```js
+function indent() {
+  return (root) => {
+    root.eachBefore((node, i) => {
+      node.y = node.depth;
+      node.x = i;
+    });
+  };
+}
+```
+```js
+function plot_tree(data, {width, height} = {}) {
+  return Plot.plot({
+  axis: null,
+  inset: 10,
+  insetRight: 120,
+  marginLeft: 100,
+  round: true,
+  width: 300,
+  height: 1300,
+  marks: Plot.tree(data, {
+    path: "name",
+    delimiter: ".",
+    treeLayout: indent,
+    strokeWidth: 1,
+    curve: "step-before",
+    textStroke: "none"
+  })
+})
+}
+```

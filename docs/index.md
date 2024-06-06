@@ -197,7 +197,7 @@ _This is an experimental project combining data collection, analysis, model buil
       </picture>
       <div class="small arrow">🗺️ Modeling</div>
     </a>
-    <a href="https://jstonge.observablehq.cloud/hello-research-groups/timeline" target="_blank">
+    <a href="https://jstonge.observablehq.cloud/hello-research-groups/results/timeline" target="_blank">
       <picture>
       <source srcset="./assets/measuring.webp" media="(prefers-color-scheme: dark)">
       <img src="./assets/measuring.webp">

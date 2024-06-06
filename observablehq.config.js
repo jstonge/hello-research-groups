@@ -34,6 +34,7 @@ export default {
         { name: "Explore NSF awards", path: "explore/nsf-awards" },
         { name: "Explore NEH awards", path: "explore/neh-awards" },
         { name: "Embeddings Playground", path: "explore/embeddings-playground" },
+        { name: "Hysteresis modeling", path: "explore/hysteresis-extra" },
       ]
     },
     {
@@ -43,6 +44,8 @@ export default {
       pages: [
         { name: "Overthinking FoS", path: "appendix/overthinking-fos" },
         { name: "Computational + X", path: "appendix/a-comp-story" },
+        { name: "scisciDB", path: "appendix/scisciDB" },
+        { name: "finetuning LLMs", path: "appendix/finetuning-llms" },
       ]
     }
   ],
