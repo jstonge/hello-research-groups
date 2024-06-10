@@ -47,7 +47,7 @@ const select = Generators.input(selectInput)
 <div>${resize((width) => 
   Plot.plot({
     width,
-    height: 600,
+    height: 630,
     marginLeft: 150, marginBottom: 50, marginRight: 180,
     x: { axis: null },
     y: { axis: null, domain: [-200 / 2, 200 / 2] },
@@ -84,6 +84,12 @@ const data = [
     numberOfLines: 3,
     type: "sociology",
     link: "https://raw.githubusercontent.com/jstonge/hello-research-groups/main/docs/assets/campbell.webp"
+  },
+  {
+      year: 1974,
+      numberOfLines: 3,
+      type: "sociology",
+      link: "https://raw.githubusercontent.com/jstonge/hello-research-groups/main/docs/assets/breiger_1974.webp"
   },
   {
     year: 1975,
