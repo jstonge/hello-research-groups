@@ -44,8 +44,9 @@ export default {
       pages: [
         { name: "Overthinking FoS", path: "appendix/overthinking-fos" },
         { name: "Computational + X", path: "appendix/a-comp-story" },
-        { name: "scisciDB", path: "appendix/scisciDB" },
-        { name: "finetuning LLMs", path: "appendix/finetuning-llms" },
+        { name: "SciSciDB", path: "appendix/scisciDB" },
+        { name: "Finetuning LLMs", path: "appendix/finetuning-llms" },
+        { name: "Accelerating annotations", path: "appendix/accelerating-annots" },
       ]
     }
   ],

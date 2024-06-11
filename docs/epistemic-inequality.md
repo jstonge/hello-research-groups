@@ -33,9 +33,13 @@ figcaption code {
 
 </style>
 
-# Gendered Academia and labor advantage
+# The rise of computational works engenders bias in academia
 
-In the previous section, we saw that with the computational turn we are experience a deep change in many parts of scientific culture.
+Yes, the title is a pun. Because in this section we are about to talk about gender biases in academia. There are many, and they are not going anywhere. Even though more women are entering science, it is unclear to what degree they are staying. Some fields are getting better, some are getting worst. It just happens that fields that are getting better are also those who might get less funded these days, a trend that might get exacerbated with the computational turn. 
+
+In this notebook, we review the literature on epistemic inequality in academia. Basically, the way that academia is organized is favoring certain ideals.
+
+## The impact of faculty hiring, socioeconomics, gender, and productivity on epistemic inequality. 
 
 <div class="grid grid-cols-3">
   <div>
@@ -72,7 +76,8 @@ In the previous section, we saw that with the computational turn we are experien
   </div>
 </div>
 
-Clauset's recent work on faculty hiring, socioeconomics, gender, and productivity. See also 
+See also 
 
  - <a href="https://www.biorxiv.org/content/biorxiv/early/2023/10/17/2023.10.13.562268.full.pdf">LaBerge, Nicholas et al. “Gendered hiring and attrition on the path to parity for academic faculty.” bioRxiv (2024): n. pag.</a>
 
+### Causal foundations of bias, disparity and fairness (Traa and Waltman 2022)
