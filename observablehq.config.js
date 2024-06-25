@@ -9,6 +9,14 @@ export default {
     { name: "Computational hysteresis", path: "/hysteresis" },
     { name: "Grontology", path: "/grontology" },
     {
+      name: "Models",
+      open: false,
+      pager: "models",
+      pages: [
+        { name: "Group-based models", path: "models/gbms" },
+      ]
+    },
+    {
       name: "Methods",
       open: false,
       pager: "methods",
