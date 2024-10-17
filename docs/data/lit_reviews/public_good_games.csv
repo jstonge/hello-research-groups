@@ -1,6 +1,10 @@
 year,title,tldr,subfield,contrib_type,read_lvl,short_title
 2000,Cooperation and Punishment in Public Goods Experiments," ""Experimental paper showing that individuals are willing to pay a cost to punish defectors in PGG.  People know when the game is about to finish, and group composition are changed randomly over the experiment. In this context, it has been shown that repeatedly with the same partners, the level of contribution declines towards zero""
 ",PS,📊,0️⃣,fehr_cooperation_2000
-1992,Covenants with and without a Sword: Self-Governance Is Possible," ""Costly punishment in a repeated common pool resource game with the possibility to develop an individual reputation.""
+1992,Covenants with and without a Sword: Self-Governance Is Possible," ""Costly punishment in a repeated common pool resource game with the possibility to develop an individual reputation. The title refers to the idea that it is possible to have groups managing their own common pool resources without having a third party agent, like the government, who come in to intervene.""
 ",PS,📊,0️⃣,ostrom_covenants_1992
-2005,Economic man in cross-cultural perspective: Behavioral experiments in 15 small-scale societies," """"",PS,📊,0️⃣,henrich_economic_2005
+2005,Economic man in cross-cultural perspective: Behavioral experiments in 15 small-scale societies," """"
+",PS,📊,0️⃣,henrich_economic_2005
+2013,Evolutionary dynamics of group interactions on structured populations: a review," ""This paper is a key review from HONs community that study the impact of modeling evo game theory with social networks and group interactions. They take ideas that were shown earlier, such as scale-free networks increase cooperation, and translate them into group idea. They focus on group size and distribution of payoffs among groups.""
+",PS,📚,1️⃣,perc_evolutionary_2013
+2021,Evolutionary dynamics of higher-order interactions in social networks," """"",PS,📚,0️⃣,rodriguez_evolutionary_2021

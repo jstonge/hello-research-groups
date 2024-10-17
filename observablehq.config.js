@@ -2,15 +2,15 @@
 export default {
   root: "docs", // path to the source root for preview
   output: "dist", // path to the output root for build
-  title: "Hello Research Groups",
+  title: "The Story of US",
   pages: [
-    { name: "The rise of computational works", path: "/comp-works" },
+    { name: "The Computational Turn", path: "/comp-works" },
     { name: "Epistemic Inequality", path: "/epistemic-inequality" },
     { name: "Computational hysteresis", path: "/hysteresis" },
-    { name: "Grontology", path: "/grontology" },
+    { name: "Multiverse Literature Review", path: "/lit-review" },
+    { name: "Primer group ontology", path: "/grontology" },
     {
       name: "Models",
-      open: false,
       pager: "models",
       pages: [
         { name: "Group-based models", path: "models/gbms" },
@@ -18,7 +18,6 @@ export default {
     },
     {
       name: "Methods",
-      open: false,
       pager: "methods",
       pages: [
         { name: "Classify computational works", path: "methods/classify-comp-works" },
@@ -26,7 +25,6 @@ export default {
     },
     {
       name: "Results",
-      open: false,
       pager: "results",
       pages: [
         { name: "Researchers timeline", path: "results/timeline" },
@@ -35,7 +33,6 @@ export default {
     },
     {
       name: "Explore",
-      open: false,
       pager: "explore",
       pages: [
         { name: "Summarize DB", path: "explore/summary-db" },
@@ -47,7 +44,6 @@ export default {
     },
     {
       name: "Appendix",
-      open: false,
       pager: "appendix",
       pages: [
         { name: "Overthinking FoS", path: "appendix/overthinking-fos" },

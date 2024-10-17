@@ -1,103 +1,41 @@
-<style type="text/css">
-    .margin-note {
-        margin: 20px;
-        float: right;  /* Align the image to the right */
-    }
-
-    p.small {
-    font-variant: small-caps;
-    }
-
-    ul {
-        list-style-type: disc;
-        padding-left: 20px;
-    }
-
-    .task-list {
-        list-style-type: none;
-        padding: 0;
-    }
-
-    .task-list li {
-        margin-bottom: 10px;
-        margin-right: 150px;
-        padding: 5px 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-    }
-
-    .task-list input[type="checkbox"] {
-        margin-right: 10px;
-    }
-
-    .box-container {
-        padding: 20px; /* Padding around the box */
-    }
-
-    .box {
-        border: 1px solid #333;
-        border-radius: 8px;
-        padding: 20px;
-        background-color: #f9f9f9;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        margin: 30px; /* Added margin around the box */
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    .box-title {
-        background-color: #333;
-        color: #fff;
-        padding: 10px;
-        border-radius: 6px 6px 0 0;
-        font-weight: bold;
-    }
-
-    .box-content {
-        padding: 20px;
-    }
-
-</style>
-
 # Group-based models
-
-<!-- Social groups are essential to explain human behaviors. In sociology, groups are thought  to influence human psychology by taking organism-like properties; as with organisms, groups can move together and share common faith, leading to social identity that cut across one's life. In complex systems, they study how a set of closely knitted individuals can emerge as synergestic teams that can outperform better uncoordinated teams. Cultural evolutionists entertain the hypothesis that group-level traits are essential to explain large-scale cooperative behavior of unrelated individuals. All of these field of studies share the core idea that groups, somehow, are not reducible to its constituents. -->
 
 In this notebook, our goal is to bridge the gap between the ontology of social groups and higher-order representations of groups.
 
-<div class="margin-note note" label="Interface paper - guideline">
+<div class="note" label="Interface paper - guideline">
 <small>
-<ul>
-    <li>Editorial paper for physicists. The main goal here is to get physicists minimally interested in philosophy of groups (and perhaps causation and cultural group selection (CGS), but this might be a bit much).</li>
-    <li>In the process, we explain why people in HONs conflate group structure and group non-reducible interactions (literature on contagion).</li>
-    <li>The meta-goal is, actually, why do we want HONs to be informed by philosophy? Or CGS? Do these communities are too far away to have something useful to say to each other? Hopefully not, they are talking about the same 'group stuff' (allegedly). We'll see, for now we seek to map group-based models on Randall's typology. </li>
-    <li>We give the minimal picture of philosophy of groups, while showing the maths of the different group-based models.</li>
-    <li>Optionally, we leave space to integrate <em>casusation</em> into the mix. It feels that this is a promising way to explain the meaning group existence; groups exist inasmuch that they cause individual to behave in such or such way.</li>
-    <li>Optionally, we leave space to integrate discussion of <em>cultural group selection</em> into the mix. CGS is useful in that they are the ones bringing the evolutionary perspective on groups; how groups copy each other based on fitness, also how migration play a key role in intergroup competition, etc.</li>
-</ul>
+    <ul>
+        <li>Editorial paper for physicists. The main goal here is to get physicists minimally interested in philosophy of groups (and perhaps causation).</li>
+        <li>In the process, we explain why people in HONs conflate group structure and group non-reducible interactions (literature on contagion).</li>
+        <li>The meta-goal is, actually, why do we want HONs to be informed by philosophy? Do these communities are too far away to have something useful to say to each other? Hopefully not, they are talking about the same 'group stuff' (allegedly). We'll see, for now we seek to map group-based models on Randall's typology. </li>
+        <li>We give the minimal picture of philosophy of groups, while showing the maths of the different group-based models.</li>
+        <li>Optionally, we leave space to integrate <em>casusation</em> into the mix. It feels that this is a promising way to explain the meaning group existence; groups exist inasmuch that they cause individual to behave in such or such way.</li>
+        <li>See <a href="https://jstonge.observablehq.cloud/hello-research-groups/grontology">grontology sister paper</a> and <a href="https://www.overleaf.com/project/65917775b218bbec87f59521">overleaf project (need permissions).</a></li>
+    </ul>
 </small>
 </div>
 
-
 ## I. Introduction
 
-<ul class="task-list">
-  <li><input type="checkbox"><em>Context</em>: Social sciences and philosophy talk a lot about groups, but they don't really model them. Physicists only recently started to model groups via higher-order networks, but they didn't engage seriously with the philosophy of groups.</li>
-  <li><input type="checkbox"><em>Context</em>: Cultural group selection (CGS) also talk about groups and model them using game theory. They bring the idea of causal mechanisms and functional and structural differences (which ones?) that we can use to create a typology of groups. But the works to tie all of this to the philosophy of groups and higher-order networks remain to be done</li>
-  <li><input type="checkbox"><em>Goal</em>: Showing why it is useful to relate how different communities (social ontology of groups, physics, cultural evolution) think about group irreducibility.</li>
-</ul>
+<div class="margin-note">
+    <img src="https://raw.githubusercontent.com/jstonge/hello-research-groups/main/docs/assets/HenslinCh5.webp" alt="Trulli" width=400px style="box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+    <center>
+    <figcaption>A typical introduction to social groups,<br>from the Essentials of Sociology (13th Ed. by James M. Henslin).</figcaption>
+    </center>
+</div>
 
-The study of social groups is central to the humanities and social sciences. Introductory texbooks describe how groups have key functional roles in explaining a wide ranging of phenomena such as wars, markets, kinship systems, individual psychology and so on. These textbooks propose a typology of groups, and set of hypotheses, derived from their respective tradition. In this context, philosophers have sought to subsume the wide variability of group typologies under a set of essential dimensions in the study of social ontology of groups (SOGs). Yet, the social sciences mostly lack network models describing mechanisms by which groups emerge and come to drive human behaviors.
 
-One exception to the modeling of groups is that of cultural group selection (CGS). Cultural evolutionist draws from public good games and population biology to study the role of group-level traits in driving cumulative cultural evolution. A popular idea is how intergroup competition can lead collaborative norms that could scale up collaboration amongst unrelated collaborators, as we have witness with the rise of a cultural hominin species. 
+The study of social groups is central to the humanities and social sciences. Introductory texbooks describe how groups have key functional roles in explaining a wide ranging of phenomena such as wars, markets, kinship systems, individual psychology and so on. These textbooks propose a typology of groups, and set of hypotheses, derived from their respective tradition. In this context, philosophers have sought to subsume the wide variability of group typologies under a set of essential dimensions in the study of social ontology of groups (SOGs). However, the social sciences mostly lack network models describing mechanisms by which groups emerge and come to drive human behaviors.
 
 In recent years, the study of the structure and dynamics of pairwise interactions in network science has evolved to include higher-order networks (HONs). As with SOGs, network scientists aim to define emergent group-level phenomena or traits that are considered irreducible to their individual constituents. Yet, both HONs and SOGs rarely, if ever, interact at the ontological level, or in discussions concerning the existence of (social) groups as entities independent from the individuals that constitute them.
 
-<!-- 
-In CGS, the discussion about group ontology is underlying the debate of cultural groups as key unit of adaptation in humen evolution. Similar to SOGs and HONs, we find a similar heated debates on the meaning of groups as having some independence from its constituents. With Smaldino, we define group-level traits as traits, or behaviors, that are the outcome of between-group interactions, mostly drive by cultural differences that make one group or another more successful. In contagion studies, one could think of how policies targeting groups, such as mask mandate, and implemented in very inconsistent way at group-level. In this context, we argued elsewhere that it is simpler to model policy dynamics, such as groups implementing strategies based on the relative success of other groups, at the collective level of groups than that of individuals.
- -->
+In this paper, we aim to better understand the intersection of SOGs and higher-order representations to facilitate interdisciplinary works. We relate key assumptions from the philosophy of groups and the higher-order representations formulated by network scientists. To do so, we map higher-order representations onto essential dimensions of groups as identified by philosophers. We hope that by mapping core assumptions within both perspectives we can facilitate interdiscplinary works of qualitative and quantative researchers interested in group-structured systems. We find that there is still much work to be done to formulate a transciplinary view of group-level behaviors.
 
-In this paper, we aim to better understand the intersection of SOGs, CGS, and higher-order representations to facilitate interdisciplinary works. We relate key assumptions from the philosophy of groups, group dynamics from CGS, and the higher-order representations formulated by network scientists. To do so, we map higher-order representations onto essential dimensions of groups as identified by philosophers. We hope that by mapping core assumptions within both perspectives we can facilitate interdiscplinary works of qualitative and quantative researchers interested in group-structured systems. We find that there is still much work to be done to formulate a transciplinary view of group-level behaviors.
+<ul class="card task-list">
+  Todo<br><br>
+  <li><input type="checkbox"><em>Context</em>: Social sciences and philosophy talk a lot about groups, but they don't really model them. Physicists only recently started to model groups via higher-order networks, but they didn't engage seriously with the philosophy of groups.</li>
+  <li><input type="checkbox"><em>Goal</em>: Showing why it is useful to relate how different communities (social ontology of groups, physics, cultural evolution) think about group irreducibility.</li>
+</ul>
 
 
 ## II. The philosophy of groups
@@ -178,7 +116,6 @@ Let the clubs or else denoted with $m$, which the size
 
 In themselves, this dual view of social networks is not sufficient to give rise to group effects. 
 
-
 ### Irreducibility, persistence, isolation, and alignment
 
 <img src="https://raw.githubusercontent.com/jstonge/hello-research-groups/main/docs/assets/drawing.svg" alt="Trulli" class="margin-note" width=300px>
@@ -232,7 +169,6 @@ With both these definition out of the ways, we distinguish different line of wor
   <li><input type="checkbox">Spread across groups with nonlinear effects within groups (bodo_sis_2016; reviewed by arruda_contagion_2024).</li>
   <li><input type="checkbox">How are they reducible, permanent, and isolated. </li>
 </ul>
-
 
 Conflate higher-order networks with the nonlinear effects in the dynamics (aka being able to decompose the dynamics within every clique into a combination of pairwise dependencies, then the network is just a pairwise network with cliques, or fully reducible. Alternatively, clique is better represented as an inseparable entity like a hyperedge)
 
@@ -295,10 +231,10 @@ Now that we have formalize how physicists think of higher-order interactions, we
 ## V. Discussion
 
 <ul class="task-list">
-  <li><input type="checkbox"><em>Big claim I never know where to pu</em>: group-based models are useful because we coarse-grained a system into a natural level to explain human behaviors. This runs against our (WEIRD) biases of favoring individuals, or nodes, over groups</li>
+  <li><input type="checkbox"><em>Big claim I never know where to put</em>: group-based models are useful because we coarse-grained a system into a natural level to explain human behaviors. This runs against our (WEIRD) biases of favoring individuals, or nodes, over groups</li>
 </ul>
 
-Famous last words
+Famous last words.
 
 
 
@@ -352,3 +288,70 @@ const infection = function(x, nu, beta) {
   <li><input type="checkbox">Claim 1: Conflate higher-order networks with the nonlinear effects in the dynamics (aka being able to decompose the dynamics within every clique into a combination of pairwise dependencies, then the network is just a pairwise network with cliques, or fully reducible. Alternatively, clique is better represented as an inseparable entity like a hyperedge)</li>
   <li><input type="checkbox">Claim 2: Group does not depend on exact knowledge about the state of non-members (contra Gleeson). The non-linear effects have to be within the group and not spillover to other groups.</li>
 </ul> -->
+
+
+
+<style type="text/css">
+    .margin-note {
+        margin: 20px;
+        float: right;  /* Align the image to the right */
+    }
+
+    p.small {
+      font-variant: small-caps;
+    }
+
+    ul {
+        list-style-type: disc;
+        padding-left: 0px;
+    }
+
+    .task-list {
+        list-style-type: none;
+        padding: 10;
+    }
+
+    .task-list li {
+        margin-bottom: 10px;
+        width: 470px;
+        padding: 5px 10px;
+        background-color:  #F5F5F5;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .task-list input[type="checkbox"] {
+        margin-right: 10px;
+    }
+
+    /* MATHEMATICS BOX */
+
+    .box-container {
+        padding: 10px; /* Padding around the box */
+        max-width: calc(70% - 2rem);
+    }
+
+    .box {
+        border: 1px solid #333;
+        border-radius: 8px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px; /* Added margin around the box */
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .box-title {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        border-radius: 6px 6px 0 0;
+        font-weight: bold;
+    }
+
+    .box-content {
+        padding: 20px;
+    }
+
+</style>
