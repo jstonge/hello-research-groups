@@ -1,12 +1,8 @@
 year,title,tldr,subfield,contrib_type,read_lvl,short_title
-2014,"Institutions and organizations: ideas, interests, and identities"," """"
-",S,💡,0️⃣,scott_institutions_2014
 1974,The road to agreement Subgroup pressures in small group consensus processes.," ""How do small groups of WEIRD people reach consensus. Models of different processes. do the role or position of each individual matters the most. Maybe the size of the group. Following Asch, the role of conformity, uplifting the role of the majority.""
 ",S,🗺️,0️⃣,godwin_road_1974
 1977,Some Effects of Proportions on Group Life Skewed Sex Ratios and Responses to Token Women," ""The importance of proportion when dominant and rare, or tokens, strategies are spreading within a group. This notion of tokens is called tokenism in socio. Drawing from Simmel, adoption of tokens depends on visibility, polarization, and assimilation. It has been fundamental in how women can take their place in traditionally male dominated space, but remained undertheorized.""
 ",S,📊,0️⃣,kanter_effects_1977
-1989,Social Identity Theory and the Organization," ""Widely cited paper in Management science, it is tied to Tomasello's idea of how WE > me depends on groups' properties. Social identity theory is the idea that people classify themselves into social categories such as orgs and age cohort, which is relational and comparative.""
-",S,📊,0️⃣,ashforth_social_1989
 1982,Hypernetwork sampling: Duality and differentiation among voluntary organizations," """"
 ",S,🗺️,0️⃣,mcpherson_hypernetwork_1982
 1938,Quantitative Methods in Politics-Statistical view of a perceptual world," ""Cool paper. Campbell (1958) cites Rice as a earlier reference asking ""when is an aggregate of persons an entity"", or when social units are ""real"" more generally. In the paper, Rice is noticing that known principles from perception can be used to explain why we feel that some entities, like a Jazz band, can be thought as entity. But nonetheless that the organization of the jazz band 'seems less tangible than the saxophone'.  Rice is arguing that perceiving is reality is socially constructed, so that it is not crazy to think that we can perceive groups and that groups can do things. ""
@@ -23,10 +19,6 @@ year,title,tldr,subfield,contrib_type,read_lvl,short_title
 ",S,💡,0️⃣,wimsatt_aggregativity_1997
 1990,"Sacrifice for the Cause: Group Processes, Recruitment, and Commitment in a Student Social Movement"," """"
 ",S,📊,0️⃣,hirsch_sacrifice_1990
-1994,How Individual and Face-to-Face-Group Selection Undermine Firm Selection in OrganizationalEvolution," ""Already in the 90s, they were talking at how selection cut across the organization levels in firms. But Campbell also engage with cultural and biological group selection at large in this paper (see [boyd_culture_1985](https://github.com/jstonge/second_brain/blob/main/Literature%20notes/boyd_culture_1985.md), [wilson_group_1983](https://github.com/jstonge/second_brain/blob/main/Literature%20notes/wilson_group_1983.md), [[W. D. Hamilton]], [[R. Trivers]])""
-",S,💡,1️⃣,campbell_how_1994
-1993,The discipline of teams," """"
-",S,💡,0️⃣,katzenbach_discipline_1993
 2023,The duality of networks and groups: Models to generate two-mode networks from one-mode networks," ""Since networks are more real than groups, Neal says that sociology focused on deriving social networks from groups. But he offers generative models to go the other way. finding groups from social networks. This is analogous to reconstructing higher order networks from networks in physics.""
 ",S,📚,1️⃣,neal_duality_2023
 1981,The Focused Organization of Social Ties," """"
@@ -35,4 +27,6 @@ year,title,tldr,subfield,contrib_type,read_lvl,short_title
 ",S,📊,1️⃣,apicella_social_2012
 1976,ON THE CONFLICTS BETWEEN BIOLOGICAL AND SOCIAL EVOLUTION AND BETWEEN PSYCHOLOGY AND MORAL TRADITION," """"
 ",S,💡,0️⃣,campbell_conflicts_1976
-2003,Structural Cohesion and Embeddedness: A Hierarchical Concept of Social Groups," ""Similar in spirit from [[campbell_common_1958]] but does not cite Campbell. The gist of the paper is how to quantify structural cohesion of social groups. Although there are ideas of group interactions in the paper, what matter at the end is the pairwise interactions, for instance group size, low betweenness so that there are more independent paths among group members, robustness to disconnections, things like that.""",S,💡,0️⃣,moody_structural_2003
+2003,Structural Cohesion and Embeddedness: A Hierarchical Concept of Social Groups," ""Similar in spirit from [[campbell_common_1958]] but does not cite Campbell. The gist of the paper is how to quantify structural cohesion of social groups. Although there are ideas of group interactions in the paper, what matter at the end is the pairwise interactions, for instance group size, low betweenness so that there are more independent paths among group members, robustness to disconnections, things like that.""
+",S,💡,0️⃣,moody_structural_2003
+2018,Mere Membership," """" ",S,📚,0️⃣,dunham_mere_2018

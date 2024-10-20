@@ -1,8 +1,8 @@
 # Multiverse literature review
 
-## Groups are real.
+## Groups are real. A synthesis.
 
-We review the study of groups in the multiverse of scientific research. There are an infinite number of ways to talk about groups. We could simply talk about the grouping of stuff, or how the structure of living systems are determined by that of social organizations. To review the literature, we ask ourselves the following questions:
+We review the study of groups in the multiverse of scientific research. The topic is vast. There are an infinite number of ways to talk about groups. We could simply talk about the grouping of stuff, or how the structure of living systems are determined by that of social organizations. We could focus how human societies are being shaped rise of formal institutions and firm selection. To cut across the multiverse, we ask ourselves how key field of studies answered the following questions:
 
 <div class="callout-box">
   <ul>
@@ -15,34 +15,41 @@ We review the study of groups in the multiverse of scientific research. There ar
 <div class="grid grid-cols-2">
   <div>
 
-  **Groups in the social sciences**. By the social sciences, we mean those fields interested in humans that are theory-driven, claiming the legacy of their forefathers. They traditionally relied on verbal models and experiments. We put in this bucket conformity studies and group psychology (Asch et al), sociologists drawing from Georg Simmel, and evolutionary minded sociologist and philosophers such as Donald Campbell, David Hull, Bill Wimsatt, etc. We also include sociologists and anthropologists who got into social network analysis. 
+  **Groups in the Social Sciences**: By social sciences, we mean those fields interested in humans and driven by theory, claiming the legacy of their forefathers. Traditionally, these fields relied on verbal models and experiments. In this category, we include conformity studies and group psychology (Asch et al.), sociologists drawing from Georg Simmel, and evolutionary-minded sociologists and philosophers such as Donald Campbell, David Hull, Bill Wimsatt, etc. We also include sociologists and anthropologists who have ventured into social network analysis.
 
+  **Group Selection in Biology**: This was controversial. In the 1960s, Wynne-Edwards proposed the idea of groups as a legitimate level of selection. The idea was that traits could evolve not in the service of individuals but because they are beneficial to groups (initially framed in terms of population regulation). Biologists fiercely opposed this idea. For many, the collective response seemed disproportionate, possibly influenced by the social climate of the era. Group selection theory resurfaced later, mostly in the form of multilevel selection theory.
 
-  **Group selection in Biology**: That was controversial. In the 1960s, the idea of groups as legitimate level of selection was put forth by Wynne-Edwards. That traits can evolve not in the service of individuals, but because they are benefitial to the groups (early on, it was in terms of population regulation). Biologists went to war with that idea. For many, the collective response was disproportionate (it feels it has something to do with the era). It came back later on, but mostly in terms of multilevel selection theory.
-  
-  **Firms  as groups**: Organizational scientists, especially those interested in firms ([Richard Scott](https://www.taylorfrancis.com/books/mono/10.4324/9781315663371/organizations-organizing-richard-scott-gerald-davis), ...). They can be evolutionary minded people, speaking of firm selection. They could be classified as a social science; they trace back their origins to some forefathers (Schumpeter, Ronald Coase) and often rely on elaborate concepts. But I feel this community like to be on their own.
-  
-  **Public Good Games**: It all started with Eleanor Ostrom arguing that small social groups can self-organize to maintain common-pool ressources, thereby avoiding the infamous tragedy of the commons. They even do so better than some centralized governments or the free markets. But N-persons games, with repeated interactions, is also tied to evolutionary game theory. Folks from cultural group selection and statistical physics used extensively dieas of public good games in the context of altruism and cooperation. Truth be told, they could be separated from Ostrom's stuff, and Ostrom's lore is big enough that it could live on its own.
+  **Firms as Groups**: Organizational scientists, especially those interested in firms (Richard Scott, etc.), often approach firms through an evolutionary lens, talking about firm selection. While these scholars could be classified as part of the social sciences, they tend to exist in their own domain, tracing their origins to forefathers like Schumpeter and Ronald Coase, and often relying on complex concepts. However, this community seems to prefer some degree of independence from the broader social sciences.
 
-  **Team science**: Starting in the 80-90s, folks from management science and business slowly understood that efficient teams can be more productive. Since then, this idea has been applied to many domains; businesses, but also sport teams, research groups, [software developpers](https://books.google.ca/books/about/Beautiful_Teams.html?id=Na3-vt2ZiPEC&source=kp_book_description&redir_esc=y), and so on. It also became more complex system sciency (with [Scott Page](https://press.princeton.edu/books/paperback/9780691191539/the-diversity-bonus?srsltid=AfmBOop_GYlMKlnwG6cBj9WV8DxAWslY77RTreJR9IfyjrjKMywyv8pT), and other SFI folks). All teams are groups but not all groups are team. Teams are more synergestic, they say.
-  
-  **Cultural group selection**: This is still controversial, but hasn't been shut down completely by biologist (it partly lives as a social science). It is population biology applied to cultural groups, with the idea that cultural groups could be a legitimate level of selection. That said, defend themselves by arguing for multilevel selection theory; you can take a dual view and have it both ways. 
+  **Public Good Games**: This literature, derived from Elinor Ostrom's work on social dilemmas, typically uses public good games to study group dynamics. Though informed by the social sciences, it presents a distinct set of questions important to the study of groups and unique to this literature. The key idea is how groups can self-govern in the face of social dilemmas under specific conditions. Groups can evolve sets of rules to avoid the tragedy of the commons, showing they are not as "mindless" as once thought. Notably, this literature often focuses on smaller groups, where a sense of joint commitment toward common-pool resources is present.
 
-  **The Ontology of Groups**: Philosophers of collective action theory, social ontology, and collective intentionality. We include Tomasello's work on shared intentionality into the mix. 
-  
-  **Groups as higher-order networks**: This is antipode of the social sciences. You start from the methods in complex systems, then you just applied to any domain you deem fit. This is our niche. This is a category that is model-first, then concepts come after. As such, groups has been mapped onto models of higher-order itneractions, without much philosophy involved.
+  **Team Science**: Starting in the 1980s and 90s, management and business science began to realize that efficient teams can be more productive. Since then, the idea has been applied across various domains—business, sports teams, research groups, software developers, and so on. Over time, this concept has merged with complex systems thinking (e.g., Scott Page and other SFI scholars). While all teams are groups, not all groups are teams; teams are often described as more synergistic.
+
+  **Cultural Group Selection**: Emerging from population biology, cultural group selection theory combines covariance genetics and game theory to demonstrate the conditions under which group-beneficial traits can evolve through group selection processes. The theory originated from 1960s debates about altruism and how reciprocity alone might not explain large-scale cooperation among unrelated individuals. A key result driving group selection is the Price equation, applied to groups of individuals with norms that maintain between-group variance while reducing within-group cultural variations.
+
+  <div class="note">
+  We distinguish between group-level features that map onto kin-based and formal institutions. By kin-based, we mean social institutions that are characteristics of kin-based social systems; they facilitate assortments but are based on the biology of cooperation. Formal institutions are written set of rules that are abstracted to unify voluntary-based  groups (associations), think of firms, church, universities, non-profits, or ministries. Both institution types are characterized by societal facts and collective intentionality specifying behavioral rules for within- and inter-group interactions. A popular definition is how institution reduce ambiguities in navigating social lives. 
+  </div>
+
+  **The Ontology of Groups**: Collective intentionality seeks to explain the feeling that a collective is more than the sum of individual intentions. As Searle puts it, there is a "we" that transcends individual actions, like friends walking together, which is more than each person merely intending to walk. This concept can also manifest in the impersonal "we" that members of a society feel, motivating them toward collective actions such as going to war or feeling pride when a local sports team wins a championship. 
+
+  **Groups as Higher-Order Networks**: Social scientists are interested in higher-order structures, such as triangles, cliques, and clubs. But here we refer to the community of network scientists who share a toolbox that is coming from physics, most notably statistical physics and information theory. By contrasts to the social scientists, the devil of their work is often in the analytic results and modeling details.
 
   In the theoretical work of this thesis, we seek to inform contemporary group-based models based on higher-order networks with the following facets of groups that cut across these communities:
- - `isolation`: do groups communicate? What is the influence of inter-group interactions.
- - `persistence`: many-body interactions are group momentarily in time. They fundamentally differ from groups that persist in time in that persistent groups can exhibit institutional reality. One might think that repeated many-body interactions is entangled with the evolution of stronger institutions.
- - `irreducibility`: what kinds of group interactions cannot be reduced to the sum of individual, or pairwise, interactions.
- - `alignment`: given group-interactions are irreducible, what does it says about the alignment of individual intentionalities with that of the group minds. How does governance and institutionalization play into that?
- - `differentiation`: with persistent, irreducible, and misaligned groups, we find that individuals are often differentiated in the groups. One key aspect of differentiation is hierearchy and the role of leadership.
+  <div class="def">
+    <ul>
+    <li><em>Isolation</em>: do groups communicate? What is the influence of inter-group interactions.
+    <li><em>Persistence</em>: many-body interactions are group momentarily in time. They fundamentally differ from groups that persist in time in that persistent groups can exhibit institutional reality. One might think that repeated many-body interactions is entangled with the evolution of stronger institutions.
+    <li><em>Irreducibility</em>: what kinds of group interactions cannot be reduced to the sum of individual, or pairwise, interactions.
+    <li><em>Alignment</em>: given group-interactions are irreducible, what does it says about the alignment of individual intentionalities with that of the group minds. How does governance and institutionalization play into that?
+    <li><em>Differentiation</em>: with persistent, irreducible, and misaligned groups, we find that individuals are often differentiated in the groups. One key aspect of differentiation is hierearchy and the role of leadership.
+    </ul>
+  </div>
+
+  We find that by focusing on key textbook concepts in combination with modeling approach best compress the high-dimensionality of our review. As such, we start by reviewing textbook understanding of groups, before diving into the modern approach to model groups, which can be summarized with networks and agent-based modeling, game theory (evolutionary game theory, common-pool ressource games, public good games), and higher-order networks. We draw from empirical findings, but we don't engage much with them.
 
   Based on evidence from historical, experimental, and modern thinking about groups, we argue that group-based model should take more space in the toolbox of complex scientists. On the other hand, by formalizing verbal models from the social science with our theoretical works, we hope to help clarify conceptual confusion about the ontology of groups. 
   
-  How exactly is what we want to review next. 
-
   </div>
   <div>
     <center>
@@ -50,15 +57,11 @@ We review the study of groups in the multiverse of scientific research. There ar
     <br>
     <div>${selectInput}</div>
     <div>${resize((width) => Plot.legend({marginLeft:width/4, color: {
-      domain: ["CGS", "φ", "S", "B", "PS", "P"], 
-      range: ["#32cd32", "#dc143c", "#1e90ff", "#32cd32", "#9370db", "#ff7f50"]
+      domain: ["CGS", "φ", "S", "B", "PS", "P", "O", "IS", "F"], 
+      range: ["#001219", "#005F73", "#0A9396", "#94D2BD", "#E9D8A6", "#EE9B00", "#CA6702", "#BB3E03", "#AE2012"]
       }}))
     }</div>
     <div>${resize((width) => lit_review(width))}
-    </div>
-    <br>
-    <div class="ridge">
-    <small>${summaries[select]}</small>
     </div>
   </div>
   </center>
@@ -70,7 +73,14 @@ We review the study of groups in the multiverse of scientific research. There ar
 <div class="caution">🚧 Everything that follows is WIP 🚧</div>
 
 
-## The social sciences of groups
+## Prehistory
+
+In this section, we review classical works on groups in the social sciences. We find that much of early work in sociology works spell out (in words) ideas that are central to the thesis. Similarly, we briefly review work in organizational science on firm selection, which branched out from sociology around the 1940s (Scott & Davis 2007). In the 1950s-1960s, the debate of group selection reveals the challenges and important of models when thinking of "groups" as potential target for natural selection. We also find that work on conformity in social psychology is important to mention. From todays' perspective, we find that the idea of people blindly adhering to the majority and authority was meant to be cautionary tales against communism (CITE). 
+
+### The classical social sciences of groups
+
+- Forefathers in sociology: [Georg Simmel](https://en.wikipedia.org/wiki/Georg_Simmel), [Max Weber](https://en.wikipedia.org/wiki/Max_Weber), [Charles Horton Cooley](https://en.wikipedia.org/wiki/Charles_Horton_Cooley) (1864-1929), [William Graham Sumner](https://en.wikipedia.org/wiki/William_Graham_Sumner), [Herbert Spencer](https://en.wikipedia.org/wiki/Herbert_Spencer) (1820-1903)
+- Textbooks: [Introduction to Sociology 3rd edition (Little 2023)](https://opentextbc.ca/introductiontosociology3rdedition/front-matter/about-the-book/), [Cultural Anthropology: The Human Challenge 15th edition(HAVILAND et al. 2015)](https://www.cengage.ca/c/cultural-anthropology-the-human-challenge-15e-haviland-prins-mcbride-walrath/9781305633797/), [How Humans Evolved (Boyd, Silk, Langerbrager 2023)](https://wwnorton.com/books/9781324061748)
 
 The temptation to perceive social groups as having some independence from its constituents has been around for a long time. Already in 1898, George Simmel was arguing that with emerging national identities, "the society, the unified group, is a structure of independent reality, wich leads its life after peculiar laws and by virtue of peculiar forces, independent of all its individual components" (Simmel 1898). According to Simmel, we could argue that corporations have independence from its constituents, because the laws governing groups are qualitatively different from that of individual psychology.
 
@@ -79,7 +89,7 @@ Similarly, Herbert Spencer was proposing around the same year that individuals, 
 The organism-like analogy is furthered explored by Donald Campbell (1956). Campbell makes the point that perceiving groups as entities is far from being crazy when we accept that reality is not given, but socially constructed. When a collection of individuals share a common fate, and tend to fly together like a flock of bird, it is natural to perceive this group as having some organism-like properties. 
 
 Textbook definition in sociology, cultural anthropology or social psychology of groups might include different perspectives, types of social groups, and recurrent notions deemed important to the study of groups: 
-  - [functionalist, critical, feminist, symbolic interactionist](https://opentextbc.ca/introductiontosociology/chapter/chapter6-groups-and-organization/)
+  - [functionalist, critical, feminist, symbolic interactionist](https://opentextbc.ca/introductiontosociology3rdedition/part/chapter-7-groups-and-organizations/)
   - notions of in- and out-groups
   - group leadership
   - group size
@@ -93,15 +103,21 @@ What you won't find in those textbooks is usually a formal notion of networks. E
 <div class="note">Well known methods in social science using networks to study groups: stochastic actor oriented models (SOAM; Snijders 2010), exponential random graph models (ERGM), etc. They are usually looked down by people from the natural sciences. This doesn't help</div>
 
 
-## Do groups can be a level of selection
+## The emerging science of firms and organizations
+
+ - Forefathers in organizational and management science: [Max Weber](https://en.wikipedia.org/wiki/Max_Weber), [Herbert Simon](https://en.wikipedia.org/wiki/Herbert_A._Simon), [R.K. Merton](https://en.wikipedia.org/wiki/Robert_K._Merton), 
+ - Forefathers institutional theories: [Ronald Coase](https://en.wikipedia.org/wiki/Ronald_Coase), [Joseph Schumpeter](https://en.wikipedia.org/wiki/Joseph_Schumpeter)
+ - Textbooks: [Organizations and Organizing: Rational, Natural, and Open System Perspectives (Scott and Davis, 2007)](https://doi.org/10.4324/9781315663371 ), [Institutions and organizations: ideas, interests, and identities (Scott 2014)](https://uk.sagepub.com/en-gb/eur/institutions-and-organizations/book237665)
+
+Interesting enough, the idea that groups as firms can be subject to selection hasn't been as controversial in management and organizational science than it has been in biology.
+
+Sometimes, sociology and organizational science are hard to distinguish, see [Peter_Blau](https://en.wikipedia.org/wiki/Peter_Blau), [Ronald Stuart Bur](https://en.wikipedia.org/wiki/Ronald_Stuart_Burt) (Burt 2000)[https://www.sciencedirect.com/science/article/abs/pii/S0191308500220091?via%3Dihub], [Paul DiMaggio](https://en.wikipedia.org/wiki/Paul_DiMaggio), [Charles Perrow](https://en.wikipedia.org/wiki/Charles_Perrow), [Oliver E. Williamson](https://en.wikipedia.org/wiki/Oliver_E._Williamson)
+
+## Group selection
 
 In the 1960s, biologists went to war with the idea that groups can be a key level of selection. In his _Animal Dispersion in Relation to Social Behaviour_ (1962), Wynne-Edwards infamously hypothesized that if groups had mechanisms to prevent overexploitation of local resources, such as limiting the number of occupants in the area, they should be able to outcompete groups with more selfish individuals. In evolutionary terms, this idea was translate to having genes that, even though decrease individual fitness, could be selected anyway if they favor group survival.
 
 The idea of groups having a particular ontological status is one that cut deeply across the sciences. In all of them, it remains more or less controversial. A key aspect of the discussion is whether group minds are *reducible* to individual components. Different groups have thought about it in different ways, focusing on different aspect of the questions.
-
-## Firm selection
-
-Interesting enough, the idea that groups as firms can be subject to selection hasn't been as controversial in management and organizational science than it has been in biology.
 
 ## Do we need a Leviathan or the free market to manage public goods?
 
@@ -182,31 +198,28 @@ const data = FileAttachment("data/lit_review.csv").csv({typed: true});
 ```
 
 ```js
-const summaries = {
-  'pinned': 'todo 🚧',
-  'CGS': 'Drawing from population bioglogy, cultural group selection theory uses a mix of covariance genetics and game theory to demonstrate the conditions under which group-benefitial traits could evolve under group selection proces. The theory emerge from debates in the 1960s about altruism, and how reciprocity is thought to not be sufficient to explain observed large-scale cooperation among unrelated individuals. The key result motivating group selection is the Price equation, applied to groups of individuals having norms that maintain between group-variance, while reducing within-group cultural variations.',
-  'φ': 'Collective intentionality is about explaining our feeling that there is something more about collective than the sum of individual intentionalities; it is the idea that friends walking together is more than the individual intending to walk together. There is a "we", as Searly puts it, that feels like is not explainable in terms of individual actions. Another way to put it is that feeling of impersonal "we" that members of societies can have, one in which that nobody knows exactly what it is but nonetheless play an active role in motivating people; such as going to war, or feeling pride when local sport teams win the championship.',
-  'S': 'This collection is a frankeinstein of different social sciences talking about the role of groups, each from their own research tradition (e.g. organizational science, sociology, psychology, anthropology). They share the common feature of traditional social sciences; no strong mathematical models to quantify the mechanisms underlying their verbal models, or theories. As such, we end up with an infinity of concepts that describe what are groups and institutions, but no common ground to investigate if each of the social science speaks about the same thing or not.',
-  'B': 'todo 🚧',
-  'PS': html`<span class="highlight-purple">Collective action theory</span> is derived from Elinor Ostrom's views of social dilemmas, and is typically characterized by its used of public good games. Although it informed by the social sciences, we find that they state a disting set of questions that is important to the study of groups and unique to that literature. The key idea of that literature is how groups can self-govern themselves in the face of a social dilemmas, under particular conditions. Groups can evolve set of rules to prevent the tragedy of the commons, they are not as 'mindless' as once thought. That being said, this literature is often characterized by smaller groups, in which there is a sense of joint commitment toward the common-pool resources.`,
-  'P': 'todo 🚧'
-}
-```
-
-```js
 const data_f = d3.sort(select === 'pinned' ? 
             data.filter(d => pinned_title.includes(d.short_title)) : 
             data.filter(d => d.subfield == select), (a,b) => d3.ascending(a.year, b.year))
 ```
 
 ```js
-const selectInput = Inputs.radio(["pinned", "S", "B", "φ", "CGS", "PS", "P"], {value: "pinned", format: x => fos2cat[x] })
+const selectInput = Inputs.radio(["pinned", "S", "B", "φ", "CGS", "PS", "P", "O", "F"], {value: "pinned", format: x => fos2cat[x] })
 const select = Generators.input(selectInput)
 ```
 
 ```js
 const fos2cat = {
-"pinned": "Sacred timeline", "S":"Classical social sciences", "B":"Biological group selection", "φ": "Philosophy", "CGS": "Cultural group selection", "P": "HONs", "PS": "Collective action theory"}
+  "pinned": "Sacred timeline", 
+  "S":"Classical social sciences", 
+  "B":"Biological group selection", 
+  "φ": "Philosophy", 
+  "CGS": "Cultural group selection", 
+  "P": "HONs", 
+  "PS": "Collective action theory",
+  "O": "Team science",
+  "F": "Organizational science"
+}
 
 const pinned_title = ['rice_quantitative_1938', 'warriner_groups_1956', 'campbell_common_1958', 'wynne-edwards_animal_1962', 'neal_duality_2023',   'smith_group_1976', 'okasha_why_2001', 'sterelny_return_1996', 'breiger_duality_1974', 'boyd_culture_1985' , 'ostrom_covenants_1992', 'gilbert_rationality_2006', 'smaldino_cultural_2014' ,'french_collective_1984', 'battiston_physics_2021']
 ```
@@ -220,7 +233,10 @@ function lit_review(width) {
           marginBottom: 50, marginTop: 50,marginLeft:20,
           y: { axis: null, reverse: true },
           x: { axis: null, domain: [-200 / 2, 200 / 2] },
-          color: {domain: ["CGS", "φ", "S", "B", "PS", "P", "O", "Ψ"], range: ["#32cd32", "#dc143c", "#1e90ff", "#32cd32", "#9370db", "#ff7f50", "#ff7f50", "#ff7f50"]},
+          color: {
+            domain: ["CGS", "φ", "S", "B", "PS", "P", "O", "F"], 
+            range: ["#001219", "#005F73", "#0A9396", "#94D2BD", "#E9D8A6", "#EE9B00", "#CA6702", "#BB3E03"]
+            },
           marks: [
             Plot.ruleX([0]),
             Plot.dot(
@@ -274,6 +290,10 @@ function lit_review(width) {
           ],
         })
 }
+```
+
+```js
+data
 ```
 
 <!-- STYLING -->
