@@ -88,21 +88,21 @@ to differential reproduction and survival, and group-based prestige bias
 
 <figure id="fig:riseprog">
 <figure>
-<embed src="Chapters/Chapter5/figures/riseprog.pdf" />
+<img src="../assets/riseprog.pdf.webp" />
 </figure>
 <figure>
-<embed src="Chapters/Chapter5/figures/mymap2.pdf" />
+<img src="../assets/mymap2.pdf.webp" />
 </figure>
 <figcaption>Top: Rise of computational approaches in science, as a proxy
 for learning computer programming. Bottom: Computational hysteresis in
 history, inspired by work on alternative biome states <span
 class="citation" data-cites="staver_global_2011"></span>. Each dot
-represents a paper, projected onto a 2D embedding space, where similar
+represents a paper, projected onto a 2D imgding space, where similar
 papers are closer together. The pale blue curves show the result of a
 Gaussian kernel, allowing us to identify clusters of similar articles,
 or topics. Articles in red are categorized as computational based on a
 simple keyword search for ‘computational.’ While this approach may
-produce false positives, manual review suggests that the embedding
+produce false positives, manual review suggests that the imgding
 successfully cluster together computational work (as in ‘computational’
 or ‘digital’ history). The overlaid shaded area conceptually illustrates
 how hysteresis might unfold in the humanities, akin to ecosystems
@@ -114,9 +114,7 @@ methodological diversity in the humanities, but also science more
 broadly. Future work could identify papers with groups, assessing the
 transient dynamics of the computational turn. See <a
 href="#groupSkills.appendix">Appendix</a> for details about the data
-pipeline. The figure is based on the following <a
-href="https://jstonge.observablehq.cloud/hello-research-groups/explore/embeddings-playground">web
-app</a>.</figcaption>
+pipeline.</figcaption>
 </figure>
 
 We examine the divide between computational (programmer-rich groups) and
@@ -268,7 +266,7 @@ graphically represents the possible transitions between group
 configurations
 
 <figure id="fig:schema">
-<embed src="Chapters/Chapter5/figures/schema1.pdf"
+<img src="../assets/schema1.pdf.webp"
 style="width:72.0%" />
 <figcaption>Schema depicting possible transitions between states in our
 model of research groups. For each group of size <span
@@ -354,7 +352,7 @@ timesteps, which we find to be sufficient time for the system to
 stabilize.
 
 <figure id="fig:hysteresis">
-<embed src="Chapters/Chapter5/figures/fig3-1.pdf" />
+<img src="../assets/fig3-1.pdf.webp" />
 <figcaption>Transition to programming adoption depends nonlinearly on
 the benefit parameter <span class="math inline"><em>χ</em></span>. (Top)
 Bimodality of computational and non-computational groups for a given
@@ -447,7 +445,7 @@ total number of individuals who attempted the transition but failed
 during the transition.
 
 <figure id="fig:transition">
-<embed src="Chapters/Chapter5/figures/sweep_chi.pdf"
+<img src="../assets/sweep_chi.pdf.webp"
 style="width:55.0%" />
 <figcaption>Shorter half-life transitions result in fewer people left
 behind. (Top) Faster half-life transitions (blue) result in fewer
@@ -498,7 +496,7 @@ the humanities as a case study, we show that the model exhibits
 irreversible hysteresis: once institutional support facilitates the
 transition to programming, the latter persists even if the support is
 later withdrawn. By framing learning dynamics and skill acquisition in
-science as a public goods game embedded in a contagion model, our
+science as a public goods game imgded in a contagion model, our
 approach captures the nonlinear influence of group dynamics on
 individual decision-making.
 
@@ -552,7 +550,7 @@ that the hysteresis weakens depending on the combination of the number
 of states and $K$.
 
 ![Varying combination of $K$ and total number of states weakens
-hysteresis](Chapters/Chapter5/figures/varying_K.pdf){#fig:extra-hysteresis
+hysteresis](../assets/varying_K.pdf.webp){#fig:extra-hysteresis
 width="80%"}
 
 ##### Effects of $k_\tau$ and $k_c$ on transition half-life
@@ -564,7 +562,7 @@ makes the transition easier overall. However, this also raises the
 threshold benefit ($\chi$) required to trigger the transition.
 
 <figure id="fig:extra-sweep">
-<embed src="Chapters/Chapter5/figures/extra-sweep.pdf"
+<img src="../assets/extra-sweep.pdf.webp"
 style="width:80.0%" />
 <figcaption>Varying combinations of <span
 class="math inline"><em>k</em><sub><em>τ</em></sub></span> and <span
@@ -594,16 +592,11 @@ computational thinking rather than the use of computational methods per
 se.
 
 <figure id="fig:emb">
-<img src="Chapters/Chapter5/figures/embeddings_facet.png" />
+<img src="../assets/embeddings_facet.png" />
 <figcaption>Location of different fields of study in the broader
-embedding space. The embedding is generated using Uniform Manifold
+imgding space. The imgding is generated using Uniform Manifold
 Approximation and Projection (UMAP) for dimension
 reduction.</figcaption>
 </figure>
 
-To further clarify meaning, we use an embedding-based visualization
-(Fig. [1.7](#fig:emb){reference-type="ref" reference="fig:emb"}) to show
-the distribution of semantic similarity among articles labeled as
-computational, helping to clarify the range of interpretations in our
-keyword-based analysis. The complete interactive web app can be found at
-[jstonge.observablehq.cloud/hello-research-groups/explore/embeddings-playground](https://jstonge.observablehq.cloud/hello-research-groups/explore/embeddings-playground).
+To further clarify meaning, we use an imgding-based visualization (Fig. [1.7]) to show the distribution of semantic similarity among articles labeled as computational, helping to clarify the range of interpretations in our keyword-based analysis. 

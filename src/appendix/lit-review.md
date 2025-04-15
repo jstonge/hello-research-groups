@@ -55,7 +55,7 @@ We review the study of groups across the multiverse of scientific research. The 
 
 
 ```js
-const data = FileAttachment("data/lit_review.csv").csv({typed: true});
+const data = FileAttachment("../data/lit_review.csv").csv({typed: true});
 ```
 
 ```js

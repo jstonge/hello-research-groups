@@ -104,7 +104,7 @@ individuals.
 ### The Human Group, Personal influence, and Social network analysis
 
 <figure id="fig:homans">
-<embed src="Chapters/figs/homans.pdf" />
+<embed src="./assets/homans.pdf.webp" />
 <figcaption>The evolution of groups in schema form, adapted from <span
 class="citation"
 data-cites="homans_human_1950 wellman_structural_1988 feld_focused_1981"></span>.
@@ -479,8 +479,7 @@ sorting those into dimensions grounded in network science, we briefly
 review how researchers have engaged with the empirical study of groups.
 We identify three main approaches that researchers are using with groups
 and relevant results derived from them (see Fig.
-[1.2](#fig:ScaleOfGroups){reference-type="ref"
-reference="fig:ScaleOfGroups"}).
+1.2).
 
 ##### The study of well-defined groups {#the-study-of-well-defined-groups .unnumbered}
 
@@ -496,87 +495,17 @@ with fewer than ten people; above this number, they are considered
 challenges
 [@isaac_group_1988; @hall_science_2018; @national_research_council_enhancing_2015].
 
-At the other end of the spectrum, we have unions and firms. In the third
-example, the union claimed to represent 200,000 workers (taking place in
-1972, the national union density of the province was around 35% at that
-time), based on the number of union cards (Fig.
-[1.2](#fig:ScaleOfGroups){reference-type="ref"
-reference="fig:ScaleOfGroups"}d). Already in 1958, researchers were
-investigating firm size distribution, showing that it follows a
-heavy-tail distribution [@bonini_decision_1958]. Axtell provides us with
-a snapshot of Zipf's law of firm sizes (2001), with the largest firm
-having more than one million employees (see Fig.
-[1.2](#fig:ScaleOfGroups){reference-type="ref"
-reference="fig:ScaleOfGroups"}d) [@axtell_zipf_2001]. Since Axtell
-published his work, we find firms such as Walmart with 2.1 million
-employees. It is a million short of meeting the largest union, *The
-National Education Association*, with its 3 million members.
+At the other end of the spectrum, we have unions and firms. In the third example, the union claimed to represent 200,000 workers (taking place in 1972, the national union density of the province was around 35% at that time), based on the number of union cards (Fig. [1.2]d). Already in 1958, researchers were investigating firm size distribution, showing that it follows a heavy-tail distribution [@bonini_decision_1958]. Axtell provides us with a snapshot of Zipf's law of firm sizes (2001), with the largest firm having more than one million employees (see Fig. [1.2]d) [@axtell_zipf_2001]. Since Axtell published his work, we find firms such as Walmart with 2.1 million employees. It is a million short of meeting the largest union, *The National Education Association*, with its 3 million members.
 
-![Scale of groups I](Chapters/figs/scaleOfGroups.pdf){#fig:ScaleOfGroups
-width="\\linewidth"}
+![Scale of groups I](./assets/scaleOfGroups.pdf.webp)
 
-Yet, as a hierarchical organization, unions can be said to resemble
-"tribes" in anthropology, sharing a collective identity and forming
-alliances in larger conflicts. In our example, the union was divided
-into three main "clans," bound by shared norms and institutions, acting
-as independent political units. This scale of organization was crucial
-in tribal warfare, influenced by territorial resources. Although
-higher-level institutions are present, small-scale cooperation continues
-to operate at the local level, with a total of 1,701 local unions
-averaging around 155 members each (similar to Fig.
-[1.2](#fig:ScaleOfGroups){reference-type="ref"
-reference="fig:ScaleOfGroups"}a,
-[1.3](#fig:ScaleOfGroups2){reference-type="ref"
-reference="fig:ScaleOfGroups2"}f, and to the camp sizes shown in Fig.
-[1.2](#fig:ScaleOfGroups){reference-type="ref"
-reference="fig:ScaleOfGroups"}b). At this scale, models suggest that
-monitoring free-riding---individuals who benefit from collective payoffs
-without bearing individual costs---becomes increasingly difficult, as
-mechanisms of direct and indirect reciprocity are harder to enforce
-[@boyd_evolution_1988; @ostrom_covenants_1992]. Yet, a review of
-historical and archaeological evidence suggests that this level of
-cooperation among unrelated individuals has been typical at least since
-the late Pleistocene and Holocene
-[@boyd_largescale_2022; @casari_group_2018].
+Yet, as a hierarchical organization, unions can be said to resemble "tribes" in anthropology, sharing a collective identity and forming alliances in larger conflicts. In our example, the union was divided into three main "clans," bound by shared norms and institutions, acting as independent political units. This scale of organization was crucial in tribal warfare, influenced by territorial resources. Although higher-level institutions are present, small-scale cooperation continues to operate at the local level, with a total of 1,701 local unions averaging around 155 members each (similar to Fig. [1.2]a, [1.3]f, and to the camp sizes shown in Fig. [1.2]b). At this scale, models suggest that monitoring free-riding---individuals who benefit from collective payoffs without bearing individual costs---becomes increasingly difficult, as mechanisms of direct and indirect reciprocity are harder to enforce [@boyd_evolution_1988; @ostrom_covenants_1992]. Yet, a review of historical and archaeological evidence suggests that this level of cooperation among unrelated individuals has been typical at least since the late Pleistocene and Holocene [@boyd_largescale_2022; @casari_group_2018].
 
 ##### The study of collective action problems
 
-We find some groups that do not fit neatly into the categories of small
-teams or large-scale cooperation. First, research teams in academia or
-the smallest groups that cooperate for subsistence in the d-place
-database show a non-negligible proportion of teams with more than ten
-members, though they do not approach the empirical mean of the
-common-pool resources (CPR) database (see Fig.
-[1.3](#fig:ScaleOfGroups2){reference-type="ref"
-reference="fig:ScaleOfGroups2"}a). Second, there are evidently papers
-with more than 10 coauthors, with the largest having over 5,000 (a
-practice called hyper-authorship). This is more akin to the size of
-large movie crews, which, to date, have a slightly lower maximum (3,310
-people were credited for Iron Man 3). As with movie crews, larger
-coauthors exhibit differentiated roles, which we discuss next in the
-context of group-level features. When this is the case, group boundaries
-are derived from theoretical frameworks; one of the most well-known
-being that of CPR.
+We find some groups that do not fit neatly into the categories of small teams or large-scale cooperation. First, research teams in academia or the smallest groups that cooperate for subsistence in the d-place database show a non-negligible proportion of teams with more than ten members, though they do not approach the empirical mean of the common-pool resources (CPR) database (see Fig. [1.3](#fig:ScaleOfGroups2)a). Second, there are evidently papers with more than 10 coauthors, with the largest having over 5,000 (a practice called hyper-authorship). This is more akin to the size of large movie crews, which, to date, have a slightly lower maximum (3,310 people were credited for Iron Man 3). As with movie crews, larger coauthors exhibit differentiated roles, which we discuss next in the context of group-level features. When this is the case, group boundaries are derived from theoretical frameworks; one of the most well-known being that of CPR.
 
-In her pioneering work on the governance of CPR ( **Q15**), Elinor
-Ostrom is well-known for publishing an extensive codebook defining all
-aspects of the enterprise [@ostrom_cpr_1989]. In it, she and her
-collaborators mention that to be considered part of "well-defined"
-groups (**Q11**); individuals, and not their households (only the person
-who can extract the CPR), must have the ability to appropriate relevant
-resources. Hence, the boundaries of the group are established by a more
-or less formal agreement among group members, which her is defined by
-the CPR theoretical framework. In Fig.
-[1.2](#fig:ScaleOfGroups){reference-type="ref"
-reference="fig:ScaleOfGroups"}a, we show the result of 86 case studies
-by Ostrom, revealing that the average size of well-defined groups
-participating in a CPR is around 154 individuals. If we consider the
-broader definition of the actual group size of individuals who were
-somewhat involved in the CPR, the mean increases to about 233
-individuals. Anthropologists have shown that this level of cooperation,
-which includes unrelated individuals, can be traced back as far as
-10,000 years, with traditional societies engaged in communal hunts or
-constructing shared capital facilities [@boyd_largescale_2022].
+In her pioneering work on the governance of CPR ( **Q15**), Elinor Ostrom is well-known for publishing an extensive codebook defining all aspects of the enterprise [@ostrom_cpr_1989]. In it, she and her collaborators mention that to be considered part of "well-defined" groups (**Q11**); individuals, and not their households (only the person who can extract the CPR), must have the ability to appropriate relevant resources. Hence, the boundaries of the group are established by a more or less formal agreement among group members, which her is defined by the CPR theoretical framework. In Fig. [1.2]a, we show the result of 86 case studies by Ostrom, revealing that the average size of well-defined groups participating in a CPR is around 154 individuals. If we consider the broader definition of the actual group size of individuals who were somewhat involved in the CPR, the mean increases to about 233 individuals. Anthropologists have shown that this level of cooperation, which includes unrelated individuals, can be traced back as far as 10,000 years, with traditional societies engaged in communal hunts or constructing shared capital facilities [@boyd_largescale_2022].
 
 **In Chapter
 [\[chapter:groupSkills\]](#chapter:groupSkills){reference-type="ref"
@@ -607,40 +536,11 @@ blending of cultures, stir social protests, and maintain strong
 boundaries between the subgroup within a territory and the rest of the
 country.
 
-In discussing the challenges of cultural evolutionary databases,
-Slingerland et al. (2024) highlight the necessity of committing to a
-particular group ontology [@slingerland_database_2024]. For example,
-they note that Seshat: The Global History Databank
-[@turchin_seshat_2015] (Fig.
-[1.3](#fig:ScaleOfGroups2){reference-type="ref"
-reference="fig:ScaleOfGroups2"}a), by focusing on polities (i.e.,
-politically autonomous groups), loses granularity in tracking the
-evolution of cultural traits---such as religious beliefs---that may not
-align neatly with broader political boundaries. In contrast, the
-Environmental Diversity (D-PLACE)[@kirby_d-place_2016] focuses on
-ethnolinguistic groups as typically found in traditional societies (Fig.
-[1.2](#fig:ScaleOfGroups){reference-type="ref"
-reference="fig:ScaleOfGroups"}c).
+In discussing the challenges of cultural evolutionary databases, Slingerland et al. (2024) highlight the necessity of committing to a particular group ontology [@slingerland_database_2024]. For example, they note that Seshat: The Global History Databank [@turchin_seshat_2015] (Fig. [1.3]a), by focusing on polities (i.e., politically autonomous groups), loses granularity in tracking the evolution of cultural traits---such as religious beliefs---that may not align neatly with broader political boundaries. In contrast, the Environmental Diversity (D-PLACE)[@kirby_d-place_2016] focuses on ethnolinguistic groups as typically found in traditional societies (Fig. [1.2]c).
 
-![Scale of groups
-II](Chapters/figs/scaleOfGroups2.pdf){#fig:ScaleOfGroups2
-width="\\linewidth"}
+![Scale of groupsII](./assets/scaleOfGroups2.pdf.webp)
 
-The Database of Religious History (DRH) [@slingerland_coding_2020] is a
-recent cultural database that focuses on fine-grained details to
-precisely measure variations from the perspective of specific
-group-level feature traits. In the DRH, cultural traits are presented as
-a number of domain-driven questions about different polls--such as the
-religious institutions poll--filled out by experts in the field. As
-such, the DRH distinguishes between reporting group affiliation and more
-stringent measures such as the frequency of participation in group
-activities and the significance of the group to individuals (Fig.
-[1.2](#fig:ScaleOfGroups){reference-type="ref"
-reference="fig:ScaleOfGroups"}f). However, the DRH is noteworthy in that
-it also invites experts from the humanities to weigh in on particular
-cultural topics, such as estimating the number of adherents of religious
-groups. Here are a few excerpts that highlight the ontological challenge
-of such an undertaking:
+The Database of Religious History (DRH) [@slingerland_coding_2020] is a recent cultural database that focuses on fine-grained details to precisely measure variations from the perspective of specific group-level feature traits. In the DRH, cultural traits are presented as a number of domain-driven questions about different polls--such as the religious institutions poll--filled out by experts in the field. As such, the DRH distinguishes between reporting group affiliation and more stringent measures such as the frequency of participation in group activities and the significance of the group to individuals (Fig. [1.2]f). However, the DRH is noteworthy in that it also invites experts from the humanities to weigh in on particular cultural topics, such as estimating the number of adherents of religious groups. Here are a few excerpts that highlight the ontological challenge of such an undertaking:
 
 -   [Mithraism (100 CE - 400 CE; part of the Roman Empire
     region)]{.smallcaps}: "This is a guesstimate, starting from a
