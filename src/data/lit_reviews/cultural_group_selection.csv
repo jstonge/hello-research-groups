@@ -1,0 +1,36 @@
+year,title,tldr,subfield,contrib_type,read_lvl,short_title
+1982,Cultural transmission and the evolution of cooperative behavior," ""Seminal early paper. B&R talk about group selection process, citing D. Campbell on ideas that some traits are shaped by group selection process. They also frame the problem in terms of public goods, citing Olson but not OStrom. There is the idea that humans shouldnt cooperate on large scale undertaking. CGS depends on rate of extinction, egoistic groups dying faster, and immigration processes. They reject genetic inheritance as being the only driving force for cultural species.""
+",CGS,💡,1️⃣,boyd_cultural_1982
+1985,Culture and the Evolutionary Process," ""classical book by Body and Richersen applying ideas from popuation biology to cultural evolution. brief introduction of cultural group selection.""
+",CGS,💡,1️⃣,boyd_culture_1985
+1992,Punishment allows the evolution of cooperation (or anything else) in sizable groups," ""Key paper presenting the argument that kin selection alone cannot explain cooperation among large groups of unrelated individuals.""
+",CGS,💡,1️⃣,boyd_punishment_1992
+2003,Shared Norms and the Evolution of Ethnic Markers," """"
+",CGS,🗺️,0️⃣,mcelreath_shared_2003
+1994,Reintroducing group selection to the human behavioral sciences," ""widely cited article that seeks to differentiate modern group selection from naive group selection (c.f. [[Wynne-Edwards]]), thereby putting group selection on a firm standing.""
+",CGS,📚,1️⃣,wilson_reintroducing_1994
+1997,Introduction: Multilevel Selection Theory Comes of Age," """"
+",CGS,💡,1️⃣,wilson_introduction_1997
+1999,A Critique of R.D. Alexander's Views on Group Selection," """"
+",CGS,💡,1️⃣,wilson_critique_1999
+1998,The Evolution of Conformist Transmission and the Emergence of Between-Group Differences," ""Henrich argues that humans are special in that variation among human groups is cultural.""
+",CGS,💡,1️⃣,henrich_evolution_1998
+2004,"Cultural group selection, coevolutionary processes and large-scale cooperation"," """"
+",CGS,💡,1️⃣,henrich_cultural_2004
+2011,A Cooperative Species: Human Reciprocity and Its Evolution," ""Humans have social preference to be strong cooperators, contrary to the theory of _homo economicus_. This is how we get cooperation among large-scale groups of distant-related individuals.""
+",E,💡,1️⃣,bowles_cooperative_2011
+2016,The natural selection of bad science," ""Their definition of group selection is my   goto when I explain how natural selection can act on   research groups. Basically, if you accept that research   methodology exhibit (i) variation, (ii) which has consequences for survival and/or repro of research groups,  and that these method are (iii) heritable (through  PhDs migrating to other institutions and starting their  own lab), you get natural selection.""
+",CGS,🗺️,0️⃣,smaldino_natural_2016
+2014,The cultural evolution of emergent group-level traits," ""Most important properties of human groups are   in fact properly defined at the level of group organization. *Yet,   most studies focus on the transmission of individual-level traits.*   This makes a difference since we cannot reduce group-level traits   to individuals (there is a qualitative difference in the types of  selection types between the two). Similar to Randall (33), there  is the argument that group-level traits are non-reducible and can  therefore only be defined at level of groups.""
+",CGS,📚,1️⃣,smaldino_cultural_2014
+2018,Sustainability of minority culture when inter-ethnic interaction is profitable," """"
+",CGS,📊,0️⃣,bunce_sustainability_2018
+2009,Did Warfare Among Ancestral Hunter-Gatherers Affect the Evolution of Human Social Behaviors?," ""Example of cultural group selection with warfare""
+",CGS,📚,0️⃣,bowles_did_2009
+2014,War’s Enduring Effects on the Development of Egalitarian Motivations and In-Group Biases," """"
+",CGS,📊,0️⃣,bauer_wars_2014
+2017,Collective action and the evolution of social norm internalization," """"
+",CGS,🗺️,0️⃣,gavrilets_collective_2017
+2019,The evolution of human cooperation," ""A bit more general than CGS, but it is mentioned that group selection is one way to get assortment. Experimental studies of social preferences are reviewed, mentioning al the games we know and love. The question of scales of cooperation is nicely done too, noting how a combination of norm-based group living and psychology around cultural transmission facilitate the emergence of larger-scale undertaking among unrelated individuals. The more traditional societies literature is tied to modern stated-based societies via markers and other forms of impersonal fairness norms.""
+",CGS,📚,1️⃣,apicella_evolution_2019
+2022,ETHNICITY AND CULTURAL DYNAMICS," ""Ethnic identity still important, underwriting power dynamics in the modern world. Ethnicity is a social construct, but still very real for people. Paper is mostly conceptual, but driven by ideas from covariance genetics [[mcelreath_mathematical_2007]]. Discussion about convincing others and oneself about crossing ethnic boundaries, and a model of cross-cultural competence to preserve cultural diversity in modern world.""",CGS,🗺️,1️⃣,bunce_ethnicity_2022

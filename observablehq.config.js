@@ -1,38 +1,59 @@
 // See https://observablehq.com/framework/config for documentation.
 export default {
-  // The app’s title; used in the sidebar and webpage titles.
-  title: "Hello Research Groups",
-
-  // The pages and sections in the sidebar. If you don’t specify this option,
-  // all pages will be listed in alphabetical order. Listing pages explicitly
-  // lets you organize them into sections and have unlisted pages.
-  // pages: [
-  //   {
-  //     name: "Examples",
-  //     pages: [
-  //       {name: "Dashboard", path: "/example-dashboard"},
-  //       {name: "Report", path: "/example-report"}
-  //     ]
-  //   }
-  // ],
+  root: "src", // path to the source root for preview
+  output: "dist", // path to the output root for build
+  title: "The Story of US",
+  pages: [
+    { name: "Short history of group minds", path: "/grontology" },
+    { name: "Laboratory of group mind", path: "/theory-primer" },
+    {
+      name: "Models",
+      pages: [
+        { name: "Defining and classifying models of groups", path: "models/interface" },
+        { name: "Computational hysteresis", path: "models/groupSkills"},
+        { name: "Paradoxes in the co-evolution of contagions and institutions", path: "models/coevo" },
+      ]
+    },
+    {
+      name: "Results",
+      pages: [
+        { name: "Researchers timeline", path: "results/timeline" },
+        { name: "Patterns of collaboration", path: "results/summary-groups" },
+      ]
+    },
+    {
+      name: "Methods",
+      open: false,
+      pages: [
+        { name: "Classify computational works", path: "methods/classify-comp-works" },
+      ]
+    },
+    {
+      name: "Explore",
+      open: false,
+      pages: [
+        { name: "Summarize DB", path: "explore/summary-db" },
+        { name: "Explore NSF awards", path: "explore/nsf-awards" },
+        { name: "Explore NEH awards", path: "explore/neh-awards" },
+        { name: "Embeddings Playground", path: "explore/embeddings-playground" },
+      ]
+    },
+    {
+      name: "Appendix",
+      open: false,
+      pages: [
+        { name: "Multiverse Literature Review", path: "appendix/lit-review" },
+        { name: "Overthinking FoS", path: "appendix/overthinking-fos" },
+        { name: "Computational + X", path: "appendix/a-comp-story" },
+        { name: "SciSciDB", path: "appendix/scisciDB" },
+        { name: "Finetuning LLMs", path: "appendix/finetuning-llms" },
+        { name: "Accelerating annotations", path: "appendix/accelerating-annots" },
+      ]
+    }
+  ],
 
   // Content to add to the head of the page, e.g. for a favicon:
   head: '<link rel="icon" href="observable.png" type="image/png" sizes="32x32">',
-
-  // The path to the source root.
-  root: "src",
-
-  // Some additional configuration options and their defaults:
-  // theme: "default", // try "light", "dark", "slate", etc.
-  // header: "", // what to show in the header (HTML)
-  // footer: "Built with Observable.", // what to show in the footer (HTML)
-  // sidebar: true, // whether to show the sidebar
-  // toc: true, // whether to show the table of contents
-  // pager: true, // whether to show previous & next links in the footer
-  // output: "dist", // path to the output root for build
-  // search: true, // activate search
-  // linkify: true, // convert URLs in Markdown to links
-  // typographer: false, // smart quotes and other typographic improvements
-  // preserveExtension: false, // drop .html from URLs
-  // preserveIndex: false, // drop /index from URLs
+  footer: "Built with Observable.", // what to show in the footer (HTML)
+  style: "styles.css"
 };

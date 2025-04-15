@@ -1,0 +1,32 @@
+year,title,tldr,subfield,contrib_type,read_lvl,short_title
+1992,Covenants with and without a Sword: Self-Governance Is Possible," ""Costly punishment in a repeated common-pool resource (CPR) game with the possibility to develop an individual reputation. The title refers to the idea that it is possible to have groups managing their own common pool resources without having a third party agent, like the government, who come in to intervene.""
+",PS,📊,0️⃣,ostrom_covenants_1992
+1992,Evolutionary games and spatial chaos," ""Seminal paper showing how structured population help with the emergence of cooperation in PDs. No networks, by structured population they mostly mean CA on grids.""
+",PS,🗺️,0️⃣,nowak_evolutionary_1992
+2000,Cooperation and Punishment in Public Goods Experiments," ""Experimental paper showing that individuals are willing to pay a cost to punish defectors in PGG.  People know when the game is about to finish, and group composition are changed randomly over the experiment. In this context, it has been shown that repeatedly with the same partners, the level of contribution declines towards zero""
+",PS,📊,0️⃣,fehr_cooperation_2000
+2004,Spatial structure often inhibits the evolution of cooperation in the snowdrift game," ""Insight of cooperation in structured population in PD applied to snowdrift, how hawk-dove, game. They show that the extension is not straightforward, with spatial structures reducing cooperation for a wide range of params. Similar methods than [[nowak_evolutionary_1992]], no networks only CAs.""
+",PS,🗺️,0️⃣,hauert_spatial_2004
+2005,Economic man in cross-cultural perspective: Behavioral experiments in 15 small-scale societies," """"
+",PS,📊,0️⃣,henrich_economic_2005
+2005,Scale-Free Networks Provide a Unifying Framework for the Emergence of Cooperation," ""Early paper demonstrating the importance of scale-free network to create correlation among individuals, leading to cooperation. No PGG, but snowdrift (hawk-dove) and PD games and seminal to the study of PGGs on HONs. They also use the replicator dynamics.""
+",PS,🗺️,0️⃣,santos_scale-free_2005
+2006,A simple rule for the evolution of cooperation on graphs and social networks," ""Early paper demonstrating how you get cooperation in structured population. No PGG, but seminal to the study off PGGs on HONs.""
+",PS,🗺️,0️⃣,ohtsuki_simple_2006
+2008,Evolutionary dynamics of collective action in N-person stag hunt dilemmas," """"
+",PS,🗺️,0️⃣,pacheco_evolutionary_2008
+2008,Social diversity promotes the emergence of cooperation in public goods games," ""They discuss social diversity as mechanism for emergence of cooperation on complex networks. By diversity, they mean the number and size of PGGs individuals participate to. They ref [[santos_scale-free_2005]] and [[hauert_spatial_2004]] as refs for replicator dynamics.""
+",PS,🗺️,0️⃣,santos_social_2008
+2011,Evolution of cooperation in multilevel public goods games with community structures," """"
+",PS,🗺️,0️⃣,wang_evolution_2011
+2010,Evolutionary Games defined at the Network Mesoscale: The Public Goods game," """"
+",PS,🗺️,0️⃣,gomez-gardenes_evolutionary_2010
+2011,Disentangling social and group heterogeneities: Public Goods games on complex networks," ""They show how Replicator dynamics in N-Person games is the same than models of PGGs on complex networks. They ref [[pacheco_evolutionary_2008]] as their main source for replicator dynamics.""
+",PS,🗺️,0️⃣,gomez-gardenes_disentangling_2011
+2012,Review: Game theory of public goods in one-shot social dilemmas without assortment," ""Review of PGG on well-mixed populations. It contains a crossover with ideas of [[Literature Review/Hysteresis|Hysteresis]].""
+",PS,📚,0️⃣,archetti_review_2012
+2013,Evolutionary dynamics of group interactions on structured populations: a review," ""Key paper from HONs community, Moreno et al., that review model of evolutionary game theory with social networks and group interactions. They ask how ideas of cooperation on networks, such as scale-free networks increase cooperation, translate them into their framework for group interaction. They focus on group size and distribution of payoffs among groups.""
+",PS,📚,1️⃣,perc_evolutionary_2013
+2019,The evolution of human cooperation," """"
+",PS,📚,0️⃣,apicella_evolution_2019
+2021,Evolutionary dynamics of higher-order interactions in social networks," ""Higher-order interactions are all the rage now, whereas before authors were talking of connectivity levels and communities.""",PS,📚,0️⃣,rodriguez_evolutionary_2021

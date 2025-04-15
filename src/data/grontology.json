@@ -1,0 +1,93 @@
+[
+    {
+      "year": 1956,
+      "type": "social sciences",
+      "link": "https://raw.githubusercontent.com/jstonge/hello-research-groups/main/src/assets/campbell.webp",
+      "pinned": true
+    },
+    {
+      "year": 2023,
+      "type": "social sciences",
+      "link": "https://raw.githubusercontent.com/jstonge/hello-research-groups/main/src/assets/neal_2023.webp",
+      "pinned": false
+    },
+    {
+        "year": 1962,
+        "type": "evolutionary biology",
+        "link": "https://raw.githubusercontent.com/jstonge/hello-research-groups/main/src/assets/wynne_edwards_1962.webp",
+        "pinned": false
+    },
+    {
+        "year": 1966,
+        "type": "evolutionary biology",
+        "link": "https://raw.githubusercontent.com/jstonge/hello-research-groups/main/src/assets/braestrup_1966.webp",
+        "pinned": false
+    },
+    {
+        "year": 1983,
+
+        "type": "evolutionary biology",
+        "link": "https://raw.githubusercontent.com/jstonge/hello-research-groups/main/src/assets/wilson_1983.webp",
+        "pinned": false
+    },
+    {
+        "year": 1976,  
+        "type": "evolutionary biology",
+        "link": "https://raw.githubusercontent.com/jstonge/hello-research-groups/main/src/assets/maynard_smith_1976.webp",
+        "pinned": false
+    },
+    {
+        "year": 2001,
+        "type": "evolutionary biology",
+        "link": "https://raw.githubusercontent.com/jstonge/hello-research-groups/main/src/assets/okasha_2001.webp",
+        "pinned": false
+    },
+    {
+        "year": 1996,
+        "type": "evolutionary biology",
+        "link": "https://raw.githubusercontent.com/jstonge/hello-research-groups/main/src/assets/sterelny_2003.webp",
+        "pinned": false
+    },
+    {
+      "year": 1974,
+        "type": "social sciences",
+        "link": "https://raw.githubusercontent.com/jstonge/hello-research-groups/main/src/assets/breiger_1974.webp",
+        "pinned": true
+    },
+    {
+      "year": 1975,
+      "type": "evolutionary biology",
+      "link": "https://raw.githubusercontent.com/jstonge/hello-research-groups/main/src/assets/sloan_wilson.webp",
+      "pinned": true
+    },
+    {
+      "year": 1990,
+      "type": "cultural evolution",
+      "link": "https://raw.githubusercontent.com/jstonge/hello-research-groups/main/src/assets/boyd_richerson_1989.webp",
+      "pinned": true
+    },
+    {
+      "year": 2014,
+      "type": "cultural evolution",
+      "link": "https://raw.githubusercontent.com/jstonge/hello-research-groups/main/src/assets/smaldino_2014.webp",
+      "pinned": false
+    },
+    {
+      "year": 2006,
+      "type": "philosophy",
+      "link": "https://raw.githubusercontent.com/jstonge/hello-research-groups/main/src/assets/gilbert.webp",
+      "pinned": true
+    },
+    {
+      "year": 2016,
+      "type": "philosophy",
+      "link": "https://raw.githubusercontent.com/jstonge/hello-research-groups/main/src/assets/tomlinson.webp",
+      "pinned": true
+    },
+    {
+      "year": 2021,
+      "type": "policy studies",
+      "link": "https://raw.githubusercontent.com/jstonge/hello-research-groups/main/src/assets/digital_commons.webp",
+      "pinned": true
+    }
+  ]
